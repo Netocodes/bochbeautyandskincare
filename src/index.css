@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media (prefers-color-scheme: dark) {
+  /* Force light mode even in dark mode */
+  html {
+    color-scheme: light;
+    background-color: #ffc2b4d7;
+    color: #000;
+  }
+}
+@keyframes slide {
+  0% {
+    transform: translateX(100%); /* Start off the screen (right side) */
+  }
+  100% {
+    transform: translateX(-100%); /* Move to the left side of the screen */
+  }
+}
+
+/* Applying the animation */
+.animate-slide-in {
+  animation: slide 10s linear infinite; /* 10s is the duration of the sliding */
+}
