@@ -1,11 +1,14 @@
 import HeroSection from "../components/herosection";
-import SlidingText from "../components/slidertext";
-
+import BestSellers from "../components/bestsellers";
+import AdProduct from "../components/adproducts";
+import ChooseUs from "../components/chooseus";
 const Homepage = () => {
   return (
-    <div>
+    <div className=" w-full flex flex-col gap-y-0">
       <HeroSection />
-      <SlidingText />
+      <AdProduct />
+      <BestSellers />
+      <ChooseUs />
     </div>
   );
 };

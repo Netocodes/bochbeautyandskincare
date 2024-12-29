@@ -23,4 +23,5 @@
 /* Applying the animation */
 .animate-slide-in {
   animation: slide 10s linear infinite; /* 10s is the duration of the sliding */
+  transition: ease in out;
 }

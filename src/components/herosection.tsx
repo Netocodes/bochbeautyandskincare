@@ -1,4 +1,5 @@
 import { Carousel } from "flowbite-react";
+import SlidingText from "../components/slidertext";
 const HeroSection = () => {
   return (
     <div>
@@ -31,6 +32,7 @@ const HeroSection = () => {
           />
         </Carousel>
       </div>
+      <SlidingText />
     </div>
   );
 };
