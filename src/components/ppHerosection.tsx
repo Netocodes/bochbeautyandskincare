@@ -19,7 +19,7 @@ const Herosection = () => {
               <div className="mt-12 flex max-sm:flex-col sm:justify-center lg:justify-start gap-4">
                 <div className="rounded-md shadow">
                   <button className="w-full flex items-center justify-center px-8 py-3 text-base tracking-wide rounded-md text-indigo-600 bg-white hover:text-indigo-500 hover:bg-indigo-100 transition duration-150 ease-in-out">
-                    Get Started
+                    npm run
                   </button>
                 </div>
                 <div>
