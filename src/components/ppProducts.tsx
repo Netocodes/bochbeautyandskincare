@@ -87,7 +87,7 @@ const Products = () => {
                             setloading(true);
                             setTimeout(() => {
                               veiwProducts(products, product.id);
-                            }, 4000);
+                            }, 3000);
                           }}
                         >
                           <FaRegEye size={20} />

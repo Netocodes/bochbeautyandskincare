@@ -78,7 +78,15 @@ export const Navbar = () => {
                 {navArray.map((item) => (
                   <ul key={item.id} className="text-white text-xl gap-y-4 ">
                     <li className="p-4 border-b rounded-xl hover:bg-[#00df9a] duration-300 hover:text-black cursor-pointer border-gray-600">
-                      <Link className="hover:text-red" to={item.link}>
+                      <Link
+                        className="hover:text-red"
+                        onClick={() => {
+                          setTimeout(() => {
+                            setOpen(false);
+                          }, 200);
+                        }}
+                        to={item.link}
+                      >
                         {item.text}
                       </Link>
                     </li>
