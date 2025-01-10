@@ -11,7 +11,7 @@ export default defineConfig((mode) => ({
         },
       },
     },
-    chunkSizeWarningLimit: 1000, // Increase limit if needed
+    chunkSizeWarningLimit: 1000,
   },
   server: {
     host: "0.0.0.0", // Allow access from any device on the network

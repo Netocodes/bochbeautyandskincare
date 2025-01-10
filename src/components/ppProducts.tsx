@@ -41,7 +41,9 @@ const Products = () => {
     }
   };
   const veiwProducts = (item: { id: number }[], idToFind: number) => {
-    let selected = item.find((items: { id: number }) => items.id === idToFind);
+    const selected = item.find(
+      (items: { id: number }) => items.id === idToFind
+    );
     if (selected) {
       navigate("/product/productDetail/", {
         state: { product: selected },
@@ -49,8 +51,9 @@ const Products = () => {
     }
   };
   return (
-    <div className="w-full sticky top-0 h-dvh bg-black/75 overflow-y-auto">
-      <h1 className="fixed top-0 z-50 text-3xl">Products</h1>
+    <div className="w-full bg-white/50 overflow-y-auto">
+      <h1 className=" text-3xl">Products</h1>
+
       {loading ? (
         <div className="text-5xl text-center">Loading</div>
       ) : (
@@ -79,8 +82,13 @@ const Products = () => {
 
                       <div className="flex items-center justify-end gap-2 ">
                         <div
-                          // to={`/product/productDetail/`}
-                          onClick={() => veiwProducts(products, product.id)}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            setloading(true);
+                            setTimeout(() => {
+                              veiwProducts(products, product.id);
+                            }, 4000);
+                          }}
                         >
                           <FaRegEye size={20} />
                         </div>
