@@ -25,7 +25,7 @@ export const Navbar = () => {
   return (
     <div className="bg-black/10">
       <div className="px-2 fixed top-0 mx-auto w-full backdrop-blur-xl">
-        <nav className="bg-black/75 z-[50]  py-4 w-full md:max-w-[76rem] rounded-lg my-3 md:rounded-full mx-auto flex items-center justify-between  px-8 md:px-20">
+        <nav className="bg-[#8c2643] z-[50]  py-4 w-full md:max-w-[76rem] rounded-lg my-3 md:rounded-full mx-auto flex items-center justify-between  px-8 md:px-20">
           {/* logo */}
           <div>
             <h1 className="w-[50px] h-[50px] bg-white">Boch</h1>

@@ -12,7 +12,7 @@ const FAQsection = () => {
           ducimus beatae iure similique quas!
         </p>
       </div>
-      <div className="md:w-[56rem] px-4 mx-auto my-6">
+      <div className="md:w-[56rem] outline-black px-4 mx-auto my-6">
         <Accordion collapseAll>
           <Accordion.Panel>
             <Accordion.Title>What is Flowbite?</Accordion.Title>

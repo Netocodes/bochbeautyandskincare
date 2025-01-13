@@ -15,12 +15,13 @@ type Product = {
 };
 
 const Details = () => {
+  const { addToCart } = useCart();
   const location = useLocation();
   const { product }: { product: Product } = location.state || {};
   if (!product) {
     return <div>Product not found</div>;
   }
-  const { addToCart } = useCart();
+
   return (
     <div>
       <div className=" container   mx-auto">

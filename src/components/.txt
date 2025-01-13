@@ -2,3 +2,14 @@ I Amaugo Netochukwu will have learnt my next programming language and be efficie
 I Amaugo Netochukwu will purchase clothes and start my Glowup 
 I Amaugo Netochukwu will have a good time with my friends and family this month
 I Amaugo Netochukwu will talk to alot of Rewarding Clients this Year
+
+Nice To Haves
+Experience with in tech startups
+Experience working with a remote team
+Passionate about the daily fantasy industry
+Any experience in the following technologies:
+Kubernetes
+Docker
+Shell scripting
+Linux or similar UNIX type operating systems
+eb Technologies (React,Redux, Typescript, node js, css, Javascript,Testing framework(Jasmine),JIRA) 
