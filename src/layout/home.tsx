@@ -9,7 +9,7 @@ const FAQsection = React.lazy(() => import("../components/faq"));
 
 const Homepage = () => {
   return (
-    <div>
+    <div className="-mt-6">
       <Helmet>
         <title className="text-[#82878a]">Beauty of Chiri - Homepage</title>
         <meta name="theme-color" content="#8c2643" />
@@ -29,7 +29,9 @@ const Homepage = () => {
           <TestimonalPage />
         </div>
 
-        <FAQsection />
+        <div style={{ backgroundImage: 'url("/bgImage.svg") ' }}>
+          <FAQsection />
+        </div>
       </div>
     </div>
   );

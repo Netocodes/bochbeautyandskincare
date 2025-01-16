@@ -3,12 +3,14 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ComingSoonPage from "./components/coming-soon";
 import { Navbar } from "./components/navbar";
 import { CartProvider } from "./context/cartContext.tsx";
+
 function App() {
   const result: boolean = false;
   const Homepage = React.lazy(() => import("./layout/home"));
   const ProductPage = React.lazy(() => import("./layout/productPage"));
   const ContactUs = React.lazy(() => import("./layout/Contact"));
-  const ProductDetail = React.lazy(() => import("./layout/productDetails.tsx"));
+  const ProductDetail = React.lazy(() => import("./layout/productDetails"));
+  const ErrorPage = React.lazy(() => import("./components/error-page"));
 
   return (
     <div>
@@ -35,6 +37,7 @@ function App() {
                       path="/product/productDetail/"
                       element={<ProductDetail />}
                     />
+                    <Route path="*" element={<ErrorPage />} />
                   </Routes>
                 </div>
               </Suspense>

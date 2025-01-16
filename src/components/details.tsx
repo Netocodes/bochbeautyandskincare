@@ -1,8 +1,10 @@
 import { useCart } from "../context/cartContext";
 import { useLocation } from "react-router-dom";
 import { Toaster } from "sonner";
+import ErrorPage from "../components/error-page";
 import Rater from "react-rater";
 import "react-rater/lib/react-rater.css";
+import { useState } from "react";
 type Product = {
   id: number;
   title: string;
@@ -17,20 +19,35 @@ type Product = {
 const Details = () => {
   const { addToCart } = useCart();
   const location = useLocation();
+  const [quantity, setQuantity] = useState<number>(1);
   const { product }: { product: Product } = location.state || {};
+  const addQuantity = () => {
+    setQuantity(quantity + 1);
+  };
+  const reduceQuantity = () => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    } else {
+      alert("Who the fuck is this");
+    }
+  };
   if (!product) {
-    return <div>Product not found</div>;
+    return (
+      <div>
+        <ErrorPage />
+      </div>
+    );
   }
 
   return (
     <div>
       <div className=" container   mx-auto">
-        <section className="text-gray-700 body-font overflow-hidden bg-white">
+        <section className="text-gray-700 body-font overflow-hidden bg-white/50">
           <div className="container px-6 md:px-20 py-24 mx-auto">
             <div className=" flex flex-col md:flex-row  items-center justify-around gap-x-8 gap-y-8">
               {" "}
               {/* image part*/}
-              <div className="w-full md:w-1/2 h-[500px] bg-red-500">
+              <div className="w-full md:w-1/2 h-[500px] backdrop-blur-lg">
                 <img
                   alt="ecommerce"
                   className="w-full h-full object-contain object-center rounded border border-gray-200"
@@ -47,7 +64,7 @@ const Details = () => {
                   {product.title}
                 </h1>
                 <div className="flex mb-4">
-                  <span className="flex items-center text-xl md:text-2xl ">
+                  <span className="flex items-center text-xl md:text-2xl text-red-500">
                     {" "}
                     {/*rater */}
                     <Rater
@@ -59,52 +76,30 @@ const Details = () => {
                       +{product.rating.count} reviews
                     </span>
                   </span>
-                  <span className="flex ml-3 pl-3 py-2 border-l-2 border-gray-200">
-                    {" "}
-                    {/* social icons*/}
-                    <a className="text-gray-500">
-                      <svg
-                        fill="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        className="w-5 h-5"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-                      </svg>
-                    </a>
-                    <a className="ml-2 text-gray-500">
-                      <svg
-                        fill="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        className="w-5 h-5"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-                      </svg>
-                    </a>
-                    <a className="ml-2 text-gray-500">
-                      <svg
-                        fill="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        className="w-5 h-5"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
-                      </svg>
-                    </a>
-                  </span>
                 </div>
                 <p className="leading-relaxed">{product.description}</p>
+                <div className="w-2/3 my-3  flex h-8 items-stretch text-gray-600">
+                  <button
+                    onClick={() => reduceQuantity()}
+                    className="flex items-center justify-center rounded-l-md bg-gray-200 px-4 transition hover:bg-black hover:text-white"
+                  >
+                    -
+                  </button>
+                  <div className="flex w-full items-center justify-center text-black bg-gray-100 px-4 text-lg uppercase transition">
+                    {quantity}
+                  </div>
+                  <button
+                    onClick={() => addQuantity()}
+                    className="flex items-center justify-center rounded-r-md bg-gray-200 px-4 transition hover:bg-black hover:text-white"
+                  >
+                    +
+                  </button>
+                </div>
                 <div className="flex mt-6">
                   <span className="title-font font-medium text-xl md:text-2xl text-gray-900">
-                    Total Price: ${product.price}
+                    Total Price: ${product.price * quantity}
                   </span>
+
                   <Toaster
                     richColors={true}
                     className=""

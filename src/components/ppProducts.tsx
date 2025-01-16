@@ -5,6 +5,8 @@ import { FaRegEye } from "react-icons/fa";
 import { useCart } from "../context/cartContext";
 import { useNavigate } from "react-router-dom";
 import { Toaster, toast } from "sonner";
+import Rater from "react-rater";
+import "react-rater/lib/react-rater.css";
 
 type Product = {
   id: number;
@@ -106,13 +108,20 @@ const Products = () => {
                       {product.title.split(" ").slice(0, 4).join(" ")}
                     </h2>
 
-                    <div className="mt-2 flex items-center gap-2">
-                      
-
-                      <p className="text-sm font-medium text-gray-900 dark:text-white">
-                        4.9
-                      </p>
-                      
+                    <div className="mt-2 ">
+                      <span className="flex  flex-row items-center text-xl md:text-2xl ">
+                        {/*rater */}
+                        <div className="flex">
+                          <Rater
+                            total={5}
+                            rating={product.rating.rate}
+                            interactive={false}
+                          />
+                        </div>
+                        <span className="text-xl text-gray-600 ml-3">
+                          +{product.rating.count} reviews
+                        </span>
+                      </span>
                     </div>
 
                     <div className="mt-4 flex items-center justify-between gap-4">
@@ -130,7 +139,7 @@ const Products = () => {
                         onClick={() => {
                           addToCart(product);
                         }}
-                        className="bg-red-500 "
+                        className="bg-[#8c2643]"
                         placeholder={undefined}
                         onPointerEnterCapture={""}
                         onPointerLeaveCapture={""}

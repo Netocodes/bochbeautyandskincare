@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Logo from "../assets/logo.svg";
 import { CgMenuRight } from "react-icons/cg";
 import { GiShoppingCart } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
@@ -25,16 +26,18 @@ export const Navbar = () => {
   return (
     <div className="bg-black/10">
       <div className="px-2 fixed top-0 mx-auto w-full backdrop-blur-xl">
-        <nav className="bg-[#8c2643] z-[50]  py-4 w-full md:max-w-[76rem] rounded-lg my-3 md:rounded-full mx-auto flex items-center justify-between  px-8 md:px-20">
+        <nav className="bg-[#ffffff]/75  z-[50]  py-4 w-full md:max-w-[76rem] rounded-lg my-3 md:rounded-full mx-auto flex items-center justify-between  px-8 md:px-20">
           {/* logo */}
           <div>
-            <h1 className="w-[50px] h-[50px] bg-white">Boch</h1>
+            {/* <h1 className="w-[80px] h-[60px] bg-white">Boch</h1> */}
+            <img className="size-16" src={Logo} alt="Navbar logo" />
+            {/* <Logo /> */}
           </div>
           {/* Laptop Screen */}
           <div className="hidden md:flex items-center md:gap-x-3 lg:gap-x-8  justify-center">
             {navArray.map((items) => (
               <div key={items.id}>
-                <ul className="flex  md:text-md lg:text-lg font-semibold  text-white/75">
+                <ul className="flex  md:text-md lg:text-lg font-semibold  text-[#8c2643]">
                   <li>
                     <Link className="hover:text-red" to={items.link}>
                       {items.text}
@@ -47,12 +50,15 @@ export const Navbar = () => {
           {/* Mobile Screen */}
           <div className="flex text-white items-center gap-3">
             <div className={isOpen ? "hidden" : "md:flex"}>
-              <div className="flex">
-                <GiShoppingCart size={32} />
+              <div className="flex text-[#8c2643]">
+                <GiShoppingCart className="text-[#8c2643]" size={32} />
                 <div className="-mt-2 font-bold ">{cartItems.length}</div>
               </div>
             </div>
-            <div onClick={handleNav} className="flex  md:hidden ">
+            <div
+              onClick={handleNav}
+              className="flex  md:hidden text-[#8c2643] "
+            >
               {isOpen ? (
                 <AiOutlineClose size={32} />
               ) : (

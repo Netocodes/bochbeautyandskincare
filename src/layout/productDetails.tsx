@@ -4,7 +4,7 @@ const ProductDetail = () => {
   return (
     <div>
       <div>
-        <section className="bg-red-300 w-full h-dvh py-12">
+        <section className=" w-full h-dvh ">
           <div>
             <>
               <Details />
