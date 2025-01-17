@@ -1,10 +1,11 @@
 import { Button } from "@material-tailwind/react";
 import { useState, useEffect } from "react";
-import { CiHeart } from "react-icons/ci";
+
 import { FaRegEye } from "react-icons/fa";
+import { IoMdHeart } from "react-icons/io";
 import { useCart } from "../context/cartContext";
 import { useNavigate } from "react-router-dom";
-import { Toaster, toast } from "sonner";
+import { Toaster } from "sonner";
 import Rater from "react-rater";
 import "react-rater/lib/react-rater.css";
 
@@ -21,8 +22,9 @@ type Product = {
 const Products = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setloading] = useState(false);
+
   const navigate = useNavigate();
-  const { addToCart } = useCart();
+  const { addToCart, likePost } = useCart();
   useEffect(() => {
     fetchProducts();
   }, []);
@@ -52,6 +54,7 @@ const Products = () => {
       });
     }
   };
+
   return (
     <div className="w-full bg-white/50 overflow-y-auto">
       <h1 className=" text-3xl">Products</h1>
@@ -94,12 +97,12 @@ const Products = () => {
                         >
                           <FaRegEye size={20} />
                         </div>
-                        <CiHeart
-                          onClick={() =>
-                            toast.success("You've Liked this post")
-                          }
+                        <IoMdHeart
+                          onClick={() => {
+                            likePost(product);
+                          }}
                           size={20}
-                          className=" text-red-500"
+                          className="text-red-500"
                         />
                       </div>
                     </div>

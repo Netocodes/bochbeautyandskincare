@@ -1,6 +1,6 @@
 import { Button } from "@material-tailwind/react";
 import ProductShowcase from "../components/productshowcase";
-
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 const BestSellers = () => {
   return (
@@ -41,13 +41,15 @@ const BestSellers = () => {
           >
             <ProductShowcase />
             <div className="absolute mt-6 right-2 md:mt-8 md:right-2 lg:mt-8 lg:right-2">
-              <Button
-                children="Veiw More"
-                className="bg-[#8c2643]"
-                placeholder={undefined}
-                onPointerEnterCapture={undefined}
-                onPointerLeaveCapture={undefined}
-              />
+              <Link to={"/productPage"}>
+                <Button
+                  children="Veiw More"
+                  className="bg-[#8c2643]"
+                  placeholder={undefined}
+                  onPointerEnterCapture={undefined}
+                  onPointerLeaveCapture={undefined}
+                />
+              </Link>
             </div>
           </motion.div>
         </div>

@@ -19,7 +19,7 @@ function App() {
           <ComingSoonPage />
         ) : (
           <div>
-            <Router basename="/bochbeautyandskincare">
+            <Router basename={import.meta.env.BASE_URL}>
               <div className="fixed top-0 z-[50]">
                 <Navbar />
               </div>

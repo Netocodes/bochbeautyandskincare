@@ -13,12 +13,15 @@ type Product = {
 const CartContext = createContext<
   | {
       cartItems: Product[];
+      like: Product[];
       addToCart: (item: Product) => void;
+      likePost: (item: Product) => void;
     }
   | undefined
 >(undefined);
 export const CartProvider = ({ children }: providerType) => {
   const [cartItems, setCartItems] = useState<Product[]>([]);
+  const [like, setLiked] = useState<Product[]>([]);
 
   <Toaster
     richColors
@@ -37,9 +40,13 @@ export const CartProvider = ({ children }: providerType) => {
       }
     }
   };
+  const likePost = (item: Product) => {
+    setLiked((prevLiked) => [...prevLiked, item]);
+    toast.success("Added to Favorite");
+  };
 
   return (
-    <CartContext.Provider value={{ cartItems, addToCart }}>
+    <CartContext.Provider value={{ cartItems, like, addToCart, likePost }}>
       {children}
     </CartContext.Provider>
   );

@@ -3,6 +3,7 @@ import Logo from "../assets/logo.svg";
 import { CgMenuRight } from "react-icons/cg";
 import { GiShoppingCart } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
+
 import { Link } from "react-router-dom";
 import { useCart } from "../context/cartContext";
 interface navitem {
@@ -26,11 +27,15 @@ export const Navbar = () => {
   return (
     <div className="bg-black/10">
       <div className="px-2 fixed top-0 mx-auto w-full backdrop-blur-xl">
-        <nav className="bg-[#ffffff]/75  z-[50]  py-4 w-full md:max-w-[76rem] rounded-lg my-3 md:rounded-full mx-auto flex items-center justify-between  px-8 md:px-20">
+        <nav className="bg-[#fcf4de]  z-[50]  py-2 w-full md:max-w-[76rem] rounded-lg my-3 md:rounded-full mx-auto flex items-center justify-between  px-8 md:px-20">
           {/* logo */}
-          <div>
+          <div className="w-[150px] h-[auto] md:w-[180px] md:h-auto">
             {/* <h1 className="w-[80px] h-[60px] bg-white">Boch</h1> */}
-            <img className="size-16" src={Logo} alt="Navbar logo" />
+            <img
+              className="object-cover w-full h-[80px]"
+              src={Logo}
+              alt="Navbar logo"
+            />
             {/* <Logo /> */}
           </div>
           {/* Laptop Screen */}
@@ -49,7 +54,7 @@ export const Navbar = () => {
           </div>
           {/* Mobile Screen */}
           <div className="flex text-white items-center gap-3">
-            <div className={isOpen ? "hidden" : "md:flex"}>
+            <div className={isOpen ? "hidden" : "md:flex flex-row gap-x-3"}>
               <div className="flex text-[#8c2643]">
                 <GiShoppingCart className="text-[#8c2643]" size={32} />
                 <div className="-mt-2 font-bold ">{cartItems.length}</div>
