@@ -9,13 +9,11 @@ export default defineConfig(() => {
   const isVercel = process.env.VERCEL_URL;
 
   // Set the base path conditionally
-  const basePath =
-    isGitHubPages || isVercel
-      ? "/bochbeautyandskincare/" // For GitHub Pages or Vercel
-      : "/"; // For local development
+  const basePath = isGitHubPages || isVercel ? "/bochbeautyandskincare/" : "/";
 
   return {
     build: {
+      outDir: 'dist',
       rollupOptions: {
         output: {
           manualChunks: {

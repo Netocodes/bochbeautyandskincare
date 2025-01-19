@@ -16,7 +16,7 @@ const AdProduct = () => {
           damping: 25, // Less damping for a sharper snap
         }}
       >
-        <div className="max-w-[85rem] px-8 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+        <div className="w-full md:max-w-[85rem]  px-8 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
           <div className="md:grid md:grid-cols-2 md:items-center md:gap-6 xl:gap-32">
             <div>
               <img

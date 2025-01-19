@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Logo from "../assets/logo.svg";
+import Logo from "../assets/logo2.svg";
 import { CgMenuRight } from "react-icons/cg";
 import { GiShoppingCart } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
@@ -29,10 +29,10 @@ export const Navbar = () => {
       <div className="px-2 fixed top-0 mx-auto w-full backdrop-blur-xl">
         <nav className="bg-[#fcf4de]  z-[50]  py-2 w-full md:max-w-[76rem] rounded-lg my-3 md:rounded-full mx-auto flex items-center justify-between  px-8 md:px-20">
           {/* logo */}
-          <div className="w-[150px] h-[auto] md:w-[180px] md:h-auto">
+          <div className="w-[150px] h-[auto] bg-[#8c2643] rounded-lg md:w-[150px] md:h-auto">
             {/* <h1 className="w-[80px] h-[60px] bg-white">Boch</h1> */}
             <img
-              className="object-cover w-full h-[80px]"
+              className="object-contain w-full h-[80px]"
               src={Logo}
               alt="Navbar logo"
             />
@@ -74,38 +74,39 @@ export const Navbar = () => {
           <div
             className={
               isOpen
-                ? " bg-black/90  fixed flex flex-col py-12 gap-y-12 md:hidden left-0 top-0 w-[80%] h-full border-r border-r-gray-900  ease-in-out duration-500"
+                ? " bg-[#D3D3D3]/75  fixed flex flex-col py-12 gap-y-12 md:hidden left-0 top-0 w-[80%] h-full border-r border-r-gray-900  ease-in-out duration-500"
                 : "  ease-in-out w-[80%] duration-500 fixed top-0 bottom-0 left-[-100%]"
             }
           >
-            <div className="bg-black  flex flex-col py-12 gap-y-12">
+            <div className="bg-[#D3D3D3]  flex flex-col py-12 gap-y-12">
               {/* Mobile Logo */}
-              <h1 className="w-full text-3xl font-bold text-[#00df9a] m-4">
+              <h1 className="w-full text-3xl font-bold text-[#8c2643] m-4">
                 Navigation Menu
               </h1>
 
               {/* Mobile Navigation Items */}
-              <div className="bg-black">
+              <div className="bg-[#bebcbc] flex flex-col gap-y-3">
                 {navArray.map((item) => (
-                  <ul key={item.id} className="text-white text-xl gap-y-4 ">
-                    <li className="p-4 border-b rounded-xl hover:bg-[#00df9a] duration-300 hover:text-black cursor-pointer border-gray-600">
-                      <Link
-                        className="hover:text-red"
-                        onClick={() => {
-                          setTimeout(() => {
-                            setOpen(false);
-                          }, 200);
-                        }}
-                        to={item.link}
-                      >
+                  <ul key={item.id} className="text-[#2e2a2b] text-xl gap-y-4 ">
+                    <Link
+                      className=""
+                      onClick={() => {
+                        setTimeout(() => {
+                          setOpen(false);
+                        }, 200);
+                      }}
+                      to={item.link}
+                    >
+                      <li className="p-4 border-y rounded-xl transition ease-in duration-300 hover:bg-[#8c2643] hover:text-white font-semibold cursor-pointer border-[#8c2643]">
                         {item.text}
-                      </Link>
-                    </li>
+                      </li>
+                    </Link>
                   </ul>
                 ))}
               </div>
 
-              <div className="flex items-center justify-end px-5 text-white">
+              <div className="flex items-center justify-end px-5 text-[#8c2643]">
+                cart total:
                 <GiShoppingCart size={42} />
                 <div className="-mt-3 ">{cartItems.length}</div>
               </div>

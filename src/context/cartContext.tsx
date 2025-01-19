@@ -14,6 +14,7 @@ const CartContext = createContext<
   | {
       cartItems: Product[];
       like: Product[];
+
       addToCart: (item: Product) => void;
       likePost: (item: Product) => void;
     }
@@ -40,6 +41,13 @@ export const CartProvider = ({ children }: providerType) => {
       }
     }
   };
+  // const TotalPrice = (items: Product[]) => {
+  //   if (items === null || cartItems.length === 0) {
+  //     alert("nothing dey here my gee");
+  //   }
+  //   const price = cartItems.map((item) => item.price );
+  //   return price;
+  // };
   const likePost = (item: Product) => {
     setLiked((prevLiked) => [...prevLiked, item]);
     toast.success("Added to Favorite");
