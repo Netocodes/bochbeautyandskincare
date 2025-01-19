@@ -9,11 +9,11 @@ export default defineConfig(() => {
   const isVercel = process.env.VERCEL_URL;
 
   // Set the base path conditionally
-  const basePath = isGitHubPages || isVercel ? "/bochbeautyandskincare/" : "/";
+  const basePath = isGitHubPages || isVercel ? "/bochbeautyandskincare/" : "./";
 
   return {
     build: {
-      outDir: 'dist',
+      outDir: "dist",
       rollupOptions: {
         output: {
           manualChunks: {
