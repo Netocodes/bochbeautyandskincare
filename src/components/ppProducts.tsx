@@ -3,11 +3,12 @@ import { useState, useEffect } from "react";
 
 import { FaRegEye } from "react-icons/fa";
 import { IoMdHeart } from "react-icons/io";
-import { useCart } from "../context/cartContext";
+import { useCart } from "../context/usecart";
 import { useNavigate } from "react-router-dom";
-import { Toaster } from "sonner";
+
 import Rater from "react-rater";
 import "react-rater/lib/react-rater.css";
+import { Tooltip } from "flowbite-react";
 
 type Product = {
   id: number;
@@ -39,7 +40,7 @@ const Products = () => {
       setTimeout(() => {
         setProducts(data);
         setloading(false);
-      }, 2000);
+      }, 400);
     } catch (error) {
       console.error("Error fetching products:", error);
     }
@@ -60,13 +61,13 @@ const Products = () => {
       <h1 className=" text-3xl">Products</h1>
 
       {loading ? (
-        <div className="text-5xl text-center">Loading</div>
+        <div className="h-dvh text-5xl text-center">Loading</div>
       ) : (
         <div>
           <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 px-6">
             {products.map((product: Product) => [
               <div key={product.id} className="  ">
-                <div className="rounded-lg border border-gray-200 bg-white/50 p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
+                <div className="rounded-lg border border-gray-200 bg-white/50 p-6 shadow-md dark:border-gray-700 dark:bg-gray-800">
                   <div className="h-56 w-full">
                     <a href="#">
                       <img
@@ -75,6 +76,7 @@ const Products = () => {
                         src={product.image}
                         alt=""
                       />
+                      <p className="sr-only">Netochukwu Codes</p>
                     </a>
                   </div>
 
@@ -95,7 +97,9 @@ const Products = () => {
                             }, 3000);
                           }}
                         >
-                          <FaRegEye size={20} />
+                          <Tooltip content="Veiw This Product" style="light">
+                            <FaRegEye size={20} />
+                          </Tooltip>
                         </div>
                         <IoMdHeart
                           onClick={() => {
@@ -132,15 +136,10 @@ const Products = () => {
                         {product.price}
                       </p>
 
-                      <Toaster
-                        richColors={true}
-                        className=""
-                        position="bottom-right"
-                      />
                       <Button
                         children="Add  cart"
                         onClick={() => {
-                          addToCart(product);
+                          addToCart(product, 1);
                         }}
                         className="bg-[#8c2643]"
                         placeholder={undefined}

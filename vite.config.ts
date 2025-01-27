@@ -4,13 +4,6 @@ import { ghPages } from "vite-plugin-gh-pages";
 
 // https://vite.dev/config/
 export default defineConfig(() => {
-  // Check if we're deploying to GitHub Pages
-  const isGitHubPages = process.env.VITE_GITHUB_PAGES === "true";
-  const isVercel = process.env.VERCEL_URL;
-
-  // Set the base path conditionally
-  const basePath = isGitHubPages || isVercel ? "/bochbeautyandskincare/" : "./";
-
   return {
     build: {
       outDir: "dist",
@@ -28,6 +21,12 @@ export default defineConfig(() => {
       port: 5173,
     },
     plugins: [react(), ghPages()],
-    base: basePath, // Dynamically set base path
+    // base: process.env.GITHUB_PAGES ? "/bochbeautyandskincare/" : "./", // Dynamically set base path
+    // define: {
+    //   "process.env": {
+    //     GITHUB_PAGES: process.env.GITHUB_PAGES,
+    //   },
+    // },
+    base: "./",
   };
 });

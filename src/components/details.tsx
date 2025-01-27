@@ -1,6 +1,6 @@
-import { useCart } from "../context/cartContext";
+import { useCart } from "../context/usecart";
 import { useLocation } from "react-router-dom";
-import { Toaster } from "sonner";
+
 import ErrorPage from "../components/error-page";
 import Rater from "react-rater";
 import "react-rater/lib/react-rater.css";
@@ -18,7 +18,7 @@ type Product = {
 };
 
 const Details = () => {
-  const { addToCart } = useCart();
+  const { addToCart, cartItems, UpdateQuantity } = useCart();
   const location = useLocation();
   const [quantity, setQuantity] = useState<number>(1);
   const { product }: { product: Product } = location.state || {};
@@ -40,7 +40,15 @@ const Details = () => {
       </div>
     );
   }
-
+  const isInCart = cartItems.some((cartItem) => cartItem.id === product.id);
+  const handleAddUpdate = () => {
+    if (isInCart) {
+      UpdateQuantity(product.id, quantity);
+    } else {
+      addToCart(product, quantity);
+    }
+  };
+  const price = product.price * quantity;
   return (
     <div>
       <div className=" container   mx-auto">
@@ -99,24 +107,18 @@ const Details = () => {
                 </div>
                 <div className="flex flex-col md:flex-row  gap-y-4 justify-around mt-6">
                   <span className="title-font font-medium text-xl md:text-2xl text-gray-900">
-                    Total Price: ${product.price * quantity}
+                    Total Price: ${price}
                   </span>
-
-                  <Toaster
-                    richColors={true}
-                    className=""
-                    position="bottom-right"
-                  />
 
                   <div className="flex">
                     <Button
-                      onClick={() => addToCart(product)}
+                      onClick={() => handleAddUpdate()}
                       className="bg-[#8c2643]"
                       placeholder=""
                       onPointerEnterCapture={() => {}}
                       onPointerLeaveCapture={() => {}}
                     >
-                      Add to Cart
+                      {isInCart ? "Update Quantity" : "Add To Cart"}
                     </Button>
                     <button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
                       <svg

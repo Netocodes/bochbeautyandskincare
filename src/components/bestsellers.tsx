@@ -40,7 +40,7 @@ const BestSellers = () => {
             transition={{ duration: 1, ease: "easeIn" }}
           >
             <ProductShowcase />
-            <div className="absolute mt-6 right-2 md:mt-8 md:right-2 lg:mt-8 lg:right-2">
+            <div className="absolute my-6 right-2 md:mt-8 md:right-2 lg:mt-8 lg:right-2">
               <Link to={"/productPage"}>
                 <Button
                   children="Veiw More"

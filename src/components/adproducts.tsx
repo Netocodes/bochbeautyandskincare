@@ -1,19 +1,18 @@
 import { Button } from "@material-tailwind/react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-
+import SlidingText from "../components/slidertext";
 const AdProduct = () => {
   return (
     <div>
       <motion.section
-        className="sm:h-screen md:h-[auto] lg:h-screen flex items-center justify-center overflow-hidden"
+        className="h-auto md:h-[auto] lg:h-screen flex items-center justify-center overflow-hidden"
         initial={{ opacity: 0, y: "50%" }}
         whileInView={{ opacity: 1, y: 0 }} // Move to normal position and become visible
-        viewport={{ once: false }}
+        // viewport={{ once: false }}
         transition={{
-          type: "spring", // Smooth spring animation
-          stiffness: 500, // Higher stiffness for a snappy feel
-          damping: 25, // Less damping for a sharper snap
+          duration: 1,
+          ease: "easeIn",
         }}
       >
         <div className="w-full md:max-w-[85rem]  px-8 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
@@ -55,6 +54,7 @@ const AdProduct = () => {
           </div>
         </div>
       </motion.section>
+      <SlidingText />
     </div>
   );
 };

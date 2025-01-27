@@ -10,7 +10,7 @@ const ChooseUs = () => {
   return (
     <motion.div
       className="py-12"
-      initial={{ opacity: 0, y: "50%" }}
+      initial={{ opacity: 0, y: "20%" }}
       whileInView={{ opacity: 1, y: 0 }} // Move to normal position and become visible
       viewport={{ once: false }}
       transition={{
@@ -31,8 +31,9 @@ const ChooseUs = () => {
             viewport={{ once: false }}
             transition={{ duration: 1, ease: "easeIn" }}
           >
-            <div className="flex justify-center items-center size-12 bg-gray-50/50 border border-gray-200 rounded-full mx-auto dark:bg-neutral-800 dark:border-neutral-700">
-              <FaLeaf className="size-80" />
+            <div className="relative flex justify-center items-center size-20   rounded-lg mx-auto dark:bg-neutral-800 dark:border-neutral-700">
+              <div className="absolute -inset-2 rounded-lg bg-gradient-to-br from-amber-600 via-pink-600 to-fuchsia-600 opacity-50 blur-2xl"></div>
+              <FaLeaf className="size-16 relative z-10" />
             </div>
             <h3 className="text-gray-800 text-xl font-semibold mb-3">
               100% Natural
@@ -50,8 +51,9 @@ const ChooseUs = () => {
             viewport={{ once: false }}
             transition={{ duration: 1, ease: "easeIn" }}
           >
-            <div className="flex justify-center items-center size-12 bg-gray-50/50 border border-gray-200 rounded-full mx-auto dark:bg-neutral-800 dark:border-neutral-700">
-              <VscWorkspaceTrusted className="size-80" />
+            <div className="relative flex justify-center items-center size-20   rounded-lg mx-auto dark:bg-neutral-800 dark:border-neutral-700">
+              <div className="absolute -inset-2 rounded-lg bg-gradient-to-br from-amber-600 via-pink-600 to-fuchsia-600 opacity-50 blur-2xl"></div>
+              <VscWorkspaceTrusted className="size-16 relative z-10" />
             </div>
             <h3 className="text-gray-800 text-xl font-semibold mb-3">
               Tested And Trusted
@@ -68,8 +70,13 @@ const ChooseUs = () => {
             viewport={{ once: false }}
             transition={{ duration: 1, ease: "easeIn" }}
           >
-            <div className="flex justify-center items-center size-12 bg-gray-50/50 border border-gray-200 rounded-full mx-auto dark:bg-neutral-800 dark:border-neutral-700">
-              <BiSupport className="size-80" />
+            {" "}
+            {/* <div className="flex justify-center items-center size-20 bg-black/50 border border-gray-200 rounded-lg mx-auto dark:bg-neutral-800 dark:border-neutral-700">
+              <BiSupport className="size-16" />
+            </div> */}
+            <div className="relative flex justify-center items-center size-20   rounded-lg mx-auto dark:bg-neutral-800 dark:border-neutral-700">
+              <div className="absolute -inset-2 rounded-lg bg-gradient-to-br from-amber-600 via-pink-600 to-fuchsia-600 opacity-50 blur-2xl"></div>
+              <BiSupport className="size-16 relative z-10" />
             </div>
             <h3 className="text-gray-800 text-xl font-semibold mb-3">
               Costumers Support
@@ -87,8 +94,9 @@ const ChooseUs = () => {
             viewport={{ once: false }}
             transition={{ duration: 1, ease: "easeIn" }}
           >
-            <div className="flex justify-center items-center size-12 bg-gray-50/50 border border-gray-200 rounded-full mx-auto dark:bg-neutral-800 dark:border-neutral-700">
-              <LiaShippingFastSolid className="size-80" />
+            <div className="relative flex justify-center items-center size-20   rounded-lg mx-auto dark:bg-neutral-800 dark:border-neutral-700">
+              <div className="absolute -inset-2 rounded-lg bg-gradient-to-br from-amber-600 via-pink-600 to-fuchsia-600 opacity-50 blur-2xl"></div>
+              <LiaShippingFastSolid className="size-16 relative z-10" />
             </div>
             <h3 className="text-gray-800 text-xl font-semibold mb-3">
               International Delivery
@@ -105,8 +113,9 @@ const ChooseUs = () => {
             viewport={{ once: false }}
             transition={{ duration: 1, ease: "easeIn" }}
           >
-            <div className="flex justify-center items-center size-12 bg-gray-50/50 border border-gray-200 rounded-full mx-auto dark:bg-neutral-800 dark:border-neutral-700">
-              <RxTimer className="size-80" />
+            <div className="relative flex justify-center items-center size-20   rounded-lg mx-auto dark:bg-neutral-800 dark:border-neutral-700">
+              <div className="absolute -inset-2 rounded-lg bg-gradient-to-br from-amber-600 via-pink-600 to-fuchsia-600 opacity-50 blur-2xl"></div>
+              <RxTimer className="size-16 relative z-10" />
             </div>
             <h3 className="text-gray-800 text-xl font-semibold mb-3">
               Fast and Reliable
@@ -124,8 +133,9 @@ const ChooseUs = () => {
             viewport={{ once: false }}
             transition={{ duration: 1, ease: "easeIn" }}
           >
-            <div className="flex justify-center items-center size-12 bg-gray-50/50 border border-gray-200 rounded-full mx-auto dark:bg-neutral-800 dark:border-neutral-700">
-              <GrMoney className="size-80" />
+            <div className="relative flex justify-center items-center size-20   rounded-lg mx-auto dark:bg-neutral-800 dark:border-neutral-700">
+              <div className="absolute -inset-2 rounded-lg bg-gradient-to-br from-amber-600 via-pink-600 to-fuchsia-600 opacity-50 blur-2xl"></div>
+              <GrMoney className="size-16 relative z-10" />
             </div>
             <h3 className="text-gray-800 text-xl font-semibold mb-3">
               Communication

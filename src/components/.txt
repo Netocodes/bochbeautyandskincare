@@ -13,3 +13,25 @@ Docker
 Shell scripting
 Linux or similar UNIX type operating systems
 eb Technologies (React,Redux, Typescript, node js, css, Javascript,Testing framework(Jasmine),JIRA) 
+function processDocument(initialdoc, operations ) {
+    let result = initialdoc;
+    for(const operation of operations) {
+        const [action, value] = operation;
+        if(action === 'Add'){
+            result += value
+        } //  append the given value to the document
+        else if (action === 'Delete'){
+result = result.slice(0, -value)
+        } //remove last value of characters
+else{
+    throw new Error(`invalid operation: ${action}`)
+}
+    }
+    return result
+}
+
+//example
+
+const initialdoc = 'Hello';
+const operations = [["Add", "world"], ['Delete', 6], ["Add", "Everyone"]];
+console.log(processDocument(initialdoc, operations))

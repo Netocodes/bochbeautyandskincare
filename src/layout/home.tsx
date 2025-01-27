@@ -9,27 +9,27 @@ const FAQsection = React.lazy(() => import("../components/faq"));
 
 const Homepage = () => {
   return (
-    <div className="-mt-6">
+    <div className="">
       <Helmet>
         <title className="text-[#82878a]">Beauty of Chiri - Homepage</title>
         <meta name="theme-color" content="#8c2643" />
       </Helmet>
-      <div className=" w-full flex flex-col  gap-y-0 overflow-hidden">
+      <div className="w-full flex flex-col  gap-y-0 overflow-hidden">
         <HeroSection />
-        <div style={{ backgroundImage: 'url("/bgImage.svg") ' }}>
+        <div className="bg-[#f3f9fc]">
           <AdProduct />
         </div>
-        <div className="bg-[#D3D3D3]">
+        <div className="bg-[#F1F1F1]">
           <BestSellers />
         </div>
-        <div style={{ backgroundImage: 'url("/bgImage.svg") ' }}>
+        <div className="bg-[#f6f6f6]">
           <ChooseUs />
         </div>
-        <div className="bg-[#D3D3D3]">
+        <div className="bg-[#f3f9fc] shadow-lg">
           <TestimonalPage />
         </div>
 
-        <div style={{ backgroundImage: 'url("/bgImage.svg") ' }}>
+        <div className="bg-[#f6f6f6]">
           <FAQsection />
         </div>
       </div>

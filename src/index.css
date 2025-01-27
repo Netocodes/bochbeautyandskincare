@@ -3,12 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background-image: url("/bgImage.svg");
-  background-size: "cover";
-  background-position: "center";
-  background-repeat: "no-repeat";
-}
 @media (prefers-color-scheme: dark) {
   /* Force light mode even in dark mode */
   html {

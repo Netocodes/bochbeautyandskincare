@@ -2,7 +2,8 @@ import React, { Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ComingSoonPage from "./components/coming-soon";
 import { Navbar } from "./components/navbar";
-import { CartProvider } from "./context/cartContext.tsx";
+import { CartProvider } from "./context/cartProvider";
+import SmoothScrolling from "./utils/smoothScroll.tsx";
 
 function App() {
   const result: boolean = false;
@@ -19,7 +20,7 @@ function App() {
           <ComingSoonPage />
         ) : (
           <div>
-            <Router basename={import.meta.env.BASE_URL}>
+            <Router basename="/bochbeautyandskincare/">
               <div className="fixed top-0 z-[50]">
                 <Navbar />
               </div>
@@ -28,18 +29,20 @@ function App() {
                   <div className="text-4xl text-center">Loading...</div>
                 }
               >
-                <div className="pt-[7rem]">
-                  <Routes>
-                    <Route path="/" element={<Homepage />} />
-                    <Route path="/productPage" element={<ProductPage />} />
-                    <Route path="/Contact" element={<ContactUs />} />
-                    <Route
-                      path="/product/productDetail/"
-                      element={<ProductDetail />}
-                    />
-                    <Route path="*" element={<ErrorPage />} />
-                  </Routes>
-                </div>
+                <SmoothScrolling>
+                  <div className="relative top-32">
+                    <Routes>
+                      <Route path="/" element={<Homepage />} />
+                      <Route path="/productPage" element={<ProductPage />} />
+                      <Route path="/Contact" element={<ContactUs />} />
+                      <Route
+                        path="/product/productDetail/"
+                        element={<ProductDetail />}
+                      />
+                      <Route path="*" element={<ErrorPage />} />
+                    </Routes>
+                  </div>
+                </SmoothScrolling>
               </Suspense>
             </Router>
           </div>
