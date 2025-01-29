@@ -57,7 +57,9 @@ export const Navbar = () => {
             <div className={isOpen ? "hidden" : "md:flex flex-row gap-x-3"}>
               <div className="flex text-[#f6f6f6]">
                 <GiShoppingCart className="text-[#f6f6f6]" size={32} />
-                <div className="-mt-2 font-bold ">{cartItems.length}</div>
+                <div className="-mt-2 text-lg font-bold ">
+                  {cartItems.length}
+                </div>
               </div>
             </div>
             <div

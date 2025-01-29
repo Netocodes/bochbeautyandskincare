@@ -1,6 +1,8 @@
 import { Button } from "@material-tailwind/react";
 import { useState, useEffect } from "react";
 import { FaRegEye } from "react-icons/fa";
+import { MdFavoriteBorder } from "react-icons/md";
+import Bg from "/bgImage.svg";
 import { IoMdHeart } from "react-icons/io";
 import { useCart } from "../context/usecart";
 import { useNavigate } from "react-router-dom";
@@ -22,6 +24,7 @@ export type Product = {
 const Products = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setloading] = useState(false);
+  const [favourite, setFavourite] = useState<boolean>(false);
   // const { data } = useFetch<Product[]>("/products.json");
   const navigate = useNavigate();
   const { addToCart, likePost } = useCart();
@@ -66,8 +69,10 @@ const Products = () => {
           <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 px-6">
             {products.map((product: Product) => [
               <div key={product.id} className="  ">
-                <div className="rounded-lg border border-gray-200 bg-white/50 p-6 shadow-md dark:border-gray-700 dark:bg-gray-800">
-                  <div className="h-56 w-full">
+                <div className="rounded-lg border border-gray-200 bg-[#f6f6f6] p-6 shadow-md dark:border-gray-700 dark:bg-gray-800">
+                  <div
+                    className={`h-56 w-full bg-[url(${Bg})] bg-cover bg-center shadow-lg`}
+                  >
                     <a href="#">
                       <img
                         className="mx-auto h-full "
@@ -97,16 +102,31 @@ const Products = () => {
                           }}
                         >
                           <Tooltip content="Veiw This Product" style="light">
-                            <FaRegEye size={20} />
+                            <FaRegEye className="text-[#8c2643]" size={28} />
                           </Tooltip>
                         </div>
-                        <IoMdHeart
+                        <div
                           onClick={() => {
+                            setFavourite(true);
                             likePost(product);
                           }}
-                          size={20}
-                          className="text-red-500"
-                        />
+                        >
+                          {favourite ? (
+                            <Tooltip
+                              content="Remove from Favourites"
+                              style="light"
+                            >
+                              <IoMdHeart size={28} className="text-[#d82e2e]" />
+                            </Tooltip>
+                          ) : (
+                            <Tooltip content="Add to Favourites" style="light">
+                              <MdFavoriteBorder
+                                size={28}
+                                className="text-[#d82e2e]"
+                              />
+                            </Tooltip>
+                          )}
+                        </div>
                       </div>
                     </div>
 

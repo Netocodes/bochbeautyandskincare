@@ -42,7 +42,7 @@ export const CartProvider = ({ children }: providerType) => {
   const likePost = (item: Product) => {
     const isInLiked = cartItems.some((items) => items.id === item.id);
     if (isInLiked) {
-      alert("Youve Added This already");
+      alert("You've Added This already");
     } else {
       setLiked((prevLiked) => [...prevLiked, item]);
       toast.success("Added to Favorite");

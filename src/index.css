@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 html {
-  font-family: "Playfair Display", serif;
+  font-family: "Georgia ", serif;
   scroll-behavior: smooth;
 }
 @media (prefers-color-scheme: dark) {
