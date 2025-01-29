@@ -65,11 +65,9 @@ const HeroSection = () => {
     },
   ];
 
-  console.table(images);
-
   return (
     <div>
-      <div className="w-full  h-[80dvh] md:h-[60dvh] lg:h-[80dvh]">
+      <div className="w-full bg-[#9b6060] h-[80dvh] md:h-[60dvh] lg:h-[80dvh]">
         <Carousel
           indicators={true}
           slideInterval={5000}
@@ -85,7 +83,7 @@ const HeroSection = () => {
                 >
                   {/* Text over the image */}
                   <motion.div
-                    className="absolute left-0 w-full lg:w-[800px] py-32 p-6 space-y-8 bg-gray-500/25 bg-clip-padding backdrop-filter  backdrop-blur bg-opacity-0 backdrop-saturate-100 backdrop-contrast-150 z-50 flex flex-col items-left justify-center lg:ml-12 my-4"
+                    className="absolute left-0 w-full lg:w-[800px] py-32  px-6 space-y-4 bg-gray-500/25 bg-clip-padding backdrop-filter  backdrop-blur bg-opacity-0 backdrop-saturate-100 backdrop-contrast-150 z-50 flex flex-col items-left justify-center lg:pl-12 my-4"
                     initial={{ opacity: 0, x: 50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{
@@ -94,14 +92,14 @@ const HeroSection = () => {
                       ease: "easeInOut",
                     }}
                   >
-                    <h1 className="text-white text-5xl font-bold text-left bg-[#8c2643]/75 shadow-lg py-8 px-6 sm:text-6xl md:text-5xl">
+                    <h1 className="text-white text-3xl font-bold text-left bg-[#8c2643]/75 shadow-lg py-2 md:py-8 px-6 sm:text-6xl md:text-5xl">
                       {data.text}
                     </h1>
-                    <p className="max-w-xl  text-white bg-gray-800/50 backdrop-blur-lg py-4  text-base text-left sm:text-lg md:text-xl px-6">
+                    <p className="max-w-xl mx-auto text-white bg-gray-800/50 backdrop-blur-lg py-4  text-base text-left sm:text-lg md:text-xl px-6">
                       {data.description}
                     </p>
                     <Button
-                      className="bg-[#8c2643] text-white w-1/3 mx-auto"
+                      className="bg-[#8c2643] text-white px-8 mx-auto"
                       ripple={true}
                       placeholder={undefined}
                       onPointerEnterCapture={undefined}

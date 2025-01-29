@@ -1,6 +1,5 @@
 import { Button } from "@material-tailwind/react";
 import { useState, useEffect } from "react";
-
 import { FaRegEye } from "react-icons/fa";
 import { IoMdHeart } from "react-icons/io";
 import { useCart } from "../context/usecart";
@@ -10,7 +9,7 @@ import Rater from "react-rater";
 import "react-rater/lib/react-rater.css";
 import { Tooltip } from "flowbite-react";
 
-type Product = {
+export type Product = {
   id: number;
   title: string;
   price: number;
@@ -23,7 +22,7 @@ type Product = {
 const Products = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setloading] = useState(false);
-
+  // const { data } = useFetch<Product[]>("/products.json");
   const navigate = useNavigate();
   const { addToCart, likePost } = useCart();
   useEffect(() => {
@@ -33,7 +32,7 @@ const Products = () => {
   const fetchProducts: () => void = async () => {
     setloading(true);
     try {
-      const response = await fetch("/products.json");
+      const response = await fetch(`${import.meta.env.BASE_URL}products.json`);
 
       const data = await response.json();
 

@@ -20,6 +20,7 @@ export default defineConfig(() => {
       host: "0.0.0.0", // Allow access from any device on the network
       port: 5173,
     },
+
     plugins: [react(), ghPages()],
     // base: process.env.GITHUB_PAGES ? "/bochbeautyandskincare/" : "./", // Dynamically set base path
     // define: {
@@ -27,6 +28,8 @@ export default defineConfig(() => {
     //     GITHUB_PAGES: process.env.GITHUB_PAGES,
     //   },
     // },
-    base: "./",
+
+    base:
+      process.env.NODE_ENV === "production" ? "/bochbeautyandskincare/" : "/",
   };
 });
