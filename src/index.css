@@ -3,10 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  font-family: "Georgia ", serif;
-  scroll-behavior: smooth;
-}
 @media (prefers-color-scheme: dark) {
   /* Force light mode even in dark mode */
   html {

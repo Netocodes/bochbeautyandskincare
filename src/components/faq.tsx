@@ -13,21 +13,18 @@ const FAQsection = () => {
         </p>
       </div>
       <div className="md:w-[56rem] px-4 mx-auto my-6">
-        <Accordion
-          collapseAll
-          className="bg-gray-100 shadow-lg border border-[#8c2643] "
-        >
-          <Accordion.Panel className="tansition-all duration-400 ease-in-out">
-            <Accordion.Title className="text-[#3b3030] hover:bg-[#8c2643] hover:text-white font-semibold  dark:text-white dark:hover:bg-gray-800 data-[state=open]:bg-[#8c2643] dark:data-[state=open]:bg-gray-800 transition-colors duration-200">
+        <Accordion collapseAll>
+          <Accordion.Panel>
+            <Accordion.Title className="text-gray-700 hover:bg-[#8c2643] hover:text-white font-semibold  dark:text-white dark:hover:bg-gray-800 data-[state=open]:bg-[#8c2643] dark:data-[state=open]:bg-gray-800 transition-colors duration-200">
               What is Flowbite?
             </Accordion.Title>
-            <Accordion.Content className="bg-[#f8e6e6]">
-              <p className="mb-2 font-medium leading-tight text-gray-800">
+            <Accordion.Content className="bg-gray-100 dark:bg-gray-800">
+              <p className="mb-2 text-gray-600 dark:text-gray-300">
                 Flowbite is an open-source library of interactive components
                 built on top of Tailwind CSS including buttons, dropdowns,
                 modals, navbars, and more.
               </p>
-              <p className="font-medium leading-tight text-gray-800">
+              <p className="text-gray-600 dark:text-gray-300">
                 Check out this guide to learn how to&nbsp;
                 <a
                   href="https://flowbite.com/docs/getting-started/introduction/"
@@ -41,17 +38,17 @@ const FAQsection = () => {
             </Accordion.Content>
           </Accordion.Panel>
 
-          <Accordion.Panel className="tansition-all duration-400 ease-in-out">
-            <Accordion.Title className="text-[#000000] hover:bg-[#8c2643] hover:text-white font-semibold dark:text-white dark:hover:bg-gray-800 data-[state=open]:bg-[#8c2643] dark:data-[state=open]:bg-gray-800 transition-colors duration-200">
+          <Accordion.Panel>
+            <Accordion.Title className="text-gray-700 hover:bg-[#8c2643] hover:text-white font-semibold dark:text-white dark:hover:bg-gray-800 data-[state=open]:bg-[#8c2643] dark:data-[state=open]:bg-gray-800 transition-colors duration-200">
               Is there a Figma file available?
             </Accordion.Title>
-            <Accordion.Content className="bg-[#f8e6e6]">
-              <p className="mb-2 font-medium leading-tight text-gray-800">
+            <Accordion.Content className="bg-gray-100 dark:bg-gray-800">
+              <p className="mb-2 text-gray-600 dark:text-gray-300">
                 Flowbite is first conceptualized and designed using the Figma
                 software so everything you see in the library has a design
                 equivalent in our Figma file.
               </p>
-              <p className="font-medium leading-tight text-gray-800">
+              <p className="text-gray-600 dark:text-gray-300">
                 Check out the
                 <a
                   href="https://flowbite.com/figma/"
@@ -65,27 +62,27 @@ const FAQsection = () => {
             </Accordion.Content>
           </Accordion.Panel>
 
-          <Accordion.Panel className="tansition-all duration-400 ease-in-out">
-            <Accordion.Title className="text-[#000000] hover:bg-[#8c2643] hover:text-white font-semibold dark:text-white dark:hover:bg-gray-800 data-[state=open]:bg-[#8c2643] dark:data-[state=open]:bg-gray-800 transition-colors duration-200">
+          <Accordion.Panel>
+            <Accordion.Title className="text-gray-700 hover:bg-[#8c2643] hover:text-white font-semibold dark:text-white dark:hover:bg-gray-800 data-[state=open]:bg-[#8c2643] dark:data-[state=open]:bg-gray-800 transition-colors duration-200">
               What are the differences between Flowbite and Tailwind UI?
             </Accordion.Title>
-            <Accordion.Content className="bg-[#f8e6e6]">
-              <p className="mb-2 font-medium leading-tight text-gray-800">
+            <Accordion.Content className="bg-gray-100 dark:bg-gray-800">
+              <p className="mb-2 text-gray-600 dark:text-gray-300">
                 The main difference is that the core components from Flowbite
                 are open source under the MIT license, whereas Tailwind UI is a
                 paid product. Another difference is that Flowbite relies on
                 smaller and standalone components, whereas Tailwind UI offers
                 sections of pages.
               </p>
-              <p className="mb-2 font-medium leading-tight text-gray-800">
+              <p className="mb-2 text-gray-600 dark:text-gray-300">
                 However, we actually recommend using both Flowbite, Flowbite
                 Pro, and even Tailwind UI as there is no technical reason
                 stopping you from using the best of two worlds.
               </p>
-              <p className="mb-2 font-medium leading-tight text-gray-800">
+              <p className="mb-2 text-gray-600 dark:text-gray-300">
                 Learn more about these technologies:
               </p>
-              <ul className="list-disc pl-5 font-medium leading-tight text-gray-800">
+              <ul className="list-disc pl-5 text-gray-600 dark:text-gray-300">
                 <li>
                   <a
                     href="https://flowbite.com/pro/"
@@ -106,27 +103,27 @@ const FAQsection = () => {
               </ul>
             </Accordion.Content>
           </Accordion.Panel>
-          <Accordion.Panel className="tansition-all duration-400 ease-in-out">
-            <Accordion.Title className="text-[#000000] hover:bg-[#8c2643] hover:text-white font-semibold dark:text-white dark:hover:bg-gray-800 data-[state=open]:bg-[#8c2643] dark:data-[state=open]:bg-gray-800 transition-colors duration-200">
+          <Accordion.Panel>
+            <Accordion.Title className="text-gray-700 hover:bg-[#8c2643] hover:text-white font-semibold dark:text-white dark:hover:bg-gray-800 data-[state=open]:bg-[#8c2643] dark:data-[state=open]:bg-gray-800 transition-colors duration-200">
               What are the differences between Flowbite and Tailwind UI?
             </Accordion.Title>
-            <Accordion.Content className="bg-[#f8e6e6]">
-              <p className="mb-2 font-medium leading-tight text-gray-800">
+            <Accordion.Content className="bg-gray-100 dark:bg-gray-800">
+              <p className="mb-2 text-gray-600 dark:text-gray-300">
                 The main difference is that the core components from Flowbite
                 are open source under the MIT license, whereas Tailwind UI is a
                 paid product. Another difference is that Flowbite relies on
                 smaller and standalone components, whereas Tailwind UI offers
                 sections of pages.
               </p>
-              <p className="mb-2 font-medium leading-tight text-gray-800">
+              <p className="mb-2 text-gray-600 dark:text-gray-300">
                 However, we actually recommend using both Flowbite, Flowbite
                 Pro, and even Tailwind UI as there is no technical reason
                 stopping you from using the best of two worlds.
               </p>
-              <p className="mb-2 font-medium leading-tight text-gray-800">
+              <p className="mb-2 text-gray-600 dark:text-gray-300">
                 Learn more about these technologies:
               </p>
-              <ul className="list-disc pl-5 font-medium leading-tight text-gray-800">
+              <ul className="list-disc pl-5 text-gray-600 dark:text-gray-300">
                 <li>
                   <a
                     href="https://flowbite.com/pro/"
@@ -147,27 +144,27 @@ const FAQsection = () => {
               </ul>
             </Accordion.Content>
           </Accordion.Panel>
-          <Accordion.Panel className="tansition-all duration-400 ease-in-out">
-            <Accordion.Title className="text-[#000000] hover:bg-[#8c2643] hover:text-white font-semibold dark:text-white dark:hover:bg-gray-800 data-[state=open]:bg-[#8c2643] dark:data-[state=open]:bg-gray-800 transition-colors duration-200">
+          <Accordion.Panel>
+            <Accordion.Title className="text-gray-700 hover:bg-[#8c2643] hover:text-white font-semibold dark:text-white dark:hover:bg-gray-800 data-[state=open]:bg-[#8c2643] dark:data-[state=open]:bg-gray-800 transition-colors duration-200">
               What are the differences between Flowbite and Tailwind UI?
             </Accordion.Title>
-            <Accordion.Content className="bg-[#f8e6e6]">
-              <p className="mb-2 font-medium leading-tight text-gray-800">
+            <Accordion.Content className="bg-gray-100 dark:bg-gray-800">
+              <p className="mb-2 text-gray-600 dark:text-gray-300">
                 The main difference is that the core components from Flowbite
                 are open source under the MIT license, whereas Tailwind UI is a
                 paid product. Another difference is that Flowbite relies on
                 smaller and standalone components, whereas Tailwind UI offers
                 sections of pages.
               </p>
-              <p className="mb-2 font-medium leading-tight text-gray-800">
+              <p className="mb-2 text-gray-600 dark:text-gray-300">
                 However, we actually recommend using both Flowbite, Flowbite
                 Pro, and even Tailwind UI as there is no technical reason
                 stopping you from using the best of two worlds.
               </p>
-              <p className="mb-2 font-medium leading-tight text-gray-800">
+              <p className="mb-2 text-gray-600 dark:text-gray-300">
                 Learn more about these technologies:
               </p>
-              <ul className="list-disc pl-5 font-medium leading-tight text-gray-800">
+              <ul className="list-disc pl-5 text-gray-600 dark:text-gray-300">
                 <li>
                   <a
                     href="https://flowbite.com/pro/"

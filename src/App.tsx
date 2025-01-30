@@ -20,9 +20,7 @@ function App() {
           <ComingSoonPage />
         ) : (
           <div>
-            <Router
-              basename={import.meta.env.PROD ? "/bochbeautyandskincare" : ""}
-            >
+            <Router basename="/bochbeautyandskincare/">
               <div className="fixed top-0 z-[50]">
                 <Navbar />
               </div>
@@ -32,7 +30,7 @@ function App() {
                 }
               >
                 <SmoothScrolling>
-                  <div className="relative top-28">
+                  <div className="relative top-32">
                     <Routes>
                       <Route path="/" element={<Homepage />} />
                       <Route path="/productPage" element={<ProductPage />} />

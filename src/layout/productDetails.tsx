@@ -1,16 +1,18 @@
 import Details from "../components/details";
-import { Productdetailcrumb } from "../layout/breadcrumbs/crumbs";
+
 const ProductDetail = () => {
   return (
-    <section className=" w-full h-dvh ">
+    <div>
       <div>
-        <div className="mt-4">
-          <Productdetailcrumb />
-        </div>
-
-        <Details />
+        <section className=" w-full h-dvh ">
+          <div>
+            <>
+              <Details />
+            </>
+          </div>
+        </section>
       </div>
-    </section>
+    </div>
   );
 };
 
