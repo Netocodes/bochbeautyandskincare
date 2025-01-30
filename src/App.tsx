@@ -21,7 +21,11 @@ function App() {
         ) : (
           <div>
             <Router
-              basename={import.meta.env.PROD ? "/bochbeautyandskincare" : ""}
+              basename={
+                import.meta.env.MODE === "production"
+                  ? "/bochbeautyandskincare"
+                  : "/"
+              }
             >
               <div className="fixed top-0 z-[50]">
                 <Navbar />
