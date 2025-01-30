@@ -26,10 +26,10 @@ export const Navbar = () => {
   ];
   return (
     <div className="bg-black/10">
-      <div className="px-2 fixed top-0 mx-auto w-full bg-white/50 lg:backdrop-blur-xl">
-        <nav className="bg-[#fff6ed]/75  z-[50]  py-2 w-full md:max-w-[76rem] rounded-lg my-3 md:rounded-full mx-auto flex items-center justify-between  px-8 md:px-20">
+      <div className="px-2 fixed top-0 mx-auto w-full bg-[#7c6f6f]/75  md:bg-gray-500 md:bg-clip-padding md:backdrop-filter  md:backdrop-blur-sm md:bg-opacity-40 md:backdrop-saturate-100 md:backdrop-contrast-10">
+        <nav className="bg-[#8c2643]/90  z-[50] shadow-lg py-2 w-full md:max-w-[76rem] rounded-lg my-3 md:rounded-full mx-auto flex items-center justify-between  px-8 md:px-20">
           {/* logo */}
-          <div className="w-[130px] h-[auto] bg-[#8c2643] rounded-lg md:w-[150px] md:h-auto">
+          <div className="w-[130px] h-[auto] bg-[#852743]/50 rounded-lg md:w-[150px] md:h-auto">
             {/* <h1 className="w-[80px] h-[60px] bg-white">Boch</h1> */}
             <img
               className="object-contain w-full h-[80px]"
@@ -42,7 +42,7 @@ export const Navbar = () => {
           <div className="hidden md:flex items-center md:gap-x-3 lg:gap-x-8  justify-center">
             {navArray.map((items) => (
               <div key={items.id}>
-                <ul className="flex  md:text-md lg:text-lg font-semibold  text-[#8c2643]">
+                <ul className="flex  md:text-md lg:text-lg font-semibold  text-[#f6f6f6]">
                   <li>
                     <Link className="hover:text-red" to={items.link}>
                       {items.text}
@@ -55,14 +55,14 @@ export const Navbar = () => {
           {/* Mobile Screen */}
           <div className="flex text-white items-center gap-3">
             <div className={isOpen ? "hidden" : "md:flex flex-row gap-x-3"}>
-              <div className="flex text-[#8c2643]">
-                <GiShoppingCart className="text-[#8c2643]" size={32} />
+              <div className="flex text-[#f6f6f6]">
+                <GiShoppingCart className="text-[#f6f6f6]" size={32} />
                 <div className="-mt-2 font-bold ">{cartItems.length}</div>
               </div>
             </div>
             <div
               onClick={handleNav}
-              className="flex  md:hidden text-[#8c2643] "
+              className="flex  md:hidden text-[#f6f6f6] "
             >
               {isOpen ? (
                 <AiOutlineClose size={32} />

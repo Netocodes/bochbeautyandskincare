@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+
 const HeroSection = React.lazy(() => import("../components/herosection"));
 const BestSellers = React.lazy(() => import("../components/bestsellers"));
 const AdProduct = React.lazy(() => import("../components/adproducts"));
@@ -28,7 +29,6 @@ const Homepage = () => {
         <div className="bg-[#f3f9fc] shadow-lg">
           <TestimonalPage />
         </div>
-
         <div className="bg-[#f6f6f6]">
           <FAQsection />
         </div>
