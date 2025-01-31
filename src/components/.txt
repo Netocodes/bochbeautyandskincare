@@ -35,3 +35,5 @@ else{
 const initialdoc = 'Hello';
 const operations = [["Add", "world"], ['Delete', 6], ["Add", "Everyone"]];
 console.log(processDocument(initialdoc, operations))
+
+ phonePassword = 8080;

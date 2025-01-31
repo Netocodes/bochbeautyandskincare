@@ -15,25 +15,12 @@ const Herosection = () => {
                 services. Indulge in exquisite flavors and extraordinary
                 moments.
               </p>
-
-              <div className="mt-12 flex max-sm:flex-col sm:justify-center lg:justify-start gap-4">
-                <div className="rounded-md shadow">
-                  <button className="w-full flex items-center justify-center px-8 py-3 text-base tracking-wide rounded-md text-indigo-600 bg-white hover:text-indigo-500 hover:bg-indigo-100 transition duration-150 ease-in-out">
-                    npm run
-                  </button>
-                </div>
-                <div>
-                  <button className="w-full flex items-center justify-center px-8 py-3 text-base tracking-wide rounded-md text-white bg-indigo-500 hover:bg-indigo-400 transition duration-150 ease-in-out">
-                    Learn More
-                  </button>
-                </div>
-              </div>
             </div>
           </div>
           <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
             <img
               className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-              src="https://readymadeui.com/hotel-img.webp"
+              src="https://i.pinimg.com/736x/93/af/44/93af446a185deb1a5a1e873c751505f4.jpg"
               alt="Delicious Food"
             />
           </div>

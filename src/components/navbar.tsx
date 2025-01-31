@@ -55,9 +55,11 @@ export const Navbar = () => {
           {/* Mobile Screen */}
           <div className="flex text-white items-center gap-3">
             <div className={isOpen ? "hidden" : "md:flex flex-row gap-x-3"}>
-              <div className="flex text-[#f6f6f6]">
+              <div className="flex  text-[#f6f6f6]">
                 <GiShoppingCart className="text-[#f6f6f6]" size={32} />
-                <div className="-mt-2 font-bold ">{cartItems.length}</div>
+                <div className="-mt-2 px-1 text-lg font-semibold text-[#f6f6f6]">
+                  {cartItems.length}
+                </div>
               </div>
             </div>
             <div
@@ -108,7 +110,14 @@ export const Navbar = () => {
               <div className="flex items-center justify-end px-5 text-lg underline underline-offset-8 text-[#8c2643]">
                 Cart Total:
                 {/* <GiShoppingCart size={42} /> */}
-                <div className="px-4 "> ₺{TotalPrice()}.00</div>
+                <div className="px-4 font-sans">
+                  {" "}
+                  ₺{" "}
+                  <span className="text-lg font-semibold leading-tight">
+                    {TotalPrice()}
+                  </span>
+                  .00
+                </div>
               </div>
             </div>
           </div>

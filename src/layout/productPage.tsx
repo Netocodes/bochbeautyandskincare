@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
+
 const HeroSection = React.lazy(() => import("../components/ppHerosection"));
 const Products = React.lazy(() => import("../components/ppProducts"));
 const ProductPage = () => {
@@ -19,9 +21,18 @@ const ProductPage = () => {
 
   return (
     <div>
+      <Helmet>
+        <title className="text-[#82878a]">
+          Shop Page - Discover Amazing Products
+        </title>
+        <meta name="theme-color" content="#89dfc2" />
+      </Helmet>
+
       {loading ? (
         <div>
-          <h1 className="text-4xl">Loading...</h1>
+          <h1 className="text-4xl flex items-center justify-center h-screen">
+            Loading...
+          </h1>
         </div>
       ) : (
         <div className="">
