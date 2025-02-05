@@ -37,3 +37,11 @@ const operations = [["Add", "world"], ['Delete', 6], ["Add", "Everyone"]];
 console.log(processDocument(initialdoc, operations))
 
  phonePassword = 8080;
+ const routes = [
+   {
+      path: "/callback",
+      Component: AuthCallback,
+   }
+]
+
+export const router = createBrowserRouter([...routes]);
