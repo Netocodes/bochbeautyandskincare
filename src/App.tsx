@@ -1,17 +1,23 @@
-import React, { Suspense } from "react";
+import { lazy, Suspense, useRef } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import ComingSoonPage from "./components/coming-soon";
 import { Navbar } from "./components/navbar";
 import { CartProvider } from "./context/cartProvider";
 import SmoothScrolling from "./utils/smoothScroll.tsx";
-
-function App() {
+import Loadingscreen from "./components/loadingScreen";
+const App = () => {
+  // Layout Routes
   const result: boolean = false;
-  const Homepage = React.lazy(() => import("./layout/home"));
-  const ProductPage = React.lazy(() => import("./layout/productPage"));
-  const ContactUs = React.lazy(() => import("./layout/Contact"));
-  const ProductDetail = React.lazy(() => import("./layout/productDetails"));
-  const ErrorPage = React.lazy(() => import("./components/error-page"));
+  const Homepage = lazy(() => import("./layout/home"));
+
+  const ProductPage = lazy(() => import("./layout/productPage"));
+  const ContactUs = lazy(() => import("./layout/Contact"));
+  const ProductDetail = lazy(() => import("./layout/productDetails"));
+  const ErrorPage = lazy(() => import("./components/error-page"));
+  // Layout Routes
+  const serviceRef = useRef(null);
+  const faqRef = useRef(null);
 
   return (
     <div>
@@ -28,17 +34,20 @@ function App() {
               }
             >
               <div className="fixed top-0 z-[50]">
-                <Navbar />
+                <Suspense fallback={<Loadingscreen />}>
+                  <Navbar serviceRef={serviceRef} faqRef={faqRef} />
+                </Suspense>
               </div>
-              <Suspense
-                fallback={
-                  <div className="text-4xl text-center">Loading...</div>
-                }
-              >
+              <Suspense fallback={<Loadingscreen />}>
                 <SmoothScrolling>
                   <div className="relative top-28">
                     <Routes>
-                      <Route path="/" element={<Homepage />} />
+                      <Route
+                        path="/"
+                        element={
+                          <Homepage serviceRef={serviceRef} faqRef={faqRef} />
+                        }
+                      />
                       <Route path="/productPage" element={<ProductPage />} />
                       <Route path="/Contact" element={<ContactUs />} />
                       <Route
@@ -56,6 +65,6 @@ function App() {
       </CartProvider>
     </div>
   );
-}
+};
 
 export default App;

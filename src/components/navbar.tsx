@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import Logo from "../assets/logo2.svg";
 import { CgMenuRight } from "react-icons/cg";
 import { GiShoppingCart } from "react-icons/gi";
@@ -10,20 +10,31 @@ interface navitem {
   id: number;
   text: string;
   link: string;
+  refs?: React.RefObject<HTMLDivElement>;
 }
-export const Navbar = () => {
+interface NavbarProps {
+  serviceRef: React.RefObject<HTMLDivElement>;
+  faqRef: React.RefObject<HTMLDivElement>;
+}
+export const Navbar: React.FC<NavbarProps> = ({ serviceRef, faqRef }) => {
   const [isOpen, setOpen] = useState(false);
+
   const { cartItems, TotalPrice } = useCart();
   const handleNav = () => {
     setOpen(!isOpen);
   };
   const navArray: navitem[] = [
-    { id: 1, text: "Homepage", link: "./" },
+    { id: 1, text: "Homepage", link: "/" },
     { id: 2, text: "Shop", link: "./productPage" },
-    { id: 3, text: "Services", link: "./services" },
-    { id: 4, text: "FAQ's", link: "./faqs" },
+    { id: 3, text: "Services", refs: serviceRef, link: "/" },
+    { id: 4, text: "FAQ's", refs: faqRef, link: "/" },
     { id: 5, text: "Contact", link: "./Contact" },
   ];
+  const scrollToSection = (section: React.RefObject<HTMLDivElement>) => {
+    if (section.current) {
+      section.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <div className="bg-black/10">
       <div className="px-2 fixed top-0 mx-auto w-full bg-[#7c6f6f]/75  md:bg-gray-500 md:bg-clip-padding md:backdrop-filter  md:backdrop-blur-sm md:bg-opacity-40 md:backdrop-saturate-100 md:backdrop-contrast-10">
@@ -44,7 +55,16 @@ export const Navbar = () => {
               <div key={items.id}>
                 <ul className="flex  md:text-md lg:text-lg font-semibold  text-[#f6f6f6]">
                   <li>
-                    <Link className="hover:text-red" to={items.link}>
+                    <Link
+                      className="hover:text-red"
+                      to={items.link}
+                      onClick={() => {
+                        setOpen(false);
+                        if (items.refs) {
+                          scrollToSection(items.refs);
+                        }
+                      }}
+                    >
                       {items.text}
                     </Link>
                   </li>
@@ -80,26 +100,31 @@ export const Navbar = () => {
                 : "  ease-in-out w-[80%] duration-500 fixed top-0 bottom-0 left-[-100%]"
             }
           >
-            <div className="bg-[#D3D3D3]  flex flex-col  py-12 gap-y-12">
+            <div className="bg-[#D3D3D3]  flex flex-col px-4 py-12 gap-y-12">
               {/* Mobile Logo */}
               <h1 className="w-full text-3xl font-bold text-[#8c2643] m-4">
                 Navigation Menu
               </h1>
 
               {/* Mobile Navigation Items */}
-              <div className="bg-[#bebcbc] flex flex-col  gap-y-3">
+              <div className="bg-[#f0ede3] py-6 rounded-md px-5 flex flex-col  gap-y-3">
                 {navArray.map((item) => (
-                  <ul key={item.id} className="text-[#2e2a2b] text-md gap-y-4 ">
+                  <ul
+                    key={item.id}
+                    className="text-[#2e2a2b]  text-md gap-y-4 "
+                  >
                     <Link
                       className=""
+                      onLoad={() => setOpen(false)}
                       onClick={() => {
-                        setTimeout(() => {
-                          setOpen(false);
-                        }, 200);
+                        setOpen(false);
+                        if (item.refs) {
+                          scrollToSection(item.refs);
+                        }
                       }}
                       to={item.link}
                     >
-                      <li className="p-4 border-y rounded-xl transition ease-in  duration-300 hover:bg-[#8c2643] hover:text-white font-semibold cursor-pointer border-[#8c2643]">
+                      <li className="p-4 w-full border-y rounded-md transition ease-in  duration-300 hover:bg-[#8c2643] hover:text-white font-semibold cursor-pointer border-[#8c2643]">
                         {item.text}
                       </li>
                     </Link>

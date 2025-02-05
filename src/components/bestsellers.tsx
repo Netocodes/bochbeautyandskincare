@@ -5,17 +5,17 @@ import { motion } from "framer-motion";
 const BestSellers = () => {
   return (
     <div className=" py-8 md:py-20">
-      <motion.div
-        className="sm:w-full md:max-w-[70%] lg:max-w-[60%] bg-black/10  mx-auto flex items-center justify-center py-3 px-2 my-3"
-        initial={{ opacity: 0, x: "50%" }}
-        whileInView={{ opacity: 1, x: 0 }} // Move to normal position and become visible
-        viewport={{ once: false }}
-        transition={{ duration: 1, ease: "easeIn" }}
-      >
-        <h1 className="sm:text-2xl md:text-3xl leading-tight tracking-tight">
-          These Are Our Trending products{" "}
-        </h1>
-      </motion.div>
+      <div className="sm:w-full md:max-w-[70%] lg:max-w-[60%] bg-black/10  mx-auto flex items-center justify-center py-3 px-2 my-3">
+        <motion.h1
+          className="text-2xl text-gray-600 md:text-3xl leading-tight tracking-tight"
+          initial={{ opacity: 0, x: "50%" }}
+          whileInView={{ opacity: 1, x: 0 }} // Move to normal position and become visible
+          viewport={{ once: false }}
+          transition={{ duration: 1, ease: "easeIn" }}
+        >
+          Customer Favorites{" "}
+        </motion.h1>
+      </div>
       <section className=" md:max-w-[85rem] my-4 flex flex-col gap-y-20 md:flex-col lg:flex-row items-center justify-around py-8 md:w-full md:px-5  lg:px-9 lg:py-8 mx-auto">
         <motion.div
           className="w-[250px] -ml-24 md:-ml-[350px] lg:-ml-[20px] md:w-[350px] lg:w-[350px] lg:-mt-28 py-6 md:py-12 lg:py-8 px-4 outline-red-500 outline-dashed outline-4 rounded-tr-[62px]"
@@ -24,7 +24,7 @@ const BestSellers = () => {
           viewport={{ once: false }}
           transition={{ duration: 1, ease: "easeIn" }}
         >
-          <h2 className="text-xl md:text-3xl lg:text-2xl leading-tight tracking-tighter font-normal text-gray-900">
+          <h2 className="text-xl md:text-3xl lg:text-2xl leading-10 tracking-tighter font-normal text-gray-900">
             These are some of our{" "}
             <i className="text-2xl font-bold md:text-4xl lg:text-5xl">
               "Best Sellers"

@@ -6,17 +6,7 @@ import Rater from "react-rater";
 import "react-rater/lib/react-rater.css";
 import { useState } from "react";
 import { Button } from "@material-tailwind/react";
-type Product = {
-  id: number;
-  title: string;
-  price: number;
-  description: string;
-  image: string;
-  category: string;
-  quantity: number;
-  rating: { rate: number; count: number };
-};
-
+import { Product } from "../components/ppProducts";
 const Details = () => {
   const { addToCart, cartItems, UpdateQuantity } = useCart();
   const location = useLocation();
@@ -57,7 +47,7 @@ const Details = () => {
             <div className=" flex flex-col md:flex-row  items-center justify-around gap-x-8 gap-y-8">
               {" "}
               {/* image part*/}
-              <div className="w-full md:w-1/2 h-[500px] backdrop-blur-lg">
+              <div className="w-full md:w-1/2 h-[200px] md:h-[500px] backdrop-blur-lg">
                 <img
                   alt="ecommerce"
                   className="w-full h-full object-contain object-center rounded border border-gray-200"
@@ -88,6 +78,15 @@ const Details = () => {
                   </span>
                 </div>
                 <p className="leading-relaxed">{product.description}</p>
+                <div className="ml-6 py-6">
+                  <ul>
+                    {product.features.map((feature) => (
+                      <li className="list-disc" key={feature}>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
                 <div className="w-2/3 my-3  flex h-8 items-stretch text-gray-600">
                   <button
                     onClick={() => reduceQuantity()}

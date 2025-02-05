@@ -15,52 +15,52 @@ const HeroSection = () => {
   const images: imageType[] = [
     {
       id: 1,
-      text: "Explore Our Natural skincare Collections",
+      text: "Explore Our Natural Skincare Collections",
       image:
         "https://i.pinimg.com/236x/4f/08/9b/4f089bc73104781bf12fcd058f572372.jpg",
       description:
-        "You're absolutely right! Using negative margins like lg:-ml-12 is often a quick solution but might not always be the most ideal, especially when considering responsive ",
-      link: "/shop",
+        "Discover our range of natural skincare products, designed to nourish and rejuvenate your skin for a healthier, glowing look.",
+      link: "/productPage",
       button: "Shop Now",
     },
     {
       id: 2,
-      text: "Visit Our shop Section to browse our beauty & skinare remedies",
+      text: "Certified Skincare Formulator Delivering Beauty Worldwide.",
       image:
         "https://i.pinimg.com/474x/cf/12/4e/cf124e2e4aeff0a99778a8d7f01c5414.jpg",
       description:
-        "You're absolutely right! Using negative margins like lg:-ml-12 is often a quick solution but might not always be the most ideal, especially when considering responsive ",
-      link: "/shop",
-      button: "Shop Now",
+        "Our certified skincare experts create custom formulas that cater to your unique skin needs, available for delivery worldwide.",
+      link: "/contact",
+      button: "Book Appointement",
     },
     {
       id: 3,
-      text: "We do International Deliveries",
+      text: "We Do International Deliveries",
       image:
         "https://i.pinimg.com/736x/d0/3d/d7/d03dd7488c5db21e5627a3eb02a9b86c.jpg",
       description:
-        "You're absolutely right! Using negative margins like lg:-ml-12 is often a quick solution but might not always be the most ideal, especially when considering responsive ",
-      link: "/shop",
+        "No matter where you are, our skincare products can reach you with international delivery options for a seamless shopping experience.",
+      link: "/productPage",
       button: "Shop Now",
     },
     {
       id: 4,
-      text: "Talk with a Proffesional",
+      text: "Explore Our Products",
       image:
         "https://i.pinimg.com/736x/2b/6c/b1/2b6cb17633d27ea7291912d2aa9fe1aa.jpg",
       description:
-        "You're absolutely right! Using negative margins like lg:-ml-12 is often a quick solution but might not always be the most ideal, especially when considering responsive ",
-      link: "/shop",
+        "Browse through our carefully curated selection of skincare and beauty products to find what’s perfect for you.",
+      link: "/productPage",
       button: "Shop Now",
     },
     {
       id: 5,
-      text: "See our Testimonails",
+      text: "See Our Testimonials",
       image:
         "https://i.pinimg.com/736x/0b/a3/f8/0ba3f818f5c2311e1e8fa13f726fb564.jpg",
       description:
-        "You're absolutely right! Using negative margins like lg:-ml-12 is often a quick solution but might not always be the most ideal, especially when considering responsive ",
-      link: "/shop",
+        "Read reviews and testimonials from happy customers who have transformed their skincare routine with our products.",
+      link: "/",
       button: "Shop Now",
     },
   ];
@@ -70,7 +70,7 @@ const HeroSection = () => {
       <div className="w-full bg-[#9b6060] h-[80dvh] md:h-[60dvh] lg:h-[80dvh]">
         <Carousel
           indicators={true}
-          slideInterval={5000}
+          slideInterval={7000}
           leftControl
           rightControl
         >
@@ -92,10 +92,10 @@ const HeroSection = () => {
                       ease: "easeInOut",
                     }}
                   >
-                    <h1 className="text-white text-3xl font-bold text-left bg-[#8c2643]/75 shadow-lg py-2 md:py-8 px-6 sm:text-6xl md:text-5xl">
+                    <h1 className="text-white text-3xl font-bold text-left bg-[#8c2643]/75 shadow-lg py-8 md:py-8 px-6 sm:text-6xl md:text-5xl">
                       {data.text}
                     </h1>
-                    <p className="max-w-xl mx-auto text-white bg-gray-800/50 backdrop-blur-lg py-4  text-base text-left sm:text-lg md:text-xl px-6">
+                    <p className="max-w-xl mx-auto font-semibold  bg-gray-300/75 backdrop-blur-md py-6  text-lg text-left sm:text-lg md:text-xl px-6">
                       {data.description}
                     </p>
                     <Button
@@ -109,7 +109,7 @@ const HeroSection = () => {
                     </Button>
                   </motion.div>
                   <img
-                    className="absolute w-full object-contain"
+                    className="absolute w-full object-cover"
                     src={data.image}
                     alt=""
                   />

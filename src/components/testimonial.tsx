@@ -4,7 +4,7 @@ import { FaRegCircleLeft, FaRegCircleRight } from "react-icons/fa6";
 
 const TestimonalPage = () => {
   return (
-    <div className="py-12">
+    <div id="testimonial" className="py-12">
       <div className="w-full md:w-1/3 mx-auto px-3 py-4 bg-[#8c2643] ">
         <h2 className="text-lg text-center text-gray-200 font-bold leading-tight">
           Here Our some of our favorite Responses
