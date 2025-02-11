@@ -18,7 +18,10 @@ const App = () => {
   const PaymentPage = lazy(() => import("./payment/paymentPage"));
   const ErrorPage = lazy(() => import("./components/error-page"));
   // Layout Routes
-
+  const Basename = import.meta.env.MODE === "production"
+  ? "/bochbeautyandskincare"
+  : "/";
+  
   return (
     <div>
       <CartProvider>
@@ -27,11 +30,7 @@ const App = () => {
         ) : (
           <div>
             <Router
-              basename={
-                import.meta.env.MODE === "production"
-                  ? "/bochbeautyandskincare"
-                  : "/"
-              }
+              basename={Basename }
             >
               <div className="fixed top-0 z-[50]">
                 <Suspense fallback={<Loadingscreen />}>

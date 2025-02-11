@@ -1,9 +1,12 @@
-import { defineConfig } from "vite";
+import { defineConfig, loadEnv } from "vite";
 import react from "@vitejs/plugin-react";
 import { ghPages } from "vite-plugin-gh-pages";
 
 // https://vite.dev/config/
-export default defineConfig(() => {
+export default defineConfig(({ mode }) => {
+  // Load environment variables based on the mode (development/production)
+  const env = loadEnv(mode, process.cwd(), '');
+
   return {
     build: {
       outDir: "dist",
@@ -22,14 +25,8 @@ export default defineConfig(() => {
     },
 
     plugins: [react(), ghPages()],
-    // base: process.env.GITHUB_PAGES ? "/bochbeautyandskincare/" : "./", // Dynamically set base path
-    // define: {
-    //   "process.env": {
-    //     GITHUB_PAGES: process.env.GITHUB_PAGES,
-    //   },
-    // },
-
-    base:
-      process.env.NODE_ENV === "production" ? "/bochbeautyandskincare/" : "/",
+    
+    // Dynamically set the base path using the environment variable VITE_BASE_PATH
+    base: env.VITE_BASE_PATH || '/',  // Use VITE_BASE_PATH for production, fallback to '/' for development
   };
 });
