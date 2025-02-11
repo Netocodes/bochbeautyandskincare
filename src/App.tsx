@@ -18,9 +18,8 @@ const App = () => {
   const PaymentPage = lazy(() => import("./payment/paymentPage"));
   const ErrorPage = lazy(() => import("./components/error-page"));
   // Layout Routes
-  const Basename = import.meta.env.MODE === "production"
-  ? "/bochbeautyandskincare"
-  : "/";
+  const Basename = import.meta.env.VITE_BASE_PATH;
+ 
   
   return (
     <div>
