@@ -73,10 +73,10 @@ const Products = () => {
 
     // Search logic
     const isSearchMatch =
-      product.title.toLowerCase().includes(search.toLowerCase()) ||
-      product.description.toLowerCase().includes(search.toLowerCase()) ||
-      product.category.toLowerCase().includes(search.toLowerCase()) ||
-      product.seo.toLowerCase().includes(search.toLowerCase()) ||
+      product.title.trim().toLowerCase().includes(search.toLowerCase()) ||
+      product.description.trim().toLowerCase().includes(search.toLowerCase()) ||
+      product.category.trim().toLowerCase().includes(search.toLowerCase()) ||
+      product.seo.trim().toLowerCase().includes(search.toLowerCase()) ||
       product.features.join(" ").toLowerCase().includes(search.toLowerCase());
 
     // Return only products that match both search and category filters
@@ -123,7 +123,9 @@ const Products = () => {
       </div>
 
       {loading ? (
-        <div className="  h-dvh text-5xl flex items-center ">Loading</div>
+        <div className="w-full h-dvh text-5xl flex items-center ">
+          Loadieffreng
+        </div>
       ) : (
         <div className=" ">
           <div className="w-full  bg-gray-500/45 flex flex-col-reverse md:flex-row items-center justify-between gap-4 px-4 md:px-12 py-4">
@@ -271,8 +273,8 @@ const Products = () => {
                     </div>
 
                     <div className="pt-6">
-                      <div className="mb-4 flex items-center justify-between gap-4">
-                        <span className="me-2 rounded bg-primary-100 px-2.5 py-0.5 text-md font-medium text-primary-800 dark:bg-primary-900 dark:text-primary-300">
+                      <div className="mb-4 flex items-center justify-between  gap-4">
+                        <span className="me-2  bg-red-100 rounded-md shadow-lg px-2.5 py-0.5 text-md font-medium text-primary-800 dark:bg-primary-900 dark:text-primary-300">
                           {" "}
                           Shipped Worldwide
                         </span>
@@ -327,23 +329,26 @@ const Products = () => {
                       </h2>
 
                       <div className="mt-2 ">
-                        <span className="flex  flex-row items-center text-xl md:text-2xl ">
+                        <span className="w-full flex  flex-row items-center text-xl md:text-2xl ">
                           {/*rater */}
-                          <div className="flex">
+                          <div className="flex ">
                             <Rater
                               total={5}
                               rating={product.rating.rate}
                               interactive={false}
                             />
                           </div>
-                          <span className="text-xl text-gray-600 ml-3">
+                          <span className="text-lg md:text-xl text-gray-600 ml-3">
                             +{product.rating.count} reviews
                           </span>
                         </span>
                       </div>
 
                       <div className="mt-4 flex items-center justify-between gap-4">
-                        <p className="text-2xl font-extrabold leading-tight text-gray-900 dark:text-white">
+                        <p className="text-2xl md:text-3xl font-extrabold leading-tight text-gray-700 dark:text-white">
+                          <span className="font-normal  text-2xl text-gray-700">
+                            ₺
+                          </span>{" "}
                           {product.price}
                         </p>
 

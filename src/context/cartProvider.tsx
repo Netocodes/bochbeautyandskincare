@@ -48,7 +48,11 @@ export const CartProvider = ({ children }: providerType) => {
       toast.success("Added to Favorite");
     }
   };
-
+  const RemoveCart = (itemId: number) => {
+    const updatedCart = cartItems.filter((item) => item.id !== itemId);
+    setCartItems(updatedCart);
+    return updatedCart;
+  };
   return (
     <CartContext.Provider
       value={{
@@ -58,6 +62,7 @@ export const CartProvider = ({ children }: providerType) => {
         TotalPrice,
         addToCart,
         likePost,
+        RemoveCart,
       }}
     >
       {children}

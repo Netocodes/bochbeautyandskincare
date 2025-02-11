@@ -24,7 +24,7 @@ const BestSellers = () => {
           viewport={{ once: false }}
           transition={{ duration: 1, ease: "easeIn" }}
         >
-          <h2 className="text-xl md:text-3xl lg:text-2xl leading-10 tracking-tighter font-normal text-gray-900">
+          <h2 className="text-xl md:text-3xl lg:text-2xl font-sans leading-10 tracking-tighter font-normal text-gray-900">
             These are some of our{" "}
             <i className="text-2xl font-bold md:text-4xl lg:text-5xl">
               "Best Sellers"

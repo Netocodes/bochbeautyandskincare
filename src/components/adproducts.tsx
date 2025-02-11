@@ -17,11 +17,12 @@ const AdProduct = () => {
       >
         <div className="w-full md:max-w-[85rem]  px-8 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
           <div className="md:grid md:grid-cols-2 md:items-center md:gap-6 xl:gap-32">
-            <div>
+            <div className="w-full md:w-[500px] h-[300px] md:h-[500px] bg-[#c9b9b9]">
               <img
-                className="rounded-xl w-[500px]"
+                className="w-full h-full object-cover object-center rounded-xl"
                 src="https://img.freepik.com/free-vector/vector-realistic-dry-stick-deodorant_88138-37.jpg?t=st=1736788881~exp=1736792481~hmac=e082b870090bb0eb169b012afbdb07a0e380e4906088417d9bad35df460b76ae&w=740"
                 alt="Features Image"
+                loading="lazy"
               />
             </div>
 

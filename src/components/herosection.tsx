@@ -67,19 +67,19 @@ const HeroSection = () => {
 
   return (
     <div>
-      <div className="w-full bg-[#9b6060] h-[80dvh] md:h-[60dvh] lg:h-[80dvh]">
+      <div className="w-full bg-[#9b6060] h-[85dvh] md:h-[60dvh] lg:h-[80dvh]">
         <Carousel
-          indicators={true}
-          slideInterval={7000}
+          indicators={false}
+          slideInterval={5000}
           leftControl
           rightControl
         >
           {images.map((data, index) => (
-            <div key={index} className="w-full">
-              <div className="flex flex-col items-center justify-center h-full">
+            <div key={index} className="w-full ">
+              <div className=" flex flex-col items-center justify-center h-full">
                 {/* Div with background image */}
                 <div
-                  className={` relative  bg-center w-full h-full flex items-center justify-center`}
+                  className={` relative   bg-center w-full h-full flex items-center justify-center`}
                 >
                   {/* Text over the image */}
                   <motion.div
@@ -109,7 +109,7 @@ const HeroSection = () => {
                     </Button>
                   </motion.div>
                   <img
-                    className="absolute w-full object-cover"
+                    className="absolute w-full  object-cover object-center"
                     src={data.image}
                     alt=""
                   />
