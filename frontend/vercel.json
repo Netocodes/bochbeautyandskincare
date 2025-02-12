@@ -3,3 +3,16 @@
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
+{
+  "builds": [
+    {
+      "src": "frontend/package.json",  // Specify the package.json inside the frontend folder
+      "use": "@vercel/node"  // Ensure this is the correct builder (you can also use @vercel/static for static sites)
+    }
+  ],
+  "build": {
+    "env": {
+      "VITE_BASE_PATH": "/bochbeautyandskincare"  // If you're using environment variables
+    }
+  }
+}
