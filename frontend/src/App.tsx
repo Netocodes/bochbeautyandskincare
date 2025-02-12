@@ -18,8 +18,7 @@ const App = () => {
   const PaymentPage = lazy(() => import("./payment/paymentPage"));
   const ErrorPage = lazy(() => import("./components/error-page"));
   // Layout Routes
-  const Basename = import.meta.env.VITE_BASE_PATH;
- 
+
   
   return (
     <div>
@@ -29,7 +28,9 @@ const App = () => {
         ) : (
           <div>
             <Router
-              basename={Basename }
+              basename={import.meta.env.MODE === "production"
+                ? "/bochbeautyandskincare"
+                : "/" }
             >
               <div className="fixed top-0 z-[50]">
                 <Suspense fallback={<Loadingscreen />}>
