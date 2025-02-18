@@ -22,7 +22,7 @@ export const Navbar: React.FC = () => {
   const navArray: navitem[] = [
     { id: 1, text: "Homepage", link: "/" },
     { id: 2, text: "Shop", link: "./productPage" },
-    { id: 3, text: "Servvvices", link: "/services" },
+    { id: 3, text: "Services", link: "/services" },
     { id: 4, text: "FAQ's", link: "/FAQ" },
     { id: 5, text: "Contact", link: "./Contact" },
   ];

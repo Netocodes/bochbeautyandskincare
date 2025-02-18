@@ -7,7 +7,7 @@ function SmoothScrolling({ children }: { children: React.ReactNode }) {
     lerp: 0.3,
     duration: 0.2,
     smoothTouch: true, //smooth scroll for touch devices
-    smooth: false,
+    smooth: true,
   };
 
   return (
