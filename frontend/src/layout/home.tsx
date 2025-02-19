@@ -8,6 +8,7 @@ const AdProduct = React.lazy(() => import("../components/adproducts"));
 const ChooseUs = React.lazy(() => import("../components/chooseus"));
 const TestimonalPage = React.lazy(() => import("../components/testimonial"));
 const FAQsection = React.lazy(() => import("../components/faq"));
+const Footer = React.lazy(() => import("../components/footer"));
 
 const Homepage: React.FC = () => {
   return (
@@ -33,6 +34,9 @@ const Homepage: React.FC = () => {
           </div>
           <div className="bg-[#f6f6f6]">
             <FAQsection />
+          </div>
+          <div className="bg-[#f6f6f6]">
+            <Footer />
           </div>
         </div>
       </Suspense>

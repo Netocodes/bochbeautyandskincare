@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ComingSoonPage from "./components/coming-soon";
 import { Navbar } from "./components/navbar";
 import { CartProvider } from "./context/cartProvider";
-import SmoothScrolling from "./utils/smoothScroll.tsx";
+
 import Loadingscreen from "./components/loadingScreen";
 const App = () => {
   // Layout Routes
@@ -38,7 +38,7 @@ const App = () => {
                 </Suspense>
               </div>
               <Suspense fallback={<Loadingscreen />}>
-                <SmoothScrolling>
+                
                   <div className="relative top-28 ">
                     <Routes>
                       <Route path="/" element={<Homepage />} />
@@ -53,7 +53,7 @@ const App = () => {
                       <Route path="*" element={<ErrorPage />} />
                     </Routes>
                   </div>
-                </SmoothScrolling>
+             
               </Suspense>
             </Router>
           </div>

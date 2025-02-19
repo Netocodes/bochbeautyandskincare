@@ -109,7 +109,7 @@ const HeroSection = () => {
                     </Button>
                   </motion.div>
                   <img
-                    className="absolute w-full  object-cover object-center"
+                    className="absolute w-full h-[80dvh]  object-cover object-right"
                     src={data.image}
                     alt=""
                   />

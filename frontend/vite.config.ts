@@ -21,6 +21,7 @@ export default defineConfig(({ mode }) => {
     },
     server: {
       host: "0.0.0.0", // Allow access from any device on the network
+      hmr: true,
       port: 5173,
     },
 
