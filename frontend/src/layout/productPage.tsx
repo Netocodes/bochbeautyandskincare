@@ -6,6 +6,7 @@ const HeroSection = React.lazy(() => import("../components/ppHerosection"));
 const Products = React.lazy(() => import("../components/ppProducts"));
 const TestimonalPage = React.lazy(() => import("../components/testimonial"));
 const Footer = React.lazy(() => import("../components/footer"));
+const SlidingText = React.lazy(() => import("../components/slidertext"));
 
 const ProductPage = () => {
   useEffect(() => {
@@ -23,6 +24,7 @@ const ProductPage = () => {
       <Suspense fallback={<LoadingScreen />}>
         <div className="">
           <HeroSection />
+          <SlidingText />
           <Products />
           <TestimonalPage />
           <div className="bg-[#8c2643]">

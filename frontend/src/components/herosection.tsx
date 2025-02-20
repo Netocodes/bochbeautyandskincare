@@ -67,7 +67,7 @@ const HeroSection = () => {
 
   return (
     <div>
-      <div className="w-full bg-[#9b6060] h-[85dvh] md:h-[60dvh] lg:h-[80dvh]">
+      <div className="w-full  bg-gradient-to-r from-[#fda4af]  to-[#f43f5e] h-[85dvh] md:h-[60dvh] lg:h-[80dvh]">
         <Carousel
           indicators={false}
           slideInterval={5000}
@@ -109,7 +109,7 @@ const HeroSection = () => {
                     </Button>
                   </motion.div>
                   <img
-                    className="absolute w-full h-[80dvh]  object-cover object-right"
+                    className="absolute hero w-full h-[80dvh]  object-cover object-right"
                     src={data.image}
                     alt=""
                   />

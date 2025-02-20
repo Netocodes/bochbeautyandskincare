@@ -69,3 +69,12 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background-color: #f6f6f6; /* Darker thumb color on hover */
 }
+.serHero {
+  border-radius: 100% 0% 0% 100% / 24% 45% 55% 76%   ;
+}
+.serHero2 {
+  border-radius: 100% 0% 94% 6% / 2% 47% 53% 98%    ;
+}
+.hero {
+  border-radius: 100% 0% 100% 0% / 0% 70% 30% 100% ;
+}
