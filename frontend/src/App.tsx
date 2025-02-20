@@ -8,7 +8,7 @@ import { CartProvider } from "./context/cartProvider";
 import Loadingscreen from "./components/loadingScreen";
 const App = () => {
   // Layout Routes
-  const result: boolean = tr;
+  const result: boolean = true;
   const Homepage = lazy(() => import("./layout/home"));
   const CartPage = lazy(() => import("./components/cartPage.tsx"));
 
