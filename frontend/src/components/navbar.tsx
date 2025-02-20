@@ -22,7 +22,7 @@ export const Navbar: React.FC = () => {
   const navArray: navitem[] = [
     { id: 1, text: "Homepage", link: "/" },
     { id: 2, text: "Shop", link: "./productPage" },
-    { id: 3, text: "Services", link: "/services" },
+    { id: 3, text: "Services", link: "/Services" },
     { id: 4, text: "FAQ's", link: "/FAQ" },
     { id: 5, text: "Contact", link: "./Contact" },
   ];
@@ -67,7 +67,7 @@ export const Navbar: React.FC = () => {
           {/* Mobile Screen */}
           <div className="flex text-white items-center gap-x-3">
             <div className={isOpen ? "hidden" : "md:flex flex-row gap-x-3"}>
-              <Link to={"/cart-Items"} className="flex  text-[#f6f6f6]">
+              <Link to={"/cart-Items"} className="flex hover:bg-white/25 px-2 py-3 rounded-xl text-[#f6f6f6]">
                 <GiShoppingCart className="text-[#f6f6f6]" size={32} />
                 <div className="-mt-4 -ml-2 px-1 text-lg font-normal text-[#f6f6f6]">
                   {cartItems.length}

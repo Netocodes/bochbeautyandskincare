@@ -13,6 +13,7 @@ import "react-rater/lib/react-rater.css";
 import { Tooltip } from "flowbite-react";
 import { motion } from "framer-motion";
 import { FaFilter } from "react-icons/fa";
+import Loadingscreen from "./loadingScreen";
 
 // import { FaSortAlphaUp } from "react-icons/fa";
 import {
@@ -124,7 +125,7 @@ const Products = () => {
 
       {loading ? (
         <div className="w-full h-dvh text-5xl flex items-center ">
-          Loadieffreng
+          <Loadingscreen />
         </div>
       ) : (
         <div className=" ">

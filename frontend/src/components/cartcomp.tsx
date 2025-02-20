@@ -74,7 +74,8 @@ const CartComponent = () => {
                   <div className="absolute bottom-0 right-0 flex ">
                     <button
                       type="button"
-                      onClick={() => {
+                      onClick={(e) => {
+                        e.preventDefault();
                         RemoveCart(items.id);
                       }}
                       className="flex rounded p-2 text-center text-gray-500 transition-all duration-200 ease-in-out focus:shadow hover:text-gray-900"
@@ -124,14 +125,14 @@ const CartComponent = () => {
                 onPointerLeaveCapture={undefined}
               >
                 <FaAngleLeft size={20} className="text-gray-800" />
-                <span className="px-2 font-semibold text-lg leading-8 text-[#8c2643]">
+                <span className="px-2 font-normal text-lg capitalize leading-8 text-[#8c2643]">
                   Continue Shopping
                 </span>
               </Button>
             </Link>
             <Link to={"/payment-Page"}>
               <Button
-                className="rounded-full w-full max-w-[280px] py-4 text-center justify-center items-center bg-[#8c2643] font-semibold text-lg text-white flex transition-all duration-500 hover:bg-indigo-700"
+                className="rounded-full w-full max-w-[280px] py-4 text-center justify-center items-center bg-[#8c2643] font-normal text-lg capitalize text-white flex transition-all duration-500 "
                 placeholder={undefined}
                 onPointerEnterCapture={undefined}
                 onPointerLeaveCapture={undefined}

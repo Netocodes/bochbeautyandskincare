@@ -1,3 +1,4 @@
+import{useEffect} from 'react'
 import { useCart } from "../context/usecart";
 import { Button } from "@material-tailwind/react";
 import { MdOutlineShoppingCart } from "react-icons/md";
@@ -5,6 +6,10 @@ import { Link } from "react-router-dom";
 import CartComponent from "./cartcomp";
 
 const CartPage = () => {
+    useEffect(() => {
+      // Scroll to the top of the page when the component mounts
+      window.scrollTo(0, 0);
+    }, []);
   const { cartItems } = useCart();
   if (cartItems.length === 0) {
     return (

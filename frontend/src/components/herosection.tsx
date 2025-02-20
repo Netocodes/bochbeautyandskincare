@@ -27,7 +27,7 @@ const HeroSection = () => {
       id: 2,
       text: "Certified Skincare Formulator Delivering Beauty Worldwide.",
       image:
-        "https://i.pinimg.com/474x/cf/12/4e/cf124e2e4aeff0a99778a8d7f01c5414.jpg",
+        "https://images.unsplash.com/photo-1665686376173-ada7a0031a85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=900&h=700&q=80",
       description:
         "Our certified skincare experts create custom formulas that cater to your unique skin needs, available for delivery worldwide.",
       link: "/contact",

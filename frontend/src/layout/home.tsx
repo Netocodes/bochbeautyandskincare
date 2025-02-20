@@ -1,5 +1,5 @@
 import React from "react";
-import { Suspense } from "react";
+import { Suspense, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import LoadingScreen from "../components/loadingScreen";
 const HeroSection = React.lazy(() => import("../components/herosection"));
@@ -11,6 +11,10 @@ const FAQsection = React.lazy(() => import("../components/faq"));
 const Footer = React.lazy(() => import("../components/footer"));
 
 const Homepage: React.FC = () => {
+  useEffect(() => {
+    // Scroll to the top of the page when the component mounts
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="">
       <Helmet>
@@ -35,7 +39,7 @@ const Homepage: React.FC = () => {
           <div className="bg-[#f6f6f6]">
             <FAQsection />
           </div>
-          <div className="bg-[#f6f6f6]">
+          <div className="bg-[#8c2643]">
             <Footer />
           </div>
         </div>

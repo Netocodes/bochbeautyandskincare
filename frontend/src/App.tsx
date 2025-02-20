@@ -16,6 +16,7 @@ const App = () => {
   const ContactUs = lazy(() => import("./layout/Contact"));
   const ProductDetail = lazy(() => import("./layout/productDetails"));
   const PaymentPage = lazy(() => import("./payment/paymentPage"));
+  const ServicePage = lazy(() => import("./layout/Service"));
   const ErrorPage = lazy(() => import("./components/error-page"));
   // Layout Routes
 
@@ -46,6 +47,7 @@ const App = () => {
                       <Route path="/Contact" element={<ContactUs />} />
                       <Route path="/payment-Page" element={<PaymentPage />} />
                       <Route path="/cart-Items" element={<CartPage />} />
+                      <Route path="/Services" element={<ServicePage />} />
                       <Route
                         path="/product/productDetail/"
                         element={<ProductDetail />}
