@@ -4,8 +4,8 @@
             
                 "rewrites": [
                   {
-                    "source": "/(.*)", 
-                    "destination": "/index.html"
+                    "source": "/(?!.*\\\\.(js|css|png|jpg|jpeg|gif|ico|svg|eot|ttf|woff|woff2|otf))",
+                     "destination": "/index.html"
                   }
                 ]
               }
