@@ -8,7 +8,7 @@ type formFeilds ={
 }
 
 const PersonalInfo = () => {
- const {register, handleSubmit, formState: {errors}} = useForm<formFeilds>()
+ const {register, handleSubmit,  formState: {errors}} = useForm<formFeilds>()
   const { nextStep } = useWizard();
  
          const onSubmit: SubmitHandler<formFeilds> = (data) => {
