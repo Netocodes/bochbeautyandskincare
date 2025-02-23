@@ -5,7 +5,7 @@ const ProductShowcase = () => {
         <a className="group block relative overflow-hidden rounded-lg" href="#">
           <img
             className="w-full size-40 object-cover bg-gray-100 rounded-b-full dark:bg-neutral-800"
-            src="https://flowbite.com/docs/images/carousel/carousel-3.svg"
+            src="https://previews.dropbox.com/p/thumb/AChZ-TcQzqeAnOODgzzA_CPYSjOaH0Ul10WtRx0yt8GpzRMZuzvd-iFDhFxJiVtycZ1Sq2Mv5SMddQlAcNvr6_qM95GrQwN5YmOmYIjiOB9subKedcTv5puWfcDeT-rs3ZK5-zOcQXwQ5I8h0hrL37VMRvu8RIjrOskuoImG1xw4B45bX-pFEW-hgLtNpM__SgosQzUgDZgaG4xA5HyENWBQF8IiJqCRtbf1p5D_lR-sUdMIHYQ_1Kdu8NZYaa8Df93SxwGCMyWM3uALKvaO0WuONp9hFNA4yaAbhpexar68DCa-tYm9P0OmDcO0egIKTr6wGBNDo_BDEecA1ZmKI1Oe/p.jpeg"
             alt="Project"
           />
           <div className="absolute bottom-1 end-1 opacity-0 group-hover:opacity-100 transition">

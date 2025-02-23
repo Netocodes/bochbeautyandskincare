@@ -17,7 +17,7 @@ const HeroSection = () => {
       id: 1,
       text: "Explore Our Natural Skincare Collections",
       image:
-        "https://i.pinimg.com/236x/4f/08/9b/4f089bc73104781bf12fcd058f572372.jpg",
+        "https://i.pinimg.com/736x/4a/82/29/4a822900869f41fe481d02f421fc7123.jpg",
       description:
         "Discover our range of natural skincare products, designed to nourish and rejuvenate your skin for a healthier, glowing look.",
       link: "/productPage",
@@ -37,7 +37,8 @@ const HeroSection = () => {
       id: 3,
       text: "We Do International Deliveries",
       image:
-        "https://i.pinimg.com/736x/d0/3d/d7/d03dd7488c5db21e5627a3eb02a9b86c.jpg",
+        // "https://i.pinimg.com/736x/d0/3d/d7/d03dd7488c5db21e5627a3eb02a9b86c.jpg",
+        "https://i.imghippo.com/files/PbO7m1719014190.png",
       description:
         "No matter where you are, our skincare products can reach you with international delivery options for a seamless shopping experience.",
       link: "/productPage",
@@ -47,7 +48,7 @@ const HeroSection = () => {
       id: 4,
       text: "Explore Our Products",
       image:
-        "https://i.pinimg.com/736x/2b/6c/b1/2b6cb17633d27ea7291912d2aa9fe1aa.jpg",
+        "https://i.pinimg.com/736x/0d/74/f5/0d74f573417beabf6cf21c24caba5920.jpg",
       description:
         "Browse through our carefully curated selection of skincare and beauty products to find what’s perfect for you.",
       link: "/productPage",
@@ -67,7 +68,7 @@ const HeroSection = () => {
 
   return (
     <div>
-      <div className="w-full  bg-gradient-to-r from-[#fda4af]  to-[#f43f5e] h-[85dvh] md:h-[60dvh] lg:h-[80dvh]">
+      <div className="w-full  bg-gradient-to-r from-[#fda4af]  to-[#f43f5e] h-[75dvh] md:h-[60dvh] lg:h-[80dvh]">
         <Carousel
           indicators={false}
           slideInterval={5000}
@@ -109,7 +110,7 @@ const HeroSection = () => {
                     </Button>
                   </motion.div>
                   <img
-                    className="absolute hero w-full h-[80dvh]  object-cover object-right"
+                    className="absolute hero w-full md:w-[95%] h-[75dvh] md:h-[75dvh]  object-cover object-center"
                     src={data.image}
                     alt=""
                   />

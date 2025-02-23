@@ -6,10 +6,19 @@ type providerType = { children: ReactNode };
 export const CartProvider = ({ children }: providerType) => {
   const [cartItems, setCartItems] = useState<Product[]>([]);
   const [like, setLiked] = useState<Product[]>([]);
-
+ 
   useEffect(() => {
-    console.log("Cart Items Updated:", cartItems);
+  window.localStorage.setItem("ProductCart", JSON.stringify(cartItems))
+  // console.log("Sent Items to local Storage")
   }, [cartItems]);
+
+  const data = window.localStorage.getItem("ProductCart")
+ useEffect(() => {
+   if(data !== null){ const dataAch = JSON.parse(data);
+    
+    setCartItems(dataAch)
+   }
+ }, [])
 
   const addToCart = (item: Product, quantity: number) => {
     if (item !== null && item !== undefined) {
@@ -18,9 +27,9 @@ export const CartProvider = ({ children }: providerType) => {
         toast.warning(
           "Item is Already in Your cart, Click on the cart icon to update Quantity"
         );
-        // UpdateQuantity(item.id, quantity);
+      
       } else {
-        console.log(`added Suscefully`);
+        // console.log(`added Suscefully`);
         setCartItems((prevItems) => [...prevItems, { ...item, quantity }]);
         toast.success("Item added to cart");
       }
