@@ -1,18 +1,17 @@
 {
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
-  ]
-}
-{
+  "version": 2,
   "builds": [
     {
-      "src": "frontend/package.json",  // Specify the package.json inside the frontend folder
-      "use": "@vercel/node"  // Ensure this is the correct builder (you can also use @vercel/static for static sites)
+      "src": "frontend/package.json",
+      "use": "@vercel/static-build"
     }
   ],
   "build": {
     "env": {
-      "VITE_BASE_PATH": "/bochbeautyandskincare"  // If you're using environment variables
+      "VITE_BASE_PATH": "/bochbeautyandskincare"
     }
-  }
+  },
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
 }
