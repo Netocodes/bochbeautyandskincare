@@ -3,6 +3,16 @@
   
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
-  ]
-
+  ],
+"builds": [
+    {
+      "src": "frontend/package.json",  
+      "use": "@vercel/node"
+    }
+  ],
+  "build": {
+    "env": {
+      "VITE_BASE_PATH": "/bochbeautyandskincare"  
+    }
+  }
 }
