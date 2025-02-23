@@ -7,7 +7,7 @@ import CartComponent from "./cartcomp";
 
 const CartPage = () => {
     useEffect(() => {
-      // Scroll to the top of the page when the component mounts
+      // Scroll to the top of the pajge when the component mounts
       window.scrollTo(0, 0);
     }, []);
   const { cartItems } = useCart();
