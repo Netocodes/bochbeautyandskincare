@@ -1,37 +1,17 @@
+
+
 {
   "version": 2,
-
-  "headers": [
-    {
-      "source": "/(.*).(js|css|svg|json|woff2|woff|ttf|eot|otf)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=0, must-revalidate"
-        }
-      ]
-    },
-    {
-      "source": "/images/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    },
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=0, must-revalidate"
-        }
-      ]
-    }
-  ],
-
+  
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
-  ]
+  ],
+  
+    "source": "/(.*)",
+    "headers": {
+      "cache-control": "public, max-age=31536000, immutable"
+    },
+  
+  "cleanUrls": true,
+  "trailingSlash": false
 }
