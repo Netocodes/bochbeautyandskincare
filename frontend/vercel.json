@@ -5,7 +5,10 @@
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ],
-  
+  "routes": [
+    { "src": "/assets/(.*)", "dest": "/dist/assets/$1" }, 
+    { "src": "/(.*)", "dest": "/dist/index.html" } 
+  ],
 
   "cleanUrls": true,
   "trailingSlash": false
