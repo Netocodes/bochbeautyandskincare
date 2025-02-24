@@ -30,7 +30,7 @@ const App = () => {
           <div>
             <Router
               basename={import.meta.env.MODE === "production"
-                ? "/bochbeautyandskincare/"
+                ? "/bochbeautyandskincare"
                 : "/" }
             >
               <div className="fixed top-0 z-[50]">
