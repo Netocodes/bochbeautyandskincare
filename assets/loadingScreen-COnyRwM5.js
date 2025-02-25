@@ -1,1 +1,0 @@
-import{j as e}from"./index-g9Q6glD2.js";const s=()=>e.jsx("div",{className:" bg-black relative w-full h-screen overflow-x-hidden",children:e.jsx("div",{className:"absolute inset-0  z-50 flex items-center justify-center",children:e.jsx("div",{className:"w-20 h-20 border-8 border-t-8 text-white border-gray-200 rounded-full animate-spin"})})});export{s as L};
