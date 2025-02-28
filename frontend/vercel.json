@@ -2,11 +2,11 @@
   "version": 2,
   "routes": [
     {
-      "src": "/assets/(.*)",
+      "src": "/bochbeautyandskincare/assets/(.*)",
       "dest": "/dist/assets/$1"
     },
     {
-      "src": "/(.*)",
+      "src": "/bochbeautyandskincare/(.*)",
       "dest": "/dist/index.html"
     }
   ]
