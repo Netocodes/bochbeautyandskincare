@@ -1,12 +1,13 @@
 import { useCart } from "../context/usecart";
-import { useLocation } from "react-router-dom";
-
+import { Link, useLocation } from "react-router-dom";
+import { Toaster, toast } from "sonner";
 import ErrorPage from "../components/error-page";
 import Rater from "react-rater";
 import "react-rater/lib/react-rater.css";
 import { useState } from "react";
 import { Button } from "@material-tailwind/react";
 import { Product } from "../components/ppProducts";
+import { Carousel } from "flowbite-react";
 const Details = () => {
   const { addToCart, cartItems, UpdateQuantity } = useCart();
   const location = useLocation();
@@ -19,13 +20,17 @@ const Details = () => {
     if (quantity > 1) {
       setQuantity(quantity - 1);
     } else {
-      alert("Who the fuck is this");
+      toast.error("The cart Cannnot be below 1")
     }
   };
-
+  <Toaster
+  richColors
+  className="mt-24 md:mt-12 lg:mt-20 z-50"
+  position="top-right"
+/>
   if (!product) {
     return (
-      <div>
+      <div className="w-full ">
         <ErrorPage />
       </div>
     );
@@ -44,15 +49,23 @@ const Details = () => {
       <div className=" container   mx-auto">
         <section className="text-gray-700 body-font overflow-hidden bg-white/50">
           <div className="container px-6 md:px-20 py-24 mx-auto">
-            <div className=" flex flex-col md:flex-row  items-center justify-around gap-x-8 gap-y-8">
+            <div className=" flex flex-col md:flex-row   justify-around gap-x-20 gap-y-8">
               {" "}
               {/* image part*/}
-              <div className="w-full md:w-1/2 h-[200px] md:h-[500px] backdrop-blur-lg">
-                <img
-                  alt="ecommerce"
-                  className="w-full h-full object-contain object-center rounded border border-gray-200"
-                  src={product.image}
-                />
+              <div className="w-full md:w-1/2 flex flex-col  gap-6   backdrop-blur-lg">
+               
+           
+ 
+           <div className="h-[400px] md:h-[500px] w-full bg-black">
+      <Carousel pauseOnHover>
+  {product.detailsImage.map((image) => {
+    return(
+      <img src={image} alt="Details Image" />
+    )
+})}
+      </Carousel>
+    </div>
+ 
               </div>
               <div className="w-full md:w-1/2">
                 {" "}
@@ -78,10 +91,24 @@ const Details = () => {
                   </span>
                 </div>
                 <p className="leading-relaxed">{product.description}</p>
-                <div className="ml-6 py-6">
-                  <ul>
-                    {product.features.map((feature) => (
-                      <li className="list-disc" key={feature}>
+                <div className="py-6 ">
+                  <h3 className="text-gray-900 text-2xl title-font font-medium mb-1">
+                    How To Use:
+                    </h3>
+                    {product.how_to_use.map((use) => (
+                      <div key={use}>
+                        <ol className="list-disc list-inside flex flex-col gap-y-3">
+                          <li>{use}</li>
+                        </ol>
+                        </div>
+                    ))}
+                  
+                </div>
+                <div className=" py-6">
+                  <h3 className="text-gray-900 text-2xl text-center my-4 font-medium ">This Product is Good For:</h3>
+                  <ul className="max-w-md flex flex-col gap-y-2  ">
+                    {product.key_features.map((feature) => (
+                      <li className="text-left" key={feature}>
                         {feature}
                       </li>
                     ))}
@@ -104,34 +131,31 @@ const Details = () => {
                     +
                   </button>
                 </div>
-                <div className="flex flex-col md:flex-row  gap-y-4 justify-around mt-6">
+                <div className="flex flex-col   gap-y-8 justify-between mt-6">
                   <span className="title-font font-medium text-xl md:text-2xl text-gray-900">
                     Total Price: ${price}
                   </span>
 
-                  <div className="flex">
+                  <div className="flex gap-x-4">
                     <Button
                       onClick={() => handleAddUpdate()}
-                      className="bg-[#8c2643]"
+                      className="bg-[#8c2643] hover:bg-[#f6f6f6] hover:text-gray-800 hover:border-2  text-sm rounded-lg  hover:border-[#8c2643]"
                       placeholder=""
                       onPointerEnterCapture={() => {}}
                       onPointerLeaveCapture={() => {}}
                     >
                       {isInCart ? "Update Quantity" : "Add To Cart"}
                     </Button>
-                    <button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
-                      <svg
-                        fill="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        className="w-5 h-5"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
-                      </svg>
-                      <p className="sr-only">button</p>
-                    </button>
+                    <Link to="/cart-Items">
+                    <Button
+                      className="border-[#8c2643] hover:bg-[#8c2643] hover:text-white   bg-[#f6f6f6] text-gray-800 tracking-wide font-semibold  text-sm rounded-3xl border-2"
+                      placeholder=""
+                      onPointerEnterCapture={() => {}}
+                      onPointerLeaveCapture={() => {}}
+                    >
+                      Proceed to Checkout
+                    </Button>
+                    </Link>
                   </div>
                 </div>
               </div>

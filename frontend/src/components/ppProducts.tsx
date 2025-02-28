@@ -22,6 +22,7 @@ import {
   MenuList,
   MenuItem,
 } from "@material-tailwind/react";
+import { getCloudinaryUrl } from "../utils/cloud";
 
 export type Product = {
   id: number;
@@ -29,11 +30,19 @@ export type Product = {
   title: string;
   price: number;
   description: string;
+  detailsImage:[],
+  images: [];
   image: string;
+  imageUrl: string;
   quantity: number;
   rating: { rate: number; count: number };
-  seo: string;
-  features: string[];
+  currency: string;
+  seo: [];
+  net_weight: string;
+  skin_type: string;
+  how_to_use: [];
+  key_features: [];
+  
 };
 
 const Products = () => {
@@ -56,11 +65,22 @@ const Products = () => {
       const response = await fetch(`${import.meta.env.BASE_URL}products.json`);
 
       const data = await response.json();
-
+     
+      
+      const productsWithUrls = data.map((product: Product) => ({
+        ...product,
+        imageUrl: getCloudinaryUrl(product.image, 500, 500), // Example options
+        detailsImage: product.images.map((image) => getCloudinaryUrl(image)), // Example options
+    }));
+     
       setTimeout(() => {
-        setProducts(data);
+        setProducts(productsWithUrls);
+        
         setloading(false);
       }, 100);
+ 
+     console.log(productsWithUrls);
+    
     } catch (error) {
       console.error("Error fetching products:", error);
     }
@@ -77,8 +97,12 @@ const Products = () => {
       product.title.trim().toLowerCase().includes(search.toLowerCase()) ||
       product.description.trim().toLowerCase().includes(search.toLowerCase()) ||
       product.category.trim().toLowerCase().includes(search.toLowerCase()) ||
-      product.seo.trim().toLowerCase().includes(search.toLowerCase()) ||
-      product.features.join(" ").toLowerCase().includes(search.toLowerCase());
+      product.seo.join(" ").toLowerCase().includes(search.toLowerCase()) ||
+      product.key_features.join(' ').toLowerCase().includes(search.toLowerCase());
+      product.how_to_use.join(" ").toLowerCase().includes(search.toLowerCase());
+      product.skin_type.trim().toLowerCase().includes(search.toLowerCase());
+      product.net_weight.trim().toLowerCase().includes(search.toLowerCase());
+      
 
     // Return only products that match both search and category filters
     return isCategoryMatch && isSearchMatch;
@@ -96,12 +120,12 @@ const Products = () => {
   };
   const category = [
     { id: 1, title: "all", icon: "CgSmileNone" },
-    { id: 2, title: "men's clothing", icon: "" },
-    { id: 3, title: "women's clothing", icon: "" },
-    { id: 4, title: "electronics", icon: "" },
-    { id: 5, title: "jewelery", icon: "" },
-    { id: 6, title: "jewelerycopy", icon: "" },
-    // { id: 7, title: "jewelerycopy", icon: "" },
+    { id: 2, title: "Body Scrubs", icon: "" },
+    { id: 3, title: "Body Oils", icon: "" },
+    { id: 4, title: "Cleansers", icon: "" },
+    { id: 5, title: "Hair Care", icon: "" },
+    { id: 6, title: "Body Creams", icon: "" },
+    { id: 7, title: "supplements", icon: "" },
     // { id: 8, title: "jewelerycopy", icon: "" },
     // { id: 9, title: "jewelerycopy", icon: "" },
   ];
@@ -133,7 +157,7 @@ const Products = () => {
             <div className="flex  items-center justify-self-start gap-4 px-4">
               <div className="flex flex-row" onClick={handleClose}>
                 <Button
-                  className="flex items-center gap-x-2 px-2 py-3 bg-[#8c2643]"
+                  className="flex items-center gap-x-2 px-2 py-3 text-gray-300 bg-[#8c2643]"
                   placeholder={undefined}
                   onPointerEnterCapture={undefined}
                   onPointerLeaveCapture={undefined}
@@ -197,7 +221,7 @@ const Products = () => {
                       placeholder={undefined}
                       onPointerEnterCapture={undefined}
                       onPointerLeaveCapture={undefined}
-                      className=" bg-[#8c2643]"
+                      className="text-gray-300 bg-[#8c2643]"
                     >
                       {" "}
                       Menu
@@ -252,10 +276,10 @@ const Products = () => {
           ) : (
             <div className="bg-[#f8f4f4] grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 px-6 py-5">
               {filteredProducts.map((product: Product) => [
-                <div key={product.id} className="bg-[#fefefe]">
+                <div key={product.id} className="bg-[#fefefe] font-sans">
                   <div className="rounded-lg border border-gray-200 bg-white/50 p-6 shadow-lg dark:border-gray-700 dark:bg-gray-800">
                     <div
-                      className="h-56 w-full pointer hover:cursor-pointer"
+                      className="h-56 w-full mx-auto px-2 py-2 bg-[#81133d] pointer hover:cursor-pointer"
                       onClick={(e) => {
                         e.preventDefault();
                         setloading(true);
@@ -265,10 +289,11 @@ const Products = () => {
                       }}
                     >
                       <img
-                        className="mx-auto h-full "
+                        className=" w-full h-full bg-center object-cover rounded-xl"
                         loading="lazy"
-                        src={product.image}
+                        src={product.imageUrl}
                         alt=""
+
                       />
                       <p className="sr-only">Netochukwu Codes</p>
                     </div>
@@ -325,7 +350,7 @@ const Products = () => {
                         </div>
                       </div>
 
-                      <h2 className="text-lg font-semibold leading-tight text-gray-900 hover:underline dark:text-white">
+                      <h2 className="text-xl font-semibold leading-tight text-gray-700 hover:underline ">
                         {product.title.split(" ").slice(0, 4).join(" ")}
                       </h2>
 
@@ -367,7 +392,7 @@ const Products = () => {
                     </div>
                   </div>
                   <div className=""></div>
-                </div>,
+                </div>
               ])}
             </div>
           )}

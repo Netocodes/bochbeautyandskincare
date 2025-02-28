@@ -6,8 +6,8 @@ const TestimonalPage = () => {
   return (
     <div className="py-12">
       <div className="w-full md:w-1/3 mx-auto px-3 py-4 bg-[#8c2643] ">
-        <h2 className="text-lg text-center text-gray-200 font-bold leading-tight">
-          Here Our some of our favorite Responses
+        <h2 className="text-lg text-center text-gray-200 font-bold tracking-tight font-sans">
+        Some of our favorite responses.
         </h2>
       </div>
       <div className="max-w-[95rem] mx-auto bg-gray-500 h-[70dvh]  md:h-[80dvh] lg:h-[80dvh]">

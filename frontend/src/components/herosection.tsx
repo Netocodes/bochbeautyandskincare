@@ -16,8 +16,7 @@ const HeroSection = () => {
     {
       id: 1,
       text: "Explore Our Natural Skincare Collections",
-      image:
-        "https://i.pinimg.com/736x/4a/82/29/4a822900869f41fe481d02f421fc7123.jpg",
+      image:"https://res.cloudinary.com/de7tyskql/image/upload/f_auto,q_auto,e_improve:outdoor/v1740561604/sample.jpg",
       description:
         "Discover our range of natural skincare products, designed to nourish and rejuvenate your skin for a healthier, glowing look.",
       link: "/productPage",
@@ -26,8 +25,7 @@ const HeroSection = () => {
     {
       id: 2,
       text: "Certified Skincare Formulator Delivering Beauty Worldwide.",
-      image:
-        "https://images.unsplash.com/photo-1665686376173-ada7a0031a85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=900&h=700&q=80",
+      image:"https://res.cloudinary.com/de7tyskql/image/upload/f_auto,q_auto,e_improve:outdoor/v1740561610/samples/two-ladies.jpg",
       description:
         "Our certified skincare experts create custom formulas that cater to your unique skin needs, available for delivery worldwide.",
       link: "/contact",
@@ -93,10 +91,10 @@ const HeroSection = () => {
                       ease: "easeInOut",
                     }}
                   >
-                    <h1 className="text-white text-3xl font-bold text-left bg-[#8c2643]/75 shadow-lg py-8 md:py-8 px-6 sm:text-6xl md:text-5xl">
+                    <h1 className="text-white text-3xl font-bold text-center bg-[#8c2643]/75 shadow-lg py-8 md:py-8 px-6 sm:text-6xl  md:text-4xl">
                       {data.text}
                     </h1>
-                    <p className="max-w-xl mx-auto font-semibold  bg-gray-300/75 backdrop-blur-md py-6  text-lg text-left sm:text-lg md:text-xl px-6">
+                    <p className="max-w-xl mx-auto font-semibold text-gray-100 bg-gray-700/55 backdrop-blur-md py-6  text-lg text-left sm:text-lg md:text-xl px-6">
                       {data.description}
                     </p>
                     <Button

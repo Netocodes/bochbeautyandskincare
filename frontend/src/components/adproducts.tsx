@@ -8,7 +8,7 @@ const AdProduct = () => {
     <div>
       <motion.section
         className="h-auto md:h-[auto] lg:h-screen flex items-center justify-center overflow-hidden"
-        initial={{ opacity: 0, y: "50%" }}
+        initial={{ opacity: 0, y: "20%" }}
         whileInView={{ opacity: 1, y: 0 }} // Move to normal position and become visible
         // viewport={{ once: false }}
         transition={{
@@ -39,6 +39,11 @@ const AdProduct = () => {
                     pain points that we have encountered in various products and
                     projects.
                   </p>
+                  <ul className="text-gray-700 list-disc list-inside ml-3 py-3">
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li></ul>
                 </div>
                 <div className="my-4">
                   <Link to={"./productPage"}>

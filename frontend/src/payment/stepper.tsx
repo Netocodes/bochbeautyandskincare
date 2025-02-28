@@ -8,7 +8,7 @@ import Payment from "./payment";
 const StepperForm = () => {
   
   return(
-    <div>
+    <div className="w-full">
          <Wizard>
            <PersonalInfo />
            <Address  />

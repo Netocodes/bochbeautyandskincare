@@ -2,12 +2,12 @@ import { Accordion } from "flowbite-react";
 
 const FAQsection = () => {
   return (
-    <div className="bg-gray-50 dark:bg-gray-900 py-12">
+    <div className="bg-gray-50 font-serif py-12">
       <div className="w-full md:max-w-[65rem] mx-auto text-center">
-        <h1 className="text-3xl md:text-5xl px-6 md:px-0 text-[#242121] font-semibold tracking-tight dark:text-white">
+        <h1 className="text-3xl md:text-5xl px-6 md:px-0 text-gray-700 font-semibold tracking-tight dark:text-white">
           These are our frequently asked questions
         </h1>
-        <p className="mt-3 text-md text-black leading-tight dark:text-gray-300">
+        <p className="mt-3 max-w-md md:max-w-xl mx-auto text-md text-black leading-tight dark:text-gray-300">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde, aut
           ducimus beatae iure similique quas!
         </p>
@@ -18,7 +18,7 @@ const FAQsection = () => {
           className="bg-gray-100 shadow-lg border border-[#8c2643] "
         >
           <Accordion.Panel className="tansition-all duration-400 ease-in-out">
-            <Accordion.Title className="text-[#3b3030] hover:bg-[#8c2643] hover:text-white font-semibold  dark:text-white dark:hover:bg-gray-800 data-[state=open]:bg-[#8c2643] dark:data-[state=open]:bg-gray-800 transition-colors duration-200">
+            <Accordion.Title className="text-gray-700 hover:bg-[#8c2643] hover:text-white font-medium   data-[state=open]:bg-[#8c2643]  transition-colors duration-200">
               What is Flowbite?
             </Accordion.Title>
             <Accordion.Content className="bg-[#f8e6e6]">
@@ -42,7 +42,7 @@ const FAQsection = () => {
           </Accordion.Panel>
 
           <Accordion.Panel className="tansition-all duration-400 ease-in-out">
-            <Accordion.Title className="text-[#000000] hover:bg-[#8c2643] hover:text-white font-semibold dark:text-white dark:hover:bg-gray-800 data-[state=open]:bg-[#8c2643] dark:data-[state=open]:bg-gray-800 transition-colors duration-200">
+            <Accordion.Title className="text-gray-700 hover:bg-[#8c2643] hover:text-white font-medium  data-[state=open]:bg-[#8c2643]  transition-colors duration-200">
               Is there a Figma file available?
             </Accordion.Title>
             <Accordion.Content className="bg-[#f8e6e6]">
@@ -66,7 +66,7 @@ const FAQsection = () => {
           </Accordion.Panel>
 
           <Accordion.Panel className="tansition-all duration-400 ease-in-out">
-            <Accordion.Title className="text-[#000000] hover:bg-[#8c2643] hover:text-white font-semibold dark:text-white dark:hover:bg-gray-800 data-[state=open]:bg-[#8c2643] dark:data-[state=open]:bg-gray-800 transition-colors duration-200">
+            <Accordion.Title className="text-gray-700 hover:bg-[#8c2643] hover:text-white font-medium  data-[state=open]:bg-[#8c2643]  transition-colors duration-200">
               What are the differences between Flowbite and Tailwind UI?
             </Accordion.Title>
             <Accordion.Content className="bg-[#f8e6e6]">
@@ -107,7 +107,7 @@ const FAQsection = () => {
             </Accordion.Content>
           </Accordion.Panel>
           <Accordion.Panel className="tansition-all duration-400 ease-in-out">
-            <Accordion.Title className="text-[#000000] hover:bg-[#8c2643] hover:text-white font-semibold dark:text-white dark:hover:bg-gray-800 data-[state=open]:bg-[#8c2643] dark:data-[state=open]:bg-gray-800 transition-colors duration-200">
+            <Accordion.Title className="text-gray-700 hover:bg-[#8c2643] hover:text-white font-medium  data-[state=open]:bg-[#8c2643]  transition-colors duration-200">
               What are the differences between Flowbite and Tailwind UI?
             </Accordion.Title>
             <Accordion.Content className="bg-[#f8e6e6]">
@@ -148,7 +148,7 @@ const FAQsection = () => {
             </Accordion.Content>
           </Accordion.Panel>
           <Accordion.Panel className="tansition-all duration-400 ease-in-out">
-            <Accordion.Title className="text-[#000000] hover:bg-[#8c2643] hover:text-white font-semibold dark:text-white dark:hover:bg-gray-800 data-[state=open]:bg-[#8c2643] dark:data-[state=open]:bg-gray-800 transition-colors duration-200">
+            <Accordion.Title className="text-gray-700 hover:bg-[#8c2643] hover:text-white font-medium  data-[state=open]:bg-[#8c2643]  transition-colors duration-200">
               What are the differences between Flowbite and Tailwind UI?
             </Accordion.Title>
             <Accordion.Content className="bg-[#f8e6e6]">

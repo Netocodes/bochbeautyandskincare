@@ -45,7 +45,7 @@ export const Navbar: React.FC = () => {
           <div className="hidden md:flex items-center md:gap-x-3 lg:gap-x-8  justify-center">
             {navArray.map((items) => (
               <div key={items.id}>
-                <ul className="flex  md:text-md lg:text-lg font-semibold  text-[#f6f6f6]">
+                <ul className="flex  md:text-md lg:text-lg font-semibold font-serif text-[#f6f6f6]">
                   <NavLink
                     className={({ isActive }) =>
                       `transition-all duration-300 ease-in hover:underline decoration-white underline-offset-8

@@ -1,18 +1,24 @@
 import {SubmitHandler, useForm} from "react-hook-form"
 import { Button } from "@material-tailwind/react";
 import { useWizard } from "react-use-wizard";
-type formFeilds ={
+export type formFeilds ={
   fullname: string;
   phoneNumber: number ;
   email: string;
+  homeAdrress: string;
+  city: string;
+  state: string;
+  zip: number;
+
 }
 
 const PersonalInfo = () => {
  const {register, handleSubmit,  formState: {errors}} = useForm<formFeilds>()
   const { nextStep } = useWizard();
- 
+ console.log(errors)
          const onSubmit: SubmitHandler<formFeilds> = (data) => {
-console.log(data)
+           window.sessionStorage.setItem("personalInfo", JSON.stringify(data))
+           console.log("Added Personal Data", data)
 setTimeout(() => {
   nextStep()
 }, 3000)
@@ -26,7 +32,7 @@ setTimeout(() => {
           Who are we shipping to :
         </h2>
         <form className=" mt-4" onSubmit={handleSubmit(onSubmit)}>
-          <label htmlFor="name"> 
+         
           <input
             {...register("fullname", {
               required: "Your full name is required"
@@ -36,9 +42,9 @@ setTimeout(() => {
             placeholder="Add your Full Name"
             className="w-full p-2 py-4 px-5 text-md font-normal placeholder:text-gray-600 border rounded mb-4 text-gray-800"
           />
-          {errors.fullname && <div className="-mt-3 text-red-500">{errors.fullname.message}</div>}
-          </label>
-          <label htmlFor="phoneNumber"> 
+
+          
+          
           <input
             {...register("phoneNumber", {
               required: "Phone Number is required",
@@ -53,11 +59,10 @@ setTimeout(() => {
             type="text"
             placeholder="Phone Number"
             
-            className="w-full p-2 py-4 px-5 text-md font-normal placeholder:text-gray-600 border rounded mb-4 text-gray-800"
+            className="w-full p-2 py-4 px-5 text-md font-normal  placeholder:text-gray-600 border rounded mb-4 text-[#690a3a]"
           />
-          {errors.phoneNumber && <div className="-mt-3 my-3 text-red-500">{errors.phoneNumber.message}</div>}
-          </label>
-         <label htmlFor="email"> 
+         
+         
          <input
             {...register("email",  {
               required: "Your Email is required",
@@ -72,8 +77,7 @@ setTimeout(() => {
           
             className="w-full p-2 py-4 px-5 text-md font-normal placeholder:text-gray-600 border rounded text-gray-800"
           />
-          {errors.email && <div className= "w-full  my-3 text-red-500">{errors.email.message}</div>}
-         </label>
+       
 
           <div className="flex items-center justify-around mt-6 ">
             <Button

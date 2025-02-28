@@ -1,45 +1,54 @@
 
 import { Button } from "@material-tailwind/react";
 import { useWizard } from "react-use-wizard";
+import { formFeilds } from "./personalInfo";
+import { SubmitHandler, useForm} from "react-hook-form"
 const Address = () => {
-                const { previousStep, nextStep } = useWizard();
+   const { previousStep, nextStep } = useWizard();
+   const {register, handleSubmit,  } = useForm<formFeilds>()
+     const onSubmit: SubmitHandler<formFeilds> = (data) => {
+              window.sessionStorage.setItem("addressData", JSON.stringify(data))
+              console.log("Added address Data", data)
+   setTimeout(() => {
+     nextStep()
+   }, 3000)}
    return (
           <div>
                                   <div className="text-center w-full max-w-xl md:max-w-7xl px-4 flex flex-col md:flex-row gap-y-8 gap-x-20 items-center  ">
                                     <h2 className="  py-4 px-8 leading-tight tracking-tight text-2xl md:text-4xl font-bold text-gray-700 ">
                                       Where are we shipping it to :
                                     </h2>
-                                    <form className=" mt-4">
+                                    <form className=" mt-4" onSubmit={handleSubmit(onSubmit)}> 
                                       <input
                                         type="text"
-                                        name="street"
+                                      
                                         placeholder="Add your Street / Home Address"
-                                        value=''
-                                        onChange={() => {}}
+                                        {...register("homeAdrress", {
+                                          required: "Your Street Address is required"})}
                                         className="w-full p-2 py-4 px-5 placeholder:text-gray-700 border rounded mb-4 text-gray-700"
                                       />
                                       <input
                                         type="text"
-                                        name="city"
+                                      
                                         placeholder="Add your City Here"
-                                        value=''
-                                        onChange={() => {}}
+                                        {...register("city", {
+                                          required: "Your City is required to Locate you"})}
                                         className="w-full p-2 py-4 px-5 placeholder:text-gray-700 border rounded mb-4 text-gray-700"
                                       />
                                       <input
                                         type="text"
-                                        name="state"
+                                        
                                         placeholder="Add your State Here"
-                                        value=''
-                                        onChange={() => {}}
+                                        {...register("state", {
+                                          required: "Your State  is required"})}
                                         className="w-full p-2 py-4 px-5 placeholder:text-gray-700 border rounded mb-4 text-gray-700"
                                       />
                                       <input
                                         type="text"
-                                        name="zip"
+                                        
                                         placeholder="Add your Zip code Here"
-                                        value=''
-                                        onChange={() => {}}
+                                        {...register("zip", {
+                                          required: "Your Zip Code is required"})}
                                         className="w-full p-2 py-4 px-5 placeholder:text-gray-700 border rounded mb-4 text-gray-700"
                                       />
                             
@@ -56,9 +65,7 @@ const Address = () => {
                                         />
                                         <Button
                                           children="next"
-                                          onClick={() => {
-                                            nextStep();
-                                          }}
+                                          type="submit"
                                           className="bg-[#8c2643] text-md  px-8 md:text-xl capitalize "
                                           placeholder={undefined}
                                           onPointerEnterCapture={""}
@@ -71,4 +78,4 @@ const Address = () => {
                               );
 }
 
-export default Address
+export default Address;
