@@ -127,44 +127,45 @@
   },
   {
     "id": 4,
-    "title": "Mens Casual Slim Fit",
-    "price": 125.0,
+    "title": "Restoration Body Oil",
+    "price": 700.0,
     "images": [
       "restoration-oil-1",
       "restoration-body-oil"
     ],
-    "description": "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
-    "category": "Body Srubs",
+    "description": "Enriched with rose hip, lemon, and jojoba oils. This body oil reduces the appearance of dark spots, curbs obvious stretch marks, eradicates flaky skin, improves overall texture and appearance of the skin, evens out skin tone, and boosts skin glow.",
+    "category": "Body Oils", 
     "image": "restoration-body-oil",
     "currency": "TL",
-    "net_weight": "500g",
-    "skin_type": "Suitable for light skin",
+    "net_weight": "250ml", 
+    "skin_type": "Suitable for all skin types", 
     "how_to_use": [
-      "Wet your entire body with warm water.",
-      "Gently massage the scrub onto your skin in circular motions.",
-      "Allow the scrub to sit for at least 7 minutes to maximize its effectiveness.",
-      "Rinse off thoroughly with warm water.",
-      "Use once or twice a week for a visibly radiant and refreshed look."
+      "Apply a small amount of the oil to your skin.",
+      "Gently massage in circular motions until fully absorbed.",
+      "Can be used 2 or more times per day for best results."
     ],
     "key_features": [
-      "Deep Cleansing",
-      "Hydrating & Moisturizing",
-      "Brightening Effect",
-      "Gentle Exfoliation"
+      "Repairs damaged skin",
+      "Restores skin elasticity",
+      "Improves skin texture and reduces fine lines",
+      "Brightens skin"
     ],
     "seo": [
-      "moisturizing body scrub",
-      "organic body scrub",
-      "exfoliating scrub",
-      "skin brightening scrub",
-      "deep cleansing skincare",
-      "hydrating exfoliator",
-      "best body scrub for dry skin",
-      "gentle exfoliation scrub",
-      "natural skincare",
-      "radiant skin treatment"
+      "restoration body oil",
+      "rose hip body oil",
+      "skin brightening oil",
+      "stretch mark treatment",
+      "dark spot reduction oil",
+      "skin repair oil",
+      "jojoba oil skincare",
+      "natural skin glow oil",
+      "skin elasticity oil",
+      "flaky skin treatment"
     ],
-    "rating": { "rate": 2.1, "count": 430 }
+    "rating": {
+      "rate": 2.1,
+      "count": 430
+    }
   },
   {
     "id": 5,
@@ -212,291 +213,296 @@
   },
   {
     "id": 6,
-    "title": "Rose Glow Oil ",
-    "price": 168.0,
+    "title": "Rose Glow Oil",
+    "price": 600.0,
     "images": [
       "rose-glow-oil",
       "original-glow-oil"
     ],
-    "description": "Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.",
+    "description": "Suitable for dark skin persons that wish to achieve a more refined brown skin tone. It maintains the skin's original texture, fades pigmentation, and keeps the skin moisturized all day.",
     "category": "Body Oils",
     "image": "original-glow-oil",
     "currency": "TL",
-    "net_weight": "500g",
-    "skin_type": "Suitable for light skin",
+    "net_weight": "250g",
+    "skin_type": "Suitable for dark skin",
     "how_to_use": [
-      "Wet your entire body with warm water.",
-      "Gently massage the scrub onto your skin in circular motions.",
-      "Allow the scrub to sit for at least 7 minutes to maximize its effectiveness.",
-      "Rinse off thoroughly with warm water.",
-      "Use once or twice a week for a visibly radiant and refreshed look."
+      "Apply a small amount of the oil to your skin.",
+      "Gently massage in circular motions until fully absorbed.",
+      "Use every day for a quality result."
     ],
     "key_features": [
-      "Deep Cleansing",
-      "Hydrating & Moisturizing",
-      "Brightening Effect",
-      "Gentle Exfoliation"
+      "Maintains the skin's original texture",
+      "Fades pigmentation on dark skin",
+      "Keeps the skin moisturized all day"
     ],
     "seo": [
-      "moisturizing body scrub",
-      "organic body scrub",
-      "exfoliating scrub",
-      "skin brightening scrub",
-      "deep cleansing skincare",
-      "hydrating exfoliator",
-      "best body scrub for dry skin",
-      "gentle exfoliation scrub",
-      "natural skincare",
-      "radiant skin treatment"
+      "rose glow oil",
+      "rose glow body oil",
+      "dark skin moisturizer",
+      "skin pigmentation treatment",
+      "refined brown skin tone",
+      "body oil for dark skin",
+      "skin hydration oil",
+      "daily skincare oil",
+      "natural skin glow oil",
+      "dark skin care product",
+      "moisturizing body oil"
     ],
-    "rating": { "rate": 3.9, "count": 70 }
+    "rating": {
+      "rate": 3.9,
+      "count": 70
+    }
   },
   {
     "id": 7,
-    "title": "White Gold Plated Princess",
-    "price": 190.0,
+    "title": "Lightnizer Xtra Lightning Body Oil",
+    "price": 700.0,
     "images": [
       "lighting-body-oil-1",
       "lighting-body-oil"
     ],
-    "description": "Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine's Day...",
+    "description": "This silky lightning body oil is designed to keep the skin looking visibly light and clear. It deeply nourishes the skin, keeps it smooth and silky, and fights aging and wrinkles.",
     "category": "Body Oils",
     "image": "lighting-body-oil",
     "currency": "TL",
-    "net_weight": "500g",
-    "skin_type": "Suitable for light skin",
+    "net_weight": "250ml",
+    "skin_type": "Suitable for all skin types",
     "how_to_use": [
-      "Wet your entire body with warm water.",
-      "Gently massage the scrub onto your skin in circular motions.",
-      "Allow the scrub to sit for at least 7 minutes to maximize its effectiveness.",
-      "Rinse off thoroughly with warm water.",
-      "Use once or twice a week for a visibly radiant and refreshed look."
+      "Apply a small amount of the oil to your skin.",
+      "Gently massage in circular motions until fully absorbed.",
+      "Use only at night before bed."
     ],
     "key_features": [
-      "Deep Cleansing",
-      "Hydrating & Moisturizing",
-      "Brightening Effect",
-      "Gentle Exfoliation"
+      "Deeply nourishes the skin",
+      "Keeps the skin smooth and silky",
+      "Fights aging and wrinkles"
     ],
     "seo": [
-      "moisturizing body scrub",
-      "organic body scrub",
-      "exfoliating scrub",
-      "skin brightening scrub",
-      "deep cleansing skincare",
-      "hydrating exfoliator",
-      "best body scrub for dry skin",
-      "gentle exfoliation scrub",
-      "natural skincare",
-      "radiant skin treatment"
+      "lightnizer xtra lightning body oil",
+      "skin lightening oil",
+      "anti-aging body oil",
+      "smooth and silky skin oil",
+      "night skincare oil",
+      "wrinkle reduction oil",
+      "skin nourishing oil",
+      "radiant skin treatment",
+      "natural body oil",
+      "visible skin lightening"
     ],
-    "rating": { "rate": 3, "count": 400 }
+    "rating": {
+      "rate": 3,
+      "count": 400
+    }
   },
   {
     "id": 8,
-    "title": "Pierced Owl Rose Gold Plated Stainless Steel Double",
-    "price": 150.0,
+    "title": "Xwhite Glow Oil",
+    "price": 500.0,
     "images": [
       "xwhite-glow-oil-1",
       "xwhite-glow-oil"
     ],
-    "description": "Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel",
+    "description": "Xwhite Glow Oil is formulated to moisturize, curb stretch marks, fade away dark spots, and keep the skin smooth. It’s non-greasy and doesn’t stick to the skin.",
     "category": "Body Oils",
     "image": "xwhite-glow-oil",
-     "currency": "TL",
-    "net_weight": "500g",
-    "skin_type": "Suitable for light skin",
+    "currency": "TL",
+    "net_weight": "150ml",
+    "skin_type": "Suitable for all skin types",
     "how_to_use": [
-      "Wet your entire body with warm water.",
-      "Gently massage the scrub onto your skin in circular motions.",
-      "Allow the scrub to sit for at least 7 minutes to maximize its effectiveness.",
-      "Rinse off thoroughly with warm water.",
-      "Use once or twice a week for a visibly radiant and refreshed look."
+      "Apply a small amount of the oil to your skin.",
+      "Gently massage in circular motions until fully absorbed.",
+      "Use daily for best results."
     ],
     "key_features": [
-      "Deep Cleansing",
-      "Hydrating & Moisturizing",
-      "Brightening Effect",
-      "Gentle Exfoliation"
+      "Gradually lightens the skin",
+      "Drastically reduces the appearance of stretch marks",
+      "Enhances skin glow and texture"
     ],
     "seo": [
-      "moisturizing body scrub",
-      "organic body scrub",
-      "exfoliating scrub",
-      "skin brightening scrub",
-      "deep cleansing skincare",
-      "hydrating exfoliator",
-      "best body scrub for dry skin",
-      "gentle exfoliation scrub",
-      "natural skincare",
-      "radiant skin treatment"
+      "xwhite glow oil",
+      "skin lightening oil",
+      "stretch mark reduction oil",
+      "dark spot removal oil",
+      "non-greasy body oil",
+      "skin moisturizing oil",
+      "skin glow enhancement",
+      "smooth skin treatment",
+      "natural skin care oil",
+      "radiant skin oil"
     ],
-    "rating": { "rate": 1.9, "count": 100 }
+    "rating": {
+      "rate": 1.9,
+      "count": 100
+    }
   },
   {
     "id": 9,
-    "title": "WD 2TB Elements Portable External Hard Drive - USB 3.0 ",
-    "price": 64.0,
+    "title": "Molato Soap",
+    "price": 650.0,
     "images": [
       "xwhite-molato-soap-1",
       "xwhite-molato-soap"
     ],
-    "description": "USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user’s hardware configuration and operating system",
-    "category": "supplements",
+    "description": "Enriched with Kojic acid, mulberry, papaya extract, and other lightning agents that effectively brighten/lighten the skin, fade away dark spots, and remove dead skin cells.",
+    "category": "Skincare",
     "image": "xwhite-molato-soap",
-     "currency": "TL",
+    "currency": "TL",
     "net_weight": "500g",
-    "skin_type": "Suitable for light skin",
+    "skin_type": "Suitable for all skin types",
     "how_to_use": [
-      "Wet your entire body with warm water.",
-      "Gently massage the scrub onto your skin in circular motions.",
-      "Allow the scrub to sit for at least 7 minutes to maximize its effectiveness.",
-      "Rinse off thoroughly with warm water.",
-      "Use once or twice a week for a visibly radiant and refreshed look."
+      "Rub the soap all over the skin.",
+      "Leave it to settle for about 10-15 minutes.",
+      "Wash it off thoroughly.",
+      "Use twice daily for best results."
     ],
     "key_features": [
-      "Deep Cleansing",
-      "Hydrating & Moisturizing",
-      "Brightening Effect",
-      "Gentle Exfoliation"
+      "Clears dark spots",
+      "Lightens the skin",
+      "Removes dead skin cells",
+      "Keeps the skin clean"
     ],
     "seo": [
-      "moisturizing body scrub",
-      "organic body scrub",
-      "exfoliating scrub",
-      "skin brightening scrub",
-      "deep cleansing skincare",
-      "hydrating exfoliator",
-      "best body scrub for dry skin",
-      "gentle exfoliation scrub",
-      "natural skincare",
+      "molato soap",
+      "skin brightening soap",
+      "dark spot removal soap",
+      "kojic acid soap",
+      "mulberry extract soap",
+      "papaya extract soap",
+      "skin lightening soap",
+      "dead skin cell removal",
+      "natural skincare soap",
       "radiant skin treatment"
     ],
-    "rating": { "rate": 3.3, "count": 203 }
+    "rating": {
+      "rate": 3.3,
+      "count": 203
+    }
   },
   {
     "id": 10,
-    "title": "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s",
-    "price": 109.0,
+    "title": "Xwhite Face Cleanser and Xwhite Glow Face Cream Combo",
+    "price": 800.0,
     "images": [
       "facial-cleanser-and-cream",
       "facial-cleanser-and-cream-1"
-      
     ],
-    "description": "Easy upgrade for faster boot up, shutdown, application load and response (As compared to 5400 RPM SATA 2.5” hard drive; Based on published specifications and internal benchmarking tests using PCMark vantage scores) Boosts burst write performance, making it ideal for typical PC workloads The perfect balance of performance and reliability Read/write speeds of up to 535MB/s/450MB/s (Based on internal testing; Performance may vary depending upon drive capacity, host device, OS and application.)",
-    "category": "supplements",
+    "description": "This combo effectively lightens dark spots, fades hyper-pigmentation, and evens out skin tone. Formulated with scientifically backed ingredients, it provides visible results in a short period. Infused with natural ingredients, it gently nourishes, clears dark spots, and lightens the skin, leaving it silky and smooth.",
+    "category": "Skincare",
     "image": "facial-cleanser-and-cream",
-     "currency": "TL",
+    "currency": "TL",
     "net_weight": "500g",
-    "skin_type": "Suitable for light skin",
+    "skin_type": "Suitable for all skin types",
     "how_to_use": [
-      "Wet your entire body with warm water.",
-      "Gently massage the scrub onto your skin in circular motions.",
-      "Allow the scrub to sit for at least 7 minutes to maximize its effectiveness.",
-      "Rinse off thoroughly with warm water.",
-      "Use once or twice a week for a visibly radiant and refreshed look."
+      "Use the Xwhite Face Cleanser to wash your face, gently massaging in circular motions.",
+      "Rinse thoroughly with water.",
+      "Apply the Xwhite Glow Face Cream to your face and neck, gently massaging until fully absorbed.",
+      "Use morning and night for best results."
     ],
     "key_features": [
-      "Deep Cleansing",
-      "Hydrating & Moisturizing",
-      "Brightening Effect",
-      "Gentle Exfoliation"
+      "Lightens dark spots and hyper-pigmentation",
+      "Evens out skin tone",
+      "Nourishes and clears dark spots",
+      "Leaves skin silky and smooth"
     ],
     "seo": [
-      "moisturizing body scrub",
-      "organic body scrub",
-      "exfoliating scrub",
-      "skin brightening scrub",
-      "deep cleansing skincare",
-      "hydrating exfoliator",
-      "best body scrub for dry skin",
-      "gentle exfoliation scrub",
-      "natural skincare",
-      "radiant skin treatment"
+      "xwhite face cleanser",
+      "xwhite glow face cream",
+      "dark spot removal combo",
+      "hyper-pigmentation treatment",
+      "skin lightening combo",
+      "even skin tone skincare",
+      "natural face cleanser and cream",
+      "smooth skin treatment",
+      "radiant skin combo",
+      "scientifically backed skincare"
     ],
-    "rating": { "rate": 2.9, "count": 470 }
+    "rating": {
+      "rate": 2.9,
+      "count": 470
+    }
   },
   {
     "id": 11,
-    "title": "Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5",
-    "price": 109.0,
+    "title": "Itching Solution",
+    "price": 400.0,
     "images": [
       "itching-solution-1",
       "itching-solution"
     ],
-    "description": "3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking & Correction) to provide the optimized performance and enhanced reliability.",
+    "description": "It’s mostly recommended for people that deal with water or environmental skin conditions. It helps treat bathing water and makes it safer to use without any issues.",
     "category": "supplements",
     "image": "itching-solution",
-     "currency": "TL",
-    "net_weight": "500g",
-    "skin_type": "Suitable for light skin",
+    "currency": "TL",
+    "net_weight": "150g",
+    "skin_type": "Suitable for all skin types",
     "how_to_use": [
-      "Wet your entire body with warm water.",
-      "Gently massage the scrub onto your skin in circular motions.",
-      "Allow the scrub to sit for at least 7 minutes to maximize its effectiveness.",
-      "Rinse off thoroughly with warm water.",
-      "Use once or twice a week for a visibly radiant and refreshed look."
+      "Add just a teaspoon of the solution inside bathing water.",
+      "Bathe as usual.",
+      "Apply your oil or body moisturizer immediately after the bath."
     ],
     "key_features": [
-      "Deep Cleansing",
-      "Hydrating & Moisturizing",
-      "Brightening Effect",
-      "Gentle Exfoliation"
+      "Treats bathing water",
+      "Safe for all skin types",
+      "Helps with environmental skin conditions",
+      "Easy to use"
     ],
     "seo": [
-      "moisturizing body scrub",
-      "organic body scrub",
-      "exfoliating scrub",
-      "skin brightening scrub",
-      "deep cleansing skincare",
-      "hydrating exfoliator",
-      "best body scrub for dry skin",
-      "gentle exfoliation scrub",
-      "natural skincare",
-      "radiant skin treatment"
+      "itching solution",
+      "skin care for water conditions",
+      "bathing water treatment",
+      "environmental skin care",
+      "skin itching relief",
+      "safe bathing solution",
+      "skin moisturizing treatment",
+      "anti-itching product",
+      "skin protection",
+      "water safety for skin"
     ],
-    "rating": { "rate": 4.8, "count": 319 }
+    "rating": {
+      "rate": 4.8,
+      "count": 319
+    }
   },
   {
     "id": 12,
-    "title": "WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive",
-    "price": 114.0,
+    "title": "Caramel Black Soap",
+    "price": 600.0,
     "images": [
       "caramel-black-soap-1",
       "caramel-black-soap"
     ],
-    "description": "Expand your PS4 gaming experience, Play anywhere Fast and easy, setup Sleek design with high capacity, 3-year manufacturer's limited warranty",
-    "category": "supplements",
+    "description": "Prevents rashes, eczema, itching, and scaly skin. Removes blemishes, relieves acne, maintains the skin's original color and texture, cleanses pores, and rejuvenates the skin, leaving it smooth, fresh, and clean.",
+    "category": "Body Care",
     "image": "caramel-black-soap",
-     "currency": "TL",
-    "net_weight": "500g",
-    "skin_type": "Suitable for light skin",
+    "currency": "TL",
+    "net_weight": "250g",
+    "skin_type": "Suitable for all skin types",
     "how_to_use": [
-      "Wet your entire body with warm water.",
-      "Gently massage the scrub onto your skin in circular motions.",
-      "Allow the scrub to sit for at least 7 minutes to maximize its effectiveness.",
-      "Rinse off thoroughly with warm water.",
-      "Use once or twice a week for a visibly radiant and refreshed look."
+      "Use morning and night.",
+      "Apply Rose Glow Body Oil for a more natural brown-looking appearance."
     ],
     "key_features": [
-      "Deep Cleansing",
-      "Hydrating & Moisturizing",
-      "Brightening Effect",
-      "Gentle Exfoliation"
+      "Prevents rashes, eczema, and itching",
+      "Removes blemishes and relieves acne",
+      "Maintains skin's original color and texture",
+      "Cleanses pores and rejuvenates skin"
     ],
     "seo": [
-      "moisturizing body scrub",
-      "organic body scrub",
-      "exfoliating scrub",
-      "skin brightening scrub",
-      "deep cleansing skincare",
-      "hydrating exfoliator",
-      "best body scrub for dry skin",
-      "gentle exfoliation scrub",
-      "natural skincare",
-      "radiant skin treatment"
+      "caramel black soap",
+      "natural skincare soap",
+      "acne relief soap",
+      "eczema prevention soap",
+      "skin rejuvenation soap",
+      "blemish removal soap",
+      "pore cleansing soap",
+      "skin texture maintenance",
+      "rash prevention soap",
+      "smooth and clean skin"
     ],
-    "rating": { "rate": 4.8, "count": 400 }
+    "rating": {
+      "rate": 1.9,
+      "count": 100
+    }
   },
   {
     "id": 13,
