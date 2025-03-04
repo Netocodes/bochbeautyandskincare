@@ -113,7 +113,7 @@ app.post('/send-email', async(req, res) => {
 
   const ownerMailOptions = {
     from: email,
-    to: email, 
+    to: email,
     subject: `New Order - ${orderId}`,
     text: ownerEmailText,
     html: ownerEmailHtml
