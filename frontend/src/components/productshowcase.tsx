@@ -1,14 +1,34 @@
+import { Toaster, toast } from "sonner";
+
+<Toaster
+richColors
+className="mt-24 md:mt-12 lg:mt-20 z-50"
+position="top-right"
+/>
 const ProductShowcase = () => {
+  const handlecopy = async (text: string) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      toast.success("Text copied to clipboard");
+    } catch (err) {
+      console.error("Failed to copy: ", err);
+      toast.error("Failed to copy: ");
+    }
+  }
   return (
-    <div className="">
-      <div className="grid grid-cols-2 md:gap-4 sm:grid-cols-3 gap-2">
-        <a className="group block relative overflow-hidden rounded-lg" href="#">
+    <div className="bg-gradient-to-r from-[#d1d5db] via-[#6b7280] to-[#374151] py-12 px-2 md:px-8">
+      <div className="w-full grid grid-cols-2 md:gap-4 sm:grid-cols-3 gap-2">
+        <div className="group block relative overflow-hidden rounded-lg" >
           <img
-            className="w-full size-40 object-cover bg-gray-100 rounded-b-full dark:bg-neutral-800"
-            src="https://previews.dropbox.com/p/thumb/AChZ-TcQzqeAnOODgzzA_CPYSjOaH0Ul10WtRx0yt8GpzRMZuzvd-iFDhFxJiVtycZ1Sq2Mv5SMddQlAcNvr6_qM95GrQwN5YmOmYIjiOB9subKedcTv5puWfcDeT-rs3ZK5-zOcQXwQ5I8h0hrL37VMRvu8RIjrOskuoImG1xw4B45bX-pFEW-hgLtNpM__SgosQzUgDZgaG4xA5HyENWBQF8IiJqCRtbf1p5D_lR-sUdMIHYQ_1Kdu8NZYaa8Df93SxwGCMyWM3uALKvaO0WuONp9hFNA4yaAbhpexar68DCa-tYm9P0OmDcO0egIKTr6wGBNDo_BDEecA1ZmKI1Oe/p.jpeg"
+            className="w-full size-40 object-cover bg-gray-100 rounded md:rounded-b-full dark:bg-neutral-800"
+            
+            src="https://res.cloudinary.com/de7tyskql/image/upload/c_fill,g_auto,h_500,w_500/f_auto/q_auto/caramel-black-soap?_a=DATAg1AAZAA0"
             alt="Project"
           />
-          <div className="absolute bottom-1 end-1 opacity-0 group-hover:opacity-100 transition">
+          <div onClick={(e) => {
+                e.preventDefault();
+                handlecopy("Caramel Black Soap");
+              }} className="cursor-pointer absolute bottom-1 end-1 opacity-0 group-hover:opacity-100 transition">
             <div className="flex items-center gap-x-1 py-1 px-2 bg-white border border-gray-200 text-gray-800 rounded-lg dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-200">
               <svg
                 className="shrink-0 size-3"
@@ -25,18 +45,22 @@ const ProductShowcase = () => {
                 <circle cx="11" cy="11" r="8" />
                 <path d="m21 21-4.3-4.3" />
               </svg>
-              <span className="text-xs">View</span>
+              <span  className="text-xs">copy</span>
+         
             </div>
           </div>
-        </a>
+        </div>
 
-        <a className="group block relative overflow-hidden rounded-lg" href="#">
+        <div className="group block relative overflow-hidden rounded-lg" >
           <img
-            className="w-full size-40 object-cover bg-gray-100 rounded-full  dark:bg-neutral-800"
-            src="https://flowbite.com/docs/images/carousel/carousel-3.svg"
+            className="w-full size-40 object-cover bg-gray-100 rounded  md:rounded-full  dark:bg-neutral-800"
+            src="https://res.cloudinary.com/de7tyskql/image/upload/c_fill,g_auto,h_500,w_500/f_auto/q_auto/glam-glow-face?_a=DATAg1AAZAA0"
             alt="Project"
           />
-          <div className="absolute bottom-1 end-1 opacity-0 group-hover:opacity-100 transition">
+          <div onClick={(e) => {
+                e.preventDefault();
+                handlecopy("Glam Glow Face");
+              }} className="cursor-pointer absolute bottom-1 end-1 opacity-0 group-hover:opacity-100 transition">
             <div className="flex items-center gap-x-1 py-1 px-2 bg-white border border-gray-200 text-gray-800 rounded-lg dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-200">
               <svg
                 className="shrink-0 size-3"
@@ -53,18 +77,21 @@ const ProductShowcase = () => {
                 <circle cx="11" cy="11" r="8" />
                 <path d="m21 21-4.3-4.3" />
               </svg>
-              <span className="text-xs">View</span>
+              <span  className="text-xs">copy</span>
             </div>
           </div>
-        </a>
+        </div>
 
-        <a className="group block relative overflow-hidden rounded-lg" href="#">
+        <div className="group block relative overflow-hidden rounded-lg" >
           <img
-            className="w-full size-40 object-cover bg-gray-100 rounded-lg dark:bg-neutral-800"
-            src="https://flowbite.com/docs/images/carousel/carousel-3.svg"
+            className="w-full size-40 object-cover rounded md:rounded-e-full bg-gray-100  dark:bg-neutral-800"
+            src="https://res.cloudinary.com/de7tyskql/image/upload/c_fill,g_auto,h_500,w_500/f_auto/q_auto/elegance-body-scrub-2?_a=DATAg1AAZAA0"
             alt="Project"
           />
-          <div className="absolute bottom-1 end-1 opacity-0 group-hover:opacity-100 transition">
+          <div onClick={(e) => {
+                e.preventDefault();
+                handlecopy("Elegance Body Scrub");
+              }} className="cursor-pointer absolute bottom-1 end-1 opacity-0 group-hover:opacity-100 transition">
             <div className="flex items-center gap-x-1 py-1 px-2 bg-white border border-gray-200 text-gray-800 rounded-lg dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-200">
               <svg
                 className="shrink-0 size-3"
@@ -81,18 +108,21 @@ const ProductShowcase = () => {
                 <circle cx="11" cy="11" r="8" />
                 <path d="m21 21-4.3-4.3" />
               </svg>
-              <span className="text-xs">View</span>
+              <span  className="text-xs">copy</span>
             </div>
           </div>
-        </a>
+        </div>
 
-        <a className="group block relative overflow-hidden rounded-lg" href="#">
+        <div className="group block relative overflow-hidden rounded-lg" >
           <img
-            className="w-full size-40 object-cover bg-gray-100 rounded-lg dark:bg-neutral-800"
-            src="https://flowbite.com/docs/images/carousel/carousel-3.svg"
+            className="w-full size-40 object-cover bg-gray-100 rounded md:rounded-b-full dark:bg-neutral-800"
+            src="https://res.cloudinary.com/de7tyskql/image/upload/c_fill,g_auto,h_500,w_500/f_auto/q_auto/lighting-body-oil?_a=DATAg1AAZAA0"
             alt="Project"
           />
-          <div className="absolute bottom-1 end-1 opacity-0 group-hover:opacity-100 transition">
+          <div onClick={(e) => {
+                e.preventDefault();
+                handlecopy("Lighting Body Oil");
+              }} className="cursor-pointer absolute bottom-1 end-1 opacity-0 group-hover:opacity-100 transition">
             <div className="flex items-center gap-x-1 py-1 px-2 bg-white border border-gray-200 text-gray-800 rounded-lg dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-200">
               <svg
                 className="shrink-0 size-3"
@@ -109,18 +139,21 @@ const ProductShowcase = () => {
                 <circle cx="11" cy="11" r="8" />
                 <path d="m21 21-4.3-4.3" />
               </svg>
-              <span className="text-xs">View</span>
+              <span  className="text-xs">copy</span>
             </div>
           </div>
-        </a>
+        </div>
 
-        <a className="group block relative overflow-hidden rounded-lg" href="#">
+        <div className="group block relative overflow-hidden rounded-lg" >
           <img
-            className="w-full size-40 object-cover bg-gray-100 rounded-lg dark:bg-neutral-800"
-            src="https://flowbite.com/docs/images/carousel/carousel-3.svg"
+            className="w-full size-40 object-cover bg-gray-100 rounded  md:rounded-full dark:bg-neutral-800"
+            src="https://res.cloudinary.com/de7tyskql/image/upload/c_fill,g_auto,h_500,w_500/f_auto/q_auto/xwhite-molato-soap?_a=DATAg1AAZAA0"
             alt="Project"
           />
-          <div className="absolute bottom-1 end-1 opacity-0 group-hover:opacity-100 transition">
+          <div onClick={(e) => {
+                e.preventDefault();
+                handlecopy("White Molato Soap");
+              }} className="cursor-pointer absolute bottom-1 end-1 opacity-0 group-hover:opacity-100 transition">
             <div className="flex items-center gap-x-1 py-1 px-2 bg-white border border-gray-200 text-gray-800 rounded-lg dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-200">
               <svg
                 className="shrink-0 size-3"
@@ -137,18 +170,21 @@ const ProductShowcase = () => {
                 <circle cx="11" cy="11" r="8" />
                 <path d="m21 21-4.3-4.3" />
               </svg>
-              <span className="text-xs">View</span>
+              <span  className="text-xs">copy</span>
             </div>
           </div>
-        </a>
+        </div>
 
-        <a className="group block relative overflow-hidden rounded-lg" href="#">
+        <div className="group block relative overflow-hidden rounded-lg" >
           <img
-            className="w-full size-40 object-cover bg-gray-100 rounded-lg dark:bg-neutral-800"
-            src="https://flowbite.com/docs/images/carousel/carousel-3.svg"
+            className="w-full size-40 object-cover rounded md:rounded-e-full bg-gray-100 rounded-lg dark:bg-neutral-800"
+            src="https://res.cloudinary.com/de7tyskql/image/upload/c_fill,g_auto,h_500,w_500/f_auto/q_auto/facial-cleanser-and-cream?_a=DATAg1AAZAA0"
             alt="Project"
           />
-          <div className="absolute bottom-1 end-1 opacity-0 group-hover:opacity-100 transition">
+          <div onClick={(e) => {
+                e.preventDefault();
+                handlecopy("Facial Cleanser and Cream");
+              }} className="cursor-pointer absolute bottom-1 end-1 opacity-0 group-hover:opacity-100 transition">
             <div className="flex items-center gap-x-1 py-1 px-2 bg-white border border-gray-200 text-gray-800 rounded-lg dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-200">
               <svg
                 className="shrink-0 size-3"
@@ -165,10 +201,10 @@ const ProductShowcase = () => {
                 <circle cx="11" cy="11" r="8" />
                 <path d="m21 21-4.3-4.3" />
               </svg>
-              <span className="text-xs">View</span>
+              <span  className="text-xs">copy</span>
             </div>
           </div>
-        </a>
+        </div>
       </div>
     </div>
   );

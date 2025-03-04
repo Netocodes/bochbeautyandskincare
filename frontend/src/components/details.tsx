@@ -133,7 +133,7 @@ const Details = () => {
                 </div>
                 <div className="flex flex-col   gap-y-8 justify-between mt-6">
                   <span className="title-font font-medium text-xl md:text-2xl text-gray-900">
-                    Total Price: ${price}
+                    Total Price: ₺{price}
                   </span>
 
                   <div className="flex gap-x-4">

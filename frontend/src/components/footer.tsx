@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Logo from "../assets/logo2.svg"
 
   const Footer = ()  => {
@@ -7,14 +8,14 @@ return(
 
 <footer className="mt-auto w-full max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 mx-auto">
  
-  <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 mb-10">
-    <div className="col-span-full hidden lg:col-span-1 lg:block">
-    <div className="w-[200px] h-auto">
-          <img className="w-full h-[80px]" src={Logo} alt="" />
+  <div className="w-full flex items-center justify-end">
+    <div className="hidden md:block px-12">
+    <div className="w-[150px] h-24">
+          <img className="w-full h-auto" src={Logo} alt="" />
           </div>
           
           <p className="mt-1 text-xs sm:text-sm text-[#c79528] dark:text-neutral-400">
-            © 2025 Preline Labs.
+            © 2025 Chiri Products.
           </p>
     </div>
    
@@ -105,24 +106,30 @@ return(
         <div className="space-x-4 text-md ">
           <a className="inline-flex gap-x-2 text-gray-200 hover:text-gray-200 focus:outline-none focus:text-gray-200 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200" href="#">Terms</a>
           <a className="inline-flex gap-x-2 text-gray-200 hover:text-gray-200 focus:outline-none focus:text-gray-200 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200" href="#">Privacy</a>
-          <a className="inline-flex gap-x-2 text-gray-200 hover:text-gray-200 focus:outline-none focus:text-gray-200 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200" href="#">Contact</a>
+          <Link className="inline-flex gap-x-2 text-gray-200 hover:text-gray-200 focus:outline-none focus:text-gray-200 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200" to="/contact">Contact</Link>
         </div>
       </div>
 
       <div className="flex flex-wrap justify-between items-center gap-3">
-        <div className="mt-3 sm:hidden">
-          <div className="w-[130px] h-auto">
-          <img className="w-full h-[80px]" src={Logo} alt="" />
+      <div className="w-full flex md:hidden items-center justify-end">
+    <div className=" px-3 py-6">
+    <div className="w-[150px] h-24">
+          <img className="w-full h-auto" src={Logo} alt="" />
           </div>
           
           <p className="mt-1 text-xs sm:text-sm text-[#c79528] dark:text-neutral-400">
-            © 2025 Preline Labs.
+            © 2025 Chiri Products.
           </p>
-        </div>
+    </div>
+   
+
+   
+   
+  </div>
 
         <div className="text-gray-200">
       <h2>This Website Was Developed By</h2> 
-     <p>Netochukwu Codes</p>
+     <a href="netocodes.dev" className="text-md underline underline-offset-4 ">Netochukwu Codes</a>
         </div>
         
       </div>

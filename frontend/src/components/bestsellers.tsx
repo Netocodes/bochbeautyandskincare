@@ -31,7 +31,7 @@ const BestSellers = () => {
             </i>
           </h2>
         </motion.div>
-        <div className="w-full md:max-w-[90%] lg:max-w-[65%] px-8 md:px-4">
+        <div className="w-full md:max-w-[90%] lg:max-w-[65%] px-1 md:px-4">
           <motion.div
             className="relative"
             initial={{ opacity: 0, y: "50%" }}

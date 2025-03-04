@@ -32,7 +32,7 @@ const CartComponent = () => {
                 <div className="shrink-0">
                   <img
                     className="h-48 w-48 max-w-full rounded-lg object-contain"
-                    src={items.image}
+                    src={items.imageUrl}
                     alt=""
                   />
                 </div>

@@ -16,7 +16,7 @@ const HeroSection = () => {
     {
       id: 1,
       text: "Explore Our Natural Skincare Collections",
-      image:"https://res.cloudinary.com/de7tyskql/image/upload/f_auto,q_auto,e_improve:outdoor/v1740561604/sample.jpg",
+      image:"https://res.cloudinary.com/de7tyskql/image/upload/f_auto/q_auto/e_improve:outdoor/v1740561604/sample.jpg",
       description:
         "Discover our range of natural skincare products, designed to nourish and rejuvenate your skin for a healthier, glowing look.",
       link: "/productPage",

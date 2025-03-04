@@ -2,6 +2,7 @@ import React from "react";
 import { Suspense, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import LoadingScreen from "../components/loadingScreen";
+import NewsLetter from "../components/newsletter";
 const HeroSection = React.lazy(() => import("../components/herosection"));
 const BestSellers = React.lazy(() => import("../components/bestsellers"));
 const AdProduct = React.lazy(() => import("../components/adproducts"));
@@ -27,7 +28,7 @@ const Homepage: React.FC = () => {
           <div className="bg-[#f3f9fc]">
             <AdProduct />
           </div>
-          <div className="bg-[#F1F1F1]">
+          <div className="bg-[#eeeded]">
             <BestSellers />
           </div>
           <div className="bg-[#f6f6f6]">
@@ -38,6 +39,9 @@ const Homepage: React.FC = () => {
           </div>
           <div className="bg-[#f6f6f6]">
             <FAQsection />
+          </div>
+          <div className="bg-[#f0e4e4]">
+            <NewsLetter />
           </div>
           <div className="bg-[#8c2643]">
             <Footer />

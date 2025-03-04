@@ -1,0 +1,10 @@
+[phases.setup]
+nixPkgs = ["nodejs"]
+
+[phases.install]
+commands = ["npm install"]
+
+
+
+[start]
+command = "npm start"

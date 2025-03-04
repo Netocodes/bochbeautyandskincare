@@ -38,7 +38,7 @@ useEffect(() => {
 <div className="bg-[#f6f6f6]">
 <ChooseUs />
 </div>
-<div className="bg-[#fefefe]">
+<div className="bg-[#f0e4e4]">
 <NewsLetter />
 </div>
 <div className="bg-[#8c2643]">
