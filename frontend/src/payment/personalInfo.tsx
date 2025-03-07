@@ -5,7 +5,7 @@ import { useWizard } from "react-use-wizard";
 export type formFeilds ={
   fullname: string;
   phoneNumber: number ;
-  email: string;
+  customerEmail: string;
   homeAdrress: string;
   city: string;
   state: string;
@@ -25,7 +25,7 @@ const PersonalInfo = () => {
   const { nextStep } = useWizard();
 
          const onSubmit: SubmitHandler<formFeilds> = (data) => {
-          
+         
           window.sessionStorage.setItem("personalInfo", JSON.stringify(data))
          
           
@@ -74,7 +74,7 @@ setTimeout(() => {
          
          
          <input
-            {...register("email",  {
+            {...register("customerEmail",  {
               required: "Your Email is required",
               validate: (value: string | string[]) => {
                 if(!value.includes("@",)){

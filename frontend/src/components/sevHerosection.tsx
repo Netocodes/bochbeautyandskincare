@@ -2,7 +2,7 @@ import { FaInstagram, FaTiktok, FaFacebook } from "react-icons/fa6";
 const ServiceHero = () => {
 return(
                
-<div className="bg-gradient-to-r from-[#fda4af]  to-[#f43f5e] rounded-xl">
+<div className="service rounded-xl">
 <div className="max-w-[85rem] mx-auto px-4 py-12">
   
   <div className="flex flex-col md:flex-row items-center justify-around">

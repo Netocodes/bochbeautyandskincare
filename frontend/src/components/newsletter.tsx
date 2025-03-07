@@ -1,6 +1,28 @@
+import { Button } from "@material-tailwind/react";
 
+import {SubmitHandler, useForm} from "react-hook-form"
 
+type news ={
+  Email:  string
+}
 const NewsLetter = () => {
+
+ const {register, handleSubmit,  formState: { isSubmitSuccessful}, } = useForm<news>()
+ const onsubmit: SubmitHandler<news> = async(data) => {
+
+const response = await fetch("http://localhost:3000/suscribe", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({data})
+})
+if(!response.ok){
+  throw new Error("An error occured")
+ }
+ const DATA = await response.json()
+ console.log(DATA)
+ }
   return (
     <div>
     
@@ -13,16 +35,30 @@ const NewsLetter = () => {
       </p>
     </div>
 
-    <form>
+    <form onSubmit={handleSubmit(onsubmit)}>
       <div className="w-full sm:max-w-lg md:ms-auto">
         <div className="flex flex-col items-center gap-2 sm:flex-row sm:gap-3">
           <div className="w-full">
             <label htmlFor="hero-input" className="sr-only">Search</label>
-            <input type="text" id="hero-input" name="hero-input" className="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" placeholder="Enter your email" />
+            <input type="email" {...register("Email", {
+               required: "Your Email is required",
+               validate: (value: string | string[]) => {
+                 if(!value.includes("@",)){
+                   return "Email Must include and @ symbol"
+                 }
+                 return true
+                }
+            })}  className="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" placeholder="Enter your email" />
           </div>
-          <a className="w-full sm:w-auto whitespace-nowrap py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-[#8c2643] text-white  focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" href="#">
-            Subscribe
-          </a>
+          
+          <Button 
+          type="submit"
+          
+           placeholder={undefined}
+                          onPointerEnterCapture={""}
+                          onPointerLeaveCapture={""}>
+                            {isSubmitSuccessful ? "Sucsribing" : "Suscribe"}
+                          </Button>
         </div>
         <p className="mt-3 text-sm text-gray-500 dark:text-neutral-500">
           No spam, unsubscribe at any time
@@ -35,5 +71,6 @@ const NewsLetter = () => {
     </div>
   )
 }
+
 
 export default NewsLetter

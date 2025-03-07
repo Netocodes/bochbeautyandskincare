@@ -111,7 +111,7 @@ return(
       </div>
 
       <div className="flex flex-wrap justify-between items-center gap-3">
-      <div className="w-full flex md:hidden items-center justify-end">
+      <div className="w-full flex md:hidden items-center justify-start">
     <div className=" px-3 py-6">
     <div className="w-[150px] h-24">
           <img className="w-full h-auto" src={Logo} alt="" />

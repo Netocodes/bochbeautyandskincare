@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+
+
 const IconSection = () => {
 return(
                 <div>
@@ -5,7 +8,7 @@ return(
     <h2 className="text-2xl text-gray-700 font-semibold underline underline-offset-4 decoration-[#8c2643] decoration-slice">Our Services Include</h2>
    
   </div>                 
-<div className="max-w-[85rem] bg-[#e6e4e4] px-4 py-10 sm:px-6 lg:px-12 lg:py-14 mx-auto">
+<div className="max-w-[85rem] bg-[#e6e4e4] px-6 py-10 sm:px-6 lg:px-12 lg:py-14 mx-auto overflow-y-hidden">
  
   <div className="grid md:grid-cols-2 gap-12">
     <div className="lg:w-3/4">
@@ -26,7 +29,11 @@ return(
 
     <div className="space-y-6 lg:space-y-10">
      
-      <div className="flex gap-x-5 sm:gap-x-8">
+      <motion.div className="flex gap-x-5 sm:gap-x-8"
+         initial={{ opacity: 0, x: "50%" }}
+         whileInView={{ opacity: 1, x: 0 }} // Move to normal position and become visible
+         viewport={{ once: false }}
+         transition={{ duration: 1, ease: "easeIn" }}>
       
         <span className="shrink-0 inline-flex justify-center items-center size-[46px] rounded-full border border-gray-200 bg-[#830b43] text-gray-800 shadow-sm mx-auto dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-200">
           <svg className="shrink-0 size-5 text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
@@ -39,10 +46,14 @@ return(
             Our documentation and extensive Client libraries contain everything a business needs to build a custom integration in a fraction of the time.
           </p>
         </div>
-      </div>
+      </motion.div>
      
 
-      <div className="flex gap-x-5 sm:gap-x-8">
+      <motion.div className="flex gap-x-5 sm:gap-x-8" 
+         initial={{ opacity: 0, x: "50%" }}
+         whileInView={{ opacity: 1, x: 0 }} // Move to normal position and become visible
+         viewport={{ once: false }}
+         transition={{ duration: 1, ease: "easeIn" }}>
      
         <span className="shrink-0 inline-flex justify-center items-center size-[46px] rounded-full border border-gray-200 bg-[#830b43] text-gray-800 shadow-sm mx-auto dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-200">
           <svg className="shrink-0 size-5 text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Z"/><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"/></svg>
@@ -55,11 +66,15 @@ return(
             We actively contribute to open-source projects—giving back to the community through development, patches, and sponsorships.
           </p>
         </div>
-      </div>
+      </motion.div>
      
 
    
-      <div className="flex gap-x-5 sm:gap-x-8">
+      <motion.div className="flex gap-x-5 sm:gap-x-8" 
+         initial={{ opacity: 0, x: "50%" }}
+         whileInView={{ opacity: 1, x: 0 }} // Move to normal position and become visible
+         viewport={{ once: false }}
+         transition={{ duration: 1, ease: "easeIn" }}>
        
         <span className="shrink-0 inline-flex justify-center items-center size-[46px] rounded-full border border-gray-200 bg-[#830b43] text-gray-800 shadow-sm mx-auto dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-200">
           <svg className="shrink-0 size-5 text-gray-100" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10v12"/><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z"/></svg>
@@ -72,7 +87,7 @@ return(
             From boarding passes to movie tickets, there's pretty much nothing you can't store with Preline.
           </p>
         </div>
-      </div>
+      </motion.div>
       
     </div>
    

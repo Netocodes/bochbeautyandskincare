@@ -62,7 +62,7 @@ const AdProduct = () => {
                   <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
                   <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
                   <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li></ul>
-                  <p className="flex flex-row  italic text-sm">search for <b> {textToCopy} </b> in the shop section <Button onClick={handlecopy} className="bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-purple-500 via-slate-700 to-teal-800 text-white font-semibold px-3 rounded-full py-2"  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>Copy</Button></p>
+                  <p className="flex flex-row gap-1 italic text-sm">search for <b> {textToCopy} </b> in the shop section <Button onClick={handlecopy} className="bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-purple-500 via-slate-700 to-teal-800 text-white font-semibold  px-3 rounded-full py-2"  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>Copy</Button></p>
                 </div>
                 <div className="my-4">
                   <Link to={"./productPage"}>
