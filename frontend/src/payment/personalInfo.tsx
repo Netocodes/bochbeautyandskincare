@@ -1,5 +1,5 @@
 import {SubmitHandler, useForm} from "react-hook-form"
-import { Button } from "@material-tailwind/react";
+import { Button, Spinner } from "@material-tailwind/react";
 import { useWizard } from "react-use-wizard";
 
 export type formFeilds ={
@@ -93,7 +93,7 @@ setTimeout(() => {
           <div className="flex items-center justify-around mt-6 ">
             <Button
             type="submit"
-              children={isSubmitSuccessful ? "...loading" : "next"}
+              children={isSubmitSuccessful ? <Spinner className="h-8 w-8" onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} /> : "next"}
            
               className="bg-[#8c2643] text-md  px-8 md:text-xl lowercase "
               placeholder={undefined}

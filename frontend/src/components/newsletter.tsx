@@ -10,7 +10,7 @@ const NewsLetter = () => {
  const {register, handleSubmit,  formState: { isSubmitSuccessful}, } = useForm<news>()
  const onsubmit: SubmitHandler<news> = async(data) => {
 
-const response = await fetch("http://localhost:3000/suscribe", {
+const response = await fetch("https://bochbeautyandskincare-production.up.railway.app/suscribe", {
   method: "POST",
   headers: {
     "Content-Type": "application/json"

@@ -5,6 +5,7 @@ const cors = require('cors')
 const bodyParser = require('body-parser')
 const Email = require("./routes/email")
 const Suscribe = require("./routes/suscribe")
+const Proof = require("./routes/proof")
 let port =  process.env.PORT_NUMBER || 3000;
 
 
@@ -20,7 +21,7 @@ app.post("/send-email", Email)
 // app.get('/', Email)
 
 app.post('/suscribe', Suscribe)
-
+app.post('/upload-proof', Proof)
 
 app.listen(port, () => {
     console.log(`server is live at: port ${port}`)

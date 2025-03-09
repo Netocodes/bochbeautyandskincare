@@ -21,6 +21,10 @@ const Homepage: React.FC = () => {
       <Helmet>
         <title className="text-[#82878a]">Beauty of Chiri - Homepage</title>
         <meta name="theme-color" content="#8c2643" />
+        {/* <meta property="og:title" content="Add title here" />
+<meta property="og:description" content="Add description here" />
+<meta property="og:image" content="https://your-website.com/og-image.png" />
+<meta property="og:url" content="https://your-website.com"></meta> */}
       </Helmet>
       <Suspense fallback={<LoadingScreen />}>
         <div className="w-full flex flex-col  gap-y-0 overflow-hidden">

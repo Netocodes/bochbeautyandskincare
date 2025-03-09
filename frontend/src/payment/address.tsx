@@ -1,4 +1,4 @@
-import { Button } from "@material-tailwind/react";
+import { Button, Spinner } from "@material-tailwind/react";
 import { useWizard } from "react-use-wizard";
 import { formFeilds } from "./personalInfo";
 import { SubmitHandler, useForm} from "react-hook-form"
@@ -71,9 +71,9 @@ const Address = () => {
                                           onPointerLeaveCapture={""}
                                         />
                                         <Button
-                                          children={isSubmitSuccessful ? "...Loading" : "next"}
+                                          children={isSubmitSuccessful ? <Spinner className="h-8 w-8" onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} /> : "Next"}
                                           type="submit"
-                                          className="bg-[#8c2643] text-md  px-8 md:text-xl lowercase "
+                                          className="bg-[#8c2643] text-md  px-8 md:text-xl capitalize "
                                           placeholder={undefined}
                                           onPointerEnterCapture={""}
                                           onPointerLeaveCapture={""}
