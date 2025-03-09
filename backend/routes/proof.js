@@ -35,7 +35,7 @@ router.post('/upload-proof', upload.single('proof'), (req, res) => {
     from: email,
     to: 'netochukwucodes@gmail.com', 
     subject: `New Payment Proof for Order #${orderId}`,
-    text: `A new payment proof has been uploaded for Order #${orderId}. Please find the attachment.`,
+    text: `A new payment proof has been uploaded for Order #${orderId}. Please find the attachment. and reply the costumer`,
     attachments: [
       {
         filename: file.originalname, // Use the original file name

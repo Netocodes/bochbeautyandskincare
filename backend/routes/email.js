@@ -31,7 +31,7 @@ transporter.verify((error, success) => {
   if (error) {
     console.error("Transporter verification failed:", error);
   } else {
-    console.log("Server is ready to send emails");
+    console.log("Product Order server is ready to send emails");
   }
 });
 
@@ -48,11 +48,11 @@ router.post("/send-email", async (req, res) => {
    
     // Get the customer details from the request body
     const { personalInfo, addressData, cartItems, total } = requestedData;
-    if (!personalInfo || !addressData || !cartItems || total === 0){
+    if (!personalInfo || !addressData || !isArray(cartItems) || total === 0){
       res.status(400).json({mssg: "Couldnt get The Data Well"})
     }
     const { fullname, customerEmail, phoneNumber } = personalInfo;
-    const { homeAddress, city, state, zip } = addressData;
+    const { homeAdrress, city, state, zip } = addressData;
     // Generate a new order ID for this request
     const orderId = generateOrderId();
 
@@ -67,24 +67,17 @@ router.post("/send-email", async (req, res) => {
     - Total Amount: $${total}
   
     Items Ordered:
-    ${cartItems
-      .map(
-        (item) => `
-      <li style="margin-bottom: 20px;">
-        <img src="${item.imageUrl}" alt="${item.title}" style="width: 100px; height: auto; border-radius: 5px; margin-right: 10px;">
-        <div>
-          <strong>${item.title}</strong><br>
+    ${cartItems.map((item) => `
+          product:   ${item.title}
           Price: ₺${item.price}
-        </div>
-      </li>
+        
     `
-      )
-      .join("")}
+      ).join("")}
   
     Next Steps:
-    1. Submit proof of payment by replying to this email with:
-       - A screenshot or PDF of your payment confirmation.
-       - Your Order ID: ${orderId}.
+    1. Copy proof of payment by sent to this email:
+       - Submit your screenshot or PDF of your payment confirmation.
+       - Alonside Your already copied Order ID: ${orderId}.
     2. Once we verify your payment, we will send you a confirmation message and shipping status.
   
     If you have any questions, please contact us or reply to this email.
@@ -100,11 +93,11 @@ router.post("/send-email", async (req, res) => {
     <p style="color: #8c2643; font-size: 16px; line-height: 1.5;">Thank you for your purchase! Your order has been confirmed.</p>
 
     <h3 style="color: #8c2643; font-size: 20px; margin-top: 20px; margin-bottom: 10px;">Order Details:</h3>
-    <ul style="list-style-type: none; padding: 0; margin: 0;">
-      <li style="color: #8c2643; font-size: 16px; line-height: 1.5; margin-bottom: 10px;">
+    <ul style="background-color: #acd8d4 width:100% list-style-type: none; padding: 12px, 20px; margin: 0;">
+      <li style="color:rgb(41, 28, 32); font-size: 21px; line-height: 1.5; margin-bottom: 10px;">
         <strong>Order ID:</strong> ${orderId}
       </li>
-      <li style="color: #8c2643; font-size: 16px; line-height: 1.5; margin-bottom: 10px;">
+      <li style="color:rgb(39, 28, 31); font-size: 21px; line-height: 1.5; margin-bottom: 10px;">
         <strong>Total Amount:</strong> ₺${total}
       </li>
     </ul>
@@ -117,8 +110,9 @@ router.post("/send-email", async (req, res) => {
         <li style="display: flex; align-items: center; margin-bottom: 20px;">
           <img src="${item.imageUrl}" alt="${item.title}" style="width: 100px; height: auto; border-radius: 5px; margin-right: 10px;">
           <div>
-            <strong style="color: #8c2643; font-size: 16px;">${item.title}</strong><br>
-            <span style="color: #8c2643; font-size: 14px; margin-top: 14px;">Price: <strong>₺${item.price}</strong></span>
+            <strong style="color: #8c2643; font-size: 18px;">${item.title}</strong><br>
+            <span style="color: #8c2643; font-size: 14px; margin-top: 16px;">Price: <strong>₺${item.price}</strong></span>
+            <span style="color:rgb(41, 23, 28); font-size: 14px; margin-top: 14px;">Price: <strong>₺${item.quantity}</strong></span>
           </div>
         </li>
       `
@@ -128,14 +122,15 @@ router.post("/send-email", async (req, res) => {
 
     <h3 style="color: #8c2643; font-size: 20px; margin-top: 20px; margin-bottom: 10px;">Next Steps:</h3>
     <ol style="color: #8c2643; font-size: 16px; line-height: 1.5;">
-      <li>
-        Submit proof of payment by replying to this email with:
+      <li style="background-color: #acd8d4; width:100%; padding: 12px, 20px; border:2px dotted rgb(48, 42, 42) margin: 0;">
+        <strong>Copy the Order Id sent to this email:</strong>
         <ul style="list-style-type: disc; padding-left: 20px;">
           <li>A screenshot or PDF of your payment confirmation.</li>
-          <li>Your Order ID: <strong>${orderId}</strong>.</li>
+          <li>Your already copied Order ID: <strong>${orderId}</strong>.</li>
         </ul>
+        <button style="background-color: #8c2643; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; margin-top: 20px; cursor: pointer;"><a href="https://www.bochbeautyandskincare.shop/verify-payment">Submit Proof of Payment</a></button>
       </li>
-      <li>Once we verify your payment, we will send you a confirmation number to complete your order.</li>
+      <li>Once we verify your payment, we will send you a confirmation message and your shipping status.</li>
     </ol>
 
     <p style="color: #8c2643; font-size: 16px; line-height: 1.5; margin-top: 20px;">
@@ -153,22 +148,29 @@ router.post("/send-email", async (req, res) => {
    New Order Received!
 
 Order Details:
-- Order ID: 12345
-- Customer Name: John Doe
-- Customer Email: john.doe@example.com
-- Customer Contact: +1234567890
+- Order ID: ${orderId}
+- Customer Name: ${fullname}
+- Customer Email: ${customerEmail}
+- Customer Contact: ${phoneNumber}
 
 Shipping Address:
-- Address: 123 Main St
-- City: New York
-- State: NY
-- ZIP: 10001
+- Address: ${homeAdrress}
+- City: ${city}
+- State: ${state}
+- ZIP: ${zip}
 
 Items Ordered:
-- Product 1: ₺50
-- Product 2: ₺30
+${cartItems
+  .map(
+    (item) => `
+  - Product: ${item.title}
+  - Price: ₺${item.price}
+  - Quantity: ${item.quantity}
+`
+  )
+  .join("")}
 
-Important: Make sure to use the Order ID: 12345 to verify the user who paid for this order.
+Important: Make sure to use the Order ID: ${orderId} to verify the user who paid for this order.
 
 If you have any questions, please contact the customer directly or reply to this email.
 
@@ -199,7 +201,7 @@ bochbeautyandskincare
   <h3 style="color: #8c2643; font-size: 20px; margin-top: 20px; margin-bottom: 10px;">Shipping Address:</h3>
   <ul style="list-style-type: none; padding: 0; margin: 0;">
     <li style="color: #8c2643; font-size: 16px; line-height: 1.5; margin-bottom: 10px;">
-      <strong>Address:</strong> ${homeAddress}
+      <strong>Address:</strong> ${homeAdrress}
     </li>
     <li style="color: #8c2643; font-size: 16px; line-height: 1.5; margin-bottom: 10px;">
       <strong>City:</strong> ${city}
@@ -237,11 +239,11 @@ bochbeautyandskincare
   </div>
 
   <p style="color: #8c2643; font-size: 16px; line-height: 1.5; margin-top: 20px;">
-    If you have any questions, please contact the customer @${customerEmail} 
-  </p>
+    If you have any questions, please contact the customer <a href="mailto:${customerEmail}">directly</a> or reply to this email.
   <p style="color: #8c2643; font-size: 16px; line-height: 1.5;">
     Best regards,<br>
           <strong><a href="https://www.bochbeautyandskincare.shop/">bochbeautyandskincare</a></strong>
+          <strong><a href="https://netocodes.github.io/netocodes/">and Your Developer @NetoCodes</a></strong>
 
   </p>
 </div>

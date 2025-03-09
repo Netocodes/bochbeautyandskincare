@@ -34,13 +34,13 @@ const mailOptions = {
   from: email,
   to: data.Email,
 subject: "Welcome to the newsletter",
-text: "Thank you for subscribing to our newsletter",
+text: "Thank you for subscribing to our newsletter, We would send update's regularly on product's that makes your skin glow.",
               };
 const ownerOptions ={
-                from: email,
-                to: email,
-                subject: "New subscriber",
-                text: `${data.Email} has subscribed to the newsletter`,
+  from: email,
+  to: email,
+  subject: "New subscriber",
+  text: `${data.Email} has subscribed to the newsletter, Do well to send skincare products to your new suscriber, to keep them updated`,
 }
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
@@ -54,10 +54,10 @@ const ownerOptions ={
                 transporter.sendMail(ownerOptions, (error, info) => {
                 if (error) {
                 console.error("Error sending email:", error);
-                res.status(500).json({ message: "Internal server error" });
+                res.status(400).json({ message: "Connection Error !!!" });
                 } else {
                 console.log("Email sent:", info.response);
-                res.status(200).json({ message: "Email sent successfully" });
+                res.status(200).json({ message: "Product ordered Successfully" });
                 }
                 });
                 
