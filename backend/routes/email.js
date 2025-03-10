@@ -42,15 +42,32 @@ router.get("/", (req, res) => {
 
 // Send email route
 router.post("/send-email", async (req, res) => {
-  try {
-    const response = req.body;
-    const {requestedData} = response
    
+  try {
+    const {requestedData} = req.body;
+
+    if (!requestedData) {
+      return res.status(400).json({ mssg: "Request body is missing or invalid" });
+  }
+ 
     // Get the customer details from the request body
     const { personalInfo, addressData, cartItems, total } = requestedData;
-    if (!personalInfo || !addressData || !isArray(cartItems) || total === 0){
-      res.status(400).json({mssg: "Couldnt get The Data Well"})
+    if (!requestedData) {
+      return res.status(400).json({ mssg: "Request body is missing or invalid" });
     }
+    
+    if (!personalInfo || !addressData || !Array.isArray(cartItems) || total === undefined) {
+      return res.status(400).json({ mssg: "Invalid or missing data in request body" });
+    }
+    
+    if (!personalInfo.fullname || !personalInfo.customerEmail || !personalInfo.phoneNumber) {
+      return res.status(400).json({ mssg: "Invalid or missing personal info" });
+    }
+    
+    if (!addressData.homeAdrress || !addressData.city || !addressData.state || !addressData.zip) {
+      return res.status(400).json({ mssg: "Invalid or missing address data" });
+    }
+    
     const { fullname, customerEmail, phoneNumber } = personalInfo;
     const { homeAdrress, city, state, zip } = addressData;
     // Generate a new order ID for this request
@@ -94,11 +111,11 @@ router.post("/send-email", async (req, res) => {
 
     <h3 style="color: #8c2643; font-size: 20px; margin-top: 20px; margin-bottom: 10px;">Order Details:</h3>
     <ul style="background-color: #acd8d4 width:100% list-style-type: none; padding: 12px, 20px; margin: 0;">
-      <li style="color:rgb(41, 28, 32); font-size: 21px; line-height: 1.5; margin-bottom: 10px;">
-        <strong>Order ID:</strong> ${orderId}
+      <li style="color:rgb(41, 28, 32);  font-size: 21px; line-height: 1.5; margin-bottom: 10px;">
+        Order ID: <strong> ${orderId}</strong> 
       </li>
       <li style="color:rgb(39, 28, 31); font-size: 21px; line-height: 1.5; margin-bottom: 10px;">
-        <strong>Total Amount:</strong> ₺${total}
+        Total Amount: <strong> ₺${total}</strong>
       </li>
     </ul>
 
@@ -112,7 +129,7 @@ router.post("/send-email", async (req, res) => {
           <div>
             <strong style="color: #8c2643; font-size: 18px;">${item.title}</strong><br>
             <span style="color: #8c2643; font-size: 14px; margin-top: 16px;">Price: <strong>₺${item.price}</strong></span>
-            <span style="color:rgb(41, 23, 28); font-size: 14px; margin-top: 14px;">Price: <strong>₺${item.quantity}</strong></span>
+            <span style="color:rgb(61, 42, 47); font-size: 14px; margin-top: 14px;">quantity: <strong>x${item.quantity}</strong></span>
           </div>
         </li>
       `
@@ -128,10 +145,11 @@ router.post("/send-email", async (req, res) => {
           <li>A screenshot or PDF of your payment confirmation.</li>
           <li>Your already copied Order ID: <strong>${orderId}</strong>.</li>
         </ul>
-        <button style="background-color: #8c2643; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; margin-top: 20px; cursor: pointer;"><a href="https://www.bochbeautyandskincare.shop/verify-payment">Submit Proof of Payment</a></button>
       </li>
       <li>Once we verify your payment, we will send you a confirmation message and your shipping status.</li>
+
     </ol>
+        <a href="https://www.bochbeautyandskincare.shop/verify-payment" style="background-color: #8c2643; color: #ffffff; margin: 20px, 0; padding: 10px 20px; border: none; border-radius: 5px; margin-top: 20px; cursor: pointer;">Submit Proof of Payment</a>
 
     <p style="color: #8c2643; font-size: 16px; line-height: 1.5; margin-top: 20px;">
       If you have any questions, please contact us or reply to this email.
@@ -169,7 +187,9 @@ ${cartItems
 `
   )
   .join("")}
-
+  Order Details:
+    - Order ID: ${orderId}
+    - Total Amount: $${total}
 Important: Make sure to use the Order ID: ${orderId} to verify the user who paid for this order.
 
 If you have any questions, please contact the customer directly or reply to this email.
@@ -224,13 +244,23 @@ bochbeautyandskincare
       <div>
         <strong style="color: #8c2643; font-size: 16px;">${item.title}</strong><br>
         <span style="color: #8c2643; font-size: 14px; margin-top: 14px;">Price: <strong>₺${item.price}</strong></span>
-      </div>
+        <span style="color: #8c2643; font-size: 14px; margin-top: 14px;">Quantity: <strong>x${item.quantity}</strong></span>
+      
+        </div>
     </li>
   `
     )
     .join("")}
   </ul>
-
+<h3 style="color: #8c2643; font-size: 20px; margin-top: 20px; margin-bottom: 10px;">Order Details:</h3>
+    <ul style="background-color: #acd8d4 width:100% list-style-type: none; padding: 12px, 20px; margin: 0;">
+      <li style="color:rgb(41, 28, 32);  font-size: 21px; line-height: 1.5; margin-bottom: 10px;">
+        Order ID: <strong> ${orderId}</strong> 
+      </li>
+      <li style="color:rgb(39, 28, 31); font-size: 21px; line-height: 1.5; margin-bottom: 10px;">
+        Total Amount: <strong> ₺${total}</strong>
+      </li>
+    </ul>
   <!-- Bottom Section -->
   <div style="margin-top: 30px; padding: 15px; background: #fff; border-radius: 5px; border: 1px solid #ddd;">
     <p style="color: #8c2643; font-size: 16px; line-height: 1.5;">

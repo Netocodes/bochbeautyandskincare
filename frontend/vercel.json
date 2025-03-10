@@ -1,0 +1,16 @@
+{
+                "rewrites": [
+                                {
+                                                "source": "/bochbeautyandskincare/assets/:path*",
+                                                "destination": "/assets/:path*"
+                                },
+                                {
+                                                "source": "/logo2.svg",
+                                                "destination": "/path/to/logo2.svg"
+                                },
+                                {
+                                                "source": "/(.*)",
+                                                "destination": "/index.html"
+                                              }
+                ]
+}

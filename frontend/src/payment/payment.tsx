@@ -5,6 +5,7 @@ import { Card } from "flowbite-react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Toaster, toast } from "sonner";
+import axios from "axios";
 
 <Toaster
 richColors
@@ -31,25 +32,30 @@ total
 }
 
 
+
   const handleClick = async () => {
     setLoading(true)
     try {
       
-      const response = await fetch('https://bochbeautyandskincare-production.up.railway.app/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ requestedData }),
-      })
-      const data = await response.json()
-   
-      toast(data.message)
-      setLoading(false)
-      navigate("/verify-payment")
+      const response = await axios.post("http://localhost:3000/send-email", {requestedData}
+      )
+   console.log("This is the response from the backend", response.data)
+   toast.success(response.data.message) //successful message
+        
+        setTimeout(() => {
+          navigate("/verify-payment");
+        }, 5000);
+      
+      
     } catch (error) {
       console.error(error)
-      toast.error("Could Not submit Request, please try again..")
+      if (axios.isAxiosError(error)) {
+        toast.error(error.response?.data?.error || "Failed to send data");
+        console.log(error.response?.data?.error )
+      } else {
+        toast.error("An unexpected error occurred");
+      }
+     
       setLoading(false)
     }
   }

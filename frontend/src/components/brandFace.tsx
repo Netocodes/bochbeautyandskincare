@@ -28,8 +28,8 @@ const BrandFace = () => {
             </main>
         </div>
     </div>
-    <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-[500px]">
-        <img className=" w-full serHero2 object-cover object-top  lg:w-full lg:h-full" src="https://cdn.pixabay.com/photo/2016/03/23/04/01/woman-1274056_960_720.jpg" alt="" />
+    <div className="lg:absolute lg:top-7 lg:right-0 lg:w-[500px]">
+        <img className="size-96 serHero2 object-cover object-center my-auto  " src="https://cdn.pixabay.com/photo/2016/03/23/04/01/woman-1274056_960_720.jpg" alt="" />
     </div>
 </div>
     </div>
