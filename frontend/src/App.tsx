@@ -30,9 +30,7 @@ const App = () => {
         ) : (
           <div>
             <Router
-              basename={import.meta.env.MODE === "production"
-                ? "/bochbeautyandskincare"
-                : "/" }
+              basename={import.meta.env.VITE_BASE_PATH || '/' }
             >
               <div className="fixed top-0 z-[50]">
                 <Suspense fallback={<Loadingscreen />}>
