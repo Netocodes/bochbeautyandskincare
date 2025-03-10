@@ -29,9 +29,7 @@ const App = () => {
           <ComingSoonPage />
         ) : (
           <div>
-            <Router
-              basename={import.meta.env.VITE_BASE_PATH || '/' }
-            >
+            <Router >
               <div className="fixed top-0 z-[50]">
                 <Suspense fallback={<Loadingscreen />}>
                   <Navbar />
