@@ -37,7 +37,7 @@ total
     setLoading(true)
     try {
       
-      const response = await axios.post("http://localhost:3000/send-email", {requestedData}
+      const response = await axios.post("https://bochbeautyandskincare-production.up.railway.app/send-email", {requestedData}
       )
    console.log("This is the response from the backend", response.data)
    toast.success(response.data.message) //successful message
