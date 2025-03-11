@@ -1,0 +1,2 @@
+import{j as e}from"./index-CRH7uIE0.js";import"./vendor-DUt4hQxu.js";const o=()=>e.jsx("div",{children:e.jsx("div",{className:"bg-gradient-to-r from-indigo-900 to-purple-900  font-[sans-serif]",children:e.jsx("div",{className:"relative overflow-hidden",children:e.jsx("div",{className:"lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2",children:e.jsx("img",{className:"h-[17rem] w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full",src:`https://res.cloudinary.com/de7tyskql/image/upload/f_auto,q_auto/zesz5qfddzmw0j1txpdj\r
+`,alt:"Delicious Food"})})})})});export{o as default};
