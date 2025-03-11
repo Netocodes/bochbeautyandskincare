@@ -11,7 +11,7 @@ position="top-right"
 />
 const AdProduct = () => {
 
-  const textToCopy = "Rose Glow Oil";
+  const textToCopy = "Restoration Body Oil";
   const handlecopy = async () => {
     try {
       await navigator.clipboard.writeText(textToCopy);

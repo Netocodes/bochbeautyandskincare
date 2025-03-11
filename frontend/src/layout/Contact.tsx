@@ -1,7 +1,6 @@
 import { CiLocationOn } from "react-icons/ci";
 import { MdOutlineMarkEmailRead } from "react-icons/md";
 import { FaPhoneVolume } from "react-icons/fa6";
-import Logo from "../assets/logo2.svg"
 const ContactUs = () => {
   return <div className="bg-[#eee7e7]">
   
@@ -14,7 +13,7 @@ const ContactUs = () => {
 
   <div className="grid grid-cols-1 lg:grid-cols-2 lg:items-center gap-6 md:gap-8 lg:gap-12 px-4">
     <div className=" w-full md:w-[500px] overflow-hidden bg-[#8c2643] rounded-2xl ">
-      <img className="w-full object-cover rounded-2xl" src={Logo} alt="Contacts Image" />
+      <img className="w-full object-cover rounded-2xl" src="https://res.cloudinary.com/de7tyskql/image/upload/f_auto,q_auto/wywofgphiwjoahygpiek" alt="Contacts Image" />
     </div>
    
 
@@ -45,7 +44,7 @@ const ContactUs = () => {
       </div>
 
       <div>
-        <h3 className="mb-5 text-center text-2xl font-semibold text-gray-800 dark:text-white">
+        <h3 className= "mb-5 text-center text-2xl font-semibold text-gray-800 dark:text-white">
           Our contacts
         </h3>
 
@@ -59,7 +58,7 @@ const ContactUs = () => {
                 Email us
               </p>
               <p>
-                <a className="relative inline-block font-medium text-gray-700 " href="mailto:contact@bochbeautyandskincare.shop">
+                <a className="relative inline-block hover:underline font-medium text-gray-700 " href="mailto:contact@bochbeautyandskincare.shop">
                   contact@bochbeautyandskincare.shop
                 </a>
               </p>
@@ -74,7 +73,7 @@ const ContactUs = () => {
                 Call us on
               </p>
               <p>
-                <a className="relative inline-block font-medium text-gray-700 before:absolute before:bottom-0.5 before:start-0 before:-z-[1] before:w-full before:h-1 before:bg-lime-400 hover:before:bg-black focus:outline-none focus:before:bg-black dark:text-white dark:hover:before:bg-white dark:focus:before:bg-white" href="tel:+90 538 408 53 04">
+                <a className="relative inline-block hover:underline font-medium text-gray-700 before:absolute before:bottom-0.5 before:start-0 before:-z-[1] before:w-full before:h-1 before:bg-lime-400 hover:before:bg-black focus:outline-none focus:before:bg-black dark:text-white dark:hover:before:bg-white dark:focus:before:bg-white" href="tel:+90 538 408 53 04">
                 +90 538 408 53 04
                 </a>
               </p>

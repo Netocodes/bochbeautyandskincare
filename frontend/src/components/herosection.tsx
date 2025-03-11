@@ -16,7 +16,7 @@ const HeroSection = () => {
     {
       id: 1,
       text: "Explore Our Natural Skincare Collections",
-      image:"https://res.cloudinary.com/de7tyskql/image/upload/f_auto/q_auto/e_improve:outdoor/v1740561604/sample.jpg",
+      image: "https://res.cloudinary.com/de7tyskql/image/upload/f_auto,q_auto/s3vzy94xmrtpvb7zkxvr",
       description:
         "Discover our range of natural skincare products, designed to nourish and rejuvenate your skin for a healthier, glowing look.",
       link: "/productPage",
@@ -25,7 +25,7 @@ const HeroSection = () => {
     {
       id: 2,
       text: "Certified Skincare Formulator Delivering Beauty Worldwide.",
-      image:"https://res.cloudinary.com/de7tyskql/image/upload/f_auto,q_auto,e_improve:outdoor/v1740561610/samples/two-ladies.jpg",
+      image:"https://res.cloudinary.com/de7tyskql/image/upload/f_auto,q_auto/s3vzy94xmrtpvb7zkxvr",
       description:
         "Our certified skincare experts create custom formulas that cater to your unique skin needs, available for delivery worldwide.",
       link: "/contact",
@@ -36,7 +36,7 @@ const HeroSection = () => {
       text: "We Do International Deliveries",
       image:
         // "https://i.pinimg.com/736x/d0/3d/d7/d03dd7488c5db21e5627a3eb02a9b86c.jpg",
-        "https://i.imghippo.com/files/PbO7m1719014190.png",
+        "https://res.cloudinary.com/de7tyskql/image/upload/f_auto,q_auto/my5urrlzlgkofiuicv8s",
       description:
         "No matter where you are, our skincare products can reach you with international delivery options for a seamless shopping experience.",
       link: "/productPage",
@@ -46,7 +46,7 @@ const HeroSection = () => {
       id: 4,
       text: "Explore Our Products",
       image:
-        "https://i.pinimg.com/736x/0d/74/f5/0d74f573417beabf6cf21c24caba5920.jpg",
+        "https://res.cloudinary.com/de7tyskql/image/upload/f_auto,q_auto/dkk8lchyqrgsjanqyi7h",
       description:
         "Browse through our carefully curated selection of skincare and beauty products to find what’s perfect for you.",
       link: "/productPage",
@@ -56,7 +56,7 @@ const HeroSection = () => {
       id: 5,
       text: "See Our Testimonials",
       image:
-        "https://i.pinimg.com/736x/0b/a3/f8/0ba3f818f5c2311e1e8fa13f726fb564.jpg",
+        "https://res.cloudinary.com/de7tyskql/image/upload/f_auto,q_auto/xua0qrbkj6i0yf6eisgw",
       description:
         "Read reviews and testimonials from happy customers who have transformed their skincare routine with our products.",
       link: "/",
@@ -78,7 +78,10 @@ const HeroSection = () => {
               <div className=" flex flex-col items-center justify-center h-full">
                 {/* Div with background image */}
                 <div
-                  className={` relative   bg-center w-full h-full flex items-center justify-center`}
+                  className={`   md:w-[95%] h-[75dvh]   bg-no-repeat bg-cover  bg-center  w-full  flex items-center justify-center`}
+                  style={{
+                    backgroundImage: `url(${data.image})`,
+                  }}
                 >
                   {/* Text over the image */}
                   <motion.div
@@ -91,9 +94,9 @@ const HeroSection = () => {
                       ease: "easeInOut",
                     }}
                   >
-                    <h1 className="text-white text-3xl font-bold text-center bg-[#8c2643]/75 shadow-lg py-8 md:py-8 px-6 sm:text-6xl  md:text-4xl">
+                    <h2 className="text-white text-3xl font-bold text-center bg-[#8c2643]/75 shadow-lg py-8 md:py-8 px-6 sm:text-6xl  md:text-4xl">
                       {data.text}
-                    </h1>
+                    </h2>
                     <p className="max-w-xl mx-auto font-semibold text-gray-100 bg-gray-700/55 backdrop-blur-md py-6  text-lg text-left sm:text-lg md:text-xl px-6">
                       {data.description}
                     </p>
@@ -107,11 +110,11 @@ const HeroSection = () => {
                       <Link to={data.link}>{data.button}</Link>
                     </Button>
                   </motion.div>
-                  <img
+                  {/* <img
                     className="absolute hero w-full md:w-[95%] h-[75dvh] md:h-[75dvh]  object-cover object-center"
                     src={data.image}
                     alt=""
-                  />
+                  /> */}
                 </div>
                 {/* End of div with text */}
               </div>

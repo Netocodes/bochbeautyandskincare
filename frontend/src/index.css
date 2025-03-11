@@ -80,3 +80,9 @@ html {
   position: absolute;
   clip: rect(10px, 150px, 130px, 10px);
 }
+.text{
+  background-image: linear-gradient(to bottom right, #ffffff, #bfdbfe, #0ea5e9);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}

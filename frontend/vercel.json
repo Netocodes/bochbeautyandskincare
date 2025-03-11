@@ -9,5 +9,12 @@
                     "source": "/(.*)",
                     "destination": "/index.html"
                   }
-                ]
+                ],
+                     "redirects": [
+                       {
+                         "source": "/:path*",
+                         "destination": "https://www.bochbeautyandskincare.shop/:path*",
+                         "permanent": true
+                       }
+                     ]            
               }

@@ -37,8 +37,8 @@ setTimeout(() => {
  
   return (
     <div>
-      <div className="text-center w-full max-w-xl md:max-w-7xl mx-auto px-4 flex flex-col md:flex-row gap-y-8 gap-x-20 items-center  ">
-        <h2 className="text-2xl md:text-4xl font-bold text-gray-700">
+      <div className="text-center w-full bg-gray-500 bg-clip-padding backdrop-filter  backdrop-blur-2xl bg-opacity-20 backdrop-saturate-50 backdrop-contrast-150 max-w-xl md:max-w-7xl mx-auto px-4 py-5 md:py-12 flex flex-col md:flex-row gap-y-8 gap-x-20 items-center  ">
+        <h2 className="text-3xl md:text-4xl font-bold text">
           Who are we shipping to :
         </h2>
         <form className=" mt-4" onSubmit={handleSubmit(onSubmit)}>
