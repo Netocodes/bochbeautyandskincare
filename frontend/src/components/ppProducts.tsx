@@ -4,7 +4,7 @@ import { HiBarsArrowUp, HiSquaresPlus } from "react-icons/hi2";
 import { MdCloseFullscreen } from "react-icons/md";
 import { useState, useEffect } from "react";
 import { FaRegEye } from "react-icons/fa";
-import { IoMdHeart } from "react-icons/io";
+import { MdOutlineFileDownload } from "react-icons/md";
 import { useCart } from "../context/usecart";
 import { SearchInput } from "./ppInputSearch";
 import { useNavigate } from "react-router-dom";
@@ -23,6 +23,7 @@ import {
   MenuItem,
 } from "@material-tailwind/react";
 import { getCloudinaryUrl } from "../utils/cloud";
+import { toast } from "sonner";
 
 export type Product = {
   id: number;
@@ -53,7 +54,7 @@ const Products = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
   // const { data } = useFetch<Product[]>("/products.json");
   const navigate = useNavigate();
-  const { addToCart, likePost } = useCart();
+  const { addToCart } = useCart();
 
   useEffect(() => {
     fetchProducts();
@@ -73,11 +74,11 @@ const Products = () => {
         detailsImage: product.images.map((image) => getCloudinaryUrl(image)), // Example options
     }));
      
-      setTimeout(() => {
+      
         setProducts(productsWithUrls);
         
         setloading(false);
-      }, 100);
+      
  
      console.log(productsWithUrls);
     
@@ -129,6 +130,9 @@ const Products = () => {
     // { id: 8, title: "jewelerycopy", icon: "" },
     // { id: 9, title: "jewelerycopy", icon: "" },
   ];
+  const handleDownload = () => {
+    toast.success("hold on ")
+  }
 
   const handleClose = (): void => setOpen(!isOpen);
   // Handle category selection from the drawer
@@ -277,15 +281,13 @@ const Products = () => {
             <div className="bg-[#f8f4f4] grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 px-6 py-5">
               {filteredProducts.map((product: Product) => [
                 <div key={product.id} className="bg-[#fefefe] font-sans">
-                  <div className="rounded-lg border border-gray-200 bg-white/50 p-6 shadow-lg dark:border-gray-700 dark:bg-gray-800">
+                  <div className="rounded-lg border border-gray-200 bg-white/50 p-6 shadow-lg ">
                     <div
-                      className="h-56 w-full mx-auto px-2 py-2 bg-[#81133d] pointer hover:cursor-pointer"
+                      className="h-56 w-full mx-auto px-2 py-2 bg-[#81133d] pointer hover:cursor-pointer rounded-xl "
                       onClick={(e) => {
                         e.preventDefault();
                         setloading(true);
-                        setTimeout(() => {
                           veiwProducts(products, product.id);
-                        }, 3000);
                       }}
                     >
                       <img
@@ -319,9 +321,7 @@ const Products = () => {
                             onClick={(e) => {
                               e.preventDefault();
                               setloading(true);
-                              setTimeout(() => {
                                 veiwProducts(products, product.id);
-                              }, 3000);
                             }}
                           >
                             <Tooltip
@@ -336,15 +336,16 @@ const Products = () => {
                             </Tooltip>
                           </motion.div>
                           <Tooltip
-                            content="Add this to Favourite"
+                            content="Downoad image"
                             style="light"
                           >
-                            <IoMdHeart
+                            
+                            <MdOutlineFileDownload
                               onClick={() => {
-                                likePost(product);
+                                handleDownload()
                               }}
                               size={28}
-                              className="text-red-500"
+                              className="text-gray-800"
                             />
                           </Tooltip>
                         </div>

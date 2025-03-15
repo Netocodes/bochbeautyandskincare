@@ -56,7 +56,7 @@ const Details = () => {
                
            
  
-           <div className="h-[400px] md:h-[500px] w-full bg-black">
+           <div className="h-[400px] md:h-[500px] w-full bg-[#8c2643] rounded-lg">
       <Carousel pauseOnHover>
   {product.detailsImage.map((image) => {
     return(
@@ -70,12 +70,12 @@ const Details = () => {
               <div className="w-full md:w-1/2">
                 {" "}
                 {/*text part */}
-                <h2 className="text-sm title-font text-gray-900 my-4 tracking-widest">
+                <b className="text-sm title-font text-gray-900 py-6 tracking-widest">
                   {product.category}
-                </h2>
-                <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">
+                </b>
+                <h2 className="text-white mt-3 bg-[#8c2643] py-3 px-2 shadow-lg  text-3xl title-font font-medium mb-1">
                   {product.title}
-                </h1>
+                </h2>
                 <div className="flex mb-4">
                   <span className="flex items-center text-xl md:text-2xl text-red-500">
                     {" "}
@@ -90,31 +90,31 @@ const Details = () => {
                     </span>
                   </span>
                 </div>
-                <p className="leading-relaxed">{product.description}</p>
+                <p className="leading-relaxed text-justify">{product.description}</p>
                 <div className="py-6 ">
-                  <h3 className="text-gray-900 text-2xl title-font font-medium mb-1">
+                  <h3 className=" bg-[#8c2643] py-3 px-2 shadow-lg text-white text-2xl title-font font-medium mb-1">
                     How To Use:
                     </h3>
                     {product.how_to_use.map((use) => (
                       <div key={use}>
-                        <ol className="list-disc list-inside flex flex-col gap-y-3">
-                          <li>{use}</li>
+                        <ol className="list-disc list-inside mt-5 flex flex-col gap-y-3">
+                          <li className="text-justify">{use}</li>
                         </ol>
                         </div>
                     ))}
                   
                 </div>
-                <div className=" py-6">
-                  <h3 className="text-gray-900 text-2xl text-center my-4 font-medium ">This Product is Good For:</h3>
-                  <ul className="max-w-md flex flex-col gap-y-2  ">
+                <div className=" py-6-3">
+                  <h3 className=" bg-[#8c2643] py-3 px-2 shadow-lg text-white text-2xl my-4 font-medium ">This Product helps:</h3>
+                  <ul className="max-w-md flex flex-col gap-y-2 list-decimal list-inside">
                     {product.key_features.map((feature) => (
-                      <li className="text-left" key={feature}>
+                      <li className="text-justify" key={feature}>
                         {feature}
                       </li>
                     ))}
                   </ul>
                 </div>
-                <div className="w-2/3 my-3  flex h-8 items-stretch text-gray-600">
+                <div className="w-[80%] my-6  flex h-8 items-stretch text-gray-600">
                   <button
                     onClick={() => reduceQuantity()}
                     className="flex items-center justify-center rounded-l-md bg-gray-200 px-4 transition hover:bg-black hover:text-white"
@@ -132,8 +132,8 @@ const Details = () => {
                   </button>
                 </div>
                 <div className="flex flex-col   gap-y-8 justify-between mt-6">
-                  <span className="title-font font-medium text-xl md:text-2xl text-gray-900">
-                    Total Price: ₺{price}
+                  <span className="title-font py-5 font-medium text-3xl flex items-center justify-end text-gray-900">
+                    Total Price: ₺<b>{price}</b>
                   </span>
 
                   <div className="flex gap-x-4">

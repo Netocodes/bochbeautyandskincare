@@ -21,6 +21,7 @@ const Homepage: React.FC = () => {
       <Helmet>
         <title className="text-[#82878a]">Beauty of Chiri - Homepage</title>
         <meta name="theme-color" content="#8c2643" />
+        <meta name="description" content="Discover Beauty of Chiri – your source for natural, skin-enriching skincare products at affordable prices. Based in Turkey and shipping worldwide, we offer fast delivery, easy returns, and exceptional customer service. Your radiant skin is our priority!"></meta>
         {/* <meta property="og:title" content="Add title here" />
 <meta property="og:description" content="Add description here" />
 <meta property="og:image" content="https://your-website.com/og-image.png" />

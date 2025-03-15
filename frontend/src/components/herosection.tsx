@@ -66,19 +66,20 @@ const HeroSection = () => {
 
   return (
     <div>
-      <div className="w-full  bg-gradient-to-r from-[#fda4af]  to-[#f43f5e] h-[75dvh] md:h-[60dvh] lg:h-[80dvh]">
+      <div className="w-full  bg-gradient-to-r from-[#fda4af]  to-[#f43f5e] h-[75dvh] md:h-[60dvh] lg:h-[75dvh]">
         <Carousel
           indicators={false}
-          slideInterval={5000}
+          slideInterval={6000}
           leftControl
           rightControl
+          
         >
           {images.map((data, index) => (
             <div key={index} className="w-full ">
               <div className=" flex flex-col items-center justify-center h-full">
                 {/* Div with background image */}
                 <div
-                  className={`   md:w-[95%] h-[75dvh]   bg-no-repeat bg-cover  bg-center  w-full  flex items-center justify-center`}
+                  className={`   md:w-full h-[75dvh]   bg-no-repeat bg-cover  bg-center  w-full  flex items-center justify-center`}
                   style={{
                     backgroundImage: `url(${data.image})`,
                   }}
@@ -97,7 +98,7 @@ const HeroSection = () => {
                     <h2 className="text-white text-3xl font-bold text-center bg-[#8c2643]/75 shadow-lg py-8 md:py-8 px-6 sm:text-6xl  md:text-4xl">
                       {data.text}
                     </h2>
-                    <p className="max-w-xl mx-auto font-semibold text-gray-100 bg-gray-700/55 backdrop-blur-md py-6  text-lg text-left sm:text-lg md:text-xl px-6">
+                    <p className="max-w-xl mx-auto font-semibold text-gray-100 bg-gray-700/55 backdrop-blur-md py-6  text-lg text-justify sm:text-lg md:text-xl px-6">
                       {data.description}
                     </p>
                     <Button

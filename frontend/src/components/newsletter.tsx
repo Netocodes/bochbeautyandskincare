@@ -1,12 +1,17 @@
 import { Button, Spinner } from "@material-tailwind/react";
-
+import { useState } from "react";
 import {SubmitHandler, useForm} from "react-hook-form"
-
+import { Toaster, toast } from "sonner";
+<Toaster
+        richColors
+        className="mt-24 md:mt-12 lg:mt-20 z-50"
+        position="top-right"
+      />
 type news ={
   Email:  string
 }
 const NewsLetter = () => {
-
+const [message, setMessage] = useState()
  const {register, handleSubmit,  formState: { isSubmitSuccessful}, } = useForm<news>()
  const onsubmit: SubmitHandler<news> = async(data) => {
 
@@ -18,10 +23,10 @@ const response = await fetch("https://bochbeautyandskincare-production.up.railwa
   body: JSON.stringify({data})
 })
 if(!response.ok){
-  throw new Error("An error occured")
+  toast.warning("Could Not Suscribe try again!!!")
  }
  const DATA = await response.json()
- console.log(DATA)
+setMessage(DATA.message)
  }
   return (
     <div>
@@ -34,7 +39,8 @@ if(!response.ok){
         Subscribe and get Update on new Products/ Routine care
       </p>
     </div>
-
+    {message ? <div className="text-center text-xl py-6">Thanks for Suscribing 👍👍</div> : 
+ 
     <form onSubmit={handleSubmit(onsubmit)}>
       <div className="w-full sm:max-w-lg md:ms-auto">
         <div className="flex flex-col items-center gap-2 sm:flex-row sm:gap-3">
@@ -65,6 +71,7 @@ if(!response.ok){
         </p>
       </div>
     </form>
+}
   </div>
 </div>
 

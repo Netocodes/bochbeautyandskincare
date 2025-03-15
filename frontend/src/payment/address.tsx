@@ -17,7 +17,7 @@ const Address = () => {
    return (
           <div>
       <div className="text-center w-full bg-gray-500 bg-clip-padding backdrop-filter  backdrop-blur-2xl bg-opacity-20 backdrop-saturate-50 backdrop-contrast-150 max-w-xl md:max-w-7xl mx-auto px-4 py-5 md:py-12 flex flex-col md:flex-row gap-y-8 gap-x-20 items-center  ">
-        <h2 className="  py-4 px-8 leading-tight tracking-tight text-2xl md:text-4xl font-bold text-gray-700 ">
+        <h2 className=" leading-tight tracking-tight text-2xl md:text-4xl font-bold bg-[#8c2643] py-3 px-4 text-gray-200 ">
           Where are we shipping it to :
         </h2>
         <form className=" mt-4" onSubmit={handleSubmit(onSubmit)}> 

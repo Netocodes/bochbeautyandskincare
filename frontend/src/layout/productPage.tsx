@@ -16,10 +16,11 @@ const ProductPage = () => {
   return (
     <div>
       <Helmet>
-        <title className="text-[#82878a]">
+        <title className="">
           Shop Page - Discover Amazing Products
         </title>
         <meta name="theme-color" content="#89dfc2" />
+        <meta name="description" content="Explore the Beauty of Chiri Shop Page – your destination for natural, skin-enriching skincare products. Discover amazing, affordable skincare solutions crafted to nourish and revitalize your skin. Shop now for fast worldwide shipping, easy returns, and exceptional customer care. Your journey to radiant skin starts here!"></meta>
       </Helmet>
       <Suspense fallback={<LoadingScreen />}>
         <div className="">

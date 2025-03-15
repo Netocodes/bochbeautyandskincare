@@ -23,17 +23,17 @@ const TestimonalPage = () => {
             <div className="max-w-[85rem] px-8 py-10 sm:px-6 lg:px-14 lg:py-200 mx-auto">
               <div className="md:grid md:grid-cols-1 lg:grid-cols-2 md:gap-10 lg:gap-16 md:items-center">
                 <div className="hidden md:hidden lg:block  mb-24 md:mb-0 sm:px-6">
-                  <div className="relative">
+                  <div className="relative flex items-center justify-center w-[450px] h-[350px]">
                     <img
                       className="rounded-xl object-cover"
-                      src="https://flowbite.com/docs/images/carousel/carousel-3.svg"
+                      src="https://res.cloudinary.com/de7tyskql/image/upload/c_fill,g_auto,h_500,w_500/f_auto/q_auto/elegance-body-scrub-2?_a=DATAg1AAZAA0"
                       alt="Avatar"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <blockquote className="relative  bg-black/25  mx-auto py-12 px-6">
+                  <blockquote className="relative  bg-black/45  mx-auto py-12 px-6">
                     <svg
                       className="absolute top-0 start-0 transform -translate-x-8 -translate-y-4 size-24 text-gray-200/50 dark:text-neutral-700"
                       width="16"
@@ -54,10 +54,8 @@ const TestimonalPage = () => {
                         Skincare Clients
                       </p>
 
-                      <p className="text-xl font-medium italic text-gray-200 md:text-2xl md:leading-normal xl:text-3xl xl:leading-normal dark:text-neutral-200">
-                        To say that switching to Preline has been life-changing
-                        is an understatement. My business has tripled and I got
-                        my life back.
+                      <p className="text-xl font-medium px-4 italic text-gray-200 text-justify md:text-2xl md:leading-normal xl:text-3xl xl:leading-normal dark:text-neutral-200">
+                      "Hey sis, I used the body scrub yesterday, and my skin feels incredibly soft—even softer than usual! It’s amazing! Where have you been all my life, especially here in Turkey? This scrub is a game-changer!"
                       </p>
                     </div>
 
@@ -80,17 +78,17 @@ const TestimonalPage = () => {
             <div className="max-w-[85rem] px-8 py-10 sm:px-6 lg:px-14 lg:py-20 mx-auto">
               <div className="md:grid md:grid-cols-2 md:gap-10 lg:gap-16 md:items-center">
                 <div className="hidden md:block  md:mb-0 sm:px-6">
-                  <div className="relative">
+                  <div className="relative flex items-center justify-center w-[450px] h-[350px]">
                     <img
                       className="rounded-xl"
-                      src="https://flowbite.com/docs/images/carousel/carousel-3.svg"
+                      src="https://res.cloudinary.com/de7tyskql/image/upload/c_fill,g_auto,h_500,w_500/f_auto/q_auto/facial-cleanser-and-cream?_a=DATAg1AAZAA0"
                       alt="Avatar"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <blockquote className="relative  bg-black/25 mx-auto py-12 px-6">
+                  <blockquote className="relative  bg-black/45 mx-auto py-12 px-6">
                     <svg
                       className="absolute top-0 start-0 transform -translate-x-8 -translate-y-4 size-24 text-gray-200/50 dark:text-neutral-700"
                       width="16"
@@ -111,10 +109,8 @@ const TestimonalPage = () => {
                         Skincare Clients
                       </p>
 
-                      <p className="text-xl font-medium italic text-gray-200 md:text-2xl md:leading-normal xl:text-3xl xl:leading-normal dark:text-neutral-200">
-                        To say that switching to Preline has been life-changing
-                        is an understatement. My business has tripled and I got
-                        my life back.
+                      <p className="text-xl font-medium px-4 italic text-gray-200 text-justify md:text-2xl md:leading-normal xl:text-3xl xl:leading-normal dark:text-neutral-200">
+                      "Your products are truly one-of-a-kind—trust me! Of course, I’m coming back this month. I can’t get enough of how amazing they are!"
                       </p>
                     </div>
 
@@ -135,19 +131,19 @@ const TestimonalPage = () => {
           {/* Third Testimonial */}
           <div className="flex h-full bg-center bg-cover bg-[url('https://i.pinimg.com/736x/f1/5d/fb/f15dfb52bb930512c255b06e7d53d91b.jpg')] items-center justify-center">
             <div className="max-w-[85rem] px-8 py-10 sm:px-6 lg:px-14 lg:py-20 mx-auto">
-              <div className="md:grid md:grid-cols-2 md:gap-10 lg:gap-16 md:items-center">
+              <div className="md:grid md:grid-cols-2 md:gap-x-6 lg:gap-16 md:items-center">
                 <div className="hidden md:block mb-24 md:mb-0 sm:px-6">
-                  <div className="relative">
+                  <div className="relative flex items-center justify-center w-[450px] h-[250px]">
                     <img
                       className="rounded-xl"
-                      src="https://flowbite.com/docs/images/carousel/carousel-3.svg"
+                      src="https://res.cloudinary.com/de7tyskql/image/upload/f_auto/q_auto/glam-glow-face?_a=DATAg1AAZAA0"
                       alt="Avatar"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <blockquote className="relative  bg-black/25 mx-auto py-12 px-6">
+                  <blockquote className="relative  bg-black/45 mx-auto py-12 px-6">
                     <svg
                       className="absolute top-0 start-0 transform -translate-x-8 -translate-y-4 size-24 text-gray-200/50 dark:text-neutral-700"
                       width="16"
@@ -168,10 +164,8 @@ const TestimonalPage = () => {
                         Skincare Clients
                       </p>
 
-                      <p className="text-xl font-medium italic text-gray-200 md:text-2xl md:leading-normal xl:text-3xl xl:leading-normal dark:text-neutral-200">
-                        To say that switching to Preline has been life-changing
-                        is an understatement. My business has tripled and I got
-                        my life back.
+                      <p className="text-xl font-medium px-4  italic text-gray-200 text-justify md:text-2xl md:leading-normal xl:text-3xl xl:leading-normal dark:text-neutral-200">
+                      "I just want to tell you how incredibly happy I am with your products—honestly, all I know is that I’m absolutely loving my skin right now!"
                       </p>
                     </div>
 

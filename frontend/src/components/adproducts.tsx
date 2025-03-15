@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import SlidingText from "../components/slidertext";
 import { Toaster, toast } from "sonner";
-
+import { FaCircleCheck } from "react-icons/fa6";
 <Toaster
 richColors
 className="mt-24 md:mt-12 lg:mt-20 z-50"
@@ -52,16 +52,13 @@ const AdProduct = () => {
                     Let me tell You guys why you need this product
                   </h2>
                   <p className="text-gray-500 dark:text-neutral-500">
-                    Besides working with start-up enterprises as a partner for
-                    digitalization, we have built enterprise products for common
-                    pain points that we have encountered in various products and
-                    projects.
+                  Restore your skin’s natural glow with our Restoration Body Oil! Enriched with rosehip oil and natural extracts, it moisturizes, balances tone, heals bleached skin, and reduces stretch marks. A must-have for healthy, radiant skin!
                   </p>
                   <ul className="text-gray-700 list-disc list-inside ml-3 py-3">
-                  <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                  <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                  <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                  <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li></ul>
+                  <li className="flex gap-x-3"> <FaCircleCheck className="text-[#8c2643]"/> Deep Restoration.</li>
+                  <li className="flex gap-x-3"> <FaCircleCheck className="text-[#8c2643]"/> Intense Moisturization.</li>
+                  <li className="flex gap-x-3"> <FaCircleCheck className="text-[#8c2643]"/> Stretch Mark Reduction.</li>
+                  <li className="flex gap-x-3"> <FaCircleCheck className="text-[#8c2643]"/> Skin Comfort Relief.</li></ul>
                   <p className="flex flex-row gap-1 italic text-sm">search for <b> {textToCopy} </b> in the shop section <Button onClick={handlecopy} className="bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-purple-500 via-slate-700 to-teal-800 text-white font-semibold  px-3 rounded-full py-2"  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>Copy</Button></p>
                 </div>
                 <div className="my-4">

@@ -3,6 +3,7 @@ import axios from 'axios';
 import {  useState, useEffect } from "react";
 import { Toaster, toast } from "sonner";
 import { Button } from "@material-tailwind/react";
+import { useCart } from "../context/usecart";
 
 <Toaster
 richColors
@@ -14,7 +15,7 @@ const Upload = () => {
   const [orderId, setOrderId] = useState<number>(); 
   const [message, setMessage] = useState('');
   const [selectedImage, setSelectedImage] = useState<string | ArrayBuffer | null>(null);
-
+const {clearCart} = useCart();
 useEffect(() => {
     // Scroll to the top of the page when the component mounts
     window.scrollTo(0, 0);
@@ -69,7 +70,7 @@ useEffect(() => {
       });
       setMessage(response.data); 
       toast.success(response.data)
-      
+      clearCart();
     } catch (error) {
       console.error(error);
       setMessage('Failed to upload file.');

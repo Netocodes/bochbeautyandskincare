@@ -89,7 +89,7 @@ const CartComponent = () => {
             ))}
           </ul>
 
-          <div className="bg-gray-50 rounded-xl p-6 w-full mb-8 max-lg:max-w-xl max-lg:mx-auto">
+          <div className="bg-gray-50 rounded-xl drop-shadow-xl p-6 w-full mb-8 max-lg:max-w-xl max-lg:mx-auto">
             <div className="flex items-center justify-between w-full mb-6">
               <p className="font-normal text-xl leading-8 text-gray-600">
                 Sub Total
@@ -115,6 +115,8 @@ const CartComponent = () => {
               </h6>
             </div>
           </div>
+          <small className="text-md flex items-center justify-end">convert to your currency then make payment, <Link to='/currency' className="underline underline-offset-4">click here</Link></small>
+
           <div className="flex items-center flex-col sm:flex-row justify-center gap-3 mt-8">
             <Link to={"/productPage"}>
               {" "}

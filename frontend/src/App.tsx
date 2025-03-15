@@ -12,6 +12,7 @@ const App = () => {
   const Homepage = lazy(() => import("./layout/home"));
   const CartPage = lazy(() => import("./components/cartPage.tsx"));
   const Upload = lazy(() => import("./verify/upload.tsx"));
+  const Currency = lazy(() => import("./components/currency.tsx"));
 
   const ProductPage = lazy(() => import("./layout/productPage"));
   const ContactUs = lazy(() => import("./layout/Contact"));
@@ -46,6 +47,7 @@ const App = () => {
                       <Route path="/cart-Items" element={<CartPage />} />
                       <Route path="/Services" element={<ServicePage />} />
                       <Route path="/verify-payment" element={<Upload />} />
+                      <Route path="/currency" element={<Currency />} />
                       <Route
                         path="/product/productDetail/"
                         element={<ProductDetail />}

@@ -16,11 +16,11 @@ const ProductShowcase = () => {
     }
   }
   return (
-    <div className="bg-gradient-to-r from-[#d1d5db] via-[#6b7280] to-[#374151] py-12 px-2 md:px-8">
+    <div className="bg-gradient-to-r from-[#d1d5db] via-[#6b7280] to-[#374151] py-8 rounded-lg px-2 md:px-8">
       <div className="w-full grid grid-cols-2 md:gap-4 sm:grid-cols-3 gap-2">
         <div className="group block relative overflow-hidden rounded-lg" >
           <img
-            className="w-full size-40 object-cover bg-gray-100 rounded md:rounded-b-full dark:bg-neutral-800"
+            className="w-full size-40 object-cover bg-gray-100 rounded  dark:bg-neutral-800"
             
             src="https://res.cloudinary.com/de7tyskql/image/upload/c_fill,g_auto,h_500,w_500/f_auto/q_auto/caramel-black-soap?_a=DATAg1AAZAA0"
             alt="Project"
@@ -53,7 +53,7 @@ const ProductShowcase = () => {
 
         <div className="group block relative overflow-hidden rounded-lg" >
           <img
-            className="w-full size-40 object-cover bg-gray-100 rounded  md:rounded-full  dark:bg-neutral-800"
+            className="w-full size-40 object-cover bg-gray-100 rounded   dark:bg-neutral-800"
             src="https://res.cloudinary.com/de7tyskql/image/upload/c_fill,g_auto,h_500,w_500/f_auto/q_auto/glam-glow-face?_a=DATAg1AAZAA0"
             alt="Project"
           />
@@ -84,7 +84,7 @@ const ProductShowcase = () => {
 
         <div className="group block relative overflow-hidden rounded-lg" >
           <img
-            className="w-full size-40 object-cover rounded md:rounded-e-full bg-gray-100  dark:bg-neutral-800"
+            className="w-full size-40 object-cover rounded  bg-gray-100  dark:bg-neutral-800"
             src="https://res.cloudinary.com/de7tyskql/image/upload/c_fill,g_auto,h_500,w_500/f_auto/q_auto/elegance-body-scrub-2?_a=DATAg1AAZAA0"
             alt="Project"
           />
@@ -115,7 +115,7 @@ const ProductShowcase = () => {
 
         <div className="group block relative overflow-hidden rounded-lg" >
           <img
-            className="w-full size-40 object-cover bg-gray-100 rounded md:rounded-b-full dark:bg-neutral-800"
+            className="w-full size-40 object-cover bg-gray-100 rounded  dark:bg-neutral-800"
             src="https://res.cloudinary.com/de7tyskql/image/upload/c_fill,g_auto,h_500,w_500/f_auto/q_auto/lighting-body-oil?_a=DATAg1AAZAA0"
             alt="Project"
           />
@@ -146,7 +146,7 @@ const ProductShowcase = () => {
 
         <div className="group block relative overflow-hidden rounded-lg" >
           <img
-            className="w-full size-40 object-cover bg-gray-100 rounded  md:rounded-full dark:bg-neutral-800"
+            className="w-full size-40 object-cover bg-gray-100 rounded  dark:bg-neutral-800"
             src="https://res.cloudinary.com/de7tyskql/image/upload/c_fill,g_auto,h_500,w_500/f_auto/q_auto/xwhite-molato-soap?_a=DATAg1AAZAA0"
             alt="Project"
           />
@@ -177,7 +177,7 @@ const ProductShowcase = () => {
 
         <div className="group block relative overflow-hidden rounded-lg" >
           <img
-            className="w-full size-40 object-cover rounded md:rounded-e-full bg-gray-100 rounded-lg dark:bg-neutral-800"
+            className="w-full size-40 object-cover   bg-gray-100 rounded-lg dark:bg-neutral-800"
             src="https://res.cloudinary.com/de7tyskql/image/upload/c_fill,g_auto,h_500,w_500/f_auto/q_auto/facial-cleanser-and-cream?_a=DATAg1AAZAA0"
             alt="Project"
           />

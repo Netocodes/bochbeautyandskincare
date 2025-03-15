@@ -3,7 +3,7 @@ import { useCart } from "../context/usecart"
 import { formFeilds } from "./personalInfo";
 import { Card } from "flowbite-react";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Toaster, toast } from "sonner";
 import axios from "axios";
 
@@ -44,8 +44,10 @@ total
         
         setTimeout(() => {
           navigate("/verify-payment");
+          
+
         }, 5000);
-      
+        
       
     } catch (error) {
       console.error(error)
@@ -62,8 +64,9 @@ total
   return (
     <div>
        <Card className="max-w-3xl p-6 mx-auto bg-white dark:bg-gray-800 shadow-md">
-      <div className="mb-4 flex items-center justify-between">
-        <h5 className="text-xl font-bold leading-none text-gray-900 dark:text-white">Payment options: Bank Transfers</h5>
+      <div className="mb-4 flex flex-col  items-center justify-between">
+        <h5 className="text-2xl pb-3 font-bold leading-none text-gray-900 dark:text-white">Payment options: Bank Transfers</h5>
+        <small className="text-gray-800">want to make transfers in your own currency <Link className="underline underline-offset-4" to="/currency">click here</Link></small>
         
       </div>
       <div className="flow-root">

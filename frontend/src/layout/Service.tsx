@@ -18,9 +18,20 @@ useEffect(() => {
   return (
    <div>
     <Helmet>
-        <title className="text-[#82878a]">Beauty of Chiri - Service Section</title>
-        <meta name="theme-color" content="#8c2643" />
-      </Helmet>
+  <title className="text-[#82878a]">Beauty of Chiri Services | Expert Skincare Solutions & Care</title>
+  <meta name="theme-color" content="#89dfc2" />
+  <meta
+    name="description"
+    content="Discover expert skincare services at Beauty of Chiri. Explore our tailored solutions for radiant, healthy skin. Book now for personalized care and exceptional results."
+  />
+  <meta property="og:title" content="Beauty of Chiri Services | Expert Skincare Solutions & Care" />
+  <meta
+    property="og:description"
+    content="Discover expert skincare services at Beauty of Chiri. Explore our tailored solutions for radiant, healthy skin. Book now for personalized care and exceptional results."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.bochbeautyandskincare.shop/services" />
+</Helmet>
       <Suspense fallback={<Loadingscreen />}>
 <ServiceHero />
 <div className="bg-[#f6f6f6]">

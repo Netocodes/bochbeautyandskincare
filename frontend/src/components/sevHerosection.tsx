@@ -2,7 +2,7 @@ import { FaInstagram, FaTiktok, FaFacebook } from "react-icons/fa6";
 const ServiceHero = () => {
 return(
                
-<div className=" rounded-xl" 
+<div className="bg-[#850c48] rounded-xl" 
 style={{
   backgroundImage: `url('https://res.cloudinary.com/de7tyskql/image/upload/f_auto,q_auto/qujv6omt9oe4sieo7f28')`,
 }}>
@@ -24,7 +24,7 @@ style={{
     </div>
 
     <div className="lg:col-span-4 mt-10 lg:mt-0">
-      <img className=" serHero w-[500px] h-[350px] rounded-xl" src="https://res.cloudinary.com/de7tyskql/image/upload/f_auto,q_auto/qujv6omt9oe4sieo7f28" alt="Hero Image" />
+      <img className="  w-[500px] h-[350px] rounded-xl" src="https://res.cloudinary.com/de7tyskql/image/upload/f_auto,q_auto/qujv6omt9oe4sieo7f28" alt="Hero Image" />
     </div>
     
   </div>

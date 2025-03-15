@@ -44,4 +44,190 @@ console.log(processDocument(initialdoc, operations))
    }
 ]
 
-export const router = createBrowserRouter([...routes]);
+export const router = createBrowserRouter([...routes]);\
+
+
+Hey sis i used the body scrub yesterday and my sjkin is very soft till today, normally its soft  but it is softer. "Where where you all my life in this turkey"
+
+your products are something else trust me, "of Course im coming back this month"
+
+I want to tell you how happy i am withyour products honsetly , "all i know is that i am loving my skin"
+using this import React from "react";
+import { useCountries } from "use-react-countries";
+import {
+  Input,
+  Menu,
+  MenuHandler,
+  MenuList,
+  MenuItem,
+  Button,
+} from "@material-tailwind/react";
+ 
+export function InputWithDropdown() {
+  const { countries } = useCountries();
+  const [country, setCountry] = React.useState(0);
+  const { name, flags, countryCallingCode } = countries[country];
+ 
+  return (
+    <div className="relative flex w-full max-w-[24rem]">
+      <Menu placement="bottom-start">
+        <MenuHandler>
+          <Button
+            ripple={false}
+            variant="text"
+            color="blue-gray"
+            className="flex h-10 items-center gap-2 rounded-r-none border border-r-0 border-blue-gray-200 bg-blue-gray-500/10 pl-3"
+          >
+            <img
+              src={flags.svg}
+              alt={name}
+              className="h-4 w-4 rounded-full object-cover"
+            />
+            {countryCallingCode}
+          </Button>
+        </MenuHandler>
+        <MenuList className="max-h-[20rem] max-w-[18rem]">
+          {countries.map(({ name, flags, countryCallingCode }, index) => {
+            return (
+              <MenuItem
+                key={name}
+                value={name}
+                className="flex items-center gap-2"
+                onClick={() => setCountry(index)}
+              >
+                <img
+                  src={flags.svg}
+                  alt={name}
+                  className="h-5 w-5 rounded-full object-cover"
+                />
+                {name} <span className="ml-auto">{countryCallingCode}</span>
+              </MenuItem>
+            );
+          })}
+        </MenuList>
+      </Menu>
+      <Input
+        type="tel"
+        placeholder="Mobile Number"
+        className="rounded-l-none !border-t-blue-gray-200 focus:!border-t-gray-900"
+        labelProps={{
+          className: "before:content-none after:content-none",
+        }}
+        containerProps={{
+          className: "min-w-0",
+        }}
+      />
+    </div>
+  );
+}, how do i add it here and get the value import {SubmitHandler, useForm} from "react-hook-form"
+import { Button, Spinner } from "@material-tailwind/react";
+import { useWizard } from "react-use-wizard";
+
+export type formFeilds ={
+  fullname: string;
+  phoneNumber: number ;
+  customerEmail: string;
+  homeAdrress: string;
+  city: string;
+  state: string;
+  zip: number;
+
+}
+
+const PersonalInfo = () => {
+  
+ const {register, handleSubmit,  formState: { isSubmitSuccessful}, } = useForm<formFeilds>()
+
+   
+  
+
+   
+ 
+  const { nextStep } = useWizard();
+
+         const onSubmit: SubmitHandler<formFeilds> = (data) => {
+         
+          window.sessionStorage.setItem("personalInfo", JSON.stringify(data))
+         
+          
+setTimeout(() => {
+  nextStep()
+}, 3000)
+         }  
+           
+ 
+  return (
+    <div>
+      <div className="text-center w-full bg-gray-800 bg-clip-padding backdrop-filter  backdrop-blur-lg bg-opacity-20 backdrop-saturate-50 backdrop-contrast-150 max-w-xl md:max-w-7xl mx-auto px-4 py-5 md:py-12 flex flex-col md:flex-row gap-y-8 gap-x-20 items-center  ">
+        <h2 className="text-3xl max-w-[65rem] md:text-4xl font-bold bg-[#8c2643] py-3 px-4 text-gray-200">
+          Who are we shipping to :
+        </h2>
+        <form className=" mt-4" onSubmit={handleSubmit(onSubmit)}>
+         
+          <input
+            {...register("fullname", {
+              required: "Your full name is required"
+             })}
+            type="text"
+        
+            placeholder="Add your Full Name"
+            className="w-full p-2 py-4 px-5 text-md font-normal placeholder:text-gray-600 border rounded mb-4 text-gray-800"
+          />
+
+          
+          
+          <input
+            {...register("phoneNumber", {
+              required: "Phone Number is required",
+              validate: (value) => {
+              if(isNaN(value)){
+                return "This Must be a Number"
+              }
+              return true;
+              }
+            })
+            }
+            type="text"
+            placeholder="Phone Number"
+            
+            className="w-full p-2 py-4 px-5 text-md font-normal  placeholder:text-gray-600 border rounded mb-4 text-[#690a3a]"
+          />
+         
+         
+         <input
+            {...register("customerEmail",  {
+              required: "Your Email is required",
+              validate: (value: string | string[]) => {
+                if(!value.includes("@",)){
+                  return "Email Must include and @ symbol"
+                }
+                return true
+            }})}
+            type="email"
+            placeholder="Input Your Working Email Here"
+          
+            className="w-full p-2 py-4 px-5 text-md font-normal placeholder:text-gray-600 border rounded text-gray-800"
+          />
+       
+
+          
+          <div className="flex items-center justify-end mt-6 ">
+            <Button
+            type="submit"
+              children={isSubmitSuccessful ? <Spinner className="h-8 w-8" onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} /> : "next"}
+           
+              className="bg-[#8c2643] text-md  px-8 md:text-xl capitalize "
+              placeholder={undefined}
+              onPointerEnterCapture={""}
+              onPointerLeaveCapture={""}
+            />
+          </div>
+         
+        </form>
+      </div>
+    </div>
+  );
+};
+
+
+export default PersonalInfo;
