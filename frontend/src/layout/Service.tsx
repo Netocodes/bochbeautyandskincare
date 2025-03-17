@@ -41,7 +41,7 @@ useEffect(() => {
 <BestSellers />
 </div>
 <div className="">
-<SlidingText />
+<SlidingText Information="We share updates and newer skincare products on whatsapp do contact us so we can enrich your skin, here is our Whatsapp line  ..." />
 </div>
 <div className="">
 <BrandFace />
