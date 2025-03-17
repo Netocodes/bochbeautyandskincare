@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import {handlecopy} from "./productshowcase"
+import { RxClipboardCopy } from "react-icons/rx";
+
 import {
                 Menu,
                 MenuHandler,
@@ -8,8 +11,11 @@ import {
                 
               } from "@material-tailwind/react";
               import {useCart} from '../context/usecart'
+              import { ImExit } from "react-icons/im";
+import { useNavigate } from 'react-router-dom';
 const Currency = () => {
   const {TotalPrice} = useCart()
+  const navigate = useNavigate()
   // State for input values and selected currencies
   const [amount, setAmount] = useState<string>(TotalPrice().toString());
   const [fromCurrency, setFromCurrency] = useState<string>('TRY');
@@ -50,15 +56,17 @@ const Currency = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen">
-      <div className="max-w-[85rem] py-12 px-20 bg-[#f8f8f8] mx-auto">
+    <div>
+      <ImExit onClick={() => navigate(-1)} className="my-2 size-12 text-[#8c2643] " /> 
+      <div className="flex justify-center items-center min-h-screen">
+      <div className="w-full max-w-[85rem] py-12 px-5 bg-[#f8f8f8] mx-auto">
         <div className="block mb-4 mx-auto border-b border-slate-300 pb-2">
           <a
             target="_blank"
             href="https://www.material-tailwind.com/docs/html/input-number"
             className="flex flex-col gap-y-3 w-full px-4 py-2 text-center text-slate-700 transition-all"
           >
-            Need a website that doesn't stress your customers like this inbuilt currency converter feauture <a href="https://wa.me/+905384085304?text=Hey%20NetoCodes%2C%20are%20you%20active%20for%20work%3F" 
+            Need a website that doesn't stress your customers like this inbuilt currency converter feauture <a href="https://wa.me/+2349134730499?text=Hey%20NetoCodes%2C%20are%20you%20active%20for%20work%3F" 
             className='underline underline-offset-8 decoration-[#8c2643]'
             target="_blank" rel="noopener noreferrer">
   " Chat with NetoCodes "
@@ -79,7 +87,7 @@ const Currency = () => {
                   type="text"
                   
                   onChange={(e) => setAmount(e.target.value)}
-                  className="w-full h-12 pl-3 bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md"
+                  className="w-full h-12 pl-3 bg-transparent placeholder:text-gray-600 text-slate-700 text-lg border border-slate-200 rounded px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md"
                   placeholder={TotalPrice().toString()}
                 />
                 <div className="absolute top-2 right-0 flex items-center pr-3">
@@ -119,8 +127,8 @@ const Currency = () => {
             </div>
 
             {/* Swap Button */}
-            <div className="flex items-center justify-center mt-6">
-              <button
+            <div  onClick={() => handlecopy(convertedAmount)} className="flex items-center justify-center mt-6">
+              {/* <button
                 className="p-2 rounded-full border border-slate-300 bg-white hover:bg-slate-100 shadow-sm"
                 onClick={() => {
                   const temp = fromCurrency;
@@ -142,7 +150,8 @@ const Currency = () => {
                     d="M3 7.5 7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5"
                   />
                 </svg>
-              </button>
+              </button> */}
+              <RxClipboardCopy className='text-[#000] size-7 ' />copy
             </div>
 
             {/* To Currency Input */}
@@ -150,21 +159,18 @@ const Currency = () => {
               <label className="block mb-1 text-sm text-slate-800">To</label>
               <div className="relative mt-2 flex flex-col gap-y-8 w-full ">
                 <input
-                                                                                                                                  type="text"
-                                                                                                                                  value={convertedAmount}
-                                                                                                                                  readOnly
-                                                                                                                                  className="pr-24"
-
-                                                                                        placeholder="1,000"                                 />
+                                                                                                                                  type="text"                                                                                                               value={convertedAmount}
+                readOnly                                                                                         className="pr-24 text-lg"
+  placeholder="1,000" />
             
        
 
             <Menu>
       <MenuHandler>
-        <Button className='bg-[#8c2643] text-white font-semibold capitalize shadow-lg'  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>select</Button>
+        <Button className='bg-[#8c2643] text-white font-semibold capitalize shadow-lg'  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>select currency</Button>
       </MenuHandler>
       <MenuList   placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
-      {['NGN', 'EUR', 'TRY', 'USD'].map((currency) => (
+      {['NGN', 'EUR', 'TRY', 'USD', ].map((currency) => (
                       
         <MenuItem  key={currency} onClick={() => handleCurrencyChange(setToCurrency, currency)} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>{currency}</MenuItem>
 
@@ -186,6 +192,7 @@ const Currency = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

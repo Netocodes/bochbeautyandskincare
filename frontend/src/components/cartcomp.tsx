@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { MdDeleteOutline } from "react-icons/md";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import { Button } from "@material-tailwind/react";
+import SlidingText from "./slidertext";
 const CartComponent = () => {
   const { cartItems, RemoveCart, TotalPrice } = useCart();
   const navigate = useNavigate();
@@ -18,8 +19,11 @@ const CartComponent = () => {
   };
   return (
     <div>
-      <section className="py-12 relative">
-        <div className="w-full bg-gray-100 border shadow-lg py-5  max-w-7xl px-4 md:px-5 lg-6  mx-auto">
+      <section className=" relative">
+      <SlidingText Information="If your currency is not Turkish Lira (₺ ), click the link labeled 
+      Click here to convert to your currency to switch to your preferred currency. After that, you can proceed to payment " />
+
+        <div className="w-full bg-gray-100 border shadow-lg  my-5 py-5 max-w-7xl px-4 md:px-5   mx-auto">
           <h2 className="title font-manrope font-bold text-4xl leading-10 mb-8 text-center text-black">
             Shopping Cart
           </h2>
@@ -115,7 +119,7 @@ const CartComponent = () => {
               </h6>
             </div>
           </div>
-          <small className="text-md flex items-center justify-end">convert to your currency then make payment, <Link to='/currency' className="underline underline-offset-4">click here</Link></small>
+          <p className="text-sm flex items-center justify-end"> <Link to='/currency' className="underline underline-offset-4">Click here to convert to your currency</Link></p>
 
           <div className="flex items-center flex-col sm:flex-row justify-center gap-3 mt-8">
             <Link to={"/productPage"}>
@@ -143,6 +147,9 @@ const CartComponent = () => {
                 <FaAngleRight />
               </Button>
             </Link>
+          </div>
+          <div className="flex items-center justify-center py-4 text-justify">
+           
           </div>
         </div>
       </section>

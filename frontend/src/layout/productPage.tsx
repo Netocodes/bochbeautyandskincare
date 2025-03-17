@@ -25,7 +25,7 @@ const ProductPage = () => {
       <Suspense fallback={<LoadingScreen />}>
         <div className="">
           <HeroSection />
-          <SlidingText />
+          <SlidingText Information="If your currency is not turkish lira, just add the products on checkout page you will see a link to convert to your currency before making payment..." />
           <Products />
           <TestimonalPage />
           <div className="bg-[#8c2643]">

@@ -56,7 +56,7 @@ const Details = () => {
                
            
  
-           <div className="h-[400px] md:h-[500px] w-full bg-[#8c2643] rounded-lg">
+           <div className="h-[300px] md:h-[500px] w-full bg-[#8c2643] rounded-lg">
       <Carousel pauseOnHover>
   {product.detailsImage.map((image) => {
     return(
@@ -85,7 +85,7 @@ const Details = () => {
                       rating={product.rating.rate}
                       interactive={false}
                     />
-                    <span className="text-xl text-gray-600 ml-3">
+                    <span className="text-xl text-gray-600 mt-2 ml-3">
                       +{product.rating.count} reviews
                     </span>
                   </span>
@@ -97,9 +97,9 @@ const Details = () => {
                     </h3>
                     {product.how_to_use.map((use) => (
                       <div key={use}>
-                        <ol className="list-disc list-inside mt-5 flex flex-col gap-y-3">
+                        <ul className="list-disc list-inside mt-5 flex flex-col gap-y-1">
                           <li className="text-justify">{use}</li>
-                        </ol>
+                        </ul>
                         </div>
                     ))}
                   
@@ -152,6 +152,7 @@ const Details = () => {
                       placeholder=""
                       onPointerEnterCapture={() => {}}
                       onPointerLeaveCapture={() => {}}
+                      onClick={handleAddUpdate}
                     >
                       Proceed to Checkout
                     </Button>

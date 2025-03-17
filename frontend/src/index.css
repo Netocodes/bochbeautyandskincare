@@ -26,7 +26,7 @@ html {
 
 /* Applying the animation */
 .animate-slide-in {
-  animation: slide 10s linear infinite; /* 10s is the duration of the sliding */
+  animation: slide 15s linear infinite; /* 10s is the duration of the sliding */
   transition: ease in out;
 }
 /* In your global CSS or in a file like `src/index.css` or `styles.css` */
@@ -86,4 +86,55 @@ html {
   -webkit-background-clip: text;
   color: transparent;
   
+}
+/* HTML: <div class="loader"></div> */
+/* .loader {
+  width: 65px;
+  aspect-ratio: .75;
+  --c: no-repeat linear-gradient(#f5f0f0 0 0);
+  background: 
+    var(--c) 0%   50%,
+    var(--c) 50%  50%,
+    var(--c) 100% 50%;
+  animation: l7 1s infinite linear alternate;
+}
+@keyframes l7 {
+  0%  {background-size: 20% 50% ,20% 50% ,20% 50% }
+  20% {background-size: 20% 20% ,20% 50% ,20% 50% }
+  40% {background-size: 20% 100%,20% 20% ,20% 50% }
+  60% {background-size: 20% 50% ,20% 100%,20% 20% }
+  80% {background-size: 20% 50% ,20% 50% ,20% 100%}
+  100%{background-size: 20% 50% ,20% 50% ,20% 50% }
+} */
+/* HTML: <div class="loader"></div> */
+/* HTML: <div class="loader"></div> */
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 60px;
+  aspect-ratio: 1;
+  box-shadow: 0 0 0 3px #fff inset;
+  border-radius: 50%;
+  position: relative;
+  animation: l11 7s infinite;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  top: calc(100% + 3px);
+  left: calc(50% - 12.5px);
+  box-shadow: inherit;
+  width: 25px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  transform-origin: 50% -28px;
+  animation: l11 1.5s infinite;
+}
+.loader:after {
+  animation-delay: -0.75s;
+}
+@keyframes l11 {
+  100% {
+    transform: rotate(360deg);
+  }
 }

@@ -4,7 +4,7 @@ import { CgMenuRight } from "react-icons/cg";
 import { GiShoppingCart } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
 
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useCart } from "../context/usecart";
 interface navitem {
   id: number;
@@ -14,7 +14,6 @@ interface navitem {
 
 export const Navbar: React.FC = () => {
   const [isOpen, setOpen] = useState(false);
-
   const { cartItems, TotalPrice } = useCart();
   const handleNav = () => {
     setOpen(!isOpen);
@@ -23,7 +22,7 @@ export const Navbar: React.FC = () => {
     { id: 1, text: "Homepage", link: "/" },
     { id: 2, text: "Shop", link: "./productPage" },
     { id: 3, text: "Services", link: "/Services" },
-    { id: 4, text: "FAQ's", link: "/FAQ" },
+    { id: 4, text: "Shipping & Payment", link: "/shipping-page" },
     { id: 5, text: "Contact", link: "./Contact" },
   ];
 
@@ -66,13 +65,16 @@ export const Navbar: React.FC = () => {
           </div>
           {/* Mobile Screen */}
           <div className="flex text-white items-center gap-x-3">
-            <div className={isOpen ? "hidden" : "md:flex flex-row gap-x-3"}>
-              <Link to={"/cart-Items"} className="flex hover:bg-white/25 px-2 py-3 rounded-xl text-[#f6f6f6]">
-                <GiShoppingCart className="text-[#f6f6f6]" size={32} />
+            <div  className={isOpen ? "hidden" : "md:flex flex-row gap-x-3"}>
+              <NavLink  to={"/cart-Items"}  className="flex hover:bg-white/25 px-2 py-3 rounded-xl text-[#f6f6f6]">
+                 
+                  <GiShoppingCart  className="text-[#f6f6f6]" size={32} />
                 <div className="-mt-4 -ml-2 px-1 text-lg font-normal text-[#f6f6f6]">
                   {cartItems.length}
                 </div>
-              </Link>
+              
+                
+              </NavLink>
             </div>
             <div
               onClick={handleNav}

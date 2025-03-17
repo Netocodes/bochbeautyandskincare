@@ -2,18 +2,17 @@ import { Button } from "@material-tailwind/react";
 import { Drawer } from "flowbite-react";
 import { HiBarsArrowUp, HiSquaresPlus } from "react-icons/hi2";
 import { MdCloseFullscreen } from "react-icons/md";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { FaRegEye } from "react-icons/fa";
 import { MdOutlineFileDownload } from "react-icons/md";
 import { useCart } from "../context/usecart";
 import { SearchInput } from "./ppInputSearch";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,  } from "react-router-dom";
 import Rater from "react-rater";
 import "react-rater/lib/react-rater.css";
 import { Tooltip } from "flowbite-react";
 import { motion } from "framer-motion";
 import { FaFilter } from "react-icons/fa";
-import Loadingscreen from "./loadingScreen";
 
 // import { FaSortAlphaUp } from "react-icons/fa";
 import {
@@ -24,6 +23,7 @@ import {
 } from "@material-tailwind/react";
 import { getCloudinaryUrl } from "../utils/cloud";
 import { toast } from "sonner";
+import Loadingscreen from "./loadingScreen";
 
 export type Product = {
   id: number;
@@ -48,7 +48,6 @@ export type Product = {
 
 const Products = () => {
   const [products, setProducts] = useState<Product[]>([]);
-  const [loading, setloading] = useState(false);
   const [search, setSearch] = useState("");
   const [isOpen, setOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -61,7 +60,7 @@ const Products = () => {
   }, []);
 
   const fetchProducts: () => void = async () => {
-    setloading(true);
+   
     try {
       const response = await fetch(`${import.meta.env.BASE_URL}products.json`);
 
@@ -77,7 +76,7 @@ const Products = () => {
       
         setProducts(productsWithUrls);
         
-        setloading(false);
+       
       
  
      console.log(productsWithUrls);
@@ -146,16 +145,15 @@ const Products = () => {
         <h2 className="text-2xl text-gray-800 my-4 font-bold md:text-4xl md:leading-tight ">
           Welcome To Our Shop
         </h2>
-        <p className="mt-1 px-6 text-gray-700 dark:text-neutral-400">
-          We've helped some great companies brand, design and get to market.
+        <p className="mt-1 px-6 text-gray-700 flex flex-col gap-y-4 items-stretch">
+          We offer alot more than the products shown here but this is for Chiri original products. <small>Click on the link below to chat with us on whatsapp for other supplements and skincare products</small>
         </p>
+        <a href="https://wa.me/+905384085304?text=Hello%2C%20I%20have%20a%20question" target="_blank" rel="noopener noreferrer" className="mt-1 underline text-purple-400"> click here</a>
       </div>
 
-      {loading ? (
-        <div className="w-full h-dvh text-5xl flex items-center ">
-          <Loadingscreen />
-        </div>
-      ) : (
+      
+        
+     
         <div className=" ">
           <div className="w-full  bg-gray-500/45 flex flex-col-reverse md:flex-row items-center justify-between gap-4 px-4 md:px-12 py-4">
             <div className="flex  items-center justify-self-start gap-4 px-4">
@@ -280,13 +278,14 @@ const Products = () => {
           ) : (
             <div className="bg-[#f8f4f4] grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 px-6 py-5">
               {filteredProducts.map((product: Product) => [
-                <div key={product.id} className="bg-[#fefefe] font-sans">
+                <Suspense fallback={<Loadingscreen />}>
+                  <div key={product.id} className="bg-[#fefefe] font-sans">
                   <div className="rounded-lg border border-gray-200 bg-white/50 p-6 shadow-lg ">
                     <div
                       className="h-56 w-full mx-auto px-2 py-2 bg-[#81133d] pointer hover:cursor-pointer rounded-xl "
                       onClick={(e) => {
                         e.preventDefault();
-                        setloading(true);
+                        toast.success("hold on while we change the page")
                           veiwProducts(products, product.id);
                       }}
                     >
@@ -294,7 +293,7 @@ const Products = () => {
                         className=" w-full h-full bg-center object-cover rounded-xl"
                         loading="lazy"
                         src={product.imageUrl}
-                        alt=""
+                        alt="Skincare images"
 
                       />
                       <p className="sr-only">Netochukwu Codes</p>
@@ -320,8 +319,11 @@ const Products = () => {
                             }}
                             onClick={(e) => {
                               e.preventDefault();
-                              setloading(true);
+                        toast.success("hold on while we change the page")
+                           
                                 veiwProducts(products, product.id);
+
+                            
                             }}
                           >
                             <Tooltip
@@ -394,11 +396,12 @@ const Products = () => {
                   </div>
                   <div className=""></div>
                 </div>
+                </Suspense>
               ])}
             </div>
           )}
         </div>
-      )}
+      
     </div>
   );
 };

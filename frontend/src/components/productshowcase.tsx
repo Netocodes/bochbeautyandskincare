@@ -5,16 +5,9 @@ richColors
 className="mt-24 md:mt-12 lg:mt-20 z-50"
 position="top-right"
 />
+
 const ProductShowcase = () => {
-  const handlecopy = async (text: string) => {
-    try {
-      await navigator.clipboard.writeText(text);
-      toast.success("Text copied to clipboard");
-    } catch (err) {
-      console.error("Failed to copy: ", err);
-      toast.error("Failed to copy: ");
-    }
-  }
+ 
   return (
     <div className="bg-gradient-to-r from-[#d1d5db] via-[#6b7280] to-[#374151] py-8 rounded-lg px-2 md:px-8">
       <div className="w-full grid grid-cols-2 md:gap-4 sm:grid-cols-3 gap-2">
@@ -211,3 +204,12 @@ const ProductShowcase = () => {
 };
 
 export default ProductShowcase;
+export const handlecopy = async (text: string) => {
+  try {
+    await navigator.clipboard.writeText(text);
+    toast.success("Text copied to clipboard");
+  } catch (err) {
+    console.error("Failed to copy: ", err);
+    toast.error("Failed to copy: ");
+  }
+}
