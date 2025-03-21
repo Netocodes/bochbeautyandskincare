@@ -1,49 +1,53 @@
 [
   {
     "id": 1,
-    "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-    "price": 109.0,
+    "title": "Lenis & Clear Face Cleanser - Gentle Hydrating Cleanser for All Skin Types",
+    "mini": false,
+    "price": 400.0,
     "images": [
       "lenis-clear-cleanser-1",
       "lenis-clear-cleanser"
     ],
-    "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-    "category": "Body Srubs",
+    "description": "Our Lenis & Clear Face Cleanser is a carefully formulated skincare product designed to gently cleanse your skin, remove dirt, and maintain hydration. It helps prevent breakouts, reduces wrinkles, and fights signs of aging, leaving your skin feeling fresh, smooth, and rejuvenated. Perfect for daily use, this 100ml cleanser is suitable for all skin types.",
+    "category": "cleansers",
     "image": "lenis-clear-cleanser",
-   "currency": "TL",
-    "net_weight": "500g",
-    "skin_type": "Suitable for light skin",
+    "currency": "TL",
+    "net_weight": "100ml",
+    "skin_type": "Suitable for all skin types",
     "how_to_use": [
-      "Wet your entire body with warm water.",
-      "Gently massage the scrub onto your skin in circular motions.",
-      "Allow the scrub to sit for at least 7 minutes to maximize its effectiveness.",
-      "Rinse off thoroughly with warm water.",
-      "Use once or twice a week for a visibly radiant and refreshed look."
+      "Wet your face with lukewarm water.",
+      "Apply a small amount of Lenis & Clear Face Cleanser to your fingertips.",
+      "Gently massage the cleanser onto your face in circular motions, avoiding the eye area.",
+      "Rinse thoroughly with water and pat your skin dry with a clean towel.",
+      "Use daily in the morning and evening for best results."
     ],
     "key_features": [
-      "Deep Cleansing",
-      "Hydrating & Moisturizing",
-      "Brightening Effect",
-      "Gentle Exfoliation"
+      "Gently removes dirt and impurities",
+      "Hydrates and nourishes the skin",
+      "Prevents breakouts and acne",
+      "Reduces wrinkles and fine lines",
+      "Fights signs of aging",
+      "Suitable for all skin types"
     ],
     "seo": [
-      "moisturizing body scrub",
-      "organic body scrub",
-      "exfoliating scrub",
-      "skin brightening scrub",
-      "deep cleansing skincare",
-      "hydrating exfoliator",
-      "best body scrub for dry skin",
-      "gentle exfoliation scrub",
-      "natural skincare",
-      "radiant skin treatment"
+      "gentle face cleanser",
+      "hydrating face cleanser",
+      "anti-aging face cleanser",
+      "cleanser for all skin types",
+      "best face cleanser for breakouts",
+      "wrinkle-reducing cleanser",
+      "daily face cleanser",
+      "skincare for hydrated skin",
+      "natural face cleanser",
+      "Lenis & Clear Face Cleanser"
     ],
-    "rating": { "rate": 3.9, "count": 120 }
+    "rating": { "rate": 4.5, "count": 150 }
   },
   {
     "id": 2,
     "title": "Elegance Moisturizing Body Scrub",
-    "category": "Body Srubs",
+    "category": "body scrubs",
+    "mini": false,
     "price": 600,
     "image": "elegance-body-scrub-2",
     "currency": "TL",
@@ -89,12 +93,15 @@
   {
     "id": 3,
     "title": "2+1 Moisturizing & Lightning Body Wash",
+    "category": "body wash",
+    "mini": false,
     "price": 450.0,
     "images": [
       "moisture-wash-1",
       "mositure-wash"
     ],
-    "description": "A nourishing body wash that deeply moisturizes while gently lightening the skin. It cleanses, smoothens, softens, and repairs dry, cracked skin, leaving it radiant and refreshed.",    "category": "men's clothing",
+    "description": "A nourishing body wash that deeply moisturizes while gently lightening the skin. It cleanses, smoothens, softens, and repairs dry, cracked skin, leaving it radiant and refreshed.",
+
     "image": "mositure-wash",
    "currency": "TL",
   "net_weight": "300ml",
@@ -132,6 +139,7 @@
   {
     "id": 4,
     "title": "Restoration Body Oil",
+    "mini": false,
     "price": 700.0,
     "images": [
       "restoration-oil-1",
@@ -174,6 +182,7 @@
   {
     "id": 5,
     "title": "Lenis and Clear Face Soap",
+    "mini": false,
     "price": 350.0,
     "images": [
       "lenis-care-1",
@@ -218,7 +227,8 @@
   {
     "id": 6,
     "title": "Rose Glow Oil",
-    "price": 600.0,
+    "mini": false,
+    "price": 650.0,
     "images": [
       "rose-glow-oil",
       "original-glow-oil"
@@ -260,6 +270,7 @@
   {
     "id": 7,
     "title": "Lightnizer Xtra Lightning Body Oil",
+    "mini": false,
     "price": 700.0,
     "images": [
       "lighting-body-oil-1",
@@ -301,6 +312,7 @@
   {
     "id": 8,
     "title": "Xwhite Glow Oil",
+    "mini": false,
     "price": 500.0,
     "images": [
       "xwhite-glow-oil-1",
@@ -342,13 +354,14 @@
   {
     "id": 9,
     "title": "Molato Soap",
+    "mini": false,
     "price": 650.0,
     "images": [
       "xwhite-molato-soap-1",
       "xwhite-molato-soap"
     ],
     "description": "Enriched with Kojic acid, mulberry, papaya extract, and other lightning agents that effectively brighten/lighten the skin, fade away dark spots, and remove dead skin cells.",
-    "category": "Skincare",
+    "category": "body scrubs",
     "image": "xwhite-molato-soap",
     "currency": "TL",
     "net_weight": "500g",
@@ -385,13 +398,14 @@
   {
     "id": 10,
     "title": "Xwhite Face Cleanser and Xwhite Glow Face Cream Combo",
+    "mini": false,
     "price": 800.0,
     "images": [
       "facial-cleanser-and-cream",
       "facial-cleanser-and-cream-1"
     ],
     "description": "This combo effectively lightens dark spots, fades hyper-pigmentation, and evens out skin tone. Formulated with scientifically backed ingredients, it provides visible results in a short period. Infused with natural ingredients, it gently nourishes, clears dark spots, and lightens the skin, leaving it silky and smooth.",
-    "category": "Skincare",
+    "category": "cleansers",
     "image": "facial-cleanser-and-cream",
     "currency": "TL",
     "net_weight": "500g",
@@ -428,13 +442,14 @@
   {
     "id": 11,
     "title": "Itching Solution",
+    "mini": false,
     "price": 400.0,
     "images": [
       "itching-solution-1",
       "itching-solution"
     ],
     "description": "It’s mostly recommended for people that deal with water or environmental skin conditions. It helps treat bathing water and makes it safer to use without any issues.",
-    "category": "supplements",
+    "category": "body scrubs",
     "image": "itching-solution",
     "currency": "TL",
     "net_weight": "150g",
@@ -470,13 +485,14 @@
   {
     "id": 12,
     "title": "Caramel Black Soap",
+    "mini": false,
     "price": 600.0,
     "images": [
       "caramel-black-soap-1",
       "caramel-black-soap"
     ],
     "description": "Prevents rashes, eczema, itching, and scaly skin. Removes blemishes, relieves acne, maintains the skin's original color and texture, cleanses pores, and rejuvenates the skin, leaving it smooth, fresh, and clean.",
-    "category": "Body Care",
+    "category": "Body scrubs",
     "image": "caramel-black-soap",
     "currency": "TL",
     "net_weight": "250g",
@@ -510,43 +526,47 @@
   },
   {
     "id": 13,
-    "title": "Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin",
-    "price": 599.0,
+    "title": "Glam Glow Face Cream - Collagen & Niacinamide Infused Skin Food for Glow & Hydration",
+    "mini": false,
+    "price": 300.0,
     "images": [
       "glam-glow-face"
+      
     ],
-    "description": "21. 5 inches Full HD (1920 x 1080) widescreen IPS display And Radeon free Sync technology. No compatibility for VESA Mount Refresh Rate: 75Hz - Using HDMI port Zero-frame design | ultra-thin | 4ms response time | IPS panel Aspect ratio - 16: 9. Color Supported - 16. 7 million colors. Brightness - 250 nit Tilt angle -5 degree to 15 degree. Horizontal viewing angle-178 degree. Vertical viewing angle-178 degree 75 hertz",
-    "category": "supplements",
+    "description": "Our Glam Glow Face Cream is a luxurious skin food infused with hydrolyzed collagen and niacinamide. Designed to deliver a radiant glow, this cream brightens, hydrates, and protects your skin while smoothing and rejuvenating it. Perfect for individuals with brown and bright skin tones, this 20g cream is your go-to solution for a healthy, glowing complexion.",
+    "category": "face creams",
     "image": "glam-glow-face",
     "currency": "TL",
-    "net_weight": "500g",
-    "skin_type": "Suitable for light skin",
+    "net_weight": "20g",
+    "skin_type": "Best for brown and bright skin tones",
     "how_to_use": [
-      "Wet your entire body with warm water.",
-      "Gently massage the scrub onto your skin in circular motions.",
-      "Allow the scrub to sit for at least 7 minutes to maximize its effectiveness.",
-      "Rinse off thoroughly with warm water.",
-      "Use once or twice a week for a visibly radiant and refreshed look."
+      "Cleanse your face thoroughly.",
+      "Take a small amount of Glam Glow Face Cream and apply it evenly to your face and neck.",
+      "Gently massage in upward circular motions until fully absorbed.",
+      "Use daily in the morning and evening for best results."
     ],
     "key_features": [
-      "Deep Cleansing",
-      "Hydrating & Moisturizing",
-      "Brightening Effect",
-      "Gentle Exfoliation"
+      "Infused with hydrolyzed collagen and niacinamide",
+      "Brightens and evens skin tone",
+      "Deeply hydrates and nourishes the skin",
+      "Promotes a radiant, glowing complexion",
+      "Smooths and rejuvenates skin texture",
+      "Protects skin from environmental stressors"
     ],
     "seo": [
-      "moisturizing body scrub",
-      "organic body scrub",
-      "exfoliating scrub",
-      "skin brightening scrub",
-      "deep cleansing skincare",
-      "hydrating exfoliator",
-      "best body scrub for dry skin",
-      "gentle exfoliation scrub",
-      "natural skincare",
-      "radiant skin treatment"
+      "glow face cream",
+      "collagen face cream",
+      "niacinamide face cream",
+      "skin brightening cream",
+      "hydrating face cream",
+      "radiant skin cream",
+      "best cream for glowing skin",
+      "face cream for brown skin",
+      "luxury skincare",
+      "Glam Glow Face Cream"
     ],
-    "rating": { "rate": 2.9, "count": 250 }
+    "rating": { "rate": 4.7, "count": 200 }
   }
+ 
 
  ]
