@@ -55,13 +55,14 @@ const PersonalInfo = () => {
           />
 
           {/* Phone Number with Country Code */}
-          <div className="relative flex w-full  mb-4">
-            <Menu placement="bottom-start">
+          <div className=" flex items-canter justify-between w-full  mb-4">
+            <div className="">
+            <Menu  placement="bottom-start">
               <MenuHandler>
                 <Button
                   ripple={false}
                   
-                  className="flex h-12 py-3 items-center gap-2 rounded-r-none border border-r-0 border-blue-gray-200 bg-[#6b0942] pl-3"  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}                >
+                  className="flex h-12 py-3 text-lg items-center gap-2 rounded-r-none border border-r-0 border-blue-gray-20 shadow-lg text-gray-700 bg-gray-200/25 pl-3"  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}                >
                   <img
                     src={flags.svg}
                     alt={name}
@@ -87,12 +88,13 @@ const PersonalInfo = () => {
                 ))}
               </MenuList>
             </Menu>
+            </div>
             <Input
               type="tel"
               placeholder="Mobile Number"
               value={phoneNumber}
               onChange={(e) => setPhoneNumber(e.target.value)}
-              className=" bg-white py-6 px-5 text-md font-normal placeholder:text-gray-600 border rounded text-gray-800 "
+              className=" bg-white py-6 px-5 text-lg font-normal placeholder:text-gray-600 border rounded text-gray-800 "
               labelProps={{
                 className: "before:content-none after:content-none",
               }}

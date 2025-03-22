@@ -12,7 +12,11 @@ type news ={
 }
 const NewsLetter = () => {
 const [message, setMessage] = useState()
- const {register, handleSubmit,  formState: { isSubmitSuccessful}, } = useForm<news>()
+const [loading, setLoading] = useState(false)
+ const {register, handleSubmit, } = useForm<news>()
+ const handleload = () => {
+  setLoading(true)
+}
  const onsubmit: SubmitHandler<news> = async(data) => {
 
 const response = await fetch("https://bochbeautyandskincare-production.up.railway.app/suscribe", {
@@ -59,11 +63,14 @@ setMessage(DATA.message)
           
           <Button 
           type="submit"
+          
+          onClick={() => handleload()}
           className="bg-[#8c2643] text-sm  px-8 md:text-md capitalize rounded-lg"
            placeholder={undefined}
                           onPointerEnterCapture={""}
-                          onPointerLeaveCapture={""}>
-                            {isSubmitSuccessful ?  <Spinner className="h-8 w-8" onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} /> : "Suscribe"}
+                          onPointerLeaveCapture={""}
+                          >
+                            {loading ? <Spinner className="h-8 w-8" onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} /> : "Subscribe"}
                           </Button>
         </div>
         <p className="mt-3 text-sm text-gray-500 dark:text-neutral-500">

@@ -103,19 +103,20 @@ const CartComponent = () => {
               </h6>
             </div>
             <div className="flex items-center justify-between w-full pb-6 border-b border-gray-200">
-              <p className="font-normal text-xl leading-8 text-gray-600">
+              <p className="font-normal flex gap-x-3 text-xl leading-8 text-gray-600">
                 Delivery Charge
+                <small className="text-gray-800"> base fee for people in turkey  </small>
               </p>
               <h6 className="font-semibold text-xl leading-8 text-gray-900">
-                $0.00
+              ₺ 200 tl
               </h6>
             </div>
             <div className="flex items-center justify-between w-full py-6">
               <p className="font-manrope font-medium text-2xl leading-9 text-gray-900">
-                Total
+                Total payment
               </p>
               <h6 className="font-manrope font-medium text-4xl leading-9 text-[#8c2643]">
-                ₺ {TotalPrice()}
+                ₺ {TotalPrice() + 200}
               </h6>
             </div>
           </div>

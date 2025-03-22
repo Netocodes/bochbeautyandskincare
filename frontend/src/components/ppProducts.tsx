@@ -30,6 +30,7 @@ export type Product = {
   category: string;
   title: string;
   price: number;
+  mini: boolean;
   description: string;
   detailsImage:[],
   images: [];
@@ -79,7 +80,7 @@ const Products = () => {
        
       
  
-     console.log(productsWithUrls);
+     
     
     } catch (error) {
       console.error("Error fetching products:", error);
@@ -119,15 +120,12 @@ const Products = () => {
     }
   };
   const category = [
-    { id: 1, title: "all", icon: "CgSmileNone" },
-    { id: 2, title: "Body Scrubs", icon: "" },
-    { id: 3, title: "Body Oils", icon: "" },
-    { id: 4, title: "Cleansers", icon: "" },
-    { id: 5, title: "Hair Care", icon: "" },
-    { id: 6, title: "Body Creams", icon: "" },
-    { id: 7, title: "supplements", icon: "" },
-    // { id: 8, title: "jewelerycopy", icon: "" },
-    // { id: 9, title: "jewelerycopy", icon: "" },
+    { id: 1, title: "all", icon: "https://res.cloudinary.com/de7tyskql/image/upload/c_fill,g_auto,h_500,w_500/f_auto/q_auto/facial-cleanser-and-cream?_a=DATAg1AAZAA0" },
+    { id: 2, title: "Body Scrubs", icon: "https://res.cloudinary.com/de7tyskql/image/upload/c_fill,g_auto,h_500,w_500/f_auto/q_auto/elegance-body-scrub-2?_a=DATAg1AAZAA0" },
+    { id: 3, title: "Body Oils", icon: "https://res.cloudinary.com/de7tyskql/image/upload/c_fill,g_auto,h_500,w_500/f_auto/q_auto/original-glow-oil?_a=DATAg1AAZAA0" },
+    { id: 4, title: "Cleansers", icon: "https://res.cloudinary.com/de7tyskql/image/upload/c_fill,g_auto,h_500,w_500/f_auto/q_auto/lenis-clear-cleanser?_a=DATAg1AAZAA0" },
+    { id: 5, title: "face creams", icon: "https://res.cloudinary.com/de7tyskql/image/upload/c_fill,g_auto,h_500,w_500/f_auto/q_auto/clear-face-soap?_a=DATAg1AAZAA0" },
+  
   ];
   const handleDownload = () => {
     toast.success("hold on ")
@@ -146,7 +144,7 @@ const Products = () => {
           Welcome To Our Shop
         </h2>
         <p className="mt-1 px-6 text-gray-700 flex flex-col gap-y-4 items-stretch">
-          We offer alot more than the products shown here but this is for Chiri original products. <small>Click on the link below to chat with us on whatsapp for other supplements and skincare products</small>
+          We offer alot more than the products shown here but this is for Chiri original products. <small>Have a question or need help choosing?, Click the link below to chat with us on whatsapp</small>
         </p>
         <a href="https://wa.me/+905384085304?text=Hello%2C%20I%20have%20a%20question" target="_blank" rel="noopener noreferrer" className="mt-1 underline text-purple-400"> click here</a>
       </div>
@@ -159,12 +157,12 @@ const Products = () => {
             <div className="flex  items-center justify-self-start gap-4 px-4">
               <div className="flex flex-row" onClick={handleClose}>
                 <Button
-                  className="flex items-center gap-x-2 px-2 py-3 text-gray-300 bg-[#8c2643]"
+                  className="flex items-center gap-x-2 px-2 py-3 text-gray-100 bg-[#8c2643]"
                   placeholder={undefined}
                   onPointerEnterCapture={undefined}
                   onPointerLeaveCapture={undefined}
                 >
-                  <FaFilter size={16} className=" text-[#fff0f5]" /> Filter
+                  <FaFilter size={16} className=" text-[#f8f3f4]" /> Filter
                 </Button>
               </div>
               <Drawer
@@ -182,8 +180,8 @@ const Products = () => {
                   onClick={handleClose}
                 />
                 <Drawer.Items className="drawer bg-black/15 overflow-y-auto h-full w-full md:w-[80%] mx-auto">
-                  <div className=" h-[50dvh]  grid grid-cols-2 gap-4 p-4 lg:grid-cols-3">
-                    {category.map(({ id, title }) => {
+                  <div className="w-full h-[50dvh]  grid grid-cols-2 gap-4 p-4 lg:grid-cols-3">
+                    {category.map(({ id, title, icon }) => {
                       return (
                         <div
                           key={id}
@@ -192,10 +190,10 @@ const Products = () => {
                           }
                         >
                           <div className="cursor-pointer">
-                            <figure className="relative bg-[#8c2643] h-48 object-cover w-full md:w-[auto]">
+                            <figure className="relative bg-[#8c2643] h-52 object-cover w-full ">
                               <img
                                 className="h-full w-full px-0 md:px-3 rounded-xl object-cover object-center"
-                                src="https://i.pinimg.com/736x/d1/a8/3d/d1a83d1b34284ad271be2a0a4df1da0c.jpg"
+                                src = {icon}
                                 alt="nature image"
                               />
                               <div className="absolute bottom-0 w-full px-2 md:px-6 py-4 bg-gray-700 bg-clip-padding backdrop-filter  backdrop-blur bg-opacity-30 backdrop-saturate-150 backdrop-contrast-100  leading-tight">
@@ -278,17 +276,19 @@ const Products = () => {
           ) : (
             <div className="bg-[#f8f4f4] grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 px-6 py-5">
               {filteredProducts.map((product: Product) => [
+               
                 <Suspense fallback={<Loadingscreen />}>
                   <div key={product.id} className="bg-[#fefefe] font-sans">
                   <div className="rounded-lg border border-gray-200 bg-white/50 p-6 shadow-lg ">
                     <div
-                      className="h-56 w-full mx-auto px-2 py-2 bg-[#81133d] pointer hover:cursor-pointer rounded-xl "
+                      className="relative h-56 w-full mx-auto px-2 py-2 bg-[#81133d] pointer hover:cursor-pointer rounded-xl "
                       onClick={(e) => {
                         e.preventDefault();
                         toast.success("hold on while we change the page")
                           veiwProducts(products, product.id);
                       }}
                     >
+                      
                       <img
                         className=" w-full h-full bg-center object-cover rounded-xl"
                         loading="lazy"
@@ -296,6 +296,8 @@ const Products = () => {
                         alt="Skincare images"
 
                       />
+                      {product.mini && <div className="absolute top-0 right-0 py-2 px-6 bg-[#8d0e49] text-white rounded z-50">Mini Item</div>}
+                      
                       <p className="sr-only">Netochukwu Codes</p>
                     </div>
 

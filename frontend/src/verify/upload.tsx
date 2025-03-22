@@ -47,7 +47,8 @@ useEffect(() => {
   };
 
   // Handle file upload
-  const handleUpload = async () => {
+  const handleUpload = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
     if (!file) {
       setMessage('Please select a file.');
       toast.error('Please select a file.');
@@ -81,26 +82,26 @@ useEffect(() => {
   return (
     <div className="w-full  flex flex-col items-center ">
       
-<div className="relative w-full min-h-screen flex items-center justify-center  py-12 px-4 sm:px-6 lg:px-8 bg-gray-500 bg-no-repeat bg-cover "
+<div className="relative w-full min-h-screen flex items-center justify-center py-4 md:py-12 px-2 sm:px-6 lg:px-8 bg-gray-500 bg-no-repeat bg-cover "
  style={{
   backgroundImage: 'url("https://images.unsplash.com/photo-1621243804936-775306a8f2e3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80")',
 }}>
 <div className="absolute bg-black opacity-60 inset-0 z-0"></div>
-	<div className="sm:max-w-lg w-full p-10 bg-white rounded-xl z-10">
+	<div className="sm:max-w-lg w-full p-5 md:p-10 bg-white rounded-xl z-10">
 		<div className="text-center">
 			<h2 className="mt-5 text-3xl font-bold text-gray-700">
 				Verify Payment
 			</h2>
 			<p className="mt-2 text-sm text-gray-700">Make sure to use the same <b className="underline italic tracking-wider underline-offset-4">orderId</b> provided to you on your mail</p>
 		</div>
-        <form className="mt-8 space-y-3" >
+        <form className="mt-8 space-y-3" onSubmit={handleUpload}>
                     <div className="grid grid-cols-1 space-y-2">
                         <label className="text-lg font-bold text-gray-600 tracking-wider">* orderId:</label>
                             <input className="text-base p-2 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500" type="text" value={orderId}
               onChange={handleOrderIdChange} required maxLength={5} placeholder="Enter orderId here" />
                     </div>
                     <div className="grid grid-cols-1 space-y-2">
-                        <label className="text-sm font-bold text-gray-500 tracking-wide">* Attach payment Screenshot/pdf </label>
+                        <label className="text-lg font-bold text-gray-500 tracking-wide">* Attach payment Screenshot/pdf </label>
                         <div className="flex items-center justify-center w-full">
                             <label className="relative flex flex-col rounded-lg border-4 border-dashed w-full h-60 p-10 group text-center">
                             {selectedImage && (
@@ -126,15 +127,16 @@ useEffect(() => {
                                 <span>File type: doc,pdf, images</span>
                             </p>
                     <div>
-                        <Button type="button"
+                        <Button type="submit"
                         placeholder={undefined}
                         onPointerEnterCapture={""}
-                        onPointerLeaveCapture={""} onClick={handleUpload}
+                        onPointerLeaveCapture={""} 
                         className="w-full bg-[#8c2643] text-md  px-8 md:text-xl capitalize "
                         >
                         Upload
                     </Button>
-                   {message && <p className="mt-4 text-red-500 text-center">{message}</p>}
+                   {message && <p className="mt-7 font-semibold text-green-500 text-lg text-center">{message}</p>}
+                 
                     </div>
         </form>
 	</div>

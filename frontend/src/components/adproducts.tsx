@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import SlidingText from "../components/slidertext";
 import { Toaster, toast } from "sonner";
 import { FaCircleCheck } from "react-icons/fa6";
+
+
 <Toaster
 richColors
 className="mt-24 md:mt-12 lg:mt-20 z-50"
@@ -24,6 +26,7 @@ const AdProduct = () => {
   }
   return (
     <div>
+   
       <motion.section
         className="h-auto md:h-[auto] lg:h-screen flex items-center justify-center overflow-hidden"
         initial={{ opacity: 0, y: "20%" }}
@@ -62,7 +65,7 @@ const AdProduct = () => {
                   <li className="flex gap-x-3"> <FaCircleCheck className="text-[#8c2643]"/> Skin Comfort Relief.</li></ul>
                   <p className="flex flex-row gap-1 italic text-sm">search for <b> {textToCopy} </b> in the shop section <Button onClick={handlecopy} className="bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-purple-500 via-slate-700 to-teal-800 text-white font-semibold  px-3 rounded-full py-2"  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>Copy</Button></p>
                 </div>
-                <div className="my-4">
+                <div className="my-4 flex items-center justify-end">
                   <Link to={"./productPage"}>
                     <Button
                       children="See more Products"
