@@ -130,15 +130,16 @@ export const Navbar: React.FC = () => {
               </div>
 
               <div className="flex items-center justify-end px-5 text-lg underline underline-offset-8 text-[#8c2643]">
-                Cart Total:
+                
                 {/* <GiShoppingCart size={42} /> */}
-                <div className="px-4 font-sans">
+                <div className="px-4 flex flex-col items-center justify-end  gap-y-4 text-right font-sans">
                   {" "}
-                  ₺{" "}
-                  <span className="text-lg font-semibold leading-tight">
-                    {TotalPrice()}
+                  {" "}
+                  <span className="text-xl font-semibold leading-tight">
+                  Cart Total:  {TotalPrice()}<small className="text-md px-1">tl</small>
                   </span>
-                  .00
+                  <span>"tl" is turkish Lira (Turkey Currency)</span>
+                  
                 </div>
               </div>
             </div>

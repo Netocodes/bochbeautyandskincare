@@ -65,7 +65,16 @@ const AdProduct = () => {
                   <li className="flex gap-x-3"> <FaCircleCheck className="text-[#8c2643]"/> Skin Comfort Relief.</li></ul>
                   <p className="flex flex-row gap-1 italic text-sm">search for <b> {textToCopy} </b> in the shop section <Button onClick={handlecopy} className="bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-purple-500 via-slate-700 to-teal-800 text-white font-semibold  px-3 rounded-full py-2"  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>Copy</Button></p>
                 </div>
-                <div className="my-4 flex items-center justify-end">
+                <motion.div className="py-8 flex items-center justify-end"
+                 animate={{
+                  scale: [1, 0.8, 1], // Scale up to 1.5x and back to original size
+                }}
+                transition={{
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  duration: 1.5, // 1.5 seconds to complete one cycle
+                  ease: "easeInOut", // Smooth ease-in and ease-out transitions
+                }}>
                   <Link to={"./productPage"}>
                     <Button
                       children="See more Products"
@@ -76,7 +85,7 @@ const AdProduct = () => {
                     >
                       </Button>
                   </Link>
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>

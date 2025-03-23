@@ -78,11 +78,14 @@ total
         <small className="text-gray-800">want to make transfers in your own currency <Link className="underline underline-offset-4" to="/currency">click here</Link></small>
         
       </div>
+      <div className="py-4 px-2 bg-[#86114c]">
+        <h2 className="text-xl text-white">Amount to pay:  <span className="text-xl ml-2">{TotalPrice() + 200} <small className="text-md ">tl</small></span></h2>
+      </div>
       <div className="flex flex-col gap-y-4">
         <div className="border rounded-2xl bg-[#eedada] py-4 px-2 flex justify-between">
           <div className=" flex flex-col">
             <h5>Account number:</h5>
-            <h2 className="ml-2 text-2xl"><b>8020705588</b></h2>
+            <h2 className="ml-2 text-gray-700 text-2xl"><b>8020705588</b></h2>
           </div>
           <Button
                 
@@ -103,7 +106,7 @@ total
         <div className="border rounded-2xl bg-[#eedada] py-4 px-2 flex justify-between">
         <div className="flex flex-col">
             <h5>Account Name:</h5>
-            <h2 className="ml-2 text-xl"><b>Amaugo Grant Izuchukwu</b></h2>
+            <h2 className="ml-2 text-gray-700 text-xl"><b>Amaugo Grant Izuchukwu</b></h2>
          </div>
          <img className="w-[5rem] h-[4rem] object-cover" src="https://businesspost.ng/wp-content/uploads/2022/08/PalmPay.jpg" alt="bank logo" />
          
@@ -114,7 +117,7 @@ total
         <div className="border rounded-2xl bg-[#eedada] py-4 px-2 flex justify-between">
         <div className="flex flex-col">
             <h5>Bank Name:</h5>
-            <h2 className="ml-2 text-xl"><b>Palmpay Nigeria</b></h2>
+            <h2 className="ml-2 text-gray-700 text-xl"><b>Palmpay Nigeria</b></h2>
          </div>
          <img className="w-[5rem] h-[4rem] object-cover" src="https://businesspost.ng/wp-content/uploads/2022/08/PalmPay.jpg" alt="bank logo" />
          

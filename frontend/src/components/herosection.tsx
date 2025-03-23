@@ -101,7 +101,20 @@ const HeroSection = () => {
                     <p className="max-w-xl mx-auto font-semibold text-gray-100 bg-gray-700/55 backdrop-blur-md py-6  text-lg text-justify sm:text-lg md:text-xl px-6">
                       {data.description}
                     </p>
-                    <Button
+                    <motion.div
+                    className="mx-auto"
+                    animate={{
+                      scale: [1, 1.2, 1], // Scale up to 1.5x and back to original size
+                    }}
+                    transition={{
+                      repeat: Infinity,
+                      repeatType: "loop",
+                      duration: 1.5, // 1.5 seconds to complete one cycle
+                      ease: "easeInOut", // Smooth ease-in and ease-out transitions
+                    }}
+                                                
+                                              >
+ <Button
                       className="bg-[#8c2643] text-white px-8 mx-auto"
                       ripple={true}
                       placeholder={undefined}
@@ -110,6 +123,8 @@ const HeroSection = () => {
                     >
                       <Link to={data.link}>{data.button}</Link>
                     </Button>
+                                              </motion.div>
+                   
                   </motion.div>
                   {/* <img
                     className="absolute hero w-full md:w-[95%] h-[75dvh] md:h-[75dvh]  object-cover object-center"

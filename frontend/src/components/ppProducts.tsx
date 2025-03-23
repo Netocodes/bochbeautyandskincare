@@ -124,7 +124,7 @@ const Products = () => {
     { id: 2, title: "Body Scrubs", icon: "https://res.cloudinary.com/de7tyskql/image/upload/c_fill,g_auto,h_500,w_500/f_auto/q_auto/elegance-body-scrub-2?_a=DATAg1AAZAA0" },
     { id: 3, title: "Body Oils", icon: "https://res.cloudinary.com/de7tyskql/image/upload/c_fill,g_auto,h_500,w_500/f_auto/q_auto/original-glow-oil?_a=DATAg1AAZAA0" },
     { id: 4, title: "Cleansers", icon: "https://res.cloudinary.com/de7tyskql/image/upload/c_fill,g_auto,h_500,w_500/f_auto/q_auto/lenis-clear-cleanser?_a=DATAg1AAZAA0" },
-    { id: 5, title: "face creams", icon: "https://res.cloudinary.com/de7tyskql/image/upload/c_fill,g_auto,h_500,w_500/f_auto/q_auto/clear-face-soap?_a=DATAg1AAZAA0" },
+    { id: 5, title: "face creams", icon: "https://res.cloudinary.com/de7tyskql/image/upload/c_fill,g_auto,h_500,w_500/f_auto/q_auto/facial-cleanser-and-cream?_a=DATAg1AAZAA0" },
   
   ];
   const handleDownload = () => {
@@ -137,6 +137,7 @@ const Products = () => {
     setSelectedCategory(category);
     handleClose(); // Close the drawer after selecting category
   };
+  
   return (
     <div className="w-full bg-white/50 py-12 overflow-y-auto">
       <div className="max-w-2xl text-center mx-auto mb-10 lg:mb-14">
@@ -377,10 +378,8 @@ const Products = () => {
 
                       <div className="mt-4 flex items-center justify-between gap-4">
                         <p className="text-2xl md:text-3xl font-extrabold leading-tight text-gray-700 dark:text-white">
-                          <span className="font-normal  text-2xl text-gray-700">
-                            ₺
-                          </span>{" "}
-                          {product.price}
+                        
+                          {product.price}<small className="text-md px-1">tl</small>
                         </p>
 
                         <Button

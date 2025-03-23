@@ -115,7 +115,7 @@ router.post("/send-email", async (req, res) => {
         Order ID: <strong> ${orderId}</strong> 
       </li>
       <li style="color:rgb(39, 28, 31); font-size: 21px; line-height: 1.5; margin-bottom: 10px;">
-        Total Amount: <strong> ₺${total}</strong>
+        Total Amount: <strong> ${total + 200}</strong> <small>tl</small>
       </li>
     </ul>
 
@@ -258,7 +258,7 @@ bochbeautyandskincare
         Order ID: <strong> ${orderId}</strong> 
       </li>
       <li style="color:rgb(39, 28, 31); font-size: 21px; line-height: 1.5; margin-bottom: 10px;">
-        Total Amount: <strong> ₺${total}</strong>
+        Total Amount: <strong> ${total + 200}</strong> <small>tl</small>
       </li>
     </ul>
   <!-- Bottom Section -->

@@ -13,7 +13,7 @@ const ContactUs = () => {
 
   <div className="grid grid-cols-1 lg:grid-cols-2 lg:items-center gap-6 md:gap-8 lg:gap-12 px-4">
     <div className=" w-full md:w-[500px] overflow-hidden bg-[#8c2643] rounded-2xl ">
-      <img className="w-full object-cover rounded-2xl" src="https://res.cloudinary.com/de7tyskql/image/upload/f_auto,q_auto/wywofgphiwjoahygpiek" alt="Contacts Image" />
+      <img className="w-full h-[250px] object-cover rounded-2xl" src="https://res.cloudinary.com/de7tyskql/image/upload/f_auto,q_auto/wywofgphiwjoahygpiek" alt="Contacts Image" loading="lazy" />
     </div>
    
 

@@ -237,7 +237,7 @@
     "category": "Body Oils",
     "image": "original-glow-oil",
     "currency": "TL",
-    "net_weight": "250g",
+    "net_weight": "250ml",
     "skin_type": "Suitable for dark skin",
     "how_to_use": [
       "Apply a small amount of the oil to your skin.",
@@ -566,7 +566,91 @@
       "Glam Glow Face Cream"
     ],
     "rating": { "rate": 4.7, "count": 200 }
-  }
+  },
  
-
+  {
+    "id": 14,
+    "title": "Rose Glow Oil",
+    "mini": true,
+    "price": 400.0,
+    "images": [
+      "rose-glow-oil",
+      "original-glow-oil"
+    ],
+    "description": "Suitable for dark skin persons that wish to achieve a more refined brown skin tone. It maintains the skin's original texture, fades pigmentation, and keeps the skin moisturized all day.",
+    "category": "Body Oils",
+    "image": "original-glow-oil",
+    "currency": "tl",
+    "net_weight": "250ml",
+    "skin_type": "Suitable for dark skin",
+    "how_to_use": [
+      "Apply a small amount of the oil to your skin.",
+      "Gently massage in circular motions until fully absorbed.",
+      "Use every day for a quality result."
+    ],
+    "key_features": [
+      "Maintains the skin's original texture",
+      "Fades pigmentation on dark skin",
+      "Keeps the skin moisturized all day"
+    ],
+    "seo": [
+      "rose glow oil",
+      "rose glow body oil",
+      "dark skin moisturizer",
+      "skin pigmentation treatment",
+      "refined brown skin tone",
+      "body oil for dark skin",
+      "skin hydration oil",
+      "daily skincare oil",
+      "natural skin glow oil",
+      "dark skin care product",
+      "moisturizing body oil"
+    ],
+    "rating": {
+      "rate": 3.9,
+      "count": 70
+    }
+  },
+  {
+    "id": 15,
+    "title": "Lightnizer Xtra Lightning Body Oil",
+    "mini": true,
+    "price": 450.0,
+    "images": [
+      "lighting-body-oil-1",
+      "lighting-body-oil"
+    ],
+    "description": "This silky lightning body oil is designed to keep the skin looking visibly light and clear. It deeply nourishes the skin, keeps it smooth and silky, and fights aging and wrinkles.",
+    "category": "Body Oils",
+    "image": "lighting-body-oil",
+    "currency": "TL",
+    "net_weight": "250ml",
+    "skin_type": "Suitable for all skin types",
+    "how_to_use": [
+      "Apply a small amount of the oil to your skin.",
+      "Gently massage in circular motions until fully absorbed.",
+      "Use only at night before bed."
+    ],
+    "key_features": [
+      "Deeply nourishes the skin",
+      "Keeps the skin smooth and silky",
+      "Fights aging and wrinkles"
+    ],
+    "seo": [
+      "lightnizer xtra lightning body oil",
+      "skin lightening oil",
+      "anti-aging body oil",
+      "smooth and silky skin oil",
+      "night skincare oil",
+      "wrinkle reduction oil",
+      "skin nourishing oil",
+      "radiant skin treatment",
+      "natural body oil",
+      "visible skin lightening"
+    ],
+    "rating": {
+      "rate": 3,
+      "count": 400
+    }
+  }
  ]

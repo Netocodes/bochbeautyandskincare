@@ -23,14 +23,14 @@ const CartComponent = () => {
       <SlidingText Information="If your currency is not Turkish Lira (₺ ), click the link labeled 
       Click here to convert to your currency to switch to your preferred currency. After that, you can proceed to payment " />
 
-        <div className="w-full bg-gray-100 border shadow-lg  my-5 py-5 max-w-7xl px-4 md:px-5   mx-auto">
+        <div className="w-full bg-gray-100 border-4 shadow-lg  my-5 py-5 max-w-7xl px-4 md:px-5   mx-auto">
           <h2 className="title font-manrope font-bold text-4xl leading-10 mb-8 text-center text-black">
             Shopping Cart
           </h2>
-          <ul className="my-4">
+          <ul className="my-4 flex flex-col gap-y-6">
             {cartItems.map((items, key) => (
               <li
-                className="border-y border-l-blue-gray-800 flex flex-col space-y-3 py-8 px-4 text-left sm:flex-row sm:space-x-5 sm:space-y-0"
+                className="border-y border-4 bg-[#ececec] shadow-2xl flex flex-col space-y-3 py-8 px-4 text-left sm:flex-row sm:space-x-5 sm:space-y-0"
                 key={key}
               >
                 <div className="shrink-0">
@@ -70,7 +70,7 @@ const CartComponent = () => {
 
                     <div className="mt-4 flex items-end justify-between sm:mt-0 sm:items-start sm:justify-end">
                       <p className="shrink-0 w-20 text-3xl leading-tight font-normal text-gray-900 sm:order-2 sm:ml-8 sm:text-right">
-                        ₺ {items.price}
+                         {items.price} <small className="text-md px-1">tl</small>
                       </p>
                     </div>
                   </div>
@@ -93,22 +93,22 @@ const CartComponent = () => {
             ))}
           </ul>
 
-          <div className="bg-gray-50 rounded-xl drop-shadow-xl p-6 w-full mb-8 max-lg:max-w-xl max-lg:mx-auto">
+          <div className="bg-gray-50 border border-[#8b0f4d] rounded-xl drop-shadow-2xl p-6 w-full mb-8 max-lg:max-w-xl max-lg:mx-auto">
             <div className="flex items-center justify-between w-full mb-6">
               <p className="font-normal text-xl leading-8 text-gray-600">
                 Sub Total
               </p>
-              <h6 className="font-semibold text-xl leading-8 text-gray-900">
-                ₺ {TotalPrice()}
+              <h6 className="font-semibold text-2xl leading-8 text-gray-900">
+                {TotalPrice()}<small className="text-md px-1">tl</small>
               </h6>
             </div>
             <div className="flex items-center justify-between w-full pb-6 border-b border-gray-200">
-              <p className="font-normal flex gap-x-3 text-xl leading-8 text-gray-600">
+              <p className="font-normal flex flex-col md:flex-row gap-x-3 text-xl leading-8 text-gray-600">
                 Delivery Charge
-                <small className="text-gray-800"> base fee for people in turkey  </small>
+                <small className="text-xs text-gray-800"> base fee for people in turkey  </small>
               </p>
               <h6 className="font-semibold text-xl leading-8 text-gray-900">
-              ₺ 200 tl
+              200 <small className="text-md px-1">tl</small>
               </h6>
             </div>
             <div className="flex items-center justify-between w-full py-6">
@@ -116,7 +116,7 @@ const CartComponent = () => {
                 Total payment
               </p>
               <h6 className="font-manrope font-medium text-4xl leading-9 text-[#8c2643]">
-                ₺ {TotalPrice() + 200}
+                 {TotalPrice() + 200} <small className="text-md px-1">tl</small>
               </h6>
             </div>
           </div>

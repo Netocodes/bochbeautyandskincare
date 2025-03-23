@@ -26,7 +26,7 @@ const FAQsection = () => {
               Stretch marks are a natural occurrence and are completely harmless. However, some stretch marks can appear due to the use of incorrect skincare products. In cases where stretch marks are caused by chemical products, they may take more than 4 weeks to fade. The key to treating stretch marks is patience and consistency with the remedy you choose.
 
               <p className="mt-3">
-To explore our range of products designed to help reduce the appearance of stretch marks, head over to our Shop Page or use the Search Bar to find the perfect match for your skin. If you have specific concerns or need personalized recommendations, don’t hesitate to reach out to us directly by clicking the "<Link to="Contact" className="underline"> Contact Us</Link>" button or emailing us at <a href="mailto:contact@bochbeautyandskincare.shop" className="underline">contact@bochbeautyandskincare.shop</a>. We’re always happy to assist you!
+To explore our range of products designed to help reduce the appearance of stretch marks, head over to our Shop Page and use the Search Bar to find the perfect match for your skin. If you have specific concerns or need personalized recommendations, don’t hesitate to reach out to us directly by clicking the "<Link to="Contact" className="underline"> Contact Us</Link>" button or emailing us at <a href="mailto:contact@bochbeautyandskincare.shop" className="underline">contact@bochbeautyandskincare.shop</a>. We’re always happy to assist you!
 </p>
               </p>
               
@@ -42,7 +42,7 @@ To explore our range of products designed to help reduce the appearance of stret
               <b>Yes</b>, we offer skin-whitening products that are designed to provide natural and long-lasting results. However, these products are not instant and require consistent use. Some customers may start seeing results in less than 2 weeks, while others may take longer, depending on their skin type.
 
 <p className="mt-3">
-To explore our range of products designed for skin whitening, head over to our Shop Page or use the Search Bar to find the perfect match for your skin. If you have specific concerns or need personalized recommendations, don’t hesitate to reach out to us directly by clicking the "<Link to="Contact" className="underline"> Contact Us</Link>" button or emailing us at <a href="mailto:contact@bochbeautyandskincare.shop" className="underline">contact@bochbeautyandskincare.shop</a>. We’re always happy to assist you!
+To explore our range of products designed for skin whitening, head over to our Shop Page and use the Search Bar to find the perfect match for your skin. If you have specific concerns or need personalized recommendations, don’t hesitate to reach out to us directly by clicking the "<Link to="Contact" className="underline"> Contact Us</Link>" button or emailing us at <a href="mailto:contact@bochbeautyandskincare.shop" className="underline">contact@bochbeautyandskincare.shop</a>. We’re always happy to assist you!
 </p>
               </p>
               
@@ -50,44 +50,21 @@ To explore our range of products designed for skin whitening, head over to our S
           </Accordion.Panel>
 
           <Accordion.Panel className="transition-all duration-400 ease-in-out rounded-lg">
-            <Accordion.Title className="text-gray-700 hover:bg-[#8c2643] hover:text-white font-medium  data-[state=open]:bg-[#8c2643]  transition-colors duration-200">
-              What are the differences between Flowbite and Tailwind UI?
+            <Accordion.Title className="text-lg text-gray-700 hover:bg-[#8c2643] hover:text-white font-medium  data-[state=open]:bg-[#8c2643]  transition-colors duration-200">
+             How do i make Payments and get my  Order?
             </Accordion.Title>
             <Accordion.Content className="bg-[#f8e6e6]">
-              <p className="mb-2 font-medium leading-tight text-gray-800">
-                The main difference is that the core components from Flowbite
-                are open source under the MIT license, whereas Tailwind UI is a
-                paid product. Another difference is that Flowbite relies on
-                smaller and standalone components, whereas Tailwind UI offers
-                sections of pages.
+            <ul>
+              <li>Add items(), click <b>"Continue to payment"</b>.</li>
+              <li>Enter shipping details.</li>
+              <li>Transfer funds to the provided account, include your emailed <b>Order ID</b> as the tranfer reference.</li>
+              <li>Submit proof via <Link to={"/verify-payment"}><b>"Verify Payment"</b></Link> </li>
+            </ul>
+            <small>Your order is processed once confirmed1</small>
+              <p className="mt-3 font-medium leading-tight text-gray-800">
+                If you have issues with your order confirmation or payment verification make sure to reack out to us  by clicking the "<Link to="Contact" className="underline"> Contact Us</Link>" button or emailing us at <a href="mailto:contact@bochbeautyandskincare.shop" className="underline">contact@bochbeautyandskincare.shop</a>. We’re always happy to assist you!
               </p>
-              <p className="mb-2 font-medium leading-tight text-gray-800">
-                However, we actually recommend using both Flowbite, Flowbite
-                Pro, and even Tailwind UI as there is no technical reason
-                stopping you from using the best of two worlds.
-              </p>
-              <p className="mb-2 font-medium leading-tight text-gray-800">
-                Learn more about these technologies:
-              </p>
-              <ul className="list-disc pl-5 font-medium leading-tight text-gray-800">
-                <li>
-                  <a
-                    href="https://flowbite.com/pro/"
-                    className="text-cyan-600 hover:underline dark:text-cyan-500"
-                  >
-                    Flowbite Pro
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://tailwindui.com/"
-                    rel="nofollow"
-                    className="text-cyan-600 hover:underline dark:text-cyan-500"
-                  >
-                    Tailwind UI
-                  </a>
-                </li>
-              </ul>
+              
             </Accordion.Content>
           </Accordion.Panel>
           <Accordion.Panel className="transition-all duration-400 ease-in-out rounded-lg">

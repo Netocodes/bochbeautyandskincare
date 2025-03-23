@@ -70,8 +70,8 @@ const Details = () => {
               <div className="w-full md:w-1/2">
                 {" "}
                 {/*text part */}
-                <b className="text-sm title-font text-gray-900 py-6 tracking-widest">
-                  {product.category}
+                <b className="text-sm flex items-center justify-start gap-x-1 title-font text-gray-900 py-6 tracking-widest">
+                  {product.category}{product.mini && <div className=" py-2 px-1 bg-[#8d0e49] text-white rounded ">Mini Item</div>}
                 </b>
                 <h2 className="text-white mt-3 bg-[#8c2643] py-3 px-2 shadow-lg  text-3xl title-font font-medium mb-1">
                   {product.title}
@@ -133,7 +133,7 @@ const Details = () => {
                 </div>
                 <div className="flex flex-col   gap-y-8 justify-between mt-6">
                   <span className="title-font py-5 font-medium text-3xl flex items-center justify-end text-gray-900">
-                    Total Price: ₺<b>{price}</b>
+                    Total Price: <b>{price}<small className="text-md px-1">tl</small></b>
                   </span>
 
                   <div className="flex gap-x-4">

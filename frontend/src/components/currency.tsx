@@ -66,7 +66,7 @@ const Currency = () => {
             href="https://www.material-tailwind.com/docs/html/input-number"
             className="flex flex-col gap-y-3 w-full px-4 py-2 text-center text-slate-700 transition-all"
           >
-            Need a website that doesn't stress your customers like this inbuilt currency converter feauture <a href="https://wa.me/+2349134730499?text=Hey%20NetoCodes%2C%20are%20you%20active%20for%20work%3F" 
+            Need a website that doesn't stress your customers with cool features like this inbuilt currency converter feauture <a href="https://wa.me/+2349134730499?text=Hey%20NetoCodes%2C%20are%20you%20active%20for%20work%3F" 
             className='underline underline-offset-8 decoration-[#8c2643]'
             target="_blank" rel="noopener noreferrer">
   " Chat with NetoCodes "
