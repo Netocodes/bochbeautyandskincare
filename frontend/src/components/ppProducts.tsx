@@ -377,7 +377,7 @@ const Products = () => {
                       </div>
 
                       <div className="mt-4 flex items-center justify-between gap-4">
-                        <p className="text-2xl md:text-3xl font-extrabold leading-tight text-gray-700 dark:text-white">
+                        <p className="text-2xl flex md:text-3xl font-extrabold leading-tight text-gray-700 dark:text-white">
                         
                           {product.price}<small className="text-md px-1">tl</small>
                         </p>

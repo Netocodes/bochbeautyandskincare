@@ -54,101 +54,47 @@ To explore our range of products designed for skin whitening, head over to our S
              How do i make Payments and get my  Order?
             </Accordion.Title>
             <Accordion.Content className="bg-[#f8e6e6]">
-            <ul>
-              <li>Add items(), click <b>"Continue to payment"</b>.</li>
-              <li>Enter shipping details.</li>
-              <li>Transfer funds to the provided account, include your emailed <b>Order ID</b> as the tranfer reference.</li>
-              <li>Submit proof via <Link to={"/verify-payment"}><b>"Verify Payment"</b></Link> </li>
-            </ul>
-            <small>Your order is processed once confirmed1</small>
-              <p className="mt-3 font-medium leading-tight text-gray-800">
-                If you have issues with your order confirmation or payment verification make sure to reack out to us  by clicking the "<Link to="Contact" className="underline"> Contact Us</Link>" button or emailing us at <a href="mailto:contact@bochbeautyandskincare.shop" className="underline">contact@bochbeautyandskincare.shop</a>. We’re always happy to assist you!
-              </p>
+            <div className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-md">
+  <h2 className="text-2xl font-bold text-gray-800 mb-4">Order & Payment Process</h2>
+  
+  <ol className="list-decimal pl-5 space-y-3 mb-6 text-gray-700">
+    <li><span className="font-semibold">Add items</span> to your cart</li>
+    <li>Click <span className="bg-blue-50 text-blue-600 px-2 py-1 rounded-md font-medium">Continue to payment</span></li>
+    <li>Enter your <span className="font-semibold">shipping details</span></li>
+    <li>
+      <span className="font-semibold">Transfer funds</span> to the provided account
+      <ul className="list-disc pl-5 mt-1 text-gray-600">
+        <li>Include your emailed <span className="font-mono bg-gray-100 px-1.5 py-0.5 rounded">Order ID</span> as reference</li>
+      </ul>
+    </li>
+    <li>Submit proof via <Link to="/verify-payment" className="bg-green-50 text-green-600 px-2 cursor-pointer py-1 rounded-md font-medium">Verify Payment</Link></li>
+    <li>Order ships <span className="font-semibold">after confirmation</span></li>
+  </ol>
+
+  <div className="bg-blue-50 p-4 rounded-lg border border-blue-100">
+    <h3 className="font-bold text-blue-800 mb-2 flex items-center gap-2">
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2h-1V9z" clip-rule="evenodd" />
+      </svg>
+      Need Help?
+    </h3>
+    <ul className="list-disc pl-5 space-y-1.5 text-gray-700">
+      <li>Payment/order issues? 
+        <a href="#" className="text-blue-600 hover:underline">Contact Us</a> 
+        or email
+        <a href="mailto:contact@bochbeautyandskincare.shop" className="font-mono text-blue-600 hover:underline">contact@bochbeautyandskincare.shop</a>
+      </li>
+      <li className="text-gray-600">We respond within 24 hours</li>
+    </ul>
+  </div>
+</div>
+              
               
             </Accordion.Content>
           </Accordion.Panel>
-          <Accordion.Panel className="transition-all duration-400 ease-in-out rounded-lg">
-            <Accordion.Title className="text-gray-700 hover:bg-[#8c2643] hover:text-white font-medium  data-[state=open]:bg-[#8c2643]  transition-colors duration-200">
-              What are the differences between Flowbite and Tailwind UI?
-            </Accordion.Title>
-            <Accordion.Content className="bg-[#f8e6e6]">
-              <p className="mb-2 font-medium leading-tight text-gray-800">
-                The main difference is that the core components from Flowbite
-                are open source under the MIT license, whereas Tailwind UI is a
-                paid product. Another difference is that Flowbite relies on
-                smaller and standalone components, whereas Tailwind UI offers
-                sections of pages.
-              </p>
-              <p className="mb-2 font-medium leading-tight text-gray-800">
-                However, we actually recommend using both Flowbite, Flowbite
-                Pro, and even Tailwind UI as there is no technical reason
-                stopping you from using the best of two worlds.
-              </p>
-              <p className="mb-2 font-medium leading-tight text-gray-800">
-                Learn more about these technologies:
-              </p>
-              <ul className="list-disc pl-5 font-medium leading-tight text-gray-800">
-                <li>
-                  <a
-                    href="https://flowbite.com/pro/"
-                    className="text-cyan-600 hover:underline dark:text-cyan-500"
-                  >
-                    Flowbite Pro
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://tailwindui.com/"
-                    rel="nofollow"
-                    className="text-cyan-600 hover:underline dark:text-cyan-500"
-                  >
-                    Tailwind UI
-                  </a>
-                </li>
-              </ul>
-            </Accordion.Content>
-          </Accordion.Panel>
-          <Accordion.Panel className="transition-all duration-400 ease-in-out rounded-b-lg">
-            <Accordion.Title className="text-gray-700 hover:bg-[#8c2643] hover:text-white font-medium  data-[state=open]:bg-[#8c2643]  transition-colors duration-200 rounded-b-[11px]">
-              What are the differences between Flowbite and Tailwind UI?
-            </Accordion.Title>
-            <Accordion.Content className="bg-[#f8e6e6]">
-              <p className="mb-2 font-medium leading-tight text-gray-800">
-                The main difference is that the core components from Flowbite
-                are open source under the MIT license, whereas Tailwind UI is a
-                paid product. Another difference is that Flowbite relies on
-                smaller and standalone components, whereas Tailwind UI offers
-                sections of pages.
-              </p>
-              <p className="mb-2 font-medium leading-tight text-gray-800">
-                However, we actually recommend using both Flowbite, Flowbite
-                Pro, and even Tailwind UI as there is no technical reason
-                stopping you from using the best of two worlds.
-              </p>
-              <p className="mb-2 font-medium leading-tight text-gray-800">
-                Learn more about these technologies:
-              </p>
-              <ul className="list-disc pl-5 font-medium leading-tight text-gray-800">
-                <li>
-                  <a
-                    href="https://flowbite.com/pro/"
-                    className="text-cyan-600 hover:underline dark:text-cyan-500"
-                  >
-                    Flowbite Pro
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://tailwindui.com/"
-                    rel="nofollow"
-                    className="text-cyan-600 hover:underline dark:text-cyan-500"
-                  >
-                    Tailwind UI
-                  </a>
-                </li>
-              </ul>
-            </Accordion.Content>
-          </Accordion.Panel>
+          <div className="w-full max-w-7xl mx-auto bg-[#f8e6e6] py-3 md:py-12 px-4 md:px-8 rounded-b-lg">
+            <h2 className="text-2xl text-justify md:text-center text-gray-700">Do you have a question, Ask us by <a className="underline" href="https://wa.me/+905384085304?text=Hello%2C%20I%27m%20interested%20in%20your%20services%21">clicking here</a> to be redirected to out whatsapp account</h2>
+          </div>
         </Accordion>
       </div>
     </div>

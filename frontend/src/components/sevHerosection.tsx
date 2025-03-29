@@ -1,4 +1,4 @@
-import { FaInstagram, FaTiktok, FaFacebook } from "react-icons/fa6";
+import { FaInstagram, FaTiktok, FaWhatsapp } from "react-icons/fa6";
 const ServiceHero = () => {
 return(
                
@@ -16,9 +16,13 @@ style={{
        <div className="mt-8 text-white">
                 <h2>Follow Us On:</h2>
                 <div className="flex items-center gap-x-4 py-4">
-                 <FaInstagram className="size-7" /> 
-                 <FaTiktok className="size-7" /> 
-                 <FaFacebook className="size-7" /> 
+                  <a href="https://www.instagram.com/boch.beauty_skincare?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                  <FaInstagram className="size-7" /></a>
+                  <a href="https://wa.me/+905384085304?text=Hello%2C%20I%27m%20interested%20in%20your%20services%21"><FaWhatsapp className="size-7" /> </a>
+                  <a href="https://www.tiktok.com/@boch.beauty_skincare"><FaTiktok className="size-7" /> </a>
+                 
+                 
+                 
                 </div>
        </div>
     </div>

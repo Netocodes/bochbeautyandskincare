@@ -132,7 +132,7 @@ export const Navbar: React.FC = () => {
               <div className="flex items-center justify-end px-5 text-lg underline underline-offset-8 text-[#8c2643]">
                 
                 {/* <GiShoppingCart size={42} /> */}
-                <div className="px-4 flex flex-col items-center justify-end  gap-y-4 text-right font-sans">
+                <div className="px-4 flex flex-col items-center justify-center  gap-y-4 text-center font-sans">
                   {" "}
                   {" "}
                   <span className="text-xl font-semibold leading-tight">

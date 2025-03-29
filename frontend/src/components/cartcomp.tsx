@@ -30,7 +30,7 @@ const CartComponent = () => {
           <ul className="my-4 flex flex-col gap-y-6">
             {cartItems.map((items, key) => (
               <li
-                className="border-y border-4 bg-[#ececec] shadow-2xl flex flex-col space-y-3 py-8 px-4 text-left sm:flex-row sm:space-x-5 sm:space-y-0"
+                className="border-y border-4 bg-[#ececec] shadow-2xl flex flex-col space-y-3 py-8 px-4 text-left md:flex-row sm:space-x-5 sm:space-y-0"
                 key={key}
               >
                 <div className="shrink-0">
@@ -43,7 +43,7 @@ const CartComponent = () => {
 
                 <div className="relative flex flex-1 flex-col  justify-between py-4">
                   <div className=" sm:grid sm:grid-cols-2">
-                    <div className="pr-8 sm:pr-5 px-4 flex flex-col gap-y-4">
+                    <div className=" pr-8 sm:pr-5 px-4 flex flex-col gap-y-4">
                       <p className="text-xl font-semibold text-gray-900">
                         {items.title.split(" ").slice(0, 6).join(" ")}{" "}
                         <span className="text-lg font-light ml-3">

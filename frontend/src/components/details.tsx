@@ -131,8 +131,8 @@ const Details = () => {
                     +
                   </button>
                 </div>
-                <div className="flex flex-col   gap-y-8 justify-between mt-6">
-                  <span className="title-font py-5 font-medium text-3xl flex items-center justify-end text-gray-900">
+                <div className="flex flex-col  px-4 gap-y-8 justify-between mt-6">
+                  <span className="title-font py-5 font-medium text-3xl flex items-center justify-center text-gray-900">
                     Total Price: <b>{price}<small className="text-md px-1">tl</small></b>
                   </span>
 
