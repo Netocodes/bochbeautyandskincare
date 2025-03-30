@@ -29,7 +29,7 @@ export const Navbar: React.FC = () => {
   return (
     <div className="bg-black/10">
       <div className="px-2 fixed top-0 mx-auto w-full bg-[#e2cfcfab]  md:bg-gray-500 md:bg-clip-padding md:backdrop-filter  md:backdrop-blur-sm md:bg-opacity-40 md:backdrop-saturate-100 md:backdrop-contrast-10">
-        <nav className="bg-[#8c2643]  z-[50] shadow-lg py-1 w-full md:max-w-[76rem] rounded-lg my-3 md:rounded-full mx-auto flex items-center justify-between  px-8 md:px-20">
+        <nav className="bg-[#8c2643]  z-[50] shadow-lg py-1 w-full md:max-w-[56rem] lg:max-w-[76rem] rounded-lg my-3 md:rounded-full mx-auto flex items-center justify-between  px-8 md:px-20">
           {/* logo */}
           <div className="w-[130px] h-[auto] bg-[#852743]/50 rounded-lg md:w-[150px] md:h-auto">
             {/* <h1 className="w-[80px] h-[60px] bg-white">Boch</h1> */}

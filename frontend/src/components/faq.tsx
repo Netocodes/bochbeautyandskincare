@@ -58,7 +58,7 @@ To explore our range of products designed for skin whitening, head over to our S
   <h2 className="text-2xl font-bold text-gray-800 mb-4">Order & Payment Process</h2>
   
   <ol className="list-decimal pl-5 space-y-3 mb-6 text-gray-700">
-    <li><span className="font-semibold">Add items</span> to your cart</li>
+    <li><span className="font-semibold">Add items</span> to your cart and click the icon on top ( 🛒 )</li>
     <li>Click <span className="bg-blue-50 text-blue-600 px-2 py-1 rounded-md font-medium">Continue to payment</span></li>
     <li>Enter your <span className="font-semibold">shipping details</span></li>
     <li>
@@ -80,9 +80,9 @@ To explore our range of products designed for skin whitening, head over to our S
     </h3>
     <ul className="list-disc pl-5 space-y-1.5 text-gray-700">
       <li>Payment/order issues? 
-        <a href="#" className="text-blue-600 hover:underline">Contact Us</a> 
+        <a href="#" className="text-blue-600 hover:underline">Contact Us </a> 
         or email
-        <a href="mailto:contact@bochbeautyandskincare.shop" className="font-mono text-blue-600 hover:underline">contact@bochbeautyandskincare.shop</a>
+        <a href="mailto:contact@bochbeautyandskincare.shop" className="font-mono text-blue-600 hover:underline"> contact@bochbeautyandskincare.shop</a>
       </li>
       <li className="text-gray-600">We respond within 24 hours</li>
     </ul>

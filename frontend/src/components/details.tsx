@@ -56,7 +56,7 @@ const Details = () => {
                
            
  
-           <div className="h-[300px] md:h-[500px] w-full bg-[#8c2643] rounded-lg">
+           <div className="h-[300px] md:h-[405px] w-full bg-[#8c2643] rounded-lg">
       <Carousel pauseOnHover>
   {product.detailsImage.map((image) => {
     return(

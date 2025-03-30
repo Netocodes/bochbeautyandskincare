@@ -5,6 +5,7 @@
 
 html {
   font-family: "playfair display", serif;
+ 
   scroll-behavior: smooth;
 }
 @media (prefers-color-scheme: dark) {

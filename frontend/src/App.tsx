@@ -15,6 +15,7 @@ const App = () => {
   const Currency = lazy(() => import("./components/currency"));
   const Shipping = lazy(() => import("./components/shipping"));
   const OrderConfirm = lazy(() => import("./payment/utility/orderConfirmed"));
+  const VerifySuccess = lazy(() => import("./verify/verifysuccess"));
 
   const ProductPage = lazy(() => import("./layout/productPage"));
   const ContactUs = lazy(() => import("./layout/Contact"));
@@ -43,6 +44,7 @@ const App = () => {
                   <div className="relative top-28 ">
                     <Routes>
                       <Route path="/" element={<Homepage />} />
+                      <Route path="/home" element={<Homepage />} />
                       <Route path="/productPage" element={<ProductPage />} />
                       <Route path="/Contact" element={<ContactUs />} />
                       <Route path="/payment-Page" element={<PaymentPage />} />
@@ -51,6 +53,7 @@ const App = () => {
                       <Route path="/Services" element={<ServicePage />} />
                       <Route path="/verify-payment" element={<Upload />} />
                       <Route path="/order-confirmed" element={<OrderConfirm />} />
+                      <Route path="/verify-success" element={<VerifySuccess />} />
                       <Route path="/currency" element={<Currency />} />
                       <Route
                         path="/product/productDetail/"

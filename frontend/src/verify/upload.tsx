@@ -2,8 +2,9 @@ import { IoFileTray } from "react-icons/io5";
 import axios from 'axios';
 import {  useState, useEffect } from "react";
 import { Toaster, toast } from "sonner";
-import { Button } from "@material-tailwind/react";
+import { Button, Spinner } from "@material-tailwind/react";
 import { useCart } from "../context/usecart";
+import { useNavigate } from "react-router-dom";
 
 <Toaster
 richColors
@@ -14,6 +15,8 @@ const Upload = () => {
   const [file, setFile] = useState<File | null>(null);
   const [orderId, setOrderId] = useState<number>(); 
   const [message, setMessage] = useState('');
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate()
   const [selectedImage, setSelectedImage] = useState<string | ArrayBuffer | null>(null);
 const {clearCart} = useCart();
 useEffect(() => {
@@ -64,6 +67,7 @@ useEffect(() => {
     formData.append('proof', file); // 'proof' should match the field name in Multer
     formData.append('orderId', orderId.toString()); // Add orderId to the request
     try {
+      setLoading(true)
       const response = await axios.post('https://bochbeautyandskincare-production.up.railway.app/upload-proof', formData, {
         headers: {
           'Content-Type': 'multipart/form-data', // Required for file uploads
@@ -72,6 +76,8 @@ useEffect(() => {
       setMessage(response.data); 
       toast.success(response.data)
       clearCart();
+      navigate("/verify-success")
+      setLoading(false)
     } catch (error) {
       console.error(error);
       setMessage('Failed to upload file.');
@@ -89,10 +95,10 @@ useEffect(() => {
 <div className="absolute bg-black opacity-60 inset-0 z-0"></div>
 	<div className="sm:max-w-lg w-full p-5 md:p-10 bg-white rounded-xl z-10">
 		<div className="text-center">
-			<h2 className="mt-5 text-3xl font-bold text-gray-700">
+			<h2 className="mt-5 text-3xl font-bold text-gray-600">
 				Verify Payment
 			</h2>
-			<p className="mt-2 text-sm text-gray-700">Make sure to use the same <b className="underline italic tracking-wider underline-offset-4">orderId</b> provided to you on your mail</p>
+			<p className="mt-4 text-sm text-gray-700">Make sure to use the same <b className="underline italic tracking-wider underline-offset-4">orderId</b> provided to you on your mail</p>
 		</div>
         <form className="mt-8 space-y-3" onSubmit={handleUpload}>
                     <div className="grid grid-cols-1 space-y-2">
@@ -126,14 +132,14 @@ useEffect(() => {
                             <p className="text-sm text-gray-700">
                                 <span>File type: doc,pdf, images</span>
                             </p>
-                    <div>
+                    <div className="flex items-center justify-end py-5">
                         <Button type="submit"
                         placeholder={undefined}
                         onPointerEnterCapture={""}
                         onPointerLeaveCapture={""} 
-                        className="w-full bg-[#8c2643] text-md  px-8 md:text-xl capitalize "
+                        className=" bg-[#8c2643] text-md  px-8 md:text-xl capitalize "
                         >
-                        Upload
+                       {loading ? <Spinner className="h-8 w-8" onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} />: "Upload Data"} 
                     </Button>
                    {message && <p className="mt-7 font-semibold text-green-500 text-lg text-center">{message}</p>}
                  

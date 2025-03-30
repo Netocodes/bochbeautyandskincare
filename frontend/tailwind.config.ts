@@ -1,11 +1,12 @@
 /** @type {import('tailwindcss').Config} */
-const flowbite = require("flowbite-react/tailwind");
-const withMT = require("@material-tailwind/react/utils/withMT");
-const defaultTheme = require("tailwindcss/defaultTheme");
-const {
-  default: flattenColorPalette,
-} = require("tailwindcss/lib/util/flattenColorPalette");
-const colors = require("tailwindcss/colors");
+import flowbite from "flowbite-react/tailwind";
+import withMT from "@material-tailwind/react/utils/withMT";
+import defaultTheme from "tailwindcss/defaultTheme";
+import { default as flattenColorPalette } from "tailwindcss/lib/util/flattenColorPalette";
+import colors from "tailwindcss/colors";
+import aspect from  '@tailwindcss/aspect-ratio'
+
+
 module.exports = withMT({
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}", flowbite.content()],
   darkMode: "class",
@@ -27,7 +28,8 @@ module.exports = withMT({
       },
     },
   },
-  plugins: [flowbite.plugin(), addVariablesForColors],
+  plugins: [flowbite.plugin(), addVariablesForColors, aspect
+  ],
 });
 
 function addVariablesForColors({ addBase, theme }: any) {

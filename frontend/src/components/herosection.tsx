@@ -79,7 +79,7 @@ const HeroSection = () => {
               <div className=" flex flex-col items-center justify-center h-full">
                 {/* Div with background image */}
                 <div
-                  className={`   md:w-full h-[75dvh]   bg-no-repeat bg-cover  bg-center  w-full  flex items-center justify-center`}
+                  className={` aspect-w-16 aspect-h-9  md:w-full h-[75dvh]   bg-no-repeat bg-cover  bg-center  w-full  flex items-center justify-center`}
                   style={{
                     backgroundImage: `url(${data.image})`,
                   }}

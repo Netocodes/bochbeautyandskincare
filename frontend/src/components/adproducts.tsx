@@ -38,7 +38,7 @@ const AdProduct = () => {
         }}
       >
         <div className="w-full md:max-w-[85rem]  px-8 py-14 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-          <div className="md:grid md:grid-cols-2 md:items-center md:gap-6 xl:gap-32">
+          <div className="md:grid md:grid-cols-2 md:items-center md:gap-2 xl:gap-12">
         
             <div className="w-full md:w-[500px] h-[300px] md:h-[350px] bg-[#861349] p-1 rounded-2xl">
               <img
@@ -49,13 +49,13 @@ const AdProduct = () => {
               />
             </div>
 
-            <div className="mt-5 sm:mt-10 lg:mt-0">
+            <div className=" h-auto mt-5 sm:mt-10 lg:mt-0">
               <div className="space-y-6 sm:space-y-8">
                 <div className="space-y-2 md:space-y-4">
                   <h2 className="font-bold text-justify pb-3 text-3xl lg:text-4xl text-gray-800 dark:text-neutral-200">
-                  Let me tell you why you NEED this product
+                   Why your skin needs this oil?
                   </h2>
-                  <p className="text-gray-500 px-2 text-justify">
+                  <p className="text-gray-600 leading-snug px-2 text-justify">
                   Restore your skin’s natural glow with our Restoration Body Oil! Enriched with rosehip oil and natural extracts, it moisturizes, balances tone, heals bleached skin, and reduces stretch marks. A must-have for healthy, radiant skin!
                   </p>
                   <ul className="text-gray-700 list-disc list-inside ml-3 py-3">
