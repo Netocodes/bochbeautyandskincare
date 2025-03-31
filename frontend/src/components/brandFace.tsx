@@ -21,7 +21,7 @@ const BrandFace = () => {
                     As a skincare expert and beauty therapist, I was inspired by the organic products that helped fix my skin issues. This led me to study scientifically backed formulations to properly address and maintain healthy skin. Now, I’ve decided to share this knowledge with all of you!
                     </p>
                 </div>
-                <Button className="mt-6 bg-[#8c2643]"  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}><a href="#">Book Appointment</a></Button>
+                <Button className="mt-6 bg-[#8c2643] capitalize"  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}><a href="#">Book Appointment</a></Button>
             </main>
         </div>
     </div>

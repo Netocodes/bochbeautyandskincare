@@ -16,8 +16,10 @@ import { useNavigate } from 'react-router-dom';
 const Currency = () => {
   const {TotalPrice} = useCart()
   const navigate = useNavigate()
+  const convert = TotalPrice() + 200
+  const priceTotal = convert.toString()
   // State for input values and selected currencies
-  const [amount, setAmount] = useState<string>(TotalPrice().toString());
+  const [amount, setAmount] = useState<string>(priceTotal);
   const [fromCurrency, setFromCurrency] = useState<string>('TRY');
   const [toCurrency, setToCurrency] = useState<string>('NGN');
   const [convertedAmount, setConvertedAmount] = useState<string>('');
@@ -88,7 +90,7 @@ const Currency = () => {
                   
                   onChange={(e) => setAmount(e.target.value)}
                   className="w-full h-12 pl-3 bg-transparent placeholder:text-gray-600 text-slate-700 text-lg border border-slate-200 rounded px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md"
-                  placeholder={TotalPrice().toString()}
+                  placeholder={priceTotal}
                 />
                 <div className="absolute top-2 right-0 flex items-center pr-3">
                   <div className="h-6 border-l border-slate-200 mr-2"></div>

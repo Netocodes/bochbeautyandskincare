@@ -1,8 +1,12 @@
 const Privacy = () => {
     return(
-        <div>Privacy Policy
-        Last Modified: 10th August 2022
+        <div>
+            <div className="flex flex-col items-center justify-center py-12 gap-y-5">
+            <h2 className="text-4xl"><b>Our Terms and Condition</b></h2>
+            
         
+            <small>Last Modified: 10th August 2022</small>  
+                </div>      
         Introduction
         
         

@@ -10,7 +10,7 @@ const TestimonalPage = () => {
         Some of our favorite responses.
         </h2>
       </div>
-      <div className="max-w-[95rem] mx-auto bg-gray-500 h-[70dvh]  md:h-[80dvh] lg:h-[80dvh]">
+      <div className="max-w-[95rem] mx-auto font-serif bg-gray-500 h-dvh">
         <Carousel
           indicators
           leftControl={<FaRegCircleLeft className="text-white/75" size={32} />}

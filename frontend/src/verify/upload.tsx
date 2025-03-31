@@ -79,6 +79,8 @@ useEffect(() => {
       navigate("/verify-success")
       setLoading(false)
     } catch (error) {
+      setLoading(false)
+
       console.error(error);
       setMessage('Failed to upload file.');
       toast.error('Failed to upload file.');

@@ -6,6 +6,7 @@ import { Navbar } from "./components/navbar";
 import { CartProvider } from "./context/cartProvider";
 
 import Loadingscreen from "./components/loadingScreen";
+import Privacy from "./components/privacy.tsx";
 const App = () => {
   // Layout Routes
   const result: boolean = false;
@@ -55,6 +56,7 @@ const App = () => {
                       <Route path="/order-confirmed" element={<OrderConfirm />} />
                       <Route path="/verify-success" element={<VerifySuccess />} />
                       <Route path="/currency" element={<Currency />} />
+                      <Route path="/terms-and-conditions" element={<Privacy />} />
                       <Route
                         path="/product/productDetail/"
                         element={<ProductDetail />}

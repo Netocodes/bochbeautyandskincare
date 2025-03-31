@@ -276,8 +276,8 @@ const Products = () => {
             </div>
           ) : (
             <div className="bg-[#f8f4f4] grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 px-6 py-5">
-              {filteredProducts.map((product: Product) => [
-               
+              {filteredProducts.map((product: Product) => (
+                
                 <Suspense fallback={<Loadingscreen />}>
                   <div key={product.id} className="bg-[#fefefe] font-sans">
                   <div className="rounded-lg border border-gray-200 bg-white/50 p-6 shadow-lg ">
@@ -398,7 +398,7 @@ const Products = () => {
                   <div className=""></div>
                 </div>
                 </Suspense>
-              ])}
+              ))}
             </div>
           )}
         </div>

@@ -92,8 +92,8 @@ To explore our range of products designed for skin whitening, head over to our S
               
             </Accordion.Content>
           </Accordion.Panel>
-          <div className="w-full max-w-7xl mx-auto bg-[#f8e6e6] py-3 md:py-12 px-4 md:px-8 rounded-b-lg">
-            <h2 className="text-2xl text-justify md:text-center text-gray-700">Do you have a question, Ask us by <a className="underline" href="https://wa.me/+905384085304?text=Hello%2C%20I%27m%20interested%20in%20your%20services%21">clicking here</a> to be redirected to out whatsapp account</h2>
+          <div className="w-full max-w-7xl mx-auto bg-[#f8e6e6] py-3 md:py-12 px-4 md:px-8 shadow-lg rounded-b-lg">
+            <h2 className="text-md text-[#450707] lg:text-2xl text-justify md:text-center ">Do you have a question, Ask us by <a className="underline text-blue-500" href="https://wa.me/+905384085304?text=Hello%2C%20I%27m%20interested%20in%20your%20services%21">clicking here</a> to be redirected to out whatsapp account</h2>
           </div>
         </Accordion>
       </div>
