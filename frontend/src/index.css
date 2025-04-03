@@ -139,3 +139,15 @@ html {
     transform: rotate(360deg);
   }
 }
+.payment-grad{
+  background: linear-gradient(to top right, #737373, #18181b, #fed7aa);
+}
+.card-grad {
+  
+  background-color: rgba(135, 83, 109, 0.331);
+  background-clip: padding-box;
+  backdrop-filter: blur(20px) saturate(200%) contrast(75%);
+  opacity: 80%;
+  color: #ffffff
+
+}

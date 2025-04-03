@@ -91,7 +91,7 @@ const AdProduct = () => {
           </div>
         </div>
       </motion.section>
-      <SlidingText Information="  We deliver worldwide, including Nigeria, Turkey, and more. Get free deliveries on select products." />
+      <SlidingText Information="  We deliver worldwide, including Nigeria, Turkey, and more. We use reliable shipping and dispatch services to get your products to you" />
     </div>
   );
 };

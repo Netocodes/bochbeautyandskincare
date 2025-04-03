@@ -6,6 +6,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Toaster, toast } from "sonner";
 import axios from "axios";
+import { motion } from "framer-motion";
 // import { Checkbox } from "@material-tailwind/react";
 
 <Toaster
@@ -81,11 +82,15 @@ total
       <div className="py-4 px-2 bg-[#86114c]">
         <h2 className="text-xl text-white">Amount to pay:  <span className="text-xl ml-2">{TotalPrice() + 200} <small className="text-md ">tl</small></span></h2>
       </div>
-      <div className="flex flex-col gap-y-4">
-        <div className="border rounded-2xl bg-[#eedada] py-4 px-2 flex justify-between">
-          <div className=" flex flex-col">
+      <div className="payment-grad px-5 py-5 flex flex-col gap-y-4">
+        <motion.div className="border rounded-2xl card-grad py-4 px-2 flex justify-between"
+         initial={{ opacity: 0, x: "-70%" }}
+         whileInView={{ opacity: 1, x: 0 }} // Move to normal position and become visible
+         viewport={{ once: false }}
+         transition={{ duration: 1, ease: "easeIn" }}>
+          <div className=" flex flex-col px-3">
             <h5>Account number:</h5>
-            <h2 className="ml-2 text-gray-700 text-2xl"><b>8020705588</b></h2>
+            <h2 className="ml-2 text-white font-bold text-2xl lg:text-3xl"><b>8020705588</b></h2>
           </div>
           <Button
                 
@@ -100,36 +105,43 @@ total
                   onPointerEnterCapture={""}
                   onPointerLeaveCapture={""}
                 />
-        </div>
+        </motion.div>
 
 
-        <div className="border rounded-2xl bg-[#eedada] py-4 px-2 flex justify-between">
-        <div className="flex flex-col">
-            <h5>Account Name:</h5>
-            <h2 className="ml-2 text-gray-700 text-xl"><b>Amaugo Grant Izuchukwu</b></h2>
+        <motion.div className="border rounded-2xl card-grad py-4 px-2 flex justify-between"
+         initial={{ opacity: 0, x: "-60%" }}
+         whileInView={{ opacity: 1, x: 0 }} // Move to normal position and become visible
+         viewport={{ once: false }}
+         transition={{ duration: 1, ease: "easeIn" }}>
+        <div className="px-3 flex flex-col gap-y-2">
+            <h5 className="text-white">Account Name:</h5>
+            <h2 className="ml-2 text-[#fbfbf8] text-xl md:text-xl lg:text-2xl"><b>Amaugo Grant Izuchukwu</b></h2>
          </div>
-         <img className="w-[5rem] h-[4rem] object-cover" src="https://businesspost.ng/wp-content/uploads/2022/08/PalmPay.jpg" alt="bank logo" />
+         <img className="w-[5rem] h-[4rem] object-cover rounded-lg" src="https://businesspost.ng/wp-content/uploads/2022/08/PalmPay.jpg" alt="bank logo" />
          
 
-        </div>
+        </motion.div>
 
 
-        <div className="border rounded-2xl bg-[#eedada] py-4 px-2 flex justify-between">
-        <div className="flex flex-col">
+        <motion.div className="border rounded-2xl card-grad py-4 px-2 flex justify-between"
+         initial={{ opacity: 0, x: "-40%" }}
+         whileInView={{ opacity: 1, x: 0 }} // Move to normal position and become visible
+         viewport={{ once: false }}
+         transition={{ duration: 1, ease: "easeIn" }}>
+        <div className="px-3 flex flex-col gap-y-2">
             <h5>Bank Name:</h5>
-            <h2 className="ml-2 text-gray-700 text-xl"><b>Palmpay Nigeria</b></h2>
+            <h2 className="ml-2 text-white font-bold text-xl"><b>Palmpay Nigeria</b></h2>
          </div>
-         <img className="w-[5rem] h-[4rem] object-cover" src="https://businesspost.ng/wp-content/uploads/2022/08/PalmPay.jpg" alt="bank logo" />
+         <img className="w-[5rem] h-[4rem] object-cover rounded-lg" src="https://businesspost.ng/wp-content/uploads/2022/08/PalmPay.jpg" alt="bank logo" />
          
-        </div>
+        </motion.div>
       </div>
       {/* how to make payment */}
-      <div>  <b className="text-red-500 px-2">* Please ensure to include your name in the payment description.</b>   <h3 className="my-3">How to make payments:</h3> 
+      <div className="py-3 px-5 border shadow" >  <b className="text-red-500 px-2">* Please ensure to include your name in the payment description.</b>   <h3 className="my-3">How to make payments:</h3> 
       <ol className="list-decimal list-inside flex flex-col gap-y-3 text-justify"> <li>Copy our account number and prepare to make the payment.</li> <li>Verify that the Account Name and Bank Name match the details provided before sending the payment.</li> <li>After completing the payment, you will receive an email with your order confirmation. Copy your Order ID and submit proof of payment.</li> </ol> </div>
       {/* how to make payment */}
 
-    </Card>
-      <div className="flex items-center justify-center py-6">
+      <div className="flex items-center justify-center py-4">
       <Button
                   children= {loading ? <Spinner className="h-8 w-8" onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} />: 'Submit'}
                   onClick={handleClick}
@@ -140,6 +152,7 @@ total
                   onPointerLeaveCapture={""}
                 />
       </div>
+    </Card>
     </div>
   )
 }
