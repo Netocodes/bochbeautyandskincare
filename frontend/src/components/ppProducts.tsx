@@ -262,25 +262,26 @@ const Products = () => {
               <div>{<SearchInput search={search} onChange={setSearch} />}</div>
             </div>
           </div>
-          <div>
+          <div className="flex items-center justify-between px-4">
             <h1 className="py-4 px-4">
               Displaying Products for{" "}
               <span className="text-lg font-semibold italic">
                 " {selectedCategory} "
               </span>
             </h1>
+            <b className="text-gray-600 text-sm md:text-md">? tl is turkish Lira</b>
           </div>
           {filteredProducts.length === 0 ? (
             <div className="w-full h-56 bg-gray-100 flex items-center justify-center">
               <h1 className="text-2xl">No Product Found</h1>
             </div>
           ) : (
-            <div className="bg-[#f8f4f4] grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 px-6 py-5">
+            <div className="bg-[#f8f4f4] grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 px-1 md:px-6 py-5">
               {filteredProducts.map((product: Product) => (
                 
                 <Suspense fallback={<Loadingscreen />}>
-                  <div key={product.id} className="bg-[#fefefe] font-sans">
-                  <div className="rounded-lg border border-gray-200 bg-white/50 p-6 shadow-lg ">
+                  <div key={product.id} className="bg-[#fefefe] font-sans rounded">
+                  <div className="rounded-lg border border-gray-200 bg-[#fefefe] p-6 shadow-lg ">
                     <div
                       className="relative h-56 w-full mx-auto px-2 py-2 bg-[#81133d] pointer hover:cursor-pointer rounded-xl "
                       onClick={(e) => {
@@ -304,7 +305,7 @@ const Products = () => {
 
                     <div className="pt-6">
                       <div className="mb-4 flex items-center justify-between  gap-4">
-                        <span className="me-2  bg-red-100 rounded-md shadow-lg px-2.5 py-0.5 text-md font-medium text-primary-800 dark:bg-primary-900 dark:text-primary-300">
+                        <span className="me-2  bg-red-100 rounded-md shadow-lg px-2.5 py-0.5 text-sm md:text-md font-medium text-gray-700 ">
                           {" "}
                           Shipped Worldwide
                         </span>
@@ -361,7 +362,7 @@ const Products = () => {
                       </h2>
 
                       <div className="mt-2 ">
-                        <span className="w-full flex  flex-row items-center text-xl md:text-2xl ">
+                        <span className="w-full hidden md:flex  flex-row items-center text-xl md:text-2xl ">
                           {/*rater */}
                           <div className="flex ">
                             <Rater

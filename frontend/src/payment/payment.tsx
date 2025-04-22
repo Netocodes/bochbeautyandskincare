@@ -62,8 +62,7 @@ total
     } catch (error) {
       console.error(error)
       if (axios.isAxiosError(error)) {
-        toast.error(error.response?.data?.error || "Failed to send data");
-        console.log(error.response?.data?.error )
+        toast.error(error.message);
       } else {
         toast.error("An unexpected error occurred");
       }

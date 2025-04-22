@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 const IconSection = () => {
 return(
                 <div>
-            <div className="max-w-2xl text-center mx-auto py-10 lg:mb-14">
+<div className="max-w-[85rem] bg-[#e6e4e4] px-6 py-10 sm:px-6 lg:px-12 lg:py-8 mx-auto overflow-y-hidden">
+            <div className="max-w-2xl text-center mx-auto py-10 mb-4 ">
     <h2 className="text-2xl text-gray-700 font-semibold underline underline-offset-4 decoration-[#8c2643] decoration-slice">Our Services Include</h2>
   
   </div>                 
-<div className="max-w-[85rem] bg-[#e6e4e4] px-6 py-10 sm:px-6 lg:px-12 lg:py-14 mx-auto overflow-y-hidden">
  
   <div className="grid md:grid-cols-2 gap-12">
     <div className="lg:w-3/4">

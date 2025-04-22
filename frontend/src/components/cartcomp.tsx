@@ -115,14 +115,14 @@ const CartComponent = () => {
               <p className="font-manrope font-medium text-2xl leading-9 text-gray-900">
                 Total payment
               </p>
-              <h6 className="font-manrope font-medium text-4xl leading-9 text-[#8c2643]">
+              <h6 className="font-manrope font-medium text-3xl md:text-4xl leading-9 text-[#8c2643]">
                  {TotalPrice() + 200} <small className="text-md px-1">tl</small>
               </h6>
             </div>
           </div>
           <p className="text-sm flex items-center justify-end"> <Link to='/currency' className="underline underline-offset-4">Click here to convert to your currency</Link></p>
 
-          <div className="flex items-center flex-col sm:flex-row justify-center gap-3 mt-8">
+          <div className="flex w-full items-center flex-col sm:flex-row justify-center gap-3 mt-8">
             <Link to={"/productPage"}>
               {" "}
               <Button

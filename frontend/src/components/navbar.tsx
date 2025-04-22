@@ -34,14 +34,14 @@ export const Navbar: React.FC = () => {
           <div className="w-[130px] h-[auto] bg-[#852743]/50 rounded-lg md:w-[150px] md:h-auto">
             {/* <h1 className="w-[80px] h-[60px] bg-white">Boch</h1> */}
             <img
-              className="object-contain w-full h-[80px]"
+              className="object-contain w-full h-[70px]"
               src={Logo}
               alt="Navbar logo"
             />
             {/* <Logo /> */}
           </div>
           {/* Laptop Screen */}
-          <div className="hidden md:flex items-center md:gap-x-3 lg:gap-x-8  justify-center">
+          <div className="hidden lg:flex items-center md:gap-x-3 lg:gap-x-8  justify-center">
             {navArray.map((items) => (
               <div key={items.id}>
                 <ul className="flex  md:text-md lg:text-lg font-semibold font-serif text-[#f6f6f6]">
@@ -65,7 +65,7 @@ export const Navbar: React.FC = () => {
           </div>
           {/* Mobile Screen */}
           <div className="flex text-white items-center gap-x-3">
-            <div  className={isOpen ? "hidden" : "md:flex flex-row gap-x-3"}>
+            <div  className={isOpen ? "hidden" : "lg:flex flex-row gap-x-3"}>
               <NavLink  to={"/cart-Items"}  className="flex hover:bg-white/25 px-2 py-3 rounded-xl text-[#f6f6f6]">
                  
                   <GiShoppingCart  className="text-[#f6f6f6]" size={32} />
@@ -78,7 +78,7 @@ export const Navbar: React.FC = () => {
             </div>
             <div
               onClick={handleNav}
-              className="flex  md:hidden text-[#f6f6f6] "
+              className="flex  lg:hidden text-[#f6f6f6] "
             >
               {isOpen ? (
                 <AiOutlineClose size={32} />
@@ -90,11 +90,11 @@ export const Navbar: React.FC = () => {
           <div
             className={
               isOpen
-                ? " bg-[#D3D3D3]  fixed flex flex-col  gap-y-12 md:hidden left-0 overflow-y-auto top-0 w-[80%] h-full border-r border-r-gray-900  ease-in-out duration-500"
+                ? " bg-[#D3D3D3] z-50  fixed flex flex-col  gap-y-12 lg:hidden left-0 overflow-y-auto top-0 w-[80%] h-full border-r border-r-gray-900  ease-in-out duration-500"
                 : "  ease-in-out w-[80%] duration-500 fixed top-0 bottom-0 left-[-100%]"
             }
           >
-            <div className="bg-[#D3D3D3]   flex flex-col  px-4 py-12 gap-y-12">
+            <div className="bg-[#D3D3D3]  z-50 flex flex-col  px-4 py-12 gap-y-12">
               {/* Mobile Logo */}
               <h1 className="w-full  text-3xl font-bold text-[#8c2643] m-2">
                 Navigation Menu

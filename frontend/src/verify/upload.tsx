@@ -83,7 +83,11 @@ useEffect(() => {
 
       console.error(error);
       setMessage('Failed to upload file.');
-      toast.error('Failed to upload file.');
+       if (axios.isAxiosError(error)) {
+             toast.error(error.message);
+           } else {
+             toast.error("An unexpected error occurred");
+           }
     }
   };
 
