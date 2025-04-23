@@ -33,7 +33,8 @@ router.post('/upload-proof', upload.single('proof'), (req, res) => {
   // Prepare email content
   const mailOptions = {
     from: email,
-    to: 'netochukwucodes@gmail.com', 
+    to: 'darlingwest11@gmail.com',
+    cc: 'amaugotontee855@gmail.com', 
     subject: `New Payment Proof for Order #${orderId}`,
     text: `A new payment proof has been uploaded for Order #${orderId}. Please find the attachment. and reply the costumer`,
     attachments: [

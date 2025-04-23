@@ -7,11 +7,11 @@ const ComingSoonPage = () => {
   return (
     <div>
       <Helmet>
-        <title className="text-[#82878a]">Coming Soon</title>
+        <title className="text-[#82878a]">Under Maintaince - Dev</title>
         <meta name="theme-color" content="#82878a" />
       </Helmet>
       <div
-        className={`relative h-dvh w-full flex items-center justify-center bg-gradient-to-tl from-zinc-300 via-rose-100 to-stone-200text-center px-5`}
+        className={`relative h-dvh w-full flex items-center justify-center bg-gradient-to-tl from-zinc-300 via-rose-100 to-stone-200 text-center px-5`}
       >
         <div className="absolute top-6 right-12">
           <button>Dark Mode</button>

@@ -9,7 +9,7 @@ import Loadingscreen from "./components/loadingScreen";
 import Privacy from "./components/privacy.tsx";
 const App = () => {
   // Layout Routes
-  const result: boolean = false;
+  const result: boolean = true;
   const Homepage = lazy(() => import("./layout/home"));
   const CartPage = lazy(() => import("./components/cartPage.tsx"));
   const Upload = lazy(() => import("./verify/upload.tsx"));
