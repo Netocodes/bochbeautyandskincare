@@ -5,9 +5,10 @@
 
 html {
   font-family: "playfair display", serif;
- 
+  overscroll-behavior: none;
   scroll-behavior: smooth;
 }
+
 @media (prefers-color-scheme: dark) {
   /* Force light mode even in dark mode */
   html {

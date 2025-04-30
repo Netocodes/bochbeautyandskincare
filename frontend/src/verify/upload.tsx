@@ -14,7 +14,7 @@ position="top-right"
 const Upload = () => {
   const [file, setFile] = useState<File | null>(null);
   const [orderId, setOrderId] = useState<number>(); 
-  const [message, setMessage] = useState('');
+  // const [message, setMessage] = useState('');
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate()
   const [selectedImage, setSelectedImage] = useState<string | ArrayBuffer | null>(null);
@@ -35,7 +35,7 @@ useEffect(() => {
       setSelectedImage(URL.createObjectURL(selectedFile))
       toast.success('File Selected')
       setFile(selectedFile);
-      setMessage('');
+      // setMessage('');
     }
   
       
@@ -53,12 +53,12 @@ useEffect(() => {
   const handleUpload = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     if (!file) {
-      setMessage('Please select a file.');
+      // setMessage('Please select a file.');
       toast.error('Please select a file.');
       return;
     }
     if (!orderId) {
-      setMessage('Please enter your order ID.');
+      // setMessage('Please enter your order ID.');
       toast.error('Please enter your order ID.');
       return;
     }
@@ -73,7 +73,7 @@ useEffect(() => {
           'Content-Type': 'multipart/form-data', // Required for file uploads
         },
       });
-      setMessage(response.data); 
+      // setMessage(response.data); 
       toast.success(response.data)
       clearCart();
       navigate("/verify-success")
@@ -82,7 +82,7 @@ useEffect(() => {
       setLoading(false)
 
       console.error(error);
-      setMessage('Failed to upload file.');
+      // setMessage('Failed to upload file.');
        if (axios.isAxiosError(error)) {
              toast.error(error.message);
            } else {
@@ -147,7 +147,6 @@ useEffect(() => {
                         >
                        {loading ? <Spinner className="h-8 w-8" onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} />: "Upload Data"} 
                     </Button>
-                   {message && <p className="mt-7 font-semibold text-green-500 text-lg text-center">{message}</p>}
                  
                     </div>
         </form>

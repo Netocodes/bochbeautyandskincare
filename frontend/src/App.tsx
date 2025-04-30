@@ -9,7 +9,7 @@ import Loadingscreen from "./components/loadingScreen";
 import Privacy from "./components/privacy.tsx";
 const App = () => {
   // Layout Routes
-  const result: boolean = true;
+  const result: boolean = false;
   const Homepage = lazy(() => import("./layout/home"));
   const CartPage = lazy(() => import("./components/cartPage.tsx"));
   const Upload = lazy(() => import("./verify/upload.tsx"));
@@ -36,9 +36,7 @@ const App = () => {
           <div>
             <Router >
               <div className="fixed top-0 z-[50]">
-                <Suspense fallback={<Loadingscreen />}>
                   <Navbar />
-                </Suspense>
               </div>
               <Suspense fallback={<Loadingscreen />}>
                 
