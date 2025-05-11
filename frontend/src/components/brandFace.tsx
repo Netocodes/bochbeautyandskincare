@@ -1,10 +1,11 @@
-import { Button } from "@material-tailwind/react"
+import { Button } from "@material-tailwind/react";
+import Face from "../assets/face.png";
 
 
 const BrandFace = () => {
   return (
     <div>
-   <div  className=" flex flex-col-reverse items-center justify-between md:flex-row-reverse bg-white  overflow-hidden py-12">
+   <div  className=" flex flex-col-reverse items-center justify-between gap-x-6 lg:px-12 md:flex-row-reverse bg-white  overflow-hidden py-12">
     <div className="  mx-auto">
         <div className="  z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
             
@@ -21,12 +22,12 @@ const BrandFace = () => {
                     As a skincare expert and beauty therapist, I was inspired by the organic products that helped fix my skin issues. This led me to study scientifically backed formulations to properly address and maintain healthy skin. Now, I’ve decided to share this knowledge with all of you!
                     </p>
                 </div>
-                <Button className="mt-6 bg-[#8c2643] capitalize"  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}><a href="#">Book Appointment</a></Button>
+                <Button className="mt-6 bg-[#8c2643] capitalize"  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}><a href="https://wa.me/+905384085304?text=Hello%2C%20I%27m%20interested%20in%20your%20services%21">Book Appointment</a></Button>
             </main>
         </div>
     </div>
-    <div className="pl-4 pr-4  md:pl-0 md:pr-0 lg:pl-4 lg:pr-4">
-        <img className="w-[400px] h-[300px] md:h-[500px]  object-cover object-center my-auto  " src="https://cdn.pixabay.com/photo/2016/03/23/04/01/woman-1274056_960_720.jpg" alt="" />
+    <div className=" w-full max-w-md h-42 flex items-center justify-center ">
+        <img className="w-full  object-cover rounded-lg object-center   " src={Face} alt="" />
     </div>
 </div>
     </div>

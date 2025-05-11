@@ -27,7 +27,7 @@ const TestimonalPage = () => {
      description: "I just want to tell you how incredibly happy I am with your products—honestly, all I know is that I’m absolutely loving my skin right now!"
     },
   ]
-  console.table(testimonials)
+  // console.table(testimonials)
   return (
     <div className="py-8">
       <div className="w-full md:w-1/3 mx-auto px-2 py-2 bg-[#8c2643] rounded-t-md">
@@ -48,7 +48,7 @@ const TestimonalPage = () => {
              <div className="w-full max-w-7xl backdrop-blur-md border px-8 py-10 sm:px-6 lg:px-14 lg:py-200 mx-auto">
                <div className="md:grid md:grid-cols-1 lg:grid-cols-2 md:gap-10 lg:gap-16 md:items-center">
                  <div className="hidden md:hidden lg:block  mb-24 md:mb-0 sm:px-6">
-                   <div className="w-96 h-64 mx-auto border">
+                   <div className="w-full max-w-xs h-42 mx-auto border">
                      <img
                        className="w-full rounded-xl object-cover"
                        src={testimonial.image}

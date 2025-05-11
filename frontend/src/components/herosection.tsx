@@ -28,7 +28,7 @@ const HeroSection = () => {
       image:"https://res.cloudinary.com/de7tyskql/image/upload/f_auto,q_auto/s3vzy94xmrtpvb7zkxvr",
       description:
         "Our certified skincare experts create custom formulas that cater to your unique skin needs, available for delivery worldwide.",
-      link: "/contact",
+      link: "https://wa.me/+905384085304?text=Hello%2C%20I%27m%20interested%20in%20your%20services%21",
       button: "Book Appointement",
     },
     {
