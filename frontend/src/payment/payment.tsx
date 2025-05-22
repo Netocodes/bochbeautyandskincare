@@ -135,6 +135,7 @@ total
          <img className="w-[5rem] h-[4rem] object-cover rounded-lg" src={Papara} alt="bank logo" />
          
         </motion.div>
+        <a className="text-sm underline text-white" href="https://www.papara.com/en/faq/money-transfer/how-can-i-send-money-with-papara">Learn how to make transfers to Papara Account</a>
       </div>
       {/* how to make payment */}
       <div className="py-3 px-5 border shadow" >  <b className="text-red-500 px-2">* Please ensure to include your name in the payment description.</b>   <h3 className="my-3">How to make payments:</h3> 
