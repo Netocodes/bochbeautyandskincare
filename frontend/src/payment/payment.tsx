@@ -83,14 +83,14 @@ total
         <h2 className="text-xl text-white">Amount to pay:  <span className="text-xl ml-2">{TotalPrice() + 200} <small className="text-md ">tl</small></span></h2>
       </div>
       <div className="payment-grad px-5 py-5 flex flex-col gap-y-4">
-        <motion.div className="border rounded-2xl card-grad py-4 px-2 flex justify-between"
+        <motion.div className="border rounded-2xl card-grad py-4 px-2 flex flex-col gap-y-3 justify-between"
          initial={{ opacity: 0, x: "-70%" }}
          whileInView={{ opacity: 1, x: 0 }} // Move to normal position and become visible
          viewport={{ once: false }}
          transition={{ duration: 1, ease: "easeIn" }}>
-          <div className=" flex flex-col px-3">
+          <div className=" flex flex-col gap-2 px-3">
             <h5>Account number:</h5>
-            <h2 className="ml-2 text-white font-semibold text-2xl lg:text-3xl">TR790082900009491081619443</h2>
+            <h2 className="ml-2 text-white font-semibold text-md lg:text-3xl">TR790082900009491081619443</h2>
           </div>
           <Button
                 
@@ -100,7 +100,7 @@ total
                     toast.success("Text copied to clipboard");
                   }}
                  
-                  className="bg-[#8c2643] text-md  md:text-xl capitalize rounded-xl"
+                  className="bg-[#8c2643] w-lg mx-auto text-md  md:text-xl capitalize rounded-xl"
                   placeholder={undefined}
                   onPointerEnterCapture={""}
                   onPointerLeaveCapture={""}
@@ -115,7 +115,7 @@ total
          transition={{ duration: 1, ease: "easeIn" }}>
         <div className="px-3 flex flex-col gap-y-2">
             <h5 className="text-white">Account Name:</h5>
-            <h2 className="ml-2 text-[#fbfbf8] text-xl md:text-xl lg:text-2xl"><b>Bright Chinenye Ngwu</b></h2>
+            <h2 className="ml-2 text-[#fbfbf8] text-md md:text-xl lg:text-2xl"><b>Bright Chinenye Ngwu</b></h2>
          </div>
          <img className="w-[5rem] h-[4rem] object-cover rounded-lg" src={Papara} alt="bank logo" />
          
@@ -130,7 +130,7 @@ total
          transition={{ duration: 1, ease: "easeIn" }}>
         <div className="px-3 flex flex-col gap-y-2">
             <h5>Bank Name:</h5>
-            <h2 className="ml-2 text-white font-bold text-xl"><b>Papara T-Bank</b></h2>
+            <h2 className="ml-2 text-white font-bold text-md md:text-xl"><b>Papara T-Bank</b></h2>
          </div>
          <img className="w-[5rem] h-[4rem] object-cover rounded-lg" src={Papara} alt="bank logo" />
          
