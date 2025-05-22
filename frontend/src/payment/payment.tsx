@@ -6,6 +6,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Toaster, toast } from "sonner";
 import axios from "axios";
+import Papara from "../assets/papara-tbank.jpg"
 import { motion } from "framer-motion";
 // import { Checkbox } from "@material-tailwind/react";
 
@@ -89,13 +90,13 @@ total
          transition={{ duration: 1, ease: "easeIn" }}>
           <div className=" flex flex-col px-3">
             <h5>Account number:</h5>
-            <h2 className="ml-2 text-white font-bold text-2xl lg:text-3xl"><b>1015570715</b></h2>
+            <h2 className="ml-2 text-white font-semibold text-2xl lg:text-3xl">TR790082900009491081619443</h2>
           </div>
           <Button
                 
                  children="Copy"
                   onClick={async () => {
-                    await navigator.clipboard.writeText("1015570715");
+                    await navigator.clipboard.writeText("TR790082900009491081619443");
                     toast.success("Text copied to clipboard");
                   }}
                  
@@ -114,9 +115,9 @@ total
          transition={{ duration: 1, ease: "easeIn" }}>
         <div className="px-3 flex flex-col gap-y-2">
             <h5 className="text-white">Account Name:</h5>
-            <h2 className="ml-2 text-[#fbfbf8] text-xl md:text-xl lg:text-2xl"><b>Chiri Global INVT LTD</b></h2>
+            <h2 className="ml-2 text-[#fbfbf8] text-xl md:text-xl lg:text-2xl"><b>Bright Chinenye Ngwu</b></h2>
          </div>
-         <img className="w-[5rem] h-[4rem] object-cover rounded-lg" src="https://media.premiumtimesng.com/wp-content/files/2023/12/22-1-e1703765279403.jpg" alt="bank logo" />
+         <img className="w-[5rem] h-[4rem] object-cover rounded-lg" src={Papara} alt="bank logo" />
          
 
         </motion.div>
@@ -129,9 +130,9 @@ total
          transition={{ duration: 1, ease: "easeIn" }}>
         <div className="px-3 flex flex-col gap-y-2">
             <h5>Bank Name:</h5>
-            <h2 className="ml-2 text-white font-bold text-xl"><b>Zenith Bank</b></h2>
+            <h2 className="ml-2 text-white font-bold text-xl"><b>Papara T-Bank</b></h2>
          </div>
-         <img className="w-[5rem] h-[4rem] object-cover rounded-lg" src="https://media.premiumtimesng.com/wp-content/files/2023/12/22-1-e1703765279403.jpg" alt="bank logo" />
+         <img className="w-[5rem] h-[4rem] object-cover rounded-lg" src={Papara} alt="bank logo" />
          
         </motion.div>
       </div>
