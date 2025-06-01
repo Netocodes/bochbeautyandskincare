@@ -57,8 +57,8 @@ return(
   </div>
 
         <div className=" text-gray-200">
-      <h2>This Website Was Developed By</h2> 
-     <a href="netocodes.dev" className="text-md underline underline-offset-4 ">Netochukwu Codes</a>
+      <h2>This Website Was built By</h2> 
+     <a href="https://www.netocodes.pro/" className="text-md underline underline-offset-4 ">Netochukwu Codes</a>
         </div>
         
       </div>
