@@ -9,7 +9,7 @@ import { FaCircleCheck } from "react-icons/fa6";
   richColors
   className="mt-24 md:mt-12 lg:mt-20 z-50"
   position="top-right"
-/>
+/>;
 const AdProduct = () => {
   const textToCopy = "Restoration Body Oil";
   const handlecopy = async () => {
@@ -52,7 +52,7 @@ const AdProduct = () => {
               <div className="">
                 <div className="space-y-1 text-left">
                   <h2 className="font-bold w-full font-sans px-4  tracking-wider text-left pb-3 text-2xl lg:text-2xl text-gray-900">
-                  Why your skin needs this oil?
+                    Why your skin needs this oil?
                   </h2>
                   <p className="text-gray-800 text-md leading-snug px-2 text-justify">
                     Restore your skin’s natural glow with our Restoration Body
@@ -83,20 +83,19 @@ const AdProduct = () => {
                     </li>
                     <div className="flex flex-col items-center text-justify gap-y-3 md:gap-1 font-sans italic text-xs mt-3">
                       <p className="">
-                    search for <b> {textToCopy} </b> in the shop section{" "}
+                        search for <b> {textToCopy} </b> in the shop section{" "}
                       </p>
-                    <Button
-                      onClick={handlecopy}
-                      className="bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] max-w-[100px] from-purple-500 via-slate-700 to-teal-800 text-white font-semibold md:ml-14 px-3 rounded-full py-2"
-                      placeholder={undefined}
-                      onPointerEnterCapture={undefined}
-                      onPointerLeaveCapture={undefined}
-                    >
-                      Copy
-                    </Button>
-                  </div>
+                      <Button
+                        onClick={handlecopy}
+                        className="bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] max-w-[100px] from-purple-500 via-slate-700 to-teal-800 text-white font-semibold md:ml-14 px-3 rounded-full py-2"
+                        placeholder={undefined}
+                        onPointerEnterCapture={undefined}
+                        onPointerLeaveCapture={undefined}
+                      >
+                        Copy
+                      </Button>
+                    </div>
                   </ul>
-                  
                 </div>
                 <motion.div
                   className="mt-8 flex items-center justify-end"
@@ -113,7 +112,7 @@ const AdProduct = () => {
                   <Link to={"./productPage"}>
                     <Button
                       children="See more Products"
-                      className="bg-[#8c2643]"
+                      className="bg-[rgb(132,35,62)]"
                       placeholder={undefined}
                       onPointerEnterCapture={undefined}
                       onPointerLeaveCapture={undefined}

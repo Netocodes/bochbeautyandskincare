@@ -19,7 +19,7 @@ const HeroSection = () => {
       <div className="absolute w-full h-full inset-0 ">
         <Threads
           amplitude={2.3}
-          color={[162, 0, 255]}
+          color={[132, 35, 62]}
           distance={0.8}
           enableMouseInteraction={true}
         />
