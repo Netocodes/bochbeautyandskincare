@@ -2,9 +2,8 @@ import { Button } from "@material-tailwind/react";
 import { Drawer } from "flowbite-react";
 import { HiBarsArrowUp, HiSquaresPlus } from "react-icons/hi2";
 import { MdCloseFullscreen } from "react-icons/md";
-import { useState, useEffect, Suspense } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { FaRegEye } from "react-icons/fa";
-import { MdOutlineFileDownload } from "react-icons/md";
 import { useCart } from "../context/usecart";
 import { SearchInput } from "./ppInputSearch";
 import { useNavigate,  } from "react-router-dom";
@@ -13,17 +12,8 @@ import "react-rater/lib/react-rater.css";
 import { Tooltip } from "flowbite-react";
 import { motion } from "framer-motion";
 import { FaFilter } from "react-icons/fa";
-
-// import { FaSortAlphaUp } from "react-icons/fa";
-import {
-  Menu,
-  MenuHandler,
-  MenuList,
-  MenuItem,
-} from "@material-tailwind/react";
 import { getCloudinaryUrl } from "../utils/cloud";
 import { toast } from "sonner";
-import Loadingscreen from "./loadingScreen";
 
 export type Product = {
   id: number;
@@ -64,50 +54,54 @@ const Products = () => {
    
     try {
       const response = await fetch(`${import.meta.env.BASE_URL}products.json`);
-
       const data = await response.json();
-     
-      
+    if(!data){
+      throw new Error("Could not get Products");
+    }
       const productsWithUrls = data.map((product: Product) => ({
         ...product,
         imageUrl: getCloudinaryUrl(product.image, 500, 500), // Example options
         detailsImage: product.images.map((image) => getCloudinaryUrl(image)), // Example options
     }));
      
-      
         setProducts(productsWithUrls);
-        
-       
-      
- 
-     
-    
     } catch (error) {
       console.error("Error fetching products:", error);
     }
   };
 
-  const filteredProducts = products.filter((product) => {
-    // If 'all' is selected, show all products
-    const isCategoryMatch =
+  const filteredProducts = useMemo(() => {
+  const searchLower = search.toLowerCase();
+  const categoryLower = selectedCategory.toLowerCase();
+
+  return products.filter(product => {
+    // Category filter
+    const isCategoryMatch = 
       selectedCategory === "all" ||
-      product.category.toLowerCase() === selectedCategory;
+      product.category.toLowerCase() === categoryLower;
 
-    // Search logic
-    const isSearchMatch =
-      product.title.trim().toLowerCase().includes(search.toLowerCase()) ||
-      product.description.trim().toLowerCase().includes(search.toLowerCase()) ||
-      product.category.trim().toLowerCase().includes(search.toLowerCase()) ||
-      product.seo.join(" ").toLowerCase().includes(search.toLowerCase()) ||
-      product.key_features.join(' ').toLowerCase().includes(search.toLowerCase());
-      product.how_to_use.join(" ").toLowerCase().includes(search.toLowerCase());
-      product.skin_type.trim().toLowerCase().includes(search.toLowerCase());
-      product.net_weight.trim().toLowerCase().includes(search.toLowerCase());
-      
+    if (!isCategoryMatch) return false;
 
-    // Return only products that match both search and category filters
-    return isCategoryMatch && isSearchMatch;
+    // Skip search if empty
+    if (!searchLower) return true;
+
+    // Search across multiple fields
+    const searchFields = [
+      product.title,
+      product.description,
+      product.category,
+      product.seo?.join(" ") || "",
+      product.key_features?.join(" ") || "",
+      product.how_to_use?.join(" ") || "",
+      product.skin_type || "",
+      product.net_weight || ""
+    ];
+
+    return searchFields.some(field => 
+      field.toLowerCase().includes(searchLower)
+    );
   });
+}, [products, search, selectedCategory]); // Re-run when these dependencies change
 
   const veiwProducts = (item: { id: number }[], idToFind: number) => {
     const selected = item.find(
@@ -127,9 +121,7 @@ const Products = () => {
     { id: 5, title: "face creams", icon: "https://res.cloudinary.com/de7tyskql/image/upload/c_fill,g_auto,h_500,w_500/f_auto/q_auto/facial-cleanser-and-cream?_a=DATAg1AAZAA0" },
   
   ];
-  const handleDownload = () => {
-    toast.success("hold on ")
-  }
+  
 
   const handleClose = (): void => setOpen(!isOpen);
   // Handle category selection from the drawer
@@ -147,15 +139,12 @@ const Products = () => {
         <p className="mt-1 px-6 text-gray-700 flex flex-col gap-y-4 items-stretch">
           We offer alot more than the products shown here but this is for Chiri original products. <small>Have a question or need help choosing?, Click the link below to chat with us on whatsapp</small>
         </p>
-        <a href="https://wa.me/+905384085304?text=Hello%2C%20I%20have%20a%20question" target="_blank" rel="noopener noreferrer" className="mt-1 underline text-purple-400"> click here</a>
-      </div>
-
-      
-        
-     
+        <a href="https://wa.me/+905384085304?text=Hello%2C%20I%20have%20a%20question?" target="_blank" rel="noopener noreferrer" className="mt-1 underline text-purple-400"> click here</a>
+      </div>     
         <div className=" ">
           <div className="w-full  bg-gray-500/45 flex flex-col-reverse md:flex-row items-center justify-between gap-4 px-4 md:px-12 py-4">
-            <div className="flex  items-center justify-self-start gap-4 px-4">
+            {/* Filter Button and drawer */}
+            <div className="flex items-center justify-self-start gap-4 px-4">
               <div className="flex flex-row" onClick={handleClose}>
                 <Button
                   className="flex items-center gap-x-2 px-2 py-3 text-gray-100 bg-[#8c2643]"
@@ -210,59 +199,17 @@ const Products = () => {
                   </div>
                 </Drawer.Items>
               </Drawer>
-              <div>
-                <Menu
-                  animate={{
-                    mount: { y: 0 },
-                    unmount: { y: 25 },
-                  }}
-                >
-                  <MenuHandler>
-                    <Button
-                      placeholder={undefined}
-                      onPointerEnterCapture={undefined}
-                      onPointerLeaveCapture={undefined}
-                      className="text-gray-300 bg-[#8c2643]"
-                    >
-                      {" "}
-                      Menu
-                    </Button>
-                  </MenuHandler>
-                  <MenuList
-                    placeholder={undefined}
-                    onPointerEnterCapture={undefined}
-                    onPointerLeaveCapture={undefined}
-                  >
-                    <MenuItem
-                      placeholder={undefined}
-                      onPointerEnterCapture={undefined}
-                      onPointerLeaveCapture={undefined}
-                    >
-                      Menu Item 1
-                    </MenuItem>
-                    <MenuItem
-                      placeholder={undefined}
-                      onPointerEnterCapture={undefined}
-                      onPointerLeaveCapture={undefined}
-                    >
-                      Menu Item 2
-                    </MenuItem>
-                    <MenuItem
-                      placeholder={undefined}
-                      onPointerEnterCapture={undefined}
-                      onPointerLeaveCapture={undefined}
-                    >
-                      Menu Item 3
-                    </MenuItem>
-                  </MenuList>
-                </Menu>
+              
+            </div>
+            {/* Filter Button and drawer */}
+
+            <div className="mr-0 px-8 flex items-center gap-4">
+              <div>{<SearchInput  setSearch={setSearch} />}
+
               </div>
             </div>
-            <div className="mr-0 px-8 flex items-center gap-4">
-              <div>{<SearchInput search={search} onChange={setSearch} />}</div>
-            </div>
           </div>
-          <div className="flex items-center justify-between px-4">
+          <div className="flex flex-col md:flex-row items-center justify-between px-4">
             <h1 className="py-4 px-4">
               Displaying Products for{" "}
               <span className="text-lg font-semibold italic">
@@ -276,14 +223,13 @@ const Products = () => {
               <h1 className="text-2xl">No Product Found</h1>
             </div>
           ) : (
-            <div className="bg-[#f8f4f4] grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 px-1 md:px-6 py-5">
+            <div className="bg-[#f8f4f4] max-w-[70rem] mx-auto grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-6 px-1 md:px-6 py-5">
               {filteredProducts.map((product: Product) => (
                 
-                <Suspense fallback={<Loadingscreen />}>
                   <div key={product.id} className="bg-[#fefefe] font-sans rounded">
                   <div className="rounded-lg border border-gray-200 bg-[#fefefe] p-6 shadow-lg ">
                     <div
-                      className="relative h-56 w-full mx-auto px-2 py-2 bg-[#81133d] pointer hover:cursor-pointer rounded-xl "
+                      className="relative h-56 w-full mx-auto  bg-[#81133d] pointer hover:cursor-pointer rounded-xl "
                       onClick={(e) => {
                         e.preventDefault();
                         toast.success("hold on while we change the page")
@@ -292,7 +238,7 @@ const Products = () => {
                     >
                       
                       <img
-                        className=" w-full h-full bg-center object-cover rounded-xl"
+                        className=" w-full h-full bg-center shadow-lg object-cover rounded-xl"
                         loading="lazy"
                         src={product.imageUrl}
                         alt="Skincare images"
@@ -341,44 +287,33 @@ const Products = () => {
                               />
                             </Tooltip>
                           </motion.div>
-                          <Tooltip
-                            content="Downoad image"
-                            style="light"
-                          >
-                            
-                            <MdOutlineFileDownload
-                              onClick={() => {
-                                handleDownload()
-                              }}
-                              size={28}
-                              className="text-gray-800"
-                            />
-                          </Tooltip>
+                        
                         </div>
                       </div>
 
-                      <h2 className="text-xl font-semibold leading-tight text-gray-700 hover:underline ">
-                        {product.title.split(" ").slice(0, 4).join(" ")}
+                      <h2 className="text-md font-semibold leading-tight text-gray-700 hover:underline ">
+                        {product.title.split(" ").slice(0, 6).join(" ")}
                       </h2>
 
                       <div className="mt-2 ">
                         <span className="w-full hidden md:flex  flex-row items-center text-xl md:text-2xl ">
                           {/*rater */}
-                          <div className="flex ">
+                          <div className="flex">
                             <Rater
                               total={5}
                               rating={product.rating.rate}
-                              interactive={false}
+                              interactive={true}
+                              
                             />
                           </div>
-                          <span className="text-lg md:text-xl text-gray-600 ml-3">
+                          <span className="text-sm md:text-lg text-gray-600 ml-3">
                             +{product.rating.count} reviews
                           </span>
                         </span>
                       </div>
 
                       <div className="mt-4 flex items-center justify-between gap-4">
-                        <p className="text-2xl flex md:text-3xl font-extrabold leading-tight text-gray-700 dark:text-white">
+                        <p className="text-2xl flex md:text-3xl font-extrabold leading-tight text-[#4f1534] dark:text-white">
                         
                           {product.price}<small className="text-md px-1">tl</small>
                         </p>
@@ -398,7 +333,6 @@ const Products = () => {
                   </div>
                   <div className=""></div>
                 </div>
-                </Suspense>
               ))}
             </div>
           )}

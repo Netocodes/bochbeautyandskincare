@@ -15,16 +15,24 @@ module.exports = withMT({
       fontFamily: {
         playfair: ["Playfair Display", "serif"],
       },
+        
+       
       animation: {
         scroll:
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
-      },
+         shine: 'shine 5s linear infinite',
+      
+        },
       keyframes: {
         scroll: {
           to: {
             transform: "translate(calc(-50% - 0.5rem))",
           },
         },
+         shine: {
+           '0%': { 'background-position': '100%' },
+           '100%': { 'background-position': '-100%' },
+         },
       },
     },
   },

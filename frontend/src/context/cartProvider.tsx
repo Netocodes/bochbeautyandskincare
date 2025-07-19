@@ -81,8 +81,8 @@ export const CartProvider = ({ children }: providerType) => {
       {children}
       <Toaster
         richColors
-        className="mt-24 md:mt-12 lg:mt-20 z-50"
-        position="top-right"
+        className="  z-[999]"
+        position="bottom-right"
       />
       ;
     </CartContext.Provider>

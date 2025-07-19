@@ -1,142 +1,81 @@
+// import Products from "../assets/product.jpeg";
+import Carousel from "../blocks/Components/Carousel/Carousel.jsx";
+import HeroBg from "../assets/heroBg2.jpg";
 import { Button } from "@material-tailwind/react";
-import { Carousel } from "flowbite-react";
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-
-type imageType = {
-  id: number;
-  image: string;
-  text: string;
-  description: string;
-  link: string;
-  button: string;
-};
+import { FaInstagram, FaWhatsapp, FaTiktok } from "react-icons/fa";
+import ShinyText from "../blocks/TextAnimations/ShinyText/ShinyText.js";
+import Threads from "../blocks/Backgrounds/Threads/Threads.js";
 const HeroSection = () => {
-  const images: imageType[] = [
-    {
-      id: 1,
-      text: "Explore Our Natural Skincare Collections",
-      image: "https://res.cloudinary.com/de7tyskql/image/upload/f_auto,q_auto/s3vzy94xmrtpvb7zkxvr",
-      description:
-        "Discover our range of natural skincare products, designed to nourish and rejuvenate your skin for a healthier, glowing look.",
-      link: "/productPage",
-      button: "Shop Now",
-    },
-    {
-      id: 2,
-      text: "Certified Skincare Formulator Delivering Beauty Worldwide.",
-      image:"https://res.cloudinary.com/de7tyskql/image/upload/f_auto,q_auto/s3vzy94xmrtpvb7zkxvr",
-      description:
-        "Our certified skincare experts create custom formulas that cater to your unique skin needs, available for delivery worldwide.",
-      link: "https://wa.me/+905384085304?text=Hello%2C%20I%27m%20interested%20in%20your%20services%21",
-      button: "Book Appointement",
-    },
-    {
-      id: 3,
-      text: "We Do International Deliveries",
-      image:
-        // "https://i.pinimg.com/736x/d0/3d/d7/d03dd7488c5db21e5627a3eb02a9b86c.jpg",
-        "https://res.cloudinary.com/de7tyskql/image/upload/f_auto,q_auto/my5urrlzlgkofiuicv8s",
-      description:
-        "No matter where you are, our skincare products can reach you with international delivery options for a seamless shopping experience.",
-      link: "/productPage",
-      button: "Shop Now",
-    },
-    {
-      id: 4,
-      text: "Explore Our Products",
-      image:
-        "https://res.cloudinary.com/de7tyskql/image/upload/f_auto,q_auto/dkk8lchyqrgsjanqyi7h",
-      description:
-        "Browse through our carefully curated selection of skincare and beauty products to find what’s perfect for you.",
-      link: "/productPage",
-      button: "Shop Now",
-    },
-    {
-      id: 5,
-      text: "See Our Testimonials",
-      image:
-        "https://res.cloudinary.com/de7tyskql/image/upload/f_auto,q_auto/xua0qrbkj6i0yf6eisgw",
-      description:
-        "Read reviews and testimonials from happy customers who have transformed their skincare routine with our products.",
-      link: "/",
-      button: "Shop Now",
-    },
-  ];
-
   return (
-    <div>
-      <div className="w-full  bg-gradient-to-r from-[#fda4af]  to-[#f43f5e] h-[75dvh] md:h-[60dvh] lg:h-[75dvh]">
-        <Carousel
-          indicators={false}
-          slideInterval={6000}
-          leftControl
-          rightControl
-          
-        >
-          {images.map((data, index) => (
-            <div key={index} className="w-full ">
-              <div className=" flex flex-col items-center justify-center h-full">
-                {/* Div with background image */}
-                <div
-                  className={` aspect-w-16 aspect-h-9  md:w-full h-[75dvh]   bg-no-repeat bg-cover  bg-center  w-full  flex items-center justify-center`}
-                  style={{
-                    backgroundImage: `url(${data.image})`,
-                  }}
-                >
-                  {/* Text over the image */}
-                  <motion.div
-                    className="absolute left-0 w-full lg:w-[800px] py-32  px-6 space-y-4 bg-gray-500/25 bg-clip-padding backdrop-filter  backdrop-blur bg-opacity-0 backdrop-saturate-100 backdrop-contrast-150 z-50 flex flex-col items-left justify-center lg:pl-12 my-4"
-                    initial={{ opacity: 0, x: 50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{
-                      delay: 2,
-                      duration: 1,
-                      ease: "easeInOut",
-                    }}
-                  >
-                    <h2 className="text-white text-3xl font-bold text-center bg-[#8c2643]/75 shadow-lg py-8 md:py-8 px-6 sm:text-6xl  md:text-4xl">
-                      {data.text}
-                    </h2>
-                    <p className="max-w-xl mx-auto font-semibold text-gray-100 bg-gray-700/55 backdrop-blur-md py-6  text-lg text-justify sm:text-lg md:text-xl px-6">
-                      {data.description}
-                    </p>
-                    <motion.div
-                    className="mx-auto"
-                    animate={{
-                      scale: [1, 1.2, 1], // Scale up to 1.5x and back to original size
-                    }}
-                    transition={{
-                      repeat: Infinity,
-                      repeatType: "loop",
-                      duration: 1.5, // 1.5 seconds to complete one cycle
-                      ease: "easeInOut", // Smooth ease-in and ease-out transitions
-                    }}
-                                                
-                                              >
- <Button
-                      className="bg-[#8c2643] text-white px-8 mx-auto"
-                      ripple={true}
-                      placeholder={undefined}
-                      onPointerEnterCapture={undefined}
-                      onPointerLeaveCapture={undefined}
-                    >
-                      <Link to={data.link}>{data.button}</Link>
-                    </Button>
-                                              </motion.div>
-                   
-                  </motion.div>
-                  {/* <img
-                    className="absolute hero w-full md:w-[95%] h-[75dvh] md:h-[75dvh]  object-cover object-center"
-                    src={data.image}
-                    alt=""
-                  /> */}
-                </div>
-                {/* End of div with text */}
-              </div>
+    <div
+      style={{
+        backgroundImage: `url(${HeroBg})`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+      }}
+      className="relative h-screen md:h-[85dvh] mt-20 md:mt-20  font-serif bg-fixed overflow-hidden"
+    >
+      <div className="absolute w-full h-full inset-0 ">
+        <Threads amplitude={3.3} color={[162, 0, 255]} distance={0.8 } enableMouseInteraction={true} />
+      </div>
+
+      <div className="absolute w-full h-screen gridlay items-center justify-center gap-2  text-center z-[99] overflow-y-auto overflow-hidden">
+        <div className=" w-full py-4 order-2 md:order-1 text-white">
+          <ShinyText
+            disabled={false}
+            speed={3}
+            className="text-4xl text-white "
+          />
+
+          <p className="uppercase text-sm py-6 px-2">
+            With our collections of skin and face products
+          </p>
+          <div className="flex items-center justify-center gap-4">
+            <Button
+              placeholder={"Schedule Call"}
+              onPointerEnterCapture={""}
+              onPointerLeaveCapture={""}
+              className="py-2 text-sm font-semibold text-gray-200 bg-gray-200/25 border-4 rounded-tr-full hover:bg-[#861349] hover:text-white hover:border-none border-[#861349] capitalize"
+            >
+              <a href="/shop-page">Schedule call 📞</a>
+            </Button>
+            <Button
+              placeholder={"Visit Shop"}
+              onPointerEnterCapture={""}
+              onPointerLeaveCapture={""}
+              className="py-2 text-sm font-semibold text-gray-200  hover:text-gray-700 bg-[#861349] hover:bg-gray-200/25 border-4 rounded-tl-full border-[#861349] capitalize"
+            >
+              <a href="/shop-page">Visit Shop 🛍️</a>
+            </Button>
+          </div>
+          <div className="flex flex-col items-center justify-center gap-y-2 mt-6">
+            <h2 className="font-semibold">Reach out on our Socials @:</h2>
+            <div className="flex items-center gap-x-6 py-2">
+              <a href="https://www.instagram.com/boch.beauty_skincare?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                <FaInstagram className="size-8" />
+              </a>
+              <a href="https://wa.me/+905384085304?text=Hello%2C%20I%27m%20interested%20in%20your%20services%21">
+                <FaWhatsapp className="size-8" />{" "}
+              </a>
+              <a href="https://www.tiktok.com/@boch.beauty_skincare">
+                <FaTiktok className="size-8" />{" "}
+              </a>
             </div>
-          ))}
-        </Carousel>
+          </div>
+        </div>
+        <div className="order-1 md:order-2 md:-mt-5 md:px-4">
+          <div className="">
+            <Carousel
+              baseWidth={350}
+              autoplay={true}
+              autoplayDelay={3000}
+              pauseOnHover={true}
+              loop={true}
+              round={false}
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

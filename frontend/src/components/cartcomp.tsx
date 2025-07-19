@@ -20,9 +20,7 @@ const CartComponent = () => {
   return (
     <div>
       <section className=" relative">
-      <SlidingText Information="If your currency is not Turkish Lira (₺ ), click the link labeled 
-      Click here to convert to your currency to switch to your preferred currency. After that, you can proceed to payment " />
-
+     
         <div className="w-full bg-gray-100 border-4 shadow-lg  my-5 py-5 max-w-7xl px-4 md:px-5   mx-auto">
           <h2 className="title font-manrope font-bold text-4xl leading-10 mb-8 text-center text-black">
             Shopping Cart
@@ -154,6 +152,9 @@ const CartComponent = () => {
           </div>
         </div>
       </section>
+       <SlidingText Information="If your currency is not Turkish Lira (₺ ), click the link labeled 
+      Click here to convert to your currency to switch to your preferred currency. After that, you can proceed to payment " />
+
     </div>
   );
 };

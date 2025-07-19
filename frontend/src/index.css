@@ -9,6 +9,7 @@ html {
   scroll-behavior: smooth;
 }
 
+
 @media (prefers-color-scheme: dark) {
   /* Force light mode even in dark mode */
   html {
@@ -151,4 +152,15 @@ html {
   opacity: 80%;
   color: #ffffff
 
+}
+.gridlay{
+  display: grid;
+          grid-template-columns: 3fr 2fr
+
+}
+@media (max-width: 500px) {
+    .gridlay {
+            grid-template-columns: repeat(1, minmax(0, 4fr));
+
+    }
 }

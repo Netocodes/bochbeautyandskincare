@@ -1,656 +1,572 @@
-[
-  {
-    "id": 1,
-    "title": "Lenis & Clear Face Cleanser - Gentle Hydrating Cleanser for All Skin Types",
-    "mini": false,
-    "price": 400.0,
-    "images": [
-      "lenis-clear-cleanser-1",
-      "lenis-clear-cleanser"
-    ],
-    "description": "Our Lenis & Clear Face Cleanser is a carefully formulated skincare product designed to gently cleanse your skin, remove dirt, and maintain hydration. It helps prevent breakouts, reduces wrinkles, and fights signs of aging, leaving your skin feeling fresh, smooth, and rejuvenated. Perfect for daily use, this 100ml cleanser is suitable for all skin types.",
-    "category": "cleansers",
-    "image": "lenis-clear-cleanser",
-    "currency": "TL",
-    "net_weight": "100ml",
-    "skin_type": "Suitable for all skin types",
-    "how_to_use": [
-      "Wet your face with lukewarm water.",
-      "Apply a small amount of Lenis & Clear Face Cleanser to your fingertips.",
-      "Gently massage the cleanser onto your face in circular motions, avoiding the eye area.",
-      "Rinse thoroughly with water and pat your skin dry with a clean towel.",
-      "Use daily in the morning and evening for best results."
-    ],
-    "key_features": [
-      "Gently removes dirt and impurities",
-      "Hydrates and nourishes the skin",
-      "Prevents breakouts and acne",
-      "Reduces wrinkles and fine lines",
-      "Fights signs of aging",
-      "Suitable for all skin types"
-    ],
-    "seo": [
-      "gentle face cleanser",
-      "hydrating face cleanser",
-      "anti-aging face cleanser",
-      "cleanser for all skin types",
-      "best face cleanser for breakouts",
-      "wrinkle-reducing cleanser",
-      "daily face cleanser",
-      "skincare for hydrated skin",
-      "natural face cleanser",
-      "Lenis & Clear Face Cleanser"
-    ],
-    "rating": { "rate": 4.5, "count": 150 }
-  },
-  {
-    "id": 2,
-    "title": "Elegance Moisturizing Body Scrub",
-    "category": "body scrubs",
-    "mini": false,
-    "price": 600,
-    "image": "elegance-body-scrub-2",
-    "currency": "TL",
-    "net_weight": "500g",
-    "skin_type": "Suitable for light skin",
-    "images": [
-      "elegance-body-scrub-1",
-      "elegance-body-scrub-2",
-      "elegance-body-scrub"
-    ],
-    "description": "Enriched with organic minerals, this luxurious body scrub deeply cleanses the skin, unclogs pores, and enhances skin texture. It leaves your skin soft, smooth, brighter, and naturally glowing.",
-    "how_to_use": [
-      "Wet your entire body with warm water.",
-      "Gently massage the scrub onto your skin in circular motions.",
-      "Allow the scrub to sit for at least 7 minutes to maximize its effectiveness.",
-      "Rinse off thoroughly with warm water.",
-      "Use once or twice a week for a visibly radiant and refreshed look."
-    ],
-    "key_features": [
-      "Deep Cleansing",
-      "Hydrating & Moisturizing",
-      "Brightening Effect",
-      "Gentle Exfoliation"
-    ],
-    "seo": [
-      "moisturizing body scrub",
-      "organic body scrub",
-      "elegance Body Scrub",
-      "elegance Scrub",
-      "elegance body",
-      "exfoliating scrub",
-      "skin brightening scrub",
-      "deep cleansing skincare",
-      "hydrating exfoliator",
-      "best body scrub for dry skin",
-      "gentle exfoliation scrub",
-      "natural skincare",
-      "radiant skin treatment"
-    ],
-    "rating": { "rate": 4.7, "count": 500 }
-  },
-  
-  {
-    "id": 3,
-    "title": "2+1 Moisturizing & Lightning Body Wash",
-    "category": "body wash",
-    "mini": false,
-    "price": 450.0,
-    "images": [
-      "moisture-wash-1",
-      "mositure-wash"
-    ],
-    "description": "A nourishing body wash that deeply moisturizes while gently lightening the skin. It cleanses, smoothens, softens, and repairs dry, cracked skin, leaving it radiant and refreshed.",
 
-    "image": "mositure-wash",
-   "currency": "TL",
-  "net_weight": "300ml",
-  "skin_type": "Suitable for light skin",
-  "how_to_use": [
-    "Use morning and night for quicker and more effective results.",
-    "Apply a small amount to wet skin.",
-    "Gently massage into the skin in circular motions.",
-    "Rinse thoroughly with warm water."
-  ],
-  "key_features": [
-    "Deeply moisturizes",
-    "Gently lightens skin",
-    "Cleanses and smoothens",
-    "Repairs dry, cracked skin",
-    "Leaves skin radiant and refreshed"
-  ],
-  "seo": [
-    "moisturizing body wash",
-    "lightening body wash",
-    "nourishing body wash",
-    "skin lightening skincare",
-    "body wash for dry skin",
-    "radiant skin body wash",
-    "2+1 body wash",
-    "gentle skin lightening",
-    "hydrating body wash",
-    "best body wash for cracked skin"
-  ],
-  "rating": {
-    "rate": 4.8,
-    "count": 350
-  }
-  },
-  {
-    "id": 4,
-    "title": "Restoration Body Oil",
-    "mini": false,
-    "price": 700.0,
-    "images": [
-      "restoration-oil-1",
-      "restoration-body-oil"
-    ],
-    "description": "Enriched with rose hip, lemon, and jojoba oils. This body oil reduces the appearance of dark spots, curbs obvious stretch marks, eradicates flaky skin, improves overall texture and appearance of the skin, evens out skin tone, and boosts skin glow.",
-    "category": "Body Oils", 
-    "image": "restoration-body-oil",
-    "currency": "TL",
-    "net_weight": "250ml", 
-    "skin_type": "Suitable for all skin types", 
-    "how_to_use": [
-      "Apply a small amount of the oil to your skin.",
-      "Gently massage in circular motions until fully absorbed.",
-      "Can be used 2 or more times per day for best results."
-    ],
-    "key_features": [
-      "Repairs damaged skin",
-      "Restores skin elasticity",
-      "Improves skin texture and reduces fine lines",
-      "Brightens skin"
-    ],
-    "seo": [
-      "restoration body oil",
-      "rose hip body oil",
-      "skin brightening oil",
-      "stretch mark treatment",
-      "dark spot reduction oil",
-      "skin repair oil",
-      "jojoba oil skincare",
-      "natural skin glow oil",
-      "skin elasticity oil",
-      "flaky skin treatment"
-    ],
-    "rating": {
-      "rate": 2.1,
-      "count": 430
+  [
+    {
+      "id": 1,
+      "title": "Lenis & Clear Face Cleanser - Gentle Hydrating Cleanser for All Skin Types",
+      "mini": false,
+      "price": 400.0,
+      "images": ["lenis-clear-cleanser-1", "lenis-clear-cleanser"],
+      "description": "Our Lenis & Clear Face Cleanser is a carefully formulated skincare product designed to gently cleanse your skin, remove dirt, and maintain hydration. It helps prevent breakouts, reduces wrinkles, and fights signs of aging, leaving your skin feeling fresh, smooth, and rejuvenated. Perfect for daily use, this 100ml cleanser is suitable for all skin types.",
+      "category": "cleansers",
+      "image": "lenis-clear-cleanser",
+      "currency": "TL",
+      "net_weight": "100ml",
+      "skin_type": "Suitable for all skin types",
+      "how_to_use": [
+        "Wet your face with lukewarm water.",
+        "Apply a small amount of Lenis & Clear Face Cleanser to your fingertips.",
+        "Gently massage the cleanser onto your face in circular motions, avoiding the eye area.",
+        "Rinse thoroughly with water and pat your skin dry with a clean towel.",
+        "Use daily in the morning and evening for best results."
+      ],
+      "key_features": [
+        "Gently removes dirt and impurities",
+        "Hydrates and nourishes the skin",
+        "Prevents breakouts and acne",
+        "Reduces wrinkles and fine lines",
+        "Fights signs of aging",
+        "Suitable for all skin types"
+      ],
+      "seo": [
+        "gentle face cleanser",
+        "hydrating face cleanser",
+        "anti-aging face cleanser",
+        "cleanser for all skin types",
+        "best face cleanser for breakouts",
+        "wrinkle-reducing cleanser",
+        "daily face cleanser",
+        "skincare for hydrated skin",
+        "natural face cleanser",
+        "Lenis & Clear Face Cleanser"
+      ],
+      "rating": { "rate": 4.5, "count": 150 }
+    },
+    {
+      "id": 2,
+      "title": "Elegance Moisturizing Body Scrub",
+      "category": "body scrubs",
+      "mini": false,
+      "price": 600,
+      "image": "elegance-body-scrub-2",
+      "currency": "TL",
+      "net_weight": "500g",
+      "skin_type": "Suitable for light skin",
+      "images": ["elegance-body-scrub-1", "elegance-body-scrub-2", "elegance-body-scrub"],
+      "description": "Enriched with organic minerals, this luxurious body scrub deeply cleanses the skin, unclogs pores, and enhances skin texture. It leaves your skin soft, smooth, brighter, and naturally glowing.",
+      "how_to_use": [
+        "Wet your entire body with warm water.",
+        "Gently massage the scrub onto your skin in circular motions.",
+        "Allow the scrub to sit for at least 7 minutes to maximize its effectiveness.",
+        "Rinse off thoroughly with warm water.",
+        "Use once or twice a week for a visibly radiant and refreshed look."
+      ],
+      "key_features": [
+        "Deep Cleansing",
+        "Hydrating & Moisturizing",
+        "Brightening Effect",
+        "Gentle Exfoliation"
+      ],
+      "seo": [
+        "moisturizing body scrub",
+        "organic body scrub",
+        "elegance Body Scrub",
+        "elegance Scrub",
+        "elegance body",
+        "exfoliating scrub",
+        "skin brightening scrub",
+        "deep cleansing skincare",
+        "hydrating exfoliator",
+        "best body scrub for dry skin",
+        "gentle exfoliation scrub",
+        "natural skincare",
+        "radiant skin treatment"
+      ],
+      "rating": { "rate": 4.7, "count": 500 }
+    },
+    {
+      "id": 3,
+      "title": "2+1 Moisturizing & Lightning Body Wash",
+      "category": "body wash",
+      "mini": false,
+      "price": 450.0,
+      "images": ["moisture-wash-1", "mositure-wash"],
+      "description": "A nourishing body wash that deeply moisturizes while gently lightening the skin. It cleanses, smoothens, softens, and repairs dry, cracked skin, leaving it radiant and refreshed.",
+      "image": "mositure-wash",
+      "currency": "TL",
+      "net_weight": "300ml",
+      "skin_type": "Suitable for light skin",
+      "how_to_use": [
+        "Use morning and night for quicker and more effective results.",
+        "Apply a small amount to wet skin.",
+        "Gently massage into the skin in circular motions.",
+        "Rinse thoroughly with warm water."
+      ],
+      "key_features": [
+        "Deeply moisturizes",
+        "Gently lightens skin",
+        "Cleanses and smoothens",
+        "Repairs dry, cracked skin",
+        "Leaves skin radiant and refreshed"
+      ],
+      "seo": [
+        "moisturizing body wash",
+        "lightening body wash",
+        "nourishing body wash",
+        "skin lightening skincare",
+        "body wash for dry skin",
+        "radiant skin body wash",
+        "2+1 body wash",
+        "gentle skin lightening",
+        "hydrating body wash",
+        "best body wash for cracked skin"
+      ],
+      "rating": { "rate": 4.8, "count": 350 }
+    },
+    {
+      "id": 4,
+      "title": "Restoration Body Oil",
+      "mini": false,
+      "price": 700.0,
+      "images": ["restoration-oil-1", "restoration-body-oil"],
+      "description": "Enriched with rose hip, lemon, and jojoba oils. This body oil reduces the appearance of dark spots, curbs obvious stretch marks, eradicates flaky skin, improves overall texture and appearance of the skin, evens out skin tone, and boosts skin glow.",
+      "category": "Body Oils", 
+      "image": "restoration-body-oil",
+      "currency": "TL",
+      "net_weight": "250ml", 
+      "skin_type": "Suitable for all skin types", 
+      "how_to_use": [
+        "Apply a small amount of the oil to your skin.",
+        "Gently massage in circular motions until fully absorbed.",
+        "Can be used 2 or more times per day for best results."
+      ],
+      "key_features": [
+        "Repairs damaged skin",
+        "Restores skin elasticity",
+        "Improves skin texture and reduces fine lines",
+        "Brightens skin"
+      ],
+      "seo": [
+        "restoration body oil",
+        "rose hip body oil",
+        "skin brightening oil",
+        "stretch mark treatment",
+        "dark spot reduction oil",
+        "skin repair oil",
+        "jojoba oil skincare",
+        "natural skin glow oil",
+        "skin elasticity oil",
+        "flaky skin treatment"
+      ],
+      "rating": { "rate": 2.1, "count": 430 }
+    },
+    {
+      "id": 5,
+      "title": "Lenis and Clear Face Soap",
+      "mini": false,
+      "price": 350.0,
+      "images": ["lenis-care-1", "clear-face-soap"],
+      "description": "This beautiful goat milk-infused face bar soap is designed to keep the skin moisturized for 24 hours. It prevents dryness, redness, and skin inflammation while promoting a healthy, glowing complexion.",
+      "category": "Face Soaps",
+      "image": "clear-face-soap",
+      "currency": "TL",
+      "net_weight": "50g",
+      "skin_type": "Suitable for all skin types",
+      "how_to_use": [
+        "Wet your face with warm water.",
+        "Gently massage the soap onto your skin in circular motions.",
+        "Rinse thoroughly with warm water.",
+        "Use every day (morning and night) for more visible results."
+      ],
+      "key_features": [
+        "Reduces obvious acne",
+        "Treats redness on the face",
+        "Improves skin dryness",
+        "Reduces wrinkles",
+        "Delays aging symptoms"
+      ],
+      "seo": [
+        "goat milk face soap",
+        "moisturizing face soap",
+        "acne treatment soap",
+        "anti-aging face soap",
+        "redness relief soap",
+        "dry skin face soap",
+        "natural face soap",
+        "gentle face cleanser",
+        "goat milk skincare",
+        "daily face soap"
+      ],
+      "rating": { "rate": 4.8, "count": 250 }
+    },
+    {
+      "id": 6,
+      "title": "Rose Glow Oil",
+      "mini": false,
+      "price": 650.0,
+      "images": ["rose-glow-oil", "original-glow-oil"],
+      "description": "Suitable for dark skin persons that wish to achieve a more refined brown skin tone. It maintains the skin's original texture, fades pigmentation, and keeps the skin moisturized all day.",
+      "category": "Body Oils",
+      "image": "original-glow-oil",
+      "currency": "TL",
+      "net_weight": "250ml",
+      "skin_type": "Suitable for dark skin",
+      "how_to_use": [
+        "Apply a small amount of the oil to your skin.",
+        "Gently massage in circular motions until fully absorbed.",
+        "Use every day for a quality result."
+      ],
+      "key_features": [
+        "Maintains the skin's original texture",
+        "Fades pigmentation on dark skin",
+        "Keeps the skin moisturized all day"
+      ],
+      "seo": [
+        "rose glow oil",
+        "rose glow body oil",
+        "dark skin moisturizer",
+        "skin pigmentation treatment",
+        "refined brown skin tone",
+        "body oil for dark skin",
+        "skin hydration oil",
+        "daily skincare oil",
+        "natural skin glow oil",
+        "dark skin care product",
+        "moisturizing body oil"
+      ],
+      "rating": { "rate": 3.9, "count": 70 }
+    },
+    {
+      "id": 7,
+      "title": "Lightnizer Xtra Lightning Body Oil",
+      "mini": false,
+      "price": 700.0,
+      "images": ["lighting-body-oil-1", "lighting-body-oil"],
+      "description": "This silky lightning body oil is designed to keep the skin looking visibly light and clear. It deeply nourishes the skin, keeps it smooth and silky, and fights aging and wrinkles.",
+      "category": "Body Oils",
+      "image": "lighting-body-oil",
+      "currency": "TL",
+      "net_weight": "250ml",
+      "skin_type": "Suitable for all skin types",
+      "how_to_use": [
+        "Apply a small amount of the oil to your skin.",
+        "Gently massage in circular motions until fully absorbed.",
+        "Use only at night before bed."
+      ],
+      "key_features": [
+        "Deeply nourishes the skin",
+        "Keeps the skin smooth and silky",
+        "Fights aging and wrinkles"
+      ],
+      "seo": [
+        "lightnizer xtra lightning body oil",
+        "skin lightening oil",
+        "anti-aging body oil",
+        "smooth and silky skin oil",
+        "night skincare oil",
+        "wrinkle reduction oil",
+        "skin nourishing oil",
+        "radiant skin treatment",
+        "natural body oil",
+        "visible skin lightening"
+      ],
+      "rating": { "rate": 3, "count": 400 }
+    },
+    {
+      "id": 8,
+      "title": "Xwhite Glow Oil",
+      "mini": false,
+      "price": 500.0,
+      "images": ["xwhite-glow-oil-1", "xwhite-glow-oil"],
+      "description": "Xwhite Glow Oil is formulated to moisturize, curb stretch marks, fade away dark spots, and keep the skin smooth. It's non-greasy and doesn't stick to the skin.",
+      "category": "Body Oils",
+      "image": "xwhite-glow-oil",
+      "currency": "TL",
+      "net_weight": "150ml",
+      "skin_type": "Suitable for all skin types",
+      "how_to_use": [
+        "Apply a small amount of the oil to your skin.",
+        "Gently massage in circular motions until fully absorbed.",
+        "Use daily for best results."
+      ],
+      "key_features": [
+        "Gradually lightens the skin",
+        "Drastically reduces the appearance of stretch marks",
+        "Enhances skin glow and texture"
+      ],
+      "seo": [
+        "xwhite glow oil",
+        "skin lightening oil",
+        "stretch mark reduction oil",
+        "dark spot removal oil",
+        "non-greasy body oil",
+        "skin moisturizing oil",
+        "skin glow enhancement",
+        "smooth skin treatment",
+        "natural skin care oil",
+        "radiant skin oil"
+      ],
+      "rating": { "rate": 1.9, "count": 100 }
+    },
+    {
+      "id": 9,
+      "title": "Molato Soap",
+      "mini": false,
+      "price": 650.0,
+      "images": ["xwhite-molato-soap-1", "xwhite-molato-soap"],
+      "description": "Enriched with Kojic acid, mulberry, papaya extract, and other lightning agents that effectively brighten/lighten the skin, fade away dark spots, and remove dead skin cells.",
+      "category": "body scrubs",
+      "image": "xwhite-molato-soap",
+      "currency": "TL",
+      "net_weight": "500g",
+      "skin_type": "Suitable for all skin types",
+      "how_to_use": [
+        "Rub the soap all over the skin.",
+        "Leave it to settle for about 10-15 minutes.",
+        "Wash it off thoroughly.",
+        "Use twice daily for best results."
+      ],
+      "key_features": [
+        "Clears dark spots",
+        "Lightens the skin",
+        "Removes dead skin cells",
+        "Keeps the skin clean"
+      ],
+      "seo": [
+        "molato soap",
+        "skin brightening soap",
+        "dark spot removal soap",
+        "kojic acid soap",
+        "mulberry extract soap",
+        "papaya extract soap",
+        "skin lightening soap",
+        "dead skin cell removal",
+        "natural skincare soap",
+        "radiant skin treatment"
+      ],
+      "rating": { "rate": 3.3, "count": 203 }
+    },
+    {
+      "id": 10,
+      "title": "Xwhite Face Cleanser and Xwhite Glow Face Cream Combo",
+      "mini": false,
+      "price": 800.0,
+      "images": ["facial-cleanser-and-cream", "facial-cleanser-and-cream-1"],
+      "description": "This combo effectively lightens dark spots, fades hyper-pigmentation, and evens out skin tone. Formulated with scientifically backed ingredients, it provides visible results in a short period. Infused with natural ingredients, it gently nourishes, clears dark spots, and lightens the skin, leaving it silky and smooth.",
+      "category": "cleansers",
+      "image": "facial-cleanser-and-cream",
+      "currency": "TL",
+      "net_weight": "500g",
+      "skin_type": "Suitable for all skin types",
+      "how_to_use": [
+        "Use the Xwhite Face Cleanser to wash your face, gently massaging in circular motions.",
+        "Rinse thoroughly with water.",
+        "Apply the Xwhite Glow Face Cream to your face and neck, gently massaging until fully absorbed.",
+        "Use morning and night for best results."
+      ],
+      "key_features": [
+        "Lightens dark spots and hyper-pigmentation",
+        "Evens out skin tone",
+        "Nourishes and clears dark spots",
+        "Leaves skin silky and smooth"
+      ],
+      "seo": [
+        "xwhite face cleanser",
+        "xwhite glow face cream",
+        "dark spot removal combo",
+        "hyper-pigmentation treatment",
+        "skin lightening combo",
+        "even skin tone skincare",
+        "natural face cleanser and cream",
+        "smooth skin treatment",
+        "radiant skin combo",
+        "scientifically backed skincare"
+      ],
+      "rating": { "rate": 2.9, "count": 470 }
+    },
+    {
+      "id": 11,
+      "title": "Itching Solution",
+      "mini": false,
+      "price": 400.0,
+      "images": ["itching-solution-1", "itching-solution"],
+      "description": "It's mostly recommended for people that deal with water or environmental skin conditions. It helps treat bathing water and makes it safer to use without any issues.",
+      "category": "body scrubs",
+      "image": "itching-solution",
+      "currency": "TL",
+      "net_weight": "150g",
+      "skin_type": "Suitable for all skin types",
+      "how_to_use": [
+        "Add just a teaspoon of the solution inside bathing water.",
+        "Bathe as usual.",
+        "Apply your oil or body moisturizer immediately after the bath."
+      ],
+      "key_features": [
+        "Treats bathing water",
+        "Safe for all skin types",
+        "Helps with environmental skin conditions",
+        "Easy to use"
+      ],
+      "seo": [
+        "itching solution",
+        "skin care for water conditions",
+        "bathing water treatment",
+        "environmental skin care",
+        "skin itching relief",
+        "safe bathing solution",
+        "skin moisturizing treatment",
+        "anti-itching product",
+        "skin protection",
+        "water safety for skin"
+      ],
+      "rating": { "rate": 4.8, "count": 319 }
+    },
+    {
+      "id": 12,
+      "title": "Caramel Black Soap",
+      "mini": false,
+      "price": 600.0,
+      "images": ["caramel-black-soap-1", "caramel-black-soap"],
+      "description": "Prevents rashes, eczema, itching, and scaly skin. Removes blemishes, relieves acne, maintains the skin's original color and texture, cleanses pores, and rejuvenates the skin, leaving it smooth, fresh, and clean.",
+      "category": "Body scrubs",
+      "image": "caramel-black-soap",
+      "currency": "TL",
+      "net_weight": "250g",
+      "skin_type": "Suitable for all skin types",
+      "how_to_use": [
+        "Use morning and night.",
+        "Apply Rose Glow Body Oil for a more natural brown-looking appearance."
+      ],
+      "key_features": [
+        "Prevents rashes, eczema, and itching",
+        "Removes blemishes and relieves acne",
+        "Maintains skin's original color and texture",
+        "Cleanses pores and rejuvenates skin"
+      ],
+      "seo": [
+        "caramel black soap",
+        "natural skincare soap",
+        "acne relief soap",
+        "eczema prevention soap",
+        "skin rejuvenation soap",
+        "blemish removal soap",
+        "pore cleansing soap",
+        "skin texture maintenance",
+        "rash prevention soap",
+        "smooth and clean skin"
+      ],
+      "rating": { "rate": 1.9, "count": 100 }
+    },
+    {
+      "id": 13,
+      "title": "Glam Glow Face Cream - Collagen & Niacinamide Infused Skin Food for Glow & Hydration",
+      "mini": false,
+      "price": 300.0,
+      "images": ["glam-glow-face"],
+      "description": "Our Glam Glow Face Cream is a luxurious skin food infused with hydrolyzed collagen and niacinamide. Designed to deliver a radiant glow, this cream brightens, hydrates, and protects your skin while smoothing and rejuvenating it. Perfect for individuals with brown and bright skin tones, this 20g cream is your go-to solution for a healthy, glowing complexion.",
+      "category": "face creams",
+      "image": "glam-glow-face",
+      "currency": "TL",
+      "net_weight": "20g",
+      "skin_type": "Best for brown and bright skin tones",
+      "how_to_use": [
+        "Cleanse your face thoroughly.",
+        "Take a small amount of Glam Glow Face Cream and apply it evenly to your face and neck.",
+        "Gently massage in upward circular motions until fully absorbed.",
+        "Use daily in the morning and evening for best results."
+      ],
+      "key_features": [
+        "Infused with hydrolyzed collagen and niacinamide",
+        "Brightens and evens skin tone",
+        "Deeply hydrates and nourishes the skin",
+        "Promotes a radiant, glowing complexion",
+        "Smooths and rejuvenates skin texture",
+        "Protects skin from environmental stressors"
+      ],
+      "seo": [
+        "glow face cream",
+        "collagen face cream",
+        "niacinamide face cream",
+        "skin brightening cream",
+        "hydrating face cream",
+        "radiant skin cream",
+        "best cream for glowing skin",
+        "face cream for brown skin",
+        "luxury skincare",
+        "Glam Glow Face Cream"
+      ],
+      "rating": { "rate": 4.7, "count": 200 }
+    },
+    {
+      "id": 14,
+      "title": "Rose Glow Oil",
+      "mini": true,
+      "price": 400.0,
+      "images": ["rose-glow-oil", "original-glow-oil"],
+      "description": "Suitable for dark skin persons that wish to achieve a more refined brown skin tone. It maintains the skin's original texture, fades pigmentation, and keeps the skin moisturized all day.",
+      "category": "Body Oils",
+      "image": "original-glow-oil",
+      "currency": "tl",
+      "net_weight": "250ml",
+      "skin_type": "Suitable for dark skin",
+      "how_to_use": [
+        "Apply a small amount of the oil to your skin.",
+        "Gently massage in circular motions until fully absorbed.",
+        "Use every day for a quality result."
+      ],
+      "key_features": [
+        "Maintains the skin's original texture",
+        "Fades pigmentation on dark skin",
+        "Keeps the skin moisturized all day"
+      ],
+      "seo": [
+        "rose glow oil",
+        "rose glow body oil",
+        "dark skin moisturizer",
+        "skin pigmentation treatment",
+        "refined brown skin tone",
+        "body oil for dark skin",
+        "skin hydration oil",
+        "daily skincare oil",
+        "natural skin glow oil",
+        "dark skin care product",
+        "moisturizing body oil"
+      ],
+      "rating": { "rate": 3.9, "count": 70 }
+    },
+    {
+      "id": 15,
+      "title": "Lightnizer Xtra Lightning Body Oil",
+      "mini": true,
+      "price": 450.0,
+      "images": ["lighting-body-oil-1", "lighting-body-oil"],
+      "description": "This silky lightning body oil is designed to keep the skin looking visibly light and clear. It deeply nourishes the skin, keeps it smooth and silky, and fights aging and wrinkles.",
+      "category": "Body Oils",
+      "image": "lighting-body-oil",
+      "currency": "TL",
+      "net_weight": "250ml",
+      "skin_type": "Suitable for all skin types",
+      "how_to_use": [
+        "Apply a small amount of the oil to your skin.",
+        "Gently massage in circular motions until fully absorbed.",
+        "Use only at night before bed."
+      ],
+      "key_features": [
+        "Deeply nourishes the skin",
+        "Keeps the skin smooth and silky",
+        "Fights aging and wrinkles"
+      ],
+      "seo": [
+        "lightnizer xtra lightning body oil",
+        "skin lightening oil",
+        "anti-aging body oil",
+        "smooth and silky skin oil",
+        "night skincare oil",
+        "wrinkle reduction oil",
+        "skin nourishing oil",
+        "radiant skin treatment",
+        "natural body oil",
+        "visible skin lightening"
+      ],
+      "rating": { "rate": 3, "count": 400 }
     }
-  },
-  {
-    "id": 5,
-    "title": "Lenis and Clear Face Soap",
-    "mini": false,
-    "price": 350.0,
-    "images": [
-      "lenis-care-1",
-      "clear-face-soap"
-    ],
-    "description": "This beautiful goat milk-infused face bar soap is designed to keep the skin moisturized for 24 hours. It prevents dryness, redness, and skin inflammation while promoting a healthy, glowing complexion.",
-    "category": "Face Soaps",
-    "image": "clear-face-soap" ,
-    "currency": "TL",
-    "net_weight": "50g",
-    "skin_type": "Suitable for all skin types",
-    "how_to_use": [
-      "Wet your face with warm water.",
-      "Gently massage the soap onto your skin in circular motions.",
-      "Rinse thoroughly with warm water.",
-      "Use every day (morning and night) for more visible results."
-    ],
-    "key_features": [
-      "Reduces obvious acne",
-      "Treats redness on the face",
-      "Improves skin dryness",
-      "Reduces wrinkles",
-      "Delays aging symptoms"
-    ],
-    "seo": [
-      "goat milk face soap",
-      "moisturizing face soap",
-      "acne treatment soap",
-      "anti-aging face soap",
-      "redness relief soap",
-      "dry skin face soap",
-      "natural face soap",
-      "gentle face cleanser",
-      "goat milk skincare",
-      "daily face soap"
-    ],
-    "rating": {
-      "rate": 4.8,
-      "count": 250
-    }
-  },
-  {
-    "id": 6,
-    "title": "Rose Glow Oil",
-    "mini": false,
-    "price": 650.0,
-    "images": [
-      "rose-glow-oil",
-      "original-glow-oil"
-    ],
-    "description": "Suitable for dark skin persons that wish to achieve a more refined brown skin tone. It maintains the skin's original texture, fades pigmentation, and keeps the skin moisturized all day.",
-    "category": "Body Oils",
-    "image": "original-glow-oil",
-    "currency": "TL",
-    "net_weight": "250ml",
-    "skin_type": "Suitable for dark skin",
-    "how_to_use": [
-      "Apply a small amount of the oil to your skin.",
-      "Gently massage in circular motions until fully absorbed.",
-      "Use every day for a quality result."
-    ],
-    "key_features": [
-      "Maintains the skin's original texture",
-      "Fades pigmentation on dark skin",
-      "Keeps the skin moisturized all day"
-    ],
-    "seo": [
-      "rose glow oil",
-      "rose glow body oil",
-      "dark skin moisturizer",
-      "skin pigmentation treatment",
-      "refined brown skin tone",
-      "body oil for dark skin",
-      "skin hydration oil",
-      "daily skincare oil",
-      "natural skin glow oil",
-      "dark skin care product",
-      "moisturizing body oil"
-    ],
-    "rating": {
-      "rate": 3.9,
-      "count": 70
-    }
-  },
-  {
-    "id": 7,
-    "title": "Lightnizer Xtra Lightning Body Oil",
-    "mini": false,
-    "price": 700.0,
-    "images": [
-      "lighting-body-oil-1",
-      "lighting-body-oil"
-    ],
-    "description": "This silky lightning body oil is designed to keep the skin looking visibly light and clear. It deeply nourishes the skin, keeps it smooth and silky, and fights aging and wrinkles.",
-    "category": "Body Oils",
-    "image": "lighting-body-oil",
-    "currency": "TL",
-    "net_weight": "250ml",
-    "skin_type": "Suitable for all skin types",
-    "how_to_use": [
-      "Apply a small amount of the oil to your skin.",
-      "Gently massage in circular motions until fully absorbed.",
-      "Use only at night before bed."
-    ],
-    "key_features": [
-      "Deeply nourishes the skin",
-      "Keeps the skin smooth and silky",
-      "Fights aging and wrinkles"
-    ],
-    "seo": [
-      "lightnizer xtra lightning body oil",
-      "skin lightening oil",
-      "anti-aging body oil",
-      "smooth and silky skin oil",
-      "night skincare oil",
-      "wrinkle reduction oil",
-      "skin nourishing oil",
-      "radiant skin treatment",
-      "natural body oil",
-      "visible skin lightening"
-    ],
-    "rating": {
-      "rate": 3,
-      "count": 400
-    }
-  },
-  {
-    "id": 8,
-    "title": "Xwhite Glow Oil",
-    "mini": false,
-    "price": 500.0,
-    "images": [
-      "xwhite-glow-oil-1",
-      "xwhite-glow-oil"
-    ],
-    "description": "Xwhite Glow Oil is formulated to moisturize, curb stretch marks, fade away dark spots, and keep the skin smooth. It’s non-greasy and doesn’t stick to the skin.",
-    "category": "Body Oils",
-    "image": "xwhite-glow-oil",
-    "currency": "TL",
-    "net_weight": "150ml",
-    "skin_type": "Suitable for all skin types",
-    "how_to_use": [
-      "Apply a small amount of the oil to your skin.",
-      "Gently massage in circular motions until fully absorbed.",
-      "Use daily for best results."
-    ],
-    "key_features": [
-      "Gradually lightens the skin",
-      "Drastically reduces the appearance of stretch marks",
-      "Enhances skin glow and texture"
-    ],
-    "seo": [
-      "xwhite glow oil",
-      "skin lightening oil",
-      "stretch mark reduction oil",
-      "dark spot removal oil",
-      "non-greasy body oil",
-      "skin moisturizing oil",
-      "skin glow enhancement",
-      "smooth skin treatment",
-      "natural skin care oil",
-      "radiant skin oil"
-    ],
-    "rating": {
-      "rate": 1.9,
-      "count": 100
-    }
-  },
-  {
-    "id": 9,
-    "title": "Molato Soap",
-    "mini": false,
-    "price": 650.0,
-    "images": [
-      "xwhite-molato-soap-1",
-      "xwhite-molato-soap"
-    ],
-    "description": "Enriched with Kojic acid, mulberry, papaya extract, and other lightning agents that effectively brighten/lighten the skin, fade away dark spots, and remove dead skin cells.",
-    "category": "body scrubs",
-    "image": "xwhite-molato-soap",
-    "currency": "TL",
-    "net_weight": "500g",
-    "skin_type": "Suitable for all skin types",
-    "how_to_use": [
-      "Rub the soap all over the skin.",
-      "Leave it to settle for about 10-15 minutes.",
-      "Wash it off thoroughly.",
-      "Use twice daily for best results."
-    ],
-    "key_features": [
-      "Clears dark spots",
-      "Lightens the skin",
-      "Removes dead skin cells",
-      "Keeps the skin clean"
-    ],
-    "seo": [
-      "molato soap",
-      "skin brightening soap",
-      "dark spot removal soap",
-      "kojic acid soap",
-      "mulberry extract soap",
-      "papaya extract soap",
-      "skin lightening soap",
-      "dead skin cell removal",
-      "natural skincare soap",
-      "radiant skin treatment"
-    ],
-    "rating": {
-      "rate": 3.3,
-      "count": 203
-    }
-  },
-  {
-    "id": 10,
-    "title": "Xwhite Face Cleanser and Xwhite Glow Face Cream Combo",
-    "mini": false,
-    "price": 800.0,
-    "images": [
-      "facial-cleanser-and-cream",
-      "facial-cleanser-and-cream-1"
-    ],
-    "description": "This combo effectively lightens dark spots, fades hyper-pigmentation, and evens out skin tone. Formulated with scientifically backed ingredients, it provides visible results in a short period. Infused with natural ingredients, it gently nourishes, clears dark spots, and lightens the skin, leaving it silky and smooth.",
-    "category": "cleansers",
-    "image": "facial-cleanser-and-cream",
-    "currency": "TL",
-    "net_weight": "500g",
-    "skin_type": "Suitable for all skin types",
-    "how_to_use": [
-      "Use the Xwhite Face Cleanser to wash your face, gently massaging in circular motions.",
-      "Rinse thoroughly with water.",
-      "Apply the Xwhite Glow Face Cream to your face and neck, gently massaging until fully absorbed.",
-      "Use morning and night for best results."
-    ],
-    "key_features": [
-      "Lightens dark spots and hyper-pigmentation",
-      "Evens out skin tone",
-      "Nourishes and clears dark spots",
-      "Leaves skin silky and smooth"
-    ],
-    "seo": [
-      "xwhite face cleanser",
-      "xwhite glow face cream",
-      "dark spot removal combo",
-      "hyper-pigmentation treatment",
-      "skin lightening combo",
-      "even skin tone skincare",
-      "natural face cleanser and cream",
-      "smooth skin treatment",
-      "radiant skin combo",
-      "scientifically backed skincare"
-    ],
-    "rating": {
-      "rate": 2.9,
-      "count": 470
-    }
-  },
-  {
-    "id": 11,
-    "title": "Itching Solution",
-    "mini": false,
-    "price": 400.0,
-    "images": [
-      "itching-solution-1",
-      "itching-solution"
-    ],
-    "description": "It’s mostly recommended for people that deal with water or environmental skin conditions. It helps treat bathing water and makes it safer to use without any issues.",
-    "category": "body scrubs",
-    "image": "itching-solution",
-    "currency": "TL",
-    "net_weight": "150g",
-    "skin_type": "Suitable for all skin types",
-    "how_to_use": [
-      "Add just a teaspoon of the solution inside bathing water.",
-      "Bathe as usual.",
-      "Apply your oil or body moisturizer immediately after the bath."
-    ],
-    "key_features": [
-      "Treats bathing water",
-      "Safe for all skin types",
-      "Helps with environmental skin conditions",
-      "Easy to use"
-    ],
-    "seo": [
-      "itching solution",
-      "skin care for water conditions",
-      "bathing water treatment",
-      "environmental skin care",
-      "skin itching relief",
-      "safe bathing solution",
-      "skin moisturizing treatment",
-      "anti-itching product",
-      "skin protection",
-      "water safety for skin"
-    ],
-    "rating": {
-      "rate": 4.8,
-      "count": 319
-    }
-  },
-  {
-    "id": 12,
-    "title": "Caramel Black Soap",
-    "mini": false,
-    "price": 600.0,
-    "images": [
-      "caramel-black-soap-1",
-      "caramel-black-soap"
-    ],
-    "description": "Prevents rashes, eczema, itching, and scaly skin. Removes blemishes, relieves acne, maintains the skin's original color and texture, cleanses pores, and rejuvenates the skin, leaving it smooth, fresh, and clean.",
-    "category": "Body scrubs",
-    "image": "caramel-black-soap",
-    "currency": "TL",
-    "net_weight": "250g",
-    "skin_type": "Suitable for all skin types",
-    "how_to_use": [
-      "Use morning and night.",
-      "Apply Rose Glow Body Oil for a more natural brown-looking appearance."
-    ],
-    "key_features": [
-      "Prevents rashes, eczema, and itching",
-      "Removes blemishes and relieves acne",
-      "Maintains skin's original color and texture",
-      "Cleanses pores and rejuvenates skin"
-    ],
-    "seo": [
-      "caramel black soap",
-      "natural skincare soap",
-      "acne relief soap",
-      "eczema prevention soap",
-      "skin rejuvenation soap",
-      "blemish removal soap",
-      "pore cleansing soap",
-      "skin texture maintenance",
-      "rash prevention soap",
-      "smooth and clean skin"
-    ],
-    "rating": {
-      "rate": 1.9,
-      "count": 100
-    }
-  },
-  {
-    "id": 13,
-    "title": "Glam Glow Face Cream - Collagen & Niacinamide Infused Skin Food for Glow & Hydration",
-    "mini": false,
-    "price": 300.0,
-    "images": [
-      "glam-glow-face"
-      
-    ],
-    "description": "Our Glam Glow Face Cream is a luxurious skin food infused with hydrolyzed collagen and niacinamide. Designed to deliver a radiant glow, this cream brightens, hydrates, and protects your skin while smoothing and rejuvenating it. Perfect for individuals with brown and bright skin tones, this 20g cream is your go-to solution for a healthy, glowing complexion.",
-    "category": "face creams",
-    "image": "glam-glow-face",
-    "currency": "TL",
-    "net_weight": "20g",
-    "skin_type": "Best for brown and bright skin tones",
-    "how_to_use": [
-      "Cleanse your face thoroughly.",
-      "Take a small amount of Glam Glow Face Cream and apply it evenly to your face and neck.",
-      "Gently massage in upward circular motions until fully absorbed.",
-      "Use daily in the morning and evening for best results."
-    ],
-    "key_features": [
-      "Infused with hydrolyzed collagen and niacinamide",
-      "Brightens and evens skin tone",
-      "Deeply hydrates and nourishes the skin",
-      "Promotes a radiant, glowing complexion",
-      "Smooths and rejuvenates skin texture",
-      "Protects skin from environmental stressors"
-    ],
-    "seo": [
-      "glow face cream",
-      "collagen face cream",
-      "niacinamide face cream",
-      "skin brightening cream",
-      "hydrating face cream",
-      "radiant skin cream",
-      "best cream for glowing skin",
-      "face cream for brown skin",
-      "luxury skincare",
-      "Glam Glow Face Cream"
-    ],
-    "rating": { "rate": 4.7, "count": 200 }
-  },
- 
-  {
-    "id": 14,
-    "title": "Rose Glow Oil",
-    "mini": true,
-    "price": 400.0,
-    "images": [
-      "rose-glow-oil",
-      "original-glow-oil"
-    ],
-    "description": "Suitable for dark skin persons that wish to achieve a more refined brown skin tone. It maintains the skin's original texture, fades pigmentation, and keeps the skin moisturized all day.",
-    "category": "Body Oils",
-    "image": "original-glow-oil",
-    "currency": "tl",
-    "net_weight": "250ml",
-    "skin_type": "Suitable for dark skin",
-    "how_to_use": [
-      "Apply a small amount of the oil to your skin.",
-      "Gently massage in circular motions until fully absorbed.",
-      "Use every day for a quality result."
-    ],
-    "key_features": [
-      "Maintains the skin's original texture",
-      "Fades pigmentation on dark skin",
-      "Keeps the skin moisturized all day"
-    ],
-    "seo": [
-      "rose glow oil",
-      "rose glow body oil",
-      "dark skin moisturizer",
-      "skin pigmentation treatment",
-      "refined brown skin tone",
-      "body oil for dark skin",
-      "skin hydration oil",
-      "daily skincare oil",
-      "natural skin glow oil",
-      "dark skin care product",
-      "moisturizing body oil"
-    ],
-    "rating": {
-      "rate": 3.9,
-      "count": 70
-    }
-  },
-  {
-    "id": 15,
-    "title": "Lightnizer Xtra Lightning Body Oil",
-    "mini": true,
-    "price": 450.0,
-    "images": [
-      "lighting-body-oil-1",
-      "lighting-body-oil"
-    ],
-    "description": "This silky lightning body oil is designed to keep the skin looking visibly light and clear. It deeply nourishes the skin, keeps it smooth and silky, and fights aging and wrinkles.",
-    "category": "Body Oils",
-    "image": "lighting-body-oil",
-    "currency": "TL",
-    "net_weight": "250ml",
-    "skin_type": "Suitable for all skin types",
-    "how_to_use": [
-      "Apply a small amount of the oil to your skin.",
-      "Gently massage in circular motions until fully absorbed.",
-      "Use only at night before bed."
-    ],
-    "key_features": [
-      "Deeply nourishes the skin",
-      "Keeps the skin smooth and silky",
-      "Fights aging and wrinkles"
-    ],
-    "seo": [
-      "lightnizer xtra lightning body oil",
-      "skin lightening oil",
-      "anti-aging body oil",
-      "smooth and silky skin oil",
-      "night skincare oil",
-      "wrinkle reduction oil",
-      "skin nourishing oil",
-      "radiant skin treatment",
-      "natural body oil",
-      "visible skin lightening"
-    ],
-    "rating": {
-      "rate": 3,
-      "count": 400
-    }
-  }
- ]
+  ]

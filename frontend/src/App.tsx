@@ -35,12 +35,12 @@ const App = () => {
         ) : (
           <div>
             <Router >
-              <div className="fixed top-0 z-[50]">
+              <div className="w-full z-[50]">
                   <Navbar />
               </div>
               <Suspense fallback={<Loadingscreen />}>
                 
-                  <div className="relative top-28 ">
+                  <div className="relative">
                     <Routes>
                       <Route path="/" element={<Homepage />} />
                       <Route path="/home" element={<Homepage />} />

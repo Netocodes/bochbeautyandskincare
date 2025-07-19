@@ -1,10 +1,18 @@
 import { Accordion } from "flowbite-react";
 import { Link } from "react-router-dom";
+import Threads from "../blocks/Backgrounds/Threads/Threads";
 
 const FAQsection = () => {
   return (
-    <div className="bg-gray-50 font-serif py-12">
-      <div className="w-full md:max-w-[65rem] mx-auto text-center">
+    <div className="relative bg-gray-50 font-serif py-12 z-50">
+      <div className="z-10 bottom-0" style={{ width: '100%', height: '200px', position: 'absolute' }}>
+  <Threads
+    amplitude={3.3}
+    distance={0.6}
+    enableMouseInteraction={false}
+  />
+</div>
+      <div className="w-full md:max-w-[65rem] mx-auto text-center z-[99]">
         <h1 className="text-3xl md:text-5xl px-6 md:px-0 text-gray-700 font-semibold tracking-tight dark:text-white">
           These are our frequently asked questions
         </h1>
@@ -12,7 +20,7 @@ const FAQsection = () => {
           We have Answers
         </p>
       </div>
-      <div className="md:w-[56rem] px-4 mx-auto my-6">
+      <div className="w-full md:w-[46rem] px-4 mx-auto my-6">
         <Accordion
           collapseAll
           className="bg-gray-100 shadow-lg border border-[#8c2643] "
@@ -93,7 +101,7 @@ To explore our range of products designed for skin whitening, head over to our S
             </Accordion.Content>
           </Accordion.Panel>
           <div className="w-full max-w-7xl mx-auto bg-[#f8e6e6] py-3 md:py-12 px-4 md:px-8 shadow-lg rounded-b-lg">
-            <h2 className="text-sm text-[#450707] lg:text-xl text-justify md:text-center ">Do you have a question, Ask us by <a className="underline text-blue-500" href="https://wa.me/+905384085304?text=Hello%2C%20I%27m%20interested%20in%20your%20services%21">clicking here</a> to be redirected to out whatsapp account</h2>
+            <h2 className="text-sm text-[#450707] lg:text-xl text-justify md:text-center ">Do you have a question, Ask us by <a className="underline text-blue-500" href="https://wa.me/+905384085304?text=Hello%2C%20I%27m%20interested%20in%20your%20services%21">clicking here</a> to be redirected to our whatsapp account</h2>
           </div>
         </Accordion>
       </div>

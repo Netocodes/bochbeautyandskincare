@@ -27,14 +27,14 @@ export const Navbar: React.FC = () => {
   ];
 
   return (
-    <div className="bg-black/10">
-      <div className="px-2 fixed top-0 mx-auto w-full bg-[#e2cfcfab]  md:bg-gray-500 md:bg-clip-padding md:backdrop-filter  md:backdrop-blur-sm md:bg-opacity-40 md:backdrop-saturate-100 md:backdrop-contrast-10">
-        <nav className="bg-[#8c2643]  z-[50] shadow-lg py-1 w-full md:max-w-[56rem] lg:max-w-[76rem] rounded-lg my-3 md:rounded-full mx-auto flex items-center justify-between  px-8 md:px-20">
+    <div className="w-full bg-black/10 ">
+      <div className="px-2 p-2 w-full fixed top-0 z-[990] bg-[#e2cfcfab]  md:bg-gray-500 md:bg-clip-padding md:backdrop-filter  md:backdrop-blur-sm md:bg-opacity-40 md:backdrop-saturate-100 md:backdrop-contrast-10 ">
+        <nav className="bg-[#8c2643]   z-[50] shadow-lg py-1 w-full md:max-w-[56rem] lg:max-w-[76rem] rounded-lg  md:rounded-full mx-auto flex items-center justify-between  px-8 md:px-20">
           {/* logo */}
           <div className="w-[130px] h-[auto] bg-[#852743]/50 rounded-lg md:w-[150px] md:h-auto">
             {/* <h1 className="w-[80px] h-[60px] bg-white">Boch</h1> */}
             <img
-              className="object-contain w-full h-[70px]"
+              className="object-contain w-full h-[65px]"
               src={Logo}
               alt="Navbar logo"
             />
@@ -57,19 +57,19 @@ export const Navbar: React.FC = () => {
                     // activeClassName="text-[#f6f6f6] underline decoration-white underline-offset-8"
                     to={items.link}
                   >
-                    <li>{items.text}</li>
+                    <li className="text-md">{items.text}</li>
                   </NavLink>
                 </ul>
               </div>
             ))}
           </div>
           {/* Mobile Screen */}
-          <div className="flex text-white items-center gap-x-3">
+          <div className="flex text-white items-center gap-x-1">
             <div  className={isOpen ? "hidden" : "lg:flex flex-row gap-x-3"}>
               <NavLink  to={"/cart-Items"}  className="flex hover:bg-white/25 px-2 py-3 rounded-xl text-[#f6f6f6]">
                  
                   <GiShoppingCart  className="text-[#f6f6f6]" size={32} />
-                <div className="-mt-4 -ml-2 px-1 text-lg font-normal text-[#f6f6f6]">
+                <div className="-mt-3 -ml-2 px-1 text-sm font-normal text-[#f6f6f6]">
                   {cartItems.length}
                 </div>
               
@@ -90,18 +90,18 @@ export const Navbar: React.FC = () => {
           <div
             className={
               isOpen
-                ? " bg-[#D3D3D3] z-50  fixed flex flex-col  gap-y-12 lg:hidden left-0 overflow-y-auto top-0 w-[80%] h-full border-r border-r-gray-900  ease-in-out duration-500"
+                ? " bg-[#D3D3D3] z-[999]  fixed flex flex-col  gap-y-12 lg:hidden left-0 overflow-y-auto top-0 w-[80%] h-full border-r border-r-gray-900  ease-in-out duration-500"
                 : "  ease-in-out w-[80%] duration-500 fixed top-0 bottom-0 left-[-100%]"
             }
           >
-            <div className="bg-[#D3D3D3]  z-50 flex flex-col  px-4 py-12 gap-y-12">
+            <div className="bg-[#D3D3D3]  z-50 flex flex-col  px-0  gap-y-4">
               {/* Mobile Logo */}
-              <h1 className="w-full  text-3xl font-bold text-[#8c2643] m-2">
-                Navigation Menu
-              </h1>
+<div className="bg-[#861349]">
+              <img src={Logo} className="w-32" alt="Website Logo" />
 
+</div>
               {/* Mobile Navigation Items */}
-              <div className="bg-[#f0ede3] py-6 rounded-md px-2 flex flex-col  gap-y-3">
+              <div className="bg-[#f0ede3] py-6 rounded-md px-0 flex flex-col  gap-y-3">
                 {navArray.map((item) => (
                   <ul
                     key={item.id}
@@ -110,7 +110,7 @@ export const Navbar: React.FC = () => {
                     <NavLink to={item.link}>
                       {({ isActive }) => (
                         <li
-                          className={`p-4 w-full border-y rounded-md transition ease-in duration-300 font-semibold cursor-pointer border-[#8c2643] ${
+                          className={`p-4 w-full text-center border-y rounded-md transition ease-in duration-300 font-semibold cursor-pointer border-[#8c2643] ${
                             isActive
                               ? "bg-[#8c2643] text-white"
                               : "hover:bg-[#8c2643] hover:text-white"

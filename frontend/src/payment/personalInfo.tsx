@@ -1,6 +1,14 @@
 import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { Button, Spinner, Input, Menu, MenuHandler, MenuList, MenuItem } from "@material-tailwind/react";
+import {
+  Button,
+  Spinner,
+  Input,
+  Menu,
+  MenuHandler,
+  MenuList,
+  MenuItem,
+} from "@material-tailwind/react";
 import { useWizard } from "react-use-wizard";
 import { useCountries } from "use-react-countries";
 
@@ -15,9 +23,21 @@ export type formFeilds = {
 };
 
 const PersonalInfo = () => {
-  const { register, handleSubmit, formState: { isSubmitSuccessful } } = useForm<formFeilds>();
+  const {
+    register,
+    handleSubmit,
+    formState: { isSubmitSuccessful },
+  } = useForm<formFeilds>();
   const { nextStep } = useWizard();
-  const { countries }: { countries: { name: string; flags: { svg: string }; countryCallingCode: string }[] } = useCountries();
+  const {
+    countries,
+  }: {
+    countries: {
+      name: string;
+      flags: { svg: string };
+      countryCallingCode: string;
+    }[];
+  } = useCountries();
   const [country, setCountry] = useState(0);
   const [phoneNumber, setPhoneNumber] = useState("");
 
@@ -43,7 +63,10 @@ const PersonalInfo = () => {
         <h2 className="text-3xl max-w-[65rem] md:text-4xl font-bold bg-[#8c2643] py-3 px-4 text-gray-200">
           Who are we shipping to:
         </h2>
-        <form className="mt-4 w-full md:w-[38rem]" onSubmit={handleSubmit(onSubmit)}>
+        <form
+          className="mt-4 w-full md:w-[38rem]"
+          onSubmit={handleSubmit(onSubmit)}
+        >
           {/* Full Name */}
           <input
             {...register("fullname", {
@@ -57,37 +80,52 @@ const PersonalInfo = () => {
           {/* Phone Number with Country Code */}
           <div className=" flex items-canter justify-between w-full  mb-4">
             <div className="">
-            <Menu  placement="bottom-start">
-              <MenuHandler>
-                <Button
-                  ripple={false}
-                  
-                  className="flex h-12 py-3 text-lg items-center gap-2 rounded-r-none border border-r-0 border-blue-gray-20 shadow-lg text-gray-700 bg-gray-200/25 pl-3"  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}                >
-                  <img
-                    src={flags.svg}
-                    alt={name}
-                    className="h-4 w-4 rounded-full object-cover"
-                  />
-                  {countryCallingCode}
-                </Button>
-              </MenuHandler>
-              <MenuList className="max-h-[20rem] max-w-[18rem]"  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
-                {countries.map(({ name, flags, countryCallingCode }, index) => (
-                  <MenuItem
-                    key={name}
-                    value={name}
-                    className="flex items-center gap-2"
-                    onClick={() => setCountry(index)}  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}                  >
+              <Menu placement="bottom-start">
+                <MenuHandler>
+                  <Button
+                    ripple={false}
+                    className="flex h-12 py-3 text-lg items-center gap-2 rounded-r-none border border-r-0 border-blue-gray-20 shadow-lg text-gray-700 bg-gray-200/25 pl-3"
+                    placeholder={undefined}
+                    onPointerEnterCapture={undefined}
+                    onPointerLeaveCapture={undefined}
+                  >
                     <img
                       src={flags.svg}
                       alt={name}
-                      className="h-5 w-5 rounded-full object-cover"
+                      className="h-4 w-4 rounded-full object-cover"
                     />
-                    {name} <span className="ml-auto">{countryCallingCode}</span>
-                  </MenuItem>
-                ))}
-              </MenuList>
-            </Menu>
+                    {countryCallingCode}
+                  </Button>
+                </MenuHandler>
+                <MenuList
+                  className="max-h-[20rem] max-w-[18rem]"
+                  placeholder={undefined}
+                  onPointerEnterCapture={undefined}
+                  onPointerLeaveCapture={undefined}
+                >
+                  {countries.map(
+                    ({ name, flags, countryCallingCode }, index) => (
+                      <MenuItem
+                        key={name}
+                        value={name}
+                        className="flex items-center gap-2"
+                        onClick={() => setCountry(index)}
+                        placeholder={undefined}
+                        onPointerEnterCapture={undefined}
+                        onPointerLeaveCapture={undefined}
+                      >
+                        <img
+                          src={flags.svg}
+                          alt={name}
+                          className="h-5 w-5 rounded-full object-cover"
+                        />
+                        {name}{" "}
+                        <span className="ml-auto">{countryCallingCode}</span>
+                      </MenuItem>
+                    )
+                  )}
+                </MenuList>
+              </Menu>
             </div>
             <Input
               type="tel"
@@ -100,7 +138,11 @@ const PersonalInfo = () => {
               }}
               containerProps={{
                 className: "min-w-0",
-              }} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} crossOrigin={undefined}            />
+              }}
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
+              crossOrigin={undefined}
+            />
           </div>
 
           {/* Email */}
@@ -123,7 +165,17 @@ const PersonalInfo = () => {
           <div className="flex items-center justify-end mt-6">
             <Button
               type="submit"
-              children={isSubmitSuccessful ? <Spinner className="h-8 w-8" onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} /> : "Next"}
+              children={
+                isSubmitSuccessful ? (
+                  <Spinner
+                    className="h-8 w-8"
+                    onPointerEnterCapture={undefined}
+                    onPointerLeaveCapture={undefined}
+                  />
+                ) : (
+                  "Next"
+                )
+              }
               className="bg-[#8c2643] text-md px-8 md:text-xl capitalize"
               placeholder={undefined}
               onPointerEnterCapture={undefined}
