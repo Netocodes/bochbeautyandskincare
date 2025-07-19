@@ -38,42 +38,47 @@ const DEFAULT_ITEMS: CarouselItem[] = [
     description: "Cool text animations for your projects.",
     id: 1,
     icon: <FiFileText className="h-[16px] w-[16px] text-white" />,
-    image: 'https://res.cloudinary.com/de7tyskql/image/upload/c_fill,g_auto,h_500,w_500/f_auto/q_auto/elegance-body-scrub-2?_a=DATAg1AAZAA0' 
+    image:
+      "https://res.cloudinary.com/de7tyskql/image/upload/c_fill,g_auto,h_500,w_500/f_auto/q_auto/elegance-body-scrub-2?_a=DATAg1AAZAA0",
   },
   {
     title: "Animations",
     description: "Smooth animations for your projects.",
     id: 2,
     icon: <FiCircle className="h-[16px] w-[16px] text-white" />,
-    image: 'https://res.cloudinary.com/de7tyskql/image/upload/c_fill,g_auto,h_500,w_500/f_auto/q_auto/glam-glow-face?_a=DATAg1AAZAA0' 
+    image:
+      "https://res.cloudinary.com/de7tyskql/image/upload/c_fill,g_auto,h_500,w_500/f_auto/q_auto/glam-glow-face?_a=DATAg1AAZAA0",
   },
   {
     title: "Components",
     description: "Reusable components for your projects.",
     id: 3,
     icon: <FiLayers className="h-[16px] w-[16px] text-white" />,
-    image: 'https://res.cloudinary.com/de7tyskql/image/upload/c_fill,g_auto,h_500,w_500/f_auto/q_auto/caramel-black-soap?_a=DATAg1AAZAA0' 
+    image:
+      "https://res.cloudinary.com/de7tyskql/image/upload/c_fill,g_auto,h_500,w_500/f_auto/q_auto/caramel-black-soap?_a=DATAg1AAZAA0",
   },
   {
     title: "Backgrounds",
     description: "Beautiful backgrounds and patterns for your projects.",
     id: 4,
     icon: <FiLayout className="h-[16px] w-[16px] text-white" />,
-    image: 'https://res.cloudinary.com/de7tyskql/image/upload/c_fill,g_auto,h_500,w_500/f_auto/q_auto/original-glow-oil?_a=DATAg1AAZAA0' 
+    image:
+      "https://res.cloudinary.com/de7tyskql/image/upload/c_fill,g_auto,h_500,w_500/f_auto/q_auto/original-glow-oil?_a=DATAg1AAZAA0",
   },
   {
     title: "Common UI",
     description: "Common UI components are coming soon!",
     id: 5,
     icon: <FiCode className="h-[16px] w-[16px] text-white" />,
-    image: 'https://res.cloudinary.com/de7tyskql/image/upload/c_fill,g_auto,h_500,w_500/f_auto/q_auto/elegance-body-scrub-2?_a=DATAg1AAZAA0' 
+    image:
+      "https://res.cloudinary.com/de7tyskql/image/upload/c_fill,g_auto,h_500,w_500/f_auto/q_auto/elegance-body-scrub-2?_a=DATAg1AAZAA0",
   },
 ];
 
 const DRAG_BUFFER = 0;
 const VELOCITY_THRESHOLD = 500;
 const GAP = 16;
-const SPRING_OPTIONS = { type: "spring", stiffness: 300, damping: 30 };
+const SPRING_OPTIONS = { type: "spring" as const, stiffness: 300, damping: 30 };
 
 export default function Carousel({
   items = DEFAULT_ITEMS,
@@ -197,7 +202,9 @@ export default function Carousel({
           width: itemWidth,
           gap: `${GAP}px`,
           perspective: 1000,
-          perspectiveOrigin: `${currentIndex * trackItemOffset + itemWidth / 2}px 50%`,
+          perspectiveOrigin: `${
+            currentIndex * trackItemOffset + itemWidth / 2
+          }px 50%`,
           x,
         }}
         onDragEnd={handleDragEnd}
@@ -212,6 +219,7 @@ export default function Carousel({
             -(index - 1) * trackItemOffset,
           ];
           const outputRange = [90, 0, -90];
+          // eslint-disable-next-line react-hooks/rules-of-hooks
           const rotateY = useTransform(x, range, outputRange, { clamp: false });
           return (
             <motion.div
@@ -225,15 +233,18 @@ export default function Carousel({
                 width: itemWidth,
                 height: round ? itemWidth : "100%",
                 rotateY: rotateY,
-                ...(round && { borderRadius: "50%" }),   
+                ...(round && { borderRadius: "50%" }),
               }}
               transition={effectiveTransition}
             >
               <div className="w-full h-72">
-                
-           <img className="w-full h-full object-cover" src={item.image} alt="Carousel Card Image" loading="lazy"  />
+                <img
+                  className="w-full h-full object-cover"
+                  src={item.image}
+                  alt="Carousel Card Image"
+                  loading="lazy"
+                />
               </div>
-              
             </motion.div>
           );
         })}
@@ -253,8 +264,8 @@ export default function Carousel({
                     ? "bg-white"
                     : "bg-[#da4a4a]"
                   : round
-                    ? "bg-[#555]"
-                    : "bg-[rgba(239,233,233,0.4)]"
+                  ? "bg-[#555]"
+                  : "bg-[rgba(239,233,233,0.4)]"
               }`}
               animate={{
                 scale: currentIndex % items.length === index ? 1.2 : 1,
