@@ -17,7 +17,12 @@ const HeroSection = () => {
       className="relative h-screen md:h-[85dvh] mt-20 md:mt-20  font-serif bg-fixed overflow-hidden"
     >
       <div className="absolute w-full h-full inset-0 ">
-        <Threads amplitude={3.3} color={[162, 0, 255]} distance={0.8 } enableMouseInteraction={true} />
+        <Threads
+          amplitude={2.3}
+          color={[162, 0, 255]}
+          distance={0.8}
+          enableMouseInteraction={true}
+        />
       </div>
 
       <div className="absolute w-full h-screen gridlay items-center justify-center gap-2  text-center z-[99] overflow-y-auto overflow-hidden">
