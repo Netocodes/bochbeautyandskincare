@@ -1,17 +1,5 @@
 import { createContext } from "react";
-
-export type Product = {
-  
-  id: number;
-  title: string;
-  price: number;
-  description: string;
-  category: string;
-  image: string;
-  imageUrl: string;
-  quantity: number;
-  rating: { rate: number; count: number };
-};
+import { Product } from "../components/ppProducts";
 export type CartContextType = {
   cartItems: Product[];
   like: Product[];

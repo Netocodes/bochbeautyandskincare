@@ -36,9 +36,9 @@ const AdProduct = () => {
         <div className="w-full md:max-w-[65rem]  px-8 py-14 sm:px-6 lg:px-8 lg:py-14 mx-auto">
           <div className="md:grid md:grid-cols-2 md:items-center md:gap-2 xl:gap-12">
             {/* image div */}
-            <div className="w-full md:max-w-lg h-64 bg-[#861349] -mt-32 p-1 rounded-2xl">
+            <div className="w-full md:max-w-lg h-64 md:h-72 bg-[#861349] -mt-32 p-1 rounded-2xl">
               <img
-                className="w-full h-full object-cover object-center rounded-2xl"
+                className="w-full h-full object-center rounded-2xl"
                 src={
                   "https://res.cloudinary.com/de7tyskql/image/upload/f_auto/q_auto/restoration-body-oil?_a=DATAg1AAZAA0"
                 }
