@@ -1,24 +1,25 @@
 import { ReactNode, useEffect, useState } from "react";
-import { Product } from "./cartContext";
+import { Product } from "../components/ppProducts";
 import { CartContext } from "./cartContext";
 import { Toaster, toast } from "sonner";
 type providerType = { children: ReactNode };
 export const CartProvider = ({ children }: providerType) => {
   const [cartItems, setCartItems] = useState<Product[]>([]);
   const [like, setLiked] = useState<Product[]>([]);
- 
+
   useEffect(() => {
-  window.localStorage.setItem("ProductCart", JSON.stringify(cartItems))
-  // console.log("Sent Items to local Storage")
+    window.localStorage.setItem("ProductCart", JSON.stringify(cartItems));
+    // console.log("Sent Items to local Storage")
   }, [cartItems]);
 
-  const data = window.localStorage.getItem("ProductCart")
- useEffect(() => {
-   if(data !== null){ const dataAch = JSON.parse(data);
-    
-    setCartItems(dataAch)
-   }
- }, [])
+  const data = window.localStorage.getItem("ProductCart");
+  useEffect(() => {
+    if (data !== null) {
+      const dataAch = JSON.parse(data);
+
+      setCartItems(dataAch);
+    }
+  }, []);
 
   const addToCart = (item: Product, quantity: number) => {
     if (item !== null && item !== undefined) {
@@ -27,7 +28,6 @@ export const CartProvider = ({ children }: providerType) => {
         toast.warning(
           "Item is Already in Your cart, Click on the cart icon to update Quantity"
         );
-      
       } else {
         // console.log(`added Suscefully`);
         setCartItems((prevItems) => [...prevItems, { ...item, quantity }]);
@@ -63,8 +63,8 @@ export const CartProvider = ({ children }: providerType) => {
     return updatedCart;
   };
   const clearCart = () => {
-    setCartItems([])
-  }
+    setCartItems([]);
+  };
   return (
     <CartContext.Provider
       value={{
@@ -79,12 +79,7 @@ export const CartProvider = ({ children }: providerType) => {
       }}
     >
       {children}
-      <Toaster
-        richColors
-        className="  z-[999]"
-        position="bottom-right"
-      />
-      ;
+      <Toaster richColors className="  z-[999]" position="bottom-right" />;
     </CartContext.Provider>
   );
 };

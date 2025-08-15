@@ -22,21 +22,26 @@ const AdProduct = () => {
     }
   };
   return (
-    <div className="mt-8">
-      <motion.section
-        className="h-auto lg:h-[85dvh] flex items-center justify-center overflow-hidden"
-        initial={{ opacity: 0, y: "20%" }}
-        whileInView={{ opacity: 1, y: 0 }} // Move to normal position and become visible
-        // viewport={{ once: false }}
-        transition={{
-          duration: 1,
-          ease: "easeIn",
-        }}
-      >
-        <div className="w-full md:max-w-[65rem]  px-8 py-14 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-          <div className="md:grid md:grid-cols-2 md:items-center md:gap-2 xl:gap-12">
+    <motion.div
+      className="mt-8"
+      initial={{ opacity: 0, y: "20%" }}
+      whileInView={{ opacity: 1, y: 0 }} // Move to normal position and become visible
+      // viewport={{ once: false }}
+      transition={{
+        duration: 1,
+        ease: "easeIn",
+      }}
+    >
+      <section className="h-auto lg:h-[85dvh] flex items-center justify-center overflow-hidden">
+        <div className="w-full md:max-w-[75rem]  px-8 sm:px-6 lg:px-8  mx-auto">
+          <div className="flex items-center justify-center flex-col gap-2 py-8 lg:py-16">
+            <h1 className="text-2xl text-center underline underline-offset-4 decoration-[#9e436f] text-gray-700">
+              Chiri's favourite Recommendation
+            </h1>
+          </div>
+          <div className="md:grid md:grid-cols-[2fr_4fr] md:items-center  md:gap-2 xl:gap-12">
             {/* image div */}
-            <div className="w-full md:max-w-lg h-64 md:h-72 bg-[#861349] -mt-32 p-1 rounded-2xl">
+            <div className="w-full md:max-w-lg h-auto md:h-72 bg-[#861349]  p-1 rounded-2xl">
               <img
                 className="w-full h-full object-center rounded-2xl"
                 src={
@@ -48,7 +53,7 @@ const AdProduct = () => {
             </div>
             {/* image div */}
 
-            <div className="py-8 md:px-8">
+            <div className="py-2 mt-8 md:mt-2 md:px-8">
               <div className="">
                 <div className="space-y-1 text-left">
                   <h2 className="font-bold w-full font-sans px-4  tracking-wider text-left pb-3 text-2xl lg:text-2xl text-gray-900">
@@ -123,9 +128,9 @@ const AdProduct = () => {
             </div>
           </div>
         </div>
-      </motion.section>
+      </section>
       <SlidingText Information="  We deliver worldwide, including Nigeria, Turkey, and more. We use reliable shipping and dispatch services to get your products to you" />
-    </div>
+    </motion.div>
   );
 };
 

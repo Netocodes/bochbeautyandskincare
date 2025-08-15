@@ -5,7 +5,19 @@ import { Button } from "@material-tailwind/react";
 import { FaInstagram, FaWhatsapp, FaTiktok } from "react-icons/fa";
 import ShinyText from "../blocks/TextAnimations/ShinyText/ShinyText.js";
 import Threads from "../blocks/Backgrounds/Threads/Threads.js";
+import { useMediaQuery } from "react-responsive";
 const HeroSection = () => {
+  const newLocal =
+    "https://www.instagram.com/boch.beauty_skincare?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==";
+  const isMobilePhone = useMediaQuery({
+    query: "(min-width: 324px) and (max-width: 480px)",
+  });
+  const isSmallScreen = useMediaQuery({
+    query: "(max-width: 320px)",
+  });
+  const isTablet = useMediaQuery({
+    query: "(min-width: 500px) and (max-width: 900px)",
+  });
   return (
     <div
       style={{
@@ -14,7 +26,9 @@ const HeroSection = () => {
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
       }}
-      className="relative h-screen md:h-[85dvh] mt-20 md:mt-20  font-serif bg-fixed overflow-hidden"
+      className={`relative  ${isSmallScreen ? "h-[150dvh]" : "h-[100dvh]"} ${
+        isTablet ? "h-[85dvh]" : " h-dvh"
+      }   bg-fixed overflow-hidden`}
     >
       <div className="absolute w-full h-full inset-0 ">
         <Threads
@@ -25,23 +39,31 @@ const HeroSection = () => {
         />
       </div>
 
-      <div className="absolute w-full h-screen gridlay items-center justify-center gap-2  text-center z-[99] overflow-y-auto overflow-hidden">
-        <div className=" w-full py-4 order-2 md:order-1 text-white">
+      <div
+        className={`absolute w-full h-auto lg:h-[85dvh] gridlay  ${
+          isTablet ? "md:flex flex-col gap-y-8" : ""
+        } py-8 items-center justify-center gap-2  text-center z-[99] overflow-y-auto lg:overflow-y-hidden overflow-hidden`}
+      >
+        <div className=" w-full py-4 order-1 text-white cormorant">
           <ShinyText
             disabled={false}
             speed={3}
-            className="text-4xl text-white "
+            className="text-4xl text-white lg:text-5xl font-bold"
           />
 
-          <p className="uppercase text-sm py-6 px-2">
-            With our collections of skin and face products
+          <p className=" text-sm md:text-lg font-light py-6 max-w-xl mx-auto">
+            At boch, we offer a set of carefully curated skin care products like
+            lotions, scrubs , oils, cleansers, face Creams and more... Made to
+            satisfy and re-organize your skin naturally and efficiently.
           </p>
           <div className="flex items-center justify-center gap-4">
             <Button
               placeholder={"Schedule Call"}
               onPointerEnterCapture={""}
               onPointerLeaveCapture={""}
-              className="py-2 text-sm font-semibold text-gray-200 bg-gray-200/25 border-4 rounded-tr-full hover:bg-[#861349] hover:text-white hover:border-none border-[#861349] capitalize"
+              className="py-2 text-sm font-semibold text-gray-200 bg-green-700 capitalize"
+              onResize={undefined}
+              onResizeCapture={undefined}
             >
               <a href="/shop-page">Schedule call 📞</a>
             </Button>
@@ -49,15 +71,17 @@ const HeroSection = () => {
               placeholder={"Visit Shop"}
               onPointerEnterCapture={""}
               onPointerLeaveCapture={""}
-              className="py-2 text-sm font-semibold text-gray-200  hover:text-gray-700 bg-[#861349] hover:bg-gray-200/25 border-4 rounded-tl-full border-[#861349] capitalize"
+              className="py-4 px-6 text-sm font-semibold text-gray-200 bg-[#8c2643] hover:text-gray-700 capitalize"
+              onResize={undefined}
+              onResizeCapture={undefined}
             >
-              <a href="/shop-page">Visit Shop 🛍️</a>
+              <a href="/shop-page"> 🛍️ Visit Shop</a>
             </Button>
           </div>
           <div className="flex flex-col items-center justify-center gap-y-2 mt-6">
             <h2 className="font-semibold">Reach out on our Socials @:</h2>
             <div className="flex items-center gap-x-6 py-2">
-              <a href="https://www.instagram.com/boch.beauty_skincare?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+              <a href={newLocal}>
                 <FaInstagram className="size-8" />
               </a>
               <a href="https://wa.me/+905384085304?text=Hello%2C%20I%27m%20interested%20in%20your%20services%21">
@@ -69,10 +93,10 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-        <div className="order-1 md:order-2 md:-mt-5 md:px-4">
-          <div className="">
+        <div className="order-2 md:-mt-5 md:px-4">
+          <div className="w-full flex items-center justify-center">
             <Carousel
-              baseWidth={350}
+              baseWidth={isMobilePhone ? 350 : 500}
               autoplay={true}
               autoplayDelay={3000}
               pauseOnHover={true}

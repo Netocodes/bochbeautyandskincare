@@ -1,14 +1,14 @@
-require("dotenv").config();
-const express = require("express");
-const cors = require("cors");
-const rateLimiter = require("express-rate-limit");
-const helmet = require("helmet");
+import "dotenv/config";
+import express from "express";
+import cors from "cors";
+import rateLimiter from "express-rate-limit";
+import helmet from "helmet";
+import router from "./routes/email.js";
+import pkg from "body-parser";
+const { json: _json, urlencoded } = pkg;
 
-const bodyParser = require("body-parser");
-const Email = require("./routes/email");
-const Suscribe = require("./routes/suscribe");
-const Proof = require("./routes/proof");
-let port = process.env.PORT_NUMBER || 5000;
+let port = process.env.PORT || 8081;
+
 const limiter = rateLimiter({
   windowMs: 1 * 60 * 1000, // 15 minutes
   max: 20, // Limit each IP to 100 requests per window
@@ -18,18 +18,12 @@ const limiter = rateLimiter({
 const app = express();
 //middleWare
 app.use(cors());
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.json());
+app.use(_json());
+app.use(urlencoded({ extended: true }));
 app.use(helmet());
 app.disable("x-powered-by");
 app.use(limiter);
-
-app.post("/send-email", Email);
-// app.get('/', Email)
-
-app.post("/suscribe", Suscribe);
-app.post("/upload-proof", Proof);
+app.use("", router);
 
 app.listen(port, () => {
   console.log(`server is live at: port ${port}`);

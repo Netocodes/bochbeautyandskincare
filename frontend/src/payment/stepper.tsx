@@ -6,15 +6,14 @@ import Address from "./address";
 import Payment from "./payment";
 
 const StepperForm = () => {
-  
-  return(
-    <div className="w-full h-full">
-         <Wizard>
-           <PersonalInfo />
-           <Address  />
-           <Payment />
-         </Wizard>
-       </div> 
-  )
-}
+  return (
+    <div className="w-full  flex items-center justify-center">
+      <Wizard>
+        <PersonalInfo />
+        <Address />
+        <Payment />
+      </Wizard>
+    </div>
+  );
+};
 export default StepperForm;

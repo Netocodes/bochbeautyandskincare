@@ -27,7 +27,7 @@ const CartComponent = () => {
           <ul className="my-4 flex flex-col gap-y-6">
             {cartItems.map((items, key) => (
               <li
-                className="border-y border-4 bg-[#eee5e5] shadow-2xl flex flex-col space-y-3 py-8 px-4 text-left md:flex-row sm:space-x-5 sm:space-y-0"
+                className="border-y border-4 bg-[#f5f4f4] shadow-2xl flex flex-col space-y-3 py-8 px-4 text-left md:flex-row sm:space-x-5 sm:space-y-0"
                 key={key}
               >
                 <div className="flex justify-between shrink-0">
@@ -70,10 +70,10 @@ const CartComponent = () => {
                     </div>
 
                     <div className="mt-4 flex items-end justify-between sm:mt-0 sm:items-start sm:justify-end">
-                      <h2 className="flex items-center gap-x-4 text-3xl">
+                      <h2 className="flex items-center gap-x-2 text-3xl">
                         {" "}
                         Price:
-                        <p className="shrink-0 w-20  flex  items-center    leading-tight font-normal text-gray-900 sm:order-2 sm:ml-8 sm:text-right">
+                        <p className="shrink-0 w-20  flex  items-center    leading-tight font-normal text-gray-900 sm:order-2  sm:text-right">
                           {items.price}{" "}
                           <small className="text-md px-1">tl</small>
                         </p>

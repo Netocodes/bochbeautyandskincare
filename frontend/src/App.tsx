@@ -26,7 +26,6 @@ const App = () => {
   const ErrorPage = lazy(() => import("./components/error-page"));
   // Layout Routes
 
-  
   return (
     <div>
       <CartProvider>
@@ -34,36 +33,33 @@ const App = () => {
           <ComingSoonPage />
         ) : (
           <div>
-            <Router >
-              <div className="w-full z-[50]">
-                  <Navbar />
+            <Router>
+              <div className="w-full sticky top-0 z-[990]">
+                <Navbar />
               </div>
               <Suspense fallback={<Loadingscreen />}>
-                
-                  <div className="relative">
-                    <Routes>
-                      <Route path="/" element={<Homepage />} />
-                      <Route path="/home" element={<Homepage />} />
-                      <Route path="/productPage" element={<ProductPage />} />
-                      <Route path="/Contact" element={<ContactUs />} />
-                      <Route path="/payment-Page" element={<PaymentPage />} />
-                      <Route path="/cart-Items" element={<CartPage />} />
-                      <Route path="/shipping" element={<Shipping />} />
-                      <Route path="/Services" element={<ServicePage />} />
-                      <Route path="/verify-payment" element={<Upload />} />
-                      <Route path="/order-confirmed" element={<OrderConfirm />} />
-                      <Route path="/verify-success" element={<VerifySuccess />} />
-                      <Route path="/currency" element={<Currency />} />
-                      <Route path="/terms-and-conditions" element={<Privacy />} />
-                      <Route
-                        path="/product/productDetail/"
-                        element={<ProductDetail />}
-                      />
-                      <Route path="*" element={<ErrorPage />} />
-
-                    </Routes>
-                  </div>
-             
+                <div className="relative">
+                  <Routes>
+                    <Route path="/" element={<Homepage />} />
+                    <Route path="/home" element={<Homepage />} />
+                    <Route path="/productPage" element={<ProductPage />} />
+                    <Route path="/Contact" element={<ContactUs />} />
+                    <Route path="/payment-Page" element={<PaymentPage />} />
+                    <Route path="/cart-Items" element={<CartPage />} />
+                    <Route path="/shipping" element={<Shipping />} />
+                    <Route path="/Services" element={<ServicePage />} />
+                    <Route path="/verify-payment" element={<Upload />} />
+                    <Route path="/order-confirmed" element={<OrderConfirm />} />
+                    <Route path="/verify-success" element={<VerifySuccess />} />
+                    <Route path="/currency" element={<Currency />} />
+                    <Route path="/terms-and-conditions" element={<Privacy />} />
+                    <Route
+                      path="/product/productDetail/"
+                      element={<ProductDetail />}
+                    />
+                    <Route path="*" element={<ErrorPage />} />
+                  </Routes>
+                </div>
               </Suspense>
             </Router>
           </div>

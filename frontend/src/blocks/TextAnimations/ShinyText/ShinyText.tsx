@@ -2,34 +2,40 @@
 	Installed from https://www.reactbits.dev/ts/tailwind/
 */
 
-import React from 'react';
+import React from "react";
 
 interface ShinyTextProps {
-  
-    disabled?: boolean;
-    speed?: number;
-    className?: string;
+  disabled?: boolean;
+  speed?: number;
+  className?: string;
 }
 
-const ShinyText: React.FC<ShinyTextProps> = ({  disabled = false, speed = 5, className = '' }) => {
-    const animationDuration = `${speed}s`;
+const ShinyText: React.FC<ShinyTextProps> = ({
+  disabled = false,
+  speed = 5,
+  className = "",
+}) => {
+  const animationDuration = `${speed}s`;
 
-    return (
-        <div
-            className={`text-[#931212dc] bg-clip-text inline-block ${disabled ? '' : 'animate-shine'} ${className}`}
-            style={{
-                backgroundImage: 'linear-gradient(120deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 60%)',
-                backgroundSize: '200% 100%',
-                WebkitBackgroundClip: 'text',
-                animationDuration: animationDuration,
-            }}
-        >
-            <h1>
-                No Hype, <br />
-                 Just Honest Skincare That Works.
-            </h1>
-        </div>
-    );
+  return (
+    <div
+      className={`text-[#931212dc] lg:text-5xl bg-clip-text inline-block ${
+        disabled ? "" : "animate-shine"
+      } ${className}`}
+      style={{
+        backgroundImage:
+          "linear-gradient(120deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0) 60%)",
+        backgroundSize: "200% 100%",
+        WebkitBackgroundClip: "text",
+        animationDuration: animationDuration,
+      }}
+    >
+      <h1>
+        No Hype, <br />
+        Just Honest Skincare That Works.
+      </h1>
+    </div>
+  );
 };
 
 export default ShinyText;

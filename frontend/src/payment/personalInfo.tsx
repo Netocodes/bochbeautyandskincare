@@ -11,6 +11,7 @@ import {
 } from "@material-tailwind/react";
 import { useWizard } from "react-use-wizard";
 import { useCountries } from "use-react-countries";
+import BlurText from "../blocks/TextAnimations/BlurText/BlurText";
 
 export type formFeilds = {
   fullname: string;
@@ -59,12 +60,18 @@ const PersonalInfo = () => {
 
   return (
     <div>
-      <div className="text-center w-full bg-gray-800 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-20 backdrop-saturate-50 backdrop-contrast-150 max-w-xl md:max-w-7xl mx-auto px-4 py-5 md:py-12 flex flex-col md:flex-row gap-y-8 gap-x-20 items-center justify-around">
-        <h2 className="text-3xl max-w-[65rem] md:text-4xl font-bold bg-[#8c2643] py-3 px-4 text-gray-200">
-          Who are we shipping to:
+      <div className="text-center w-full  grid grid-cols-1 md:grid-cols-[2fr_4fr] items-center justify-center gap-x-12 bg-gray-800 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-20 backdrop-saturate-50 backdrop-contrast-150 max-w-xl md:max-w-7xl mx-auto px-4 py-5 md:py-12 ">
+        <h2 className="text-3xl text-center mx-auto w-full max-w-[65rem] md:text-4xl flex items-center font-bold bg-[#8c2643] py-3 px-4 text-gray-200">
+          <BlurText
+            text="Your Contact Details"
+            delay={200}
+            animateBy="letters"
+            direction="top"
+            className="text-2xl ml-3 py-3"
+          />
         </h2>
         <form
-          className="mt-4 w-full md:w-[38rem]"
+          className="mt-4 w-full md:w-[38rem] mx-auto"
           onSubmit={handleSubmit(onSubmit)}
         >
           {/* Full Name */}
@@ -88,6 +95,8 @@ const PersonalInfo = () => {
                     placeholder={undefined}
                     onPointerEnterCapture={undefined}
                     onPointerLeaveCapture={undefined}
+                    onResize={undefined}
+                    onResizeCapture={undefined}
                   >
                     <img
                       src={flags.svg}
@@ -102,6 +111,8 @@ const PersonalInfo = () => {
                   placeholder={undefined}
                   onPointerEnterCapture={undefined}
                   onPointerLeaveCapture={undefined}
+                  onResize={undefined}
+                  onResizeCapture={undefined}
                 >
                   {countries.map(
                     ({ name, flags, countryCallingCode }, index) => (
@@ -113,6 +124,8 @@ const PersonalInfo = () => {
                         placeholder={undefined}
                         onPointerEnterCapture={undefined}
                         onPointerLeaveCapture={undefined}
+                        onResize={undefined}
+                        onResizeCapture={undefined}
                       >
                         <img
                           src={flags.svg}
@@ -142,6 +155,8 @@ const PersonalInfo = () => {
               onPointerEnterCapture={undefined}
               onPointerLeaveCapture={undefined}
               crossOrigin={undefined}
+              onResize={undefined}
+              onResizeCapture={undefined}
             />
           </div>
 
@@ -171,6 +186,8 @@ const PersonalInfo = () => {
                     className="h-8 w-8"
                     onPointerEnterCapture={undefined}
                     onPointerLeaveCapture={undefined}
+                    onResize={undefined}
+                    onResizeCapture={undefined}
                   />
                 ) : (
                   "Next"
@@ -180,6 +197,8 @@ const PersonalInfo = () => {
               placeholder={undefined}
               onPointerEnterCapture={undefined}
               onPointerLeaveCapture={undefined}
+              onResize={undefined}
+              onResizeCapture={undefined}
             />
           </div>
         </form>

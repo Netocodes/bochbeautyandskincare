@@ -27,8 +27,8 @@ export const Navbar: React.FC = () => {
   ];
 
   return (
-    <div className="w-full bg-black/10 ">
-      <div className="px-2 p-2 w-full fixed top-0 z-[990] bg-[#e2cfcfab]  md:bg-gray-500 md:bg-clip-padding md:backdrop-filter  md:backdrop-blur-sm md:bg-opacity-40 md:backdrop-saturate-100 md:backdrop-contrast-10 ">
+    <div className=" w-full bg-black/10 ">
+      <div className="px-2 p-2 w-full mt-2 sticky top-0 z-[990] bg-[#e2cfcfab]  md:bg-gray-500 md:bg-clip-padding md:backdrop-filter  md:backdrop-blur-sm md:bg-opacity-40 md:backdrop-saturate-100 md:backdrop-contrast-10 ">
         <nav className="bg-[#8c2643]   z-[50] shadow-lg py-1 w-full md:max-w-[56rem] lg:max-w-[76rem] rounded-lg  md:rounded-full mx-auto flex items-center justify-between  px-8 md:px-20">
           {/* logo */}
           <div className="w-[130px] h-[auto] bg-[#852743]/50 rounded-lg md:w-[150px] md:h-auto">
@@ -65,15 +65,15 @@ export const Navbar: React.FC = () => {
           </div>
           {/* Mobile Screen */}
           <div className="flex text-white items-center gap-x-1">
-            <div  className={isOpen ? "hidden" : "lg:flex flex-row gap-x-3"}>
-              <NavLink  to={"/cart-Items"}  className="flex hover:bg-white/25 px-2 py-3 rounded-xl text-[#f6f6f6]">
-                 
-                  <GiShoppingCart  className="text-[#f6f6f6]" size={32} />
+            <div className={isOpen ? "hidden" : "lg:flex flex-row gap-x-3"}>
+              <NavLink
+                to={"/cart-Items"}
+                className="flex hover:bg-white/25 px-2 py-3 rounded-xl text-[#f6f6f6]"
+              >
+                <GiShoppingCart className="text-[#f6f6f6]" size={32} />
                 <div className="-mt-3 -ml-2 px-1 text-sm font-normal text-[#f6f6f6]">
                   {cartItems.length}
                 </div>
-              
-                
               </NavLink>
             </div>
             <div
@@ -90,16 +90,15 @@ export const Navbar: React.FC = () => {
           <div
             className={
               isOpen
-                ? " bg-[#D3D3D3] z-[999]  fixed flex flex-col  gap-y-12 lg:hidden left-0 overflow-y-auto top-0 w-[80%] h-full border-r border-r-gray-900  ease-in-out duration-500"
+                ? " bg-[#D3D3D3] z-[999]  fixed flex flex-col  gap-y-12 lg:hidden left-0 overflow-y-auto top-0 w-[80%] h-screen border-r border-r-gray-900  ease-in-out duration-500"
                 : "  ease-in-out w-[80%] duration-500 fixed top-0 bottom-0 left-[-100%]"
             }
           >
             <div className="bg-[#D3D3D3]  z-50 flex flex-col  px-0  gap-y-4">
               {/* Mobile Logo */}
-<div className="bg-[#861349]">
-              <img src={Logo} className="w-32" alt="Website Logo" />
-
-</div>
+              <div className="bg-[#861349]">
+                <img src={Logo} className="w-32" alt="Website Logo" />
+              </div>
               {/* Mobile Navigation Items */}
               <div className="bg-[#f0ede3] py-6 rounded-md px-0 flex flex-col  gap-y-3">
                 {navArray.map((item) => (
@@ -130,16 +129,14 @@ export const Navbar: React.FC = () => {
               </div>
 
               <div className="flex items-center justify-end px-5 text-lg underline underline-offset-8 text-[#8c2643]">
-                
                 {/* <GiShoppingCart size={42} /> */}
                 <div className="px-4 flex flex-col items-center justify-center  gap-y-4 text-center font-sans">
                   {" "}
-                  {" "}
                   <span className="text-xl font-semibold leading-tight">
-                  Cart Total:  {TotalPrice()}<small className="text-md px-1">tl</small>
+                    Cart Total: {TotalPrice()}
+                    <small className="text-md px-1">tl</small>
                   </span>
                   <span>"tl" is turkish Lira (Turkey Currency)</span>
-                  
                 </div>
               </div>
             </div>
