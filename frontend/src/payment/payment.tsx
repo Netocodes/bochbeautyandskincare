@@ -48,9 +48,6 @@ const Payment = () => {
   const handleClick = async () => {
     setLoading(true);
     try {
-      // if(!isChecked){
-      //   return;
-      // }
       const response = await axios.post(
         "https://bochbeautyandskincare-production.up.railway.app/send-email",
         { requestedData }

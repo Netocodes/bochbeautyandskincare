@@ -1,14 +1,29 @@
 import { Resend } from "resend";
 const resend = new Resend(process.env.RESEND_API_KEY);
+
 export const Suscriber = (req, res) => {
+  /* Expect the data arriving in this formart
+
+  {"data":{"Email":"amaugotontee855@gmail.com"}}
+  */
   const response = req.body;
+  console.log(req);
+  console.log(res);
+
+  // check response is not empty
+  if (!response) {
+    res.status(400).json({ error: "Could not get data from req.body" });
+  }
+
   const { data } = response;
   const { Email } = data;
 
-  if (!String(Email).trim()) {
+  // Validate Email is not empty
+  if (!Email || Email.trim() == "") {
     return res.status(400).json({ error: "Email is required" });
   }
 
+  // Order mail sent to the User
   const mailOptions = {
     from: process.env.email,
     to: Email,
@@ -50,6 +65,7 @@ The Boch Beauty & Skincare Team
   `,
   };
 
+  // Order mail sent to the Shop Owner
   const ownerMailOptions = {
     from: process.env.email,
     to: process.env.owner_mail,
@@ -86,6 +102,8 @@ Subscribed On: ${new Date().toLocaleString()}
 This is an automated notification from your website's newsletter system.
 `,
   };
+
+  // Send mails Asyncronosly and send error response status code if one occurs
   (async () => {
     try {
       const response = await resend.batch.send([mailOptions, ownerMailOptions]);
@@ -99,3 +117,5 @@ This is an automated notification from your website's newsletter system.
     }
   })();
 };
+
+// To suscribe when the user add's their email to our frontend, our api is called and expects data in that format else throws an error

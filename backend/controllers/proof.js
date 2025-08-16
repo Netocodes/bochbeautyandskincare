@@ -1,22 +1,24 @@
 import { Resend } from "resend";
-// import multer from "multer";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-// Configure Multer for file uploads (in memory)
-
-// Endpoint to handle file and orderId upload
+// Endpoint to handle file and orderId upload for payment Verification
 export const Proof = (req, res) => {
   const file = req.file;
   const orderId = req.body.orderId;
 
-  if (!file || !orderId) {
-    return res.status(400).send("File and order ID are required.");
+  // validate input
+  if (!file || !orderId || orderId > 5) {
+    return res
+      .status(400)
+      .send(
+        "Payment-slip and order-ID of not more than 5 numbers are required."
+      );
   }
 
-  // Prepare email content
+  // Prepare email content for the user
   const mailOptions = {
     from: email,
-    to: "darlingwest11@gmail.com",
+    to: process.env.owner_mail,
     cc: "amaugotontee855@gmail.com",
     subject: `New Payment Proof for Order #${orderId}`,
     text: `A new payment proof has been uploaded for Order #${orderId}. Please find the attachment. and reply the costumer`,
@@ -28,6 +30,7 @@ export const Proof = (req, res) => {
     ],
   };
 
+  // asyncronosly send Confirmation mails
   (async () => {
     try {
       const { data, error } = await resend.emails.send(mailOptions);
@@ -44,3 +47,5 @@ export const Proof = (req, res) => {
     }
   })();
 };
+
+// To verify a user has paid they send their payment slip and order id for verification then their package gets sent out and notifies the user

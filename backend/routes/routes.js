@@ -6,6 +6,7 @@ import { SendOrder } from "../controllers/send-orders.js";
 import { Suscriber } from "../controllers/suscribe.js";
 import { Proof } from "../controllers/proof.js";
 const router = Router();
+// Configure Multer for file uploads (in memory)
 const upload = multer({ storage: memoryStorage() });
 
 // Home route
@@ -14,9 +15,9 @@ router.get("/", (req, res) => {
 });
 
 // Send email route
-// router.post("/send-email", SendOrder);
+router.post("/send-email", SendOrder);
 
-// router.post("/suscribe", Suscriber);
-// router.post("/upload-proof", upload.single("proof"), Proof);
+router.post("/suscribe", Suscriber);
+router.post("/upload-proof", upload.single("proof"), Proof);
 
 export default router;

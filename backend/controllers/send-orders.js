@@ -1,15 +1,11 @@
 import { Resend } from "resend";
 
-// Generate a unique order ID for each request
+// Generate a unique order ID for each request e.g 45001
 function generateOrderId() {
   return Math.floor(10000 + Math.random() * 90000).toString();
 }
 
 export const SendOrder = async (req, res) => {
-  console.log(
-    "RESEND_API_KEY:",
-    process.env.RESEND_API_KEY ? `Set` : "Missing"
-  );
   const resendClient = new Resend(process.env.RESEND_API_KEY);
   try {
     // Get the customer details from the request body
@@ -18,8 +14,8 @@ export const SendOrder = async (req, res) => {
     if (
       !personalInfo ||
       !addressData ||
-      !Array.isArray(cartItems) ||
-      total === undefined
+      cartItems.lenght() == 0 ||
+      total == 0
     ) {
       return res
         .status(400)
