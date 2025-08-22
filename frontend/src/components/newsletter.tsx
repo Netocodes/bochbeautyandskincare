@@ -2,6 +2,7 @@ import { Button, Spinner } from "@material-tailwind/react";
 import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { Toaster, toast } from "sonner";
+
 <Toaster
   richColors
   className="mt-24 md:mt-12 lg:mt-20 z-50"
@@ -20,16 +21,13 @@ const NewsLetter = () => {
   const onsubmit: SubmitHandler<news> = async (data) => {
     console.log(JSON.stringify({ data: data }));
     try {
-      const response = await fetch(
-        "https://bochbeautyandskincare-production.up.railway.app/suscribe",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ data: data }),
-        }
-      );
+      const response = await fetch(import.meta.env.VITE_NEWSLETTER, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ data: data }),
+      });
       if (!response.ok) {
         toast.warning("Could Not Suscribe try again!!!");
       }

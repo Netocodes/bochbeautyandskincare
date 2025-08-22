@@ -48,10 +48,9 @@ const Payment = () => {
   const handleClick = async () => {
     setLoading(true);
     try {
-      const response = await axios.post(
-        "https://bochbeautyandskincare-production.up.railway.app/send-email",
-        { requestedData }
-      );
+      const response = await axios.post(import.meta.env.VITE_SENDORDER, {
+        requestedData,
+      });
       console.log("This is the response from the backend", response.data);
       toast.success(response.data.message); //successful message
 

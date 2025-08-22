@@ -205,9 +205,9 @@ const Products = () => {
             >
               <Drawer.Header
                 openIcon={MdCloseFullscreen}
-                closeIcon={HiBarsArrowUp}
+                closeIcon={() => <HiBarsArrowUp />}
                 title="Filters"
-                titleIcon={HiSquaresPlus}
+                titleIcon={() => <HiSquaresPlus />}
                 onClick={handleClose}
               />
               <Drawer.Items className="drawer bg-black/15 overflow-y-auto h-full w-full md:w-[80%] mx-auto">
