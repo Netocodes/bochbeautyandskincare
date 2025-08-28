@@ -32,7 +32,7 @@ const CartComponent = () => {
               >
                 <div className="flex justify-between shrink-0">
                   <img
-                    className="h-48 w-48 max-w-full rounded-lg object-contain"
+                    className="h-48 w-48 max-w-full bg-[#811d52] rounded-lg object-contain"
                     src={items.imageUrl}
                     alt=""
                   />
@@ -98,13 +98,18 @@ const CartComponent = () => {
               </li>
             ))}
           </ul>
-
-          <div className="bg-gray-50 border border-[#8b0f4d] rounded-xl drop-shadow-2xl p-6 w-full mb-8 max-lg:max-w-xl max-lg:mx-auto">
+          <p className="text-sm flex items-center justify-end mb-5">
+            {" "}
+            <Link to="/currency" className="underline underline-offset-4">
+              Click here to convert to your currency
+            </Link>
+          </p>
+          <div className="bg-gray-50 border border-[#8b0f4d] rounded-xl drop-shadow-2xl p-6 w-full mb-8 lg:max-w-3xl lg:mx-auto">
             <div className="flex items-center justify-between w-full mb-6">
               <p className="font-normal text-xl leading-8 text-gray-600">
                 Sub Total
               </p>
-              <h6 className="font-semibold text-2xl leading-8 text-gray-900">
+              <h6 className="font-semibold text-3xl leading-8 text-gray-900">
                 {TotalPrice()}
                 <small className="text-md px-1">tl</small>
               </h6>
@@ -117,7 +122,7 @@ const CartComponent = () => {
                   base fee for people in turkey{" "}
                 </small>
               </p>
-              <h6 className="font-semibold text-xl leading-8 text-gray-900">
+              <h6 className="font-semibold text-3xl leading-8 text-gray-900">
                 200 <small className="text-md px-1">tl</small>
               </h6>
             </div>
@@ -130,12 +135,6 @@ const CartComponent = () => {
               </h6>
             </div>
           </div>
-          <p className="text-sm flex items-center justify-end">
-            {" "}
-            <Link to="/currency" className="underline underline-offset-4">
-              Click here to convert to your currency
-            </Link>
-          </p>
 
           <div className="flex w-full items-center flex-col sm:flex-row justify-center gap-3 mt-8">
             <Link to={"/productPage"}>

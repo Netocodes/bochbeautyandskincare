@@ -203,6 +203,7 @@ const Products = () => {
               position="bottom"
               className="w-full bottom-0 shadow-lg bg-[#f3f3f3]  py-10 z-50  flex-col md:flex-row items-center justify-around "
             >
+              {/*  */}
               <Drawer.Header
                 openIcon={MdCloseFullscreen}
                 closeIcon={() => <HiBarsArrowUp />}

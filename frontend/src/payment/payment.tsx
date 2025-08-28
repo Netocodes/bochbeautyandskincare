@@ -43,7 +43,7 @@ const Payment = () => {
     cartItems,
     total,
   };
-  console.log(JSON.stringify(requestedData));
+  // console.log(JSON.stringify(requestedData)); backend data request
 
   const handleClick = async () => {
     setLoading(true);
@@ -123,13 +123,13 @@ const Payment = () => {
             </motion.div>
 
             <motion.div
-              className="border rounded-2xl card-grad py-4 px-2 grid grid-cols-1 md:grid-cols-[2fr_1fr] items-center justify-between"
+              className="border rounded-2xl card-grad py-4 px-2 flex items-center justify-between"
               initial={{ opacity: 0, x: "-60%" }}
               whileInView={{ opacity: 1, x: 0 }} // Move to normal position and become visible
               viewport={{ once: false }}
               transition={{ duration: 1, ease: "easeIn" }}
             >
-              <div className="px-3 flex flex-col items-right gap-y-2">
+              <div className="px-3 flex flex-col gap-y-2">
                 <h5 className="text-white">Account Name:</h5>
                 <h2 className="ml-2 text-[#fbfbf8] text-md md:text-xl lg:text-2xl">
                   <b>Bright Chinenye Ngwu</b>

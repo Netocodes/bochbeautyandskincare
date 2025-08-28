@@ -26,9 +26,9 @@ const HeroSection = () => {
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
       }}
-      className={`relative  ${isSmallScreen ? "h-[150dvh]" : "h-[100dvh]"} ${
-        isTablet ? "h-[85dvh]" : " h-dvh"
-      }   bg-fixed overflow-hidden`}
+      className={`relative h-[110dvh] md:h-[90dvh]   ${
+        isSmallScreen ? "h-[150dvh] " : ""
+      } ${isTablet ? "h-[85dvh]" : ""} bg-fixed overflow-scroll`}
     >
       <div className="absolute w-full h-full inset-0 ">
         <Threads
@@ -42,7 +42,7 @@ const HeroSection = () => {
       <div
         className={`absolute w-full h-auto lg:h-[85dvh] gridlay  ${
           isTablet ? "md:flex flex-col gap-y-8" : ""
-        } py-8 items-center justify-center gap-2  text-center z-[99] overflow-y-auto lg:overflow-y-hidden overflow-hidden`}
+        } py-8 px-4 items-center justify-center gap-2  text-center z-[99] overflow-y-auto lg:overflow-y-hidden overflow-hidden`}
       >
         <div className=" w-full py-4 order-1 text-white cormorant">
           <ShinyText
@@ -51,7 +51,7 @@ const HeroSection = () => {
             className="text-4xl text-white lg:text-5xl font-bold"
           />
 
-          <p className=" text-sm md:text-lg font-light py-6 max-w-xl mx-auto">
+          <p className=" text-md md:text-lg font-light py-6 max-w-xl mx-auto">
             At boch, we offer a set of carefully curated skin care products like
             lotions, scrubs , oils, cleansers, face Creams and more... Made to
             satisfy and re-organize your skin naturally and efficiently.

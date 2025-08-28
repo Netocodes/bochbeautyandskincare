@@ -23,7 +23,7 @@ const AdProduct = () => {
   };
   return (
     <motion.div
-      className="mt-8"
+      className=""
       initial={{ opacity: 0, y: "20%" }}
       whileInView={{ opacity: 1, y: 0 }} // Move to normal position and become visible
       // viewport={{ once: false }}
@@ -34,7 +34,7 @@ const AdProduct = () => {
     >
       <section className="h-auto lg:h-[85dvh] flex items-center justify-center overflow-hidden">
         <div className="w-full md:max-w-[75rem]  px-8 sm:px-6 lg:px-8  mx-auto">
-          <div className="flex items-center justify-center flex-col gap-2 py-8 lg:py-16">
+          <div className="flex items-center justify-center flex-col gap-2 py-8 ">
             <h1 className="text-2xl text-center underline underline-offset-4 decoration-[#9e436f] text-gray-700">
               Chiri's favourite Recommendation
             </h1>
@@ -53,11 +53,11 @@ const AdProduct = () => {
             </div>
             {/* image div */}
 
-            <div className="py-2 mt-8 md:mt-2 md:px-8">
+            <div className="py-6 mt-8 md:mt-2 md:px-8">
               <div className="">
                 <div className="space-y-1 text-left">
-                  <h2 className="font-bold w-full font-sans px-4  tracking-wider text-left pb-3 text-2xl lg:text-2xl text-gray-900">
-                    Why your skin needs this oil?
+                  <h2 className="font-bold w-full font-sans px-4  tracking-wider text-center pb-3 text-2xl lg:text-2xl text-gray-900">
+                    Restoration Body Oil
                   </h2>
                   <p className="text-gray-800 text-md leading-snug px-2 text-justify">
                     Restore your skin’s natural glow with our Restoration Body
