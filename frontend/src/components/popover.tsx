@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import {
   Dialog,
   DialogBackdrop,
@@ -6,6 +5,7 @@ import {
   DialogTitle,
 } from "@headlessui/react";
 import { ExclamationTriangleIcon } from "@heroicons/react/24/outline";
+import { useState } from "react";
 
 const PopOver = () => {
   const [open, setOpen] = useState(true);
