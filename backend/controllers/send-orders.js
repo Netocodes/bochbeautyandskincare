@@ -14,7 +14,7 @@ export const SendOrder = async (req, res) => {
     if (
       !personalInfo ||
       !addressData ||
-      cartItems.lenght() == 0 ||
+      cartItems.length() == 0 ||
       total == 0
     ) {
       return res
