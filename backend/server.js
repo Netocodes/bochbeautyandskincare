@@ -41,15 +41,6 @@ app.disable("x-powered-by");
 
 // Use the rate limiter
 app.use(limiter);
-app.use((req, res) => {
-  const { remaining } = req.rateLimit;
-  // Check rate Limit and send
-  if (remaining <= 5) {
-    res
-      .status(400)
-      .json({ error: "You are reaching traffic Violations, Slow down.." });
-  }
-});
 
 // Set the routes for the application
 app.use("", router);
@@ -64,6 +55,6 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: "Internal Server Error" }); // Respond with a 500 status code
 });
 // Start the server
-app.listen(port, () => {
+app.listen(port, "0.0.0.0", () => {
   console.log(`server is live at: port ${port}`);
 });
