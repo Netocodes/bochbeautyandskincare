@@ -39,6 +39,8 @@ const BrandFace = () => {
             placeholder={undefined}
             onPointerEnterCapture={undefined}
             onPointerLeaveCapture={undefined}
+            onResize={undefined}
+            onResizeCapture={undefined}
           >
             <a
               href="https://wa.me/+905384085304?text=Hello%2C%20I%27m%20interested%20in%20your%20services%21"

@@ -24,6 +24,8 @@ const ErrorPage = () => {
                 placeholder={undefined}
                 onPointerEnterCapture={undefined}
                 onPointerLeaveCapture={undefined}
+                onResize={undefined}
+                onResizeCapture={undefined}
               />
             </Link>
           </div>

@@ -149,6 +149,8 @@ const Details = () => {
                       placeholder=""
                       onPointerEnterCapture={() => {}}
                       onPointerLeaveCapture={() => {}}
+                      onResize={undefined}
+                      onResizeCapture={undefined}
                     >
                       {isInCart ? "Update Quantity" : "Add To Cart"}
                     </Button>
@@ -159,6 +161,8 @@ const Details = () => {
                         onPointerEnterCapture={() => {}}
                         onPointerLeaveCapture={() => {}}
                         onClick={handleAddUpdate}
+                        onResize={undefined}
+                        onResizeCapture={undefined}
                       >
                         Proceed to Checkout
                       </Button>

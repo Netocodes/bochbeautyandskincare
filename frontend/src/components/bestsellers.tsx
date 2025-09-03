@@ -40,16 +40,18 @@ const BestSellers = () => {
             transition={{ duration: 1, ease: "easeIn" }}
           >
             <ProductShowcase />
-            <motion.div className="absolute my-6 right-2 md:mt-8 md:right-2 lg:mt-8 lg:right-2"
-             animate={{
-                                                              scale: [1, 0.9, 1], // Scale up to 1.5x and back to original size
-                                                            }}
-                                                            transition={{
-                                                              repeat: Infinity,
-                                                              repeatType: "loop",
-                                                              duration: 1.5, // 1.5 seconds to complete one cycle
-                                                              ease: "easeInOut", // Smooth ease-in and ease-out transitions
-                                                            }}>
+            <motion.div
+              className="absolute my-6 right-2 md:mt-8 md:right-2 lg:mt-8 lg:right-2"
+              animate={{
+                scale: [1, 0.9, 1], // Scale up to 1.5x and back to original size
+              }}
+              transition={{
+                repeat: Infinity,
+                repeatType: "loop",
+                duration: 1.5, // 1.5 seconds to complete one cycle
+                ease: "easeInOut", // Smooth ease-in and ease-out transitions
+              }}
+            >
               <Link to={"/productPage"}>
                 <Button
                   children="Veiw More"
@@ -57,6 +59,8 @@ const BestSellers = () => {
                   placeholder={undefined}
                   onPointerEnterCapture={undefined}
                   onPointerLeaveCapture={undefined}
+                  onResize={undefined}
+                  onResizeCapture={undefined}
                 />
               </Link>
             </motion.div>

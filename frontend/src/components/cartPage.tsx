@@ -25,6 +25,8 @@ const CartPage = () => {
             onPointerEnterCapture={undefined}
             onPointerLeaveCapture={undefined}
             className="bg-[#8c2643] text-white capitalize"
+            onResize={undefined}
+            onResizeCapture={undefined}
           >
             Start Shopping
           </Button>

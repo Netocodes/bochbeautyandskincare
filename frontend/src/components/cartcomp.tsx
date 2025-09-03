@@ -144,6 +144,8 @@ const CartComponent = () => {
                 placeholder={undefined}
                 onPointerEnterCapture={undefined}
                 onPointerLeaveCapture={undefined}
+                onResize={undefined}
+                onResizeCapture={undefined}
               >
                 <FaAngleLeft size={20} className="text-gray-800" />
                 <span className="px-2 font-normal text-lg capitalize leading-8 text-[#8c2643]">
@@ -157,6 +159,8 @@ const CartComponent = () => {
                 placeholder={undefined}
                 onPointerEnterCapture={undefined}
                 onPointerLeaveCapture={undefined}
+                onResize={undefined}
+                onResizeCapture={undefined}
               >
                 Continue to Payment
                 <FaAngleRight />

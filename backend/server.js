@@ -28,6 +28,7 @@ app.use(cors());
 
 // Parse JSON and URL-encoded data
 app.use(_json());
+app.set("trust proxy", 1);
 
 // Parse URL-encoded data with extended option
 app.use(urlencoded({ extended: true }));

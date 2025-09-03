@@ -8,6 +8,8 @@ export const Productdetailcrumb = () => {
         placeholder={undefined}
         onPointerEnterCapture={undefined}
         onPointerLeaveCapture={undefined}
+        onResize={undefined}
+        onResizeCapture={undefined}
       >
         <Link to={"/"} className="opacity-60">
           <FiHome className="size-6 font-bold text-[#8c2643]" />
@@ -30,6 +32,8 @@ export const PaymentCrumb = () => {
         placeholder={undefined}
         onPointerEnterCapture={undefined}
         onPointerLeaveCapture={undefined}
+        onResize={undefined}
+        onResizeCapture={undefined}
       >
         <Link to={"/"} className="opacity-60">
           <FiHome className="size-6 font-bold text-[#8c2643]" />
@@ -50,4 +54,4 @@ export const PaymentCrumb = () => {
       </Breadcrumbs>
     </div>
   );
-}
+};
