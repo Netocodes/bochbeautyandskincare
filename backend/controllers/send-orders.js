@@ -11,12 +11,7 @@ export const SendOrder = async (req, res) => {
     // Get the customer details from the request body
     const { personalInfo, addressData, cartItems, total } = req.body;
 
-    if (
-      !personalInfo ||
-      !addressData ||
-      cartItems.length() == 0 ||
-      total == 0
-    ) {
+    if (!personalInfo || !addressData || cartItems.length == 0 || total == 0) {
       return res
         .status(400)
         .json({ mssg: "Invalid or missing data in request body" });
