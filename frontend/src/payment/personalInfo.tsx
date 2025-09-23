@@ -60,7 +60,7 @@ const PersonalInfo = () => {
 
   return (
     <div>
-      <div className="text-center w-full  grid grid-cols-1 md:grid-cols-[2fr_4fr] items-center justify-center gap-x-12 bg-gray-800 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-20 backdrop-saturate-50 backdrop-contrast-150 max-w-xl md:max-w-7xl mx-auto px-4 py-5 md:py-12 ">
+      <div className="text-center w-full  grid grid-cols-1 md:grid-cols-[2fr_4fr] items-center justify-center gap-x-12 bg-gray-800 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-20 backdrop-saturate-50 backdrop-contrast-150 max-w-xl md:max-w-7xl mx-auto px-4 py-12 md:py-12 ">
         <h2 className="text-3xl text-center mx-auto w-full max-w-[65rem] md:text-4xl flex items-center font-bold bg-[#8c2643] py-3 px-4 text-gray-200">
           <BlurText
             text="Your Contact Details"
