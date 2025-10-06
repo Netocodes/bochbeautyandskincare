@@ -61,7 +61,7 @@ const Upload = () => {
     }
 
     const formData = new FormData();
-    formData.append("proof", file); // 'proof' should match the field name in Multer
+    formData.append("file", file); // 'proof' should match the field name in Multer
     formData.append("orderId", orderId.toString()); // Add orderId to the request
     try {
       setLoading(true);

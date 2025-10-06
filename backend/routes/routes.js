@@ -18,6 +18,6 @@ router.get("/", (req, res) => {
 router.post("/send-email", SendOrder);
 
 router.post("/suscribe", Suscriber);
-router.post("/upload-proof", upload.single("proof"), Proof);
+router.post("/upload-proof", upload.single("file"), Proof);
 
 export default router;
