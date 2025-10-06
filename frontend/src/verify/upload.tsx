@@ -63,9 +63,6 @@ const Upload = () => {
     const formData = new FormData();
     formData.append("file", file); // 'proof' should match the field name in Multer
     formData.append("orderId", orderId.toString()); // Add orderId to the request
-    for (const [key, value] of formData.entries()) {
-      console.log(key, value);
-    }
 
     try {
       setLoading(true);
@@ -79,7 +76,7 @@ const Upload = () => {
         }
       );
       // setMessage(response.data);
-      toast.success(response.data);
+      toast.success(response.data.message);
       clearCart();
       navigate("/verify-success");
       setLoading(false);
@@ -93,6 +90,8 @@ const Upload = () => {
       } else {
         toast.error("An unexpected error occurred");
       }
+    } finally {
+      setLoading(false);
     }
   };
 
