@@ -11,50 +11,78 @@ let port = process.env.PORT || 8081;
 if (!process.env.PORT) {
   console.log("No PORT specified, using default port 8081");
 }
-`
-// Set rate limiting to prevent abuse`;
+
+// ✅ Allowlist your frontend origins
+const allowedOrigins = [
+  "http://localhost:5173", // Vite dev
+  "http://localhost:3000", // React dev alt
+  "https://bochbeautyandskincare.netlify.app", // example if deployed frontend
+  "https://bochbeautyandskincare.vercel.app",
+  "https://bochbeautyandskincare.onrender.com",
+];
+
+// ✅ CORS options
+const corsOptions = {
+  origin: (origin, callback) => {
+    // Allow requests with no origin (e.g. mobile apps, Postman)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  methods: ["GET", "POST", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true,
+};
+
+// ✅ Rate limiter to prevent abuse
 const limiter = rateLimiter({
-  windowMs: 1 * 60 * 1000, // 15 minutes
-  max: 30, // Limit each IP to 30 requests per window
-  standardHeaders: true, // Return rate limit info in headers
-  legacyHeaders: false, // Disable deprecated headers
+  windowMs: 1 * 60 * 1000,
+  max: 30,
+  standardHeaders: true,
+  legacyHeaders: false,
 });
 
-// create an Express application
 const app = express();
 
-// Add middleWare
-app.use(cors());
+// ✅ Apply CORS **before all routes**
+app.use(cors(corsOptions));
+
+// ✅ Handle OPTIONS preflight globally
+app.options("*", cors(corsOptions));
 
 // Parse JSON and URL-encoded data
 app.use(_json());
 app.set("trust proxy", 1);
-
-// Parse URL-encoded data with extended option
 app.use(urlencoded({ extended: true }));
 
-// Set security headers
+// Security headers
 app.use(helmet());
-
-// Disable the 'X-Powered-By' header to use a prefered security practice (old is gold)
 app.disable("x-powered-by");
 
-// Use the rate limiter
+// Rate limiter
 app.use(limiter);
 
-// Set the routes for the application
+// Routes
 app.use("", router);
 
-// Handle 404 errors
+// 404 handler
 app.use((req, res) => {
   res.status(404).json({ error: "Route not found" });
 });
-// Handle errors globally
+
+// Global error handler (includes CORS errors)
 app.use((err, req, res, next) => {
-  console.error(err.stack); // Log the error stack trace
-  res.status(500).json({ error: "Internal Server Error" }); // Respond with a 500 status code
+  console.error("❌ Global Error:", err.message);
+  if (err.message === "Not allowed by CORS") {
+    return res.status(403).json({ error: "CORS: Origin not allowed" });
+  }
+  res.status(500).json({ error: "Internal Server Error" });
 });
-// Start the server
+
+// Start server
 app.listen(port, "0.0.0.0", () => {
-  console.log(`server is live at: port ${port}`);
+  console.log(`🚀 Server is live at port ${port}`);
 });

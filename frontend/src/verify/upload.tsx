@@ -63,6 +63,10 @@ const Upload = () => {
     const formData = new FormData();
     formData.append("file", file); // 'proof' should match the field name in Multer
     formData.append("orderId", orderId.toString()); // Add orderId to the request
+    for (const [key, value] of formData.entries()) {
+      console.log(key, value);
+    }
+
     try {
       setLoading(true);
       const response = await axios.post(
