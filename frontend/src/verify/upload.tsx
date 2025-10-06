@@ -70,7 +70,7 @@ const Upload = () => {
     try {
       setLoading(true);
       const response = await axios.post(
-        "https://bochbeautyandskincare-production.up.railway.app/upload-proof",
+        import.meta.env.VITE_UPLOADPROOF,
         formData,
         {
           headers: {
