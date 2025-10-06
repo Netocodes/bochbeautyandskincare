@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import {
   Button,
@@ -30,6 +30,11 @@ const PersonalInfo = () => {
     formState: { isSubmitSuccessful },
   } = useForm<formFeilds>();
   const { nextStep } = useWizard();
+  // ✅ State to track the selected country index
+  const [selectedCountryIndex, setSelectedCountryIndex] = useState(0);
+
+  // ✅ State for search input
+  const [search, setSearch] = useState("");
   const {
     countries,
   }: {
@@ -39,10 +44,25 @@ const PersonalInfo = () => {
       countryCallingCode: string;
     }[];
   } = useCountries();
-  const [country, setCountry] = useState(0);
+  const filteredCountries = useMemo(() => {
+    const searchLower = search.toLowerCase();
+
+    return countries.filter((country) => {
+      const nameMatch = country.name.toLowerCase().includes(searchLower);
+      const codeMatch = country.countryCallingCode
+        ?.toLowerCase()
+        .includes(searchLower);
+      return nameMatch || codeMatch;
+    });
+  }, [search, countries]);
+  const addCountry = (index: number) => {
+    const countryName = filteredCountries[index].name;
+    const originalIndex = countries.findIndex((c) => c.name === countryName);
+    setSelectedCountryIndex(originalIndex);
+  };
   const [phoneNumber, setPhoneNumber] = useState("");
 
-  const { name, flags, countryCallingCode } = countries[country];
+  const { name, flags, countryCallingCode } = countries[selectedCountryIndex];
 
   const onSubmit: SubmitHandler<formFeilds> = (data) => {
     // Combine country code and phone number
@@ -101,9 +121,9 @@ const PersonalInfo = () => {
                     <img
                       src={flags.svg}
                       alt={name}
-                      className="h-4 w-4 rounded-full object-cover"
+                      className="h-4 w-4 rounded-full  object-cover"
                     />
-                    {countryCallingCode}
+                    {countries[selectedCountryIndex].countryCallingCode}
                   </Button>
                 </MenuHandler>
                 <MenuList
@@ -112,31 +132,47 @@ const PersonalInfo = () => {
                   onPointerEnterCapture={undefined}
                   onPointerLeaveCapture={undefined}
                   onResize={undefined}
+                  onMouseDown={(e) => e.stopPropagation()}
                   onResizeCapture={undefined}
                 >
-                  {countries.map(
-                    ({ name, flags, countryCallingCode }, index) => (
-                      <MenuItem
-                        key={name}
-                        value={name}
-                        className="flex items-center gap-2"
-                        onClick={() => setCountry(index)}
-                        placeholder={undefined}
-                        onPointerEnterCapture={undefined}
-                        onPointerLeaveCapture={undefined}
-                        onResize={undefined}
-                        onResizeCapture={undefined}
-                      >
-                        <img
-                          src={flags.svg}
-                          alt={name}
-                          className="h-5 w-5 rounded-full object-cover"
-                        />
-                        {name}{" "}
-                        <span className="ml-auto">{countryCallingCode}</span>
-                      </MenuItem>
-                    )
-                  )}
+                  <div
+                    className="p-2 sticky top-0 bg-white z-10"
+                    onClick={(e) => e.stopPropagation()} // 👈 stop click from closing the menu
+                  >
+                    <input
+                      type="text"
+                      placeholder="Search country or code..."
+                      value={search}
+                      onChange={(e) => setSearch(e.target.value)}
+                      onClick={(e) => e.stopPropagation()}
+                      className="w-full p-2 text-sm border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                  </div>
+                  {filteredCountries &&
+                    filteredCountries.map(
+                      ({ name, flags, countryCallingCode }, index) => (
+                        <MenuItem
+                          key={name}
+                          value={name}
+                          className="flex items-center gap-2"
+                          onClick={() => addCountry(index)}
+                          placeholder={undefined}
+                          onPointerEnterCapture={undefined}
+                          onPointerLeaveCapture={undefined}
+                          onResize={undefined}
+                          onResizeCapture={undefined}
+                        >
+                          <img
+                            src={flags.svg}
+                            alt={name}
+                            className="h-5 w-5 rounded-full object-cover"
+                          />
+                          {name}{" "}
+                          <span className="ml-auto">{countryCallingCode}</span>
+                        </MenuItem>
+                      )
+                    )}
+                  {!filteredCountries && <div> No Country found</div>}
                 </MenuList>
               </Menu>
             </div>

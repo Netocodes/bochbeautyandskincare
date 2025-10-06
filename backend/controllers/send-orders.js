@@ -41,96 +41,158 @@ export const SendOrder = async (req, res) => {
 
     // Email content for the customer
     const emailText = `
-    Hi ${fullname},
-  
-    Thank you for your purchase! Your order has been confirmed.
-  
-    Order Details:
-    - Order ID: ${orderId}
-    - Total Amount: $${total}
-  
-    Items Ordered:
-    ${cartItems
-      .map(
-        (item) => `
-          product:   ${item.title}
-          Price: ₺${item.price}
-        
-    `
-      )
-      .join("")}
-  
-    Next Steps:
-    1. Copy proof of payment by sent to this email:
-       - Submit your screenshot or PDF of your payment confirmation.
-       - Alonside Your already copied Order ID: ${orderId}.
-    2. Once we verify your payment, we will send you a confirmation message and shipping status.
-  
-    If you have any questions, please contact us or reply to this email.
-  
-    Best regards,
-    Bochbeautyandskincare
-    `;
+Hi ${fullname},
+
+Thank you for your purchase! Your order has been confirmed.
+
+Order Details:
+- Order ID: ${orderId}
+- Total Amount: ₺${total + 200}
+
+Items Ordered:
+${cartItems
+  .map(
+    (item) => `
+  - Product: ${item.title}
+  - Price: ₺${item.price}
+  - Quantity: x${item.quantity}
+`
+  )
+  .join("")}
+
+Next Steps:
+1. Copy your Order ID: ${orderId}.
+2. Send a screenshot or PDF of your payment confirmation to this email.
+3. Once we verify your payment, we’ll send you a confirmation message and shipping status.
+
+If you have any questions, please contact us or reply to this email.
+
+Best regards,  
+Bochbeautyandskincare
+`;
+
     const emailHtml = `
-  <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 20px auto; padding: 20px; border: 1px solid #ccc; border-radius: 5px; background: #f5f5dc;">
-    <h2 style="color: #8c2643; font-size: 24px; margin-bottom: 20px;">Order Confirmation</h2>
-    <p style="color: #8c2643; font-size: 16px; line-height: 1.5;">Hi ${fullname},</p>
-    <p style="color: #8c2643; font-size: 16px; line-height: 1.5;">Thank you for your purchase! Your order has been confirmed.</p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Confirmation</title>
+    <style>
+      /* Basic resets for email */
+      body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+      table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+      img { -ms-interpolation-mode: bicubic; }
+      body { margin: 0; padding: 0; width: 100% !important; }
 
-    <h3 style="color: #8c2643; font-size: 20px; margin-top: 20px; margin-bottom: 10px;">Order Details:</h3>
-    <ul style="background-color: #acd8d4 width:100% list-style-type: none; padding: 12px, 20px; margin: 0;">
-      <li style="color:rgb(41, 28, 32);  font-size: 21px; line-height: 1.5; margin-bottom: 10px;">
-        Order ID: <strong> ${orderId}</strong> 
-      </li>
-      <li style="color:rgb(39, 28, 31); font-size: 21px; line-height: 1.5; margin-bottom: 10px;">
-        Total Amount: <strong> ${total + 200}</strong> <small>tl</small>
-      </li>
-    </ul>
+      /* Mobile responsiveness */
+      @media screen and (max-width: 600px) {
+        .container {
+          width: 100% !important;
+          padding: 16px !important;
+        }
+        .order-id {
+          font-size: 24px !important;
+          padding: 12px 18px !important;
+        }
+        .item img {
+          width: 70px !important;
+        }
+      }
+    </style>
+  </head>
+  <body style="background-color: #f5f5dc; font-family: Arial, sans-serif;">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="center">
+          <table class="container" width="600" cellspacing="0" cellpadding="0" style="background:#ffffff; border-radius:12px; overflow:hidden; margin-top:20px; padding:24px;">
+            <tr>
+              <td align="center" style="padding-bottom:20px;">
+                <h2 style="color:#8c2643; font-size:24px; margin:0;">🛍️ Order Confirmation</h2>
+              </td>
+            </tr>
 
-    <h3 style="color: #8c2643; font-size: 20px; margin-top: 20px; margin-bottom: 10px;">Items Ordered:</h3>
-    <ul style="list-style-type: none; padding: 0; margin: 0;">
-      ${cartItems
-        .map(
-          (item) => `
-        <li style="display: flex; align-items: center; margin-bottom: 20px;">
-          <img src="${item.imageUrl}" alt="${item.title}" style="width: 100px; height: auto; border-radius: 5px; margin-right: 10px;">
-          <div>
-            <strong style="color: #8c2643; font-size: 18px;">${item.title}</strong><br>
-            <span style="color: #8c2643; font-size: 14px; margin-top: 16px;">Price: <strong>₺${item.price}</strong></span>
-            <span style="color:rgb(61, 42, 47); font-size: 14px; margin-top: 14px;">quantity: <strong>x${item.quantity}</strong></span>
-          </div>
-        </li>
-      `
-        )
-        .join("")}
-    </ul>
+            <!-- ORDER ID -->
+            <tr>
+              <td align="center" style="padding:20px 0;">
+                <div class="order-id" style="background:#8c2643; color:#fff; font-size:30px; font-weight:800; padding:16px 28px; border-radius:8px; letter-spacing:2px;">
+                  ${orderId}
+                </div>
+                <p style="font-size:14px; color:#8c2643; margin-top:8px;">Use this Order ID to verify your payment</p>
+              </td>
+            </tr>
 
-    <h3 style="color: #8c2643; font-size: 20px; margin-top: 20px; margin-bottom: 10px;">Next Steps:</h3>
-    <ol style="color: #8c2643; font-size: 16px; line-height: 1.5;">
-      <li style="background-color: #acd8d4; width:100%; padding: 12px, 20px; border:2px dotted rgb(48, 42, 42) margin: 0;">
-        <strong>Copy the Order Id sent to this email:</strong>
-        <ul style="list-style-type: disc; padding-left: 20px;">
-          <li>A screenshot or PDF of your payment confirmation.</li>
-          <li>Your already copied Order ID: <strong>${orderId}</strong>.</li>
-        </ul>
-      </li>
-      <li>Once we verify your payment, we will send you a confirmation message and your shipping status.</li>
+            <!-- TOTAL -->
+            <tr>
+              <td style="background:#acd8d4; padding:16px; border-radius:8px; color:#291c20; font-size:18px; text-align:center;">
+                <strong>Total Amount: ₺${total + 200}</strong>
+              </td>
+            </tr>
 
-    </ol>
-        <a href="https://www.bochbeautyandskincare.shop/verify-payment" style="background-color: #8c2643; color: #ffffff; margin: 20px, 0; padding: 10px 20px; border: none; border-radius: 5px; margin-top: 20px; cursor: pointer;">Submit Proof of Payment</a>
+            <!-- ITEMS -->
+            <tr>
+              <td style="padding-top:25px;">
+                <h3 style="color:#8c2643; font-size:20px; margin-bottom:10px;">Items Ordered</h3>
+                ${cartItems
+                  .map(
+                    (item) => `
+                <table class="item" width="100%" cellspacing="0" cellpadding="0" style="margin-bottom:15px; border-bottom:1px solid #ddd; padding-bottom:10px;">
+                  <tr>
+                    <td width="100" valign="top">
+                      <img src="${item.imageUrl}" alt="${item.title}" style="width:90px; border-radius:6px; display:block;">
+                    </td>
+                    <td valign="top" style="padding-left:12px;">
+                      <strong style="color:#8c2643; font-size:16px; display:block;">${item.title}</strong>
+                      <span style="color:#8c2643; font-size:14px;">Price: ₺${item.price}</span><br/>
+                      <span style="color:#3d2a2f; font-size:14px;">Quantity: x${item.quantity}</span>
+                    </td>
+                  </tr>
+                </table>`
+                  )
+                  .join("")}
+              </td>
+            </tr>
 
-    <p style="color: #8c2643; font-size: 16px; line-height: 1.5; margin-top: 20px;">
-      If you have any questions, please contact us or reply to this email.
-    </p>
-    <p style="color: #8c2643; font-size: 16px; line-height: 1.5;">
-      Best regards,<br>
-      <strong><a href="https://www.bochbeautyandskincare.shop/">bochbeautyandskincare</a></strong>
-    </p>
-  </div>
-    `;
-    // Email content for the owner
+            <!-- NEXT STEPS -->
+            <tr>
+              <td>
+                <h3 style="color:#8c2643; font-size:20px; margin-top:20px; margin-bottom:10px;">Next Steps</h3>
+                <ol style="color:#8c2643; font-size:16px; line-height:1.6; padding-left:20px;">
+                  <li style="background-color:#acd8d4; padding:12px 16px; border:2px dotted #302a2a; border-radius:8px; margin-bottom:10px;">
+                    Attach your payment confirmation (screenshot or PDF) and include your Order ID <strong>${orderId}</strong>.
+                  </li>
+                  <li>Once verified, we’ll send a confirmation and shipping status.</li>
+                </ol>
+              </td>
+            </tr>
+
+            <!-- BUTTON -->
+            <tr>
+              <td align="center" style="padding-top:25px;">
+                <a href="https://www.bochbeautyandskincare.shop/verify-payment" 
+                  style="display:inline-block; background-color:#8c2643; color:#ffffff; padding:14px 28px; text-decoration:none; border-radius:6px; font-size:16px; font-weight:600;">
+                  Submit Proof of Payment
+                </a>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding-top:25px; font-size:14px; color:#8c2643; text-align:center;">
+                If you have any questions, reply to this email.<br/>
+                <strong><a href="https://www.bochbeautyandskincare.shop/" style="color:#8c2643; text-decoration:none;">bochbeautyandskincare</a></strong>
+              </td>
+            </tr>
+
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+`;
+
     const ownerEmailText = `
-   New Order Received!
+New Order Received!
 
 Order Details:
 - Order ID: ${orderId}
@@ -154,96 +216,111 @@ ${cartItems
 `
   )
   .join("")}
-  Order Details:
-    - Order ID: ${orderId}
-    - Total Amount: $${total}
-Important: Make sure to use the Order ID: ${orderId} to verify the user who paid for this order.
+
+Order Summary:
+- Total Amount: ₺${total + 200}
+
+Important: Use the Order ID ${orderId} to verify the payment.
 
 If you have any questions, please contact the customer directly or reply to this email.
 
-Best regards,
-bochbeautyandskincare
-    `;
+Best regards,  
+bochbeautyandskincare  
+Your Developer @NetoCodes
+`;
+
     const ownerEmailHtml = `
-      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 20px auto; padding: 20px; border: 1px solid #ccc; border-radius: 5px; background: #f5f5dc; color: #8c2643;">
-  <h2 style="color: #8c2643; font-size: 24px; margin-bottom: 20px;">New Order Received!</h2>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Order</title>
+    <style>
+      body, table, td { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+      img { -ms-interpolation-mode: bicubic; }
+      body { margin: 0; padding: 0; width: 100% !important; }
 
-  <h3 style="color: #8c2643; font-size: 20px; margin-top: 20px; margin-bottom: 10px;">Order Details:</h3>
-  <ul style="list-style-type: none; padding: 0; margin: 0;">
-    <li style="color: #8c2643; font-size: 16px; line-height: 1.5; margin-bottom: 10px;">
-      <strong>Order ID:</strong> ${orderId}
-    </li>
-    <li style="color: #8c2643; font-size: 16px; line-height: 1.5; margin-bottom: 10px;">
-      <strong>Customer Name:</strong> ${fullname}
-    </li>
-    <li style="color: #8c2643; font-size: 16px; line-height: 1.5; margin-bottom: 10px;">
-      <strong>Customer Email:</strong> ${customerEmail}
-    </li>
-    <li style="color: #8c2643; font-size: 16px; line-height: 1.5; margin-bottom: 10px;">
-      <strong>Customer Contact:</strong> ${phoneNumber}
-    </li>
-  </ul>
+      @media screen and (max-width: 600px) {
+        .container { width: 100% !important; padding: 16px !important; }
+        .order-id { font-size: 22px !important; padding: 10px 14px !important; }
+        .item img { width: 70px !important; }
+      }
+    </style>
+  </head>
+  <body style="background-color:#f5f5dc; font-family:Arial, sans-serif;">
+    <table width="100%">
+      <tr>
+        <td align="center">
+          <table class="container" width="600" cellspacing="0" cellpadding="0" style="background:#fff; border-radius:12px; overflow:hidden; margin-top:20px; padding:24px;">
+            <tr>
+              <td align="center">
+                <h2 style="color:#8c2643; font-size:24px;">📝 New Order Received</h2>
+              </td>
+            </tr>
 
-  <h3 style="color: #8c2643; font-size: 20px; margin-top: 20px; margin-bottom: 10px;">Shipping Address:</h3>
-  <ul style="list-style-type: none; padding: 0; margin: 0;">
-    <li style="color: #8c2643; font-size: 16px; line-height: 1.5; margin-bottom: 10px;">
-      <strong>Address:</strong> ${homeAdrress}
-    </li>
-    <li style="color: #8c2643; font-size: 16px; line-height: 1.5; margin-bottom: 10px;">
-      <strong>City:</strong> ${city}
-    </li>
-    <li style="color: #8c2643; font-size: 16px; line-height: 1.5; margin-bottom: 10px;">
-      <strong>State:</strong> ${state}
-    </li>
-    <li style="color: #8c2643; font-size: 16px; line-height: 1.5; margin-bottom: 10px;">
-      <strong>ZIP:</strong> ${zip}
-    </li>
-  </ul>
+            <tr>
+              <td align="center" style="padding:20px 0;">
+                <div class="order-id" style="background:#8c2643; color:#fff; font-size:28px; font-weight:800; padding:14px 26px; border-radius:8px; letter-spacing:2px;">
+                  ${orderId}
+                </div>
+              </td>
+            </tr>
 
-  <h3 style="color: #8c2643; font-size: 20px; margin-top: 20px; margin-bottom: 10px;">Items Ordered:</h3>
-  <ul style="list-style-type: none; padding: 0; margin: 0;">
-  ${cartItems
-    .map(
-      (item) => `
-    <li style="display: flex; align-items: center; margin-bottom: 20px;">
-      <img src="${item.imageUrl}" alt="${item.title}" style="width: 100px; height: auto; border-radius: 5px; margin-right: 10px;">
-      <div>
-        <strong style="color: #8c2643; font-size: 16px;">${item.title}</strong><br>
-        <span style="color: #8c2643; font-size: 14px; margin-top: 14px;">Price: <strong>₺${item.price}</strong></span>
-        <span style="color: #8c2643; font-size: 14px; margin-top: 14px;">Quantity: <strong>x${item.quantity}</strong></span>
-      
-        </div>
-    </li>
-  `
-    )
-    .join("")}
-  </ul>
-<h3 style="color: #8c2643; font-size: 20px; margin-top: 20px; margin-bottom: 10px;">Order Details:</h3>
-    <ul style="background-color: #acd8d4 width:100% list-style-type: none; padding: 12px, 20px; margin: 0;">
-      <li style="color:rgb(41, 28, 32);  font-size: 21px; line-height: 1.5; margin-bottom: 10px;">
-        Order ID: <strong> ${orderId}</strong> 
-      </li>
-      <li style="color:rgb(39, 28, 31); font-size: 21px; line-height: 1.5; margin-bottom: 10px;">
-        Total Amount: <strong> ${total + 200}</strong> <small>tl</small>
-      </li>
-    </ul>
-  <!-- Bottom Section -->
-  <div style="margin-top: 30px; padding: 15px; background: #fff; border-radius: 5px; border: 1px solid #ddd;">
-    <p style="color: #8c2643; font-size: 16px; line-height: 1.5;">
-      <strong>Important:</strong> Make sure to use the <strong>Order ID: ${orderId}</strong> to verify the user who paid for this order.
-    </p>
-  </div>
+            <tr>
+              <td>
+                <h3 style="color:#8c2643; font-size:20px; margin-top:20px;">Customer Details</h3>
+                <p><strong>Name:</strong> ${fullname}</p>
+                <p><strong>Email:</strong> ${customerEmail}</p>
+                <p><strong>Phone:</strong> ${phoneNumber}</p>
+              </td>
+            </tr>
 
-  <p style="color: #8c2643; font-size: 16px; line-height: 1.5; margin-top: 20px;">
-    If you have any questions, please contact the customer <a href="mailto:${customerEmail}">directly</a> or reply to this email.
-  <p style="color: #8c2643; font-size: 16px; line-height: 1.5;">
-    Best regards,<br>
-          <strong><a href="https://www.bochbeautyandskincare.shop/">bochbeautyandskincare</a></strong>
-          <strong><a href="https://www.netocodes.pro">and Your Developer @NetoCodes</a></strong>
+            <tr>
+              <td>
+                <h3 style="color:#8c2643; font-size:20px; margin-top:20px;">Shipping Address</h3>
+                <p>${homeAdrress}, ${city}, ${state}, ${zip}</p>
+              </td>
+            </tr>
 
-  </p>
-</div>
-    `;
+            <tr>
+              <td>
+                <h3 style="color:#8c2643; font-size:20px; margin-top:20px;">Items</h3>
+                ${cartItems
+                  .map(
+                    (item) => `
+                <table class="item" width="100%" cellspacing="0" cellpadding="0" style="margin-bottom:12px; border-bottom:1px solid #ddd; padding-bottom:8px;">
+                  <tr>
+                    <td width="100"><img src="${item.imageUrl}" alt="${item.title}" style="width:90px; border-radius:6px;"></td>
+                    <td style="padding-left:12px;">
+                      <strong>${item.title}</strong><br/>
+                      ₺${item.price} × ${item.quantity}
+                    </td>
+                  </tr>
+                </table>`
+                  )
+                  .join("")}
+              </td>
+            </tr>
+
+            <tr>
+              <td style="background:#acd8d4; padding:16px; border-radius:8px; text-align:center; font-size:18px; color:#291c20; margin-top:15px;">
+                <strong>Total: ₺${total + 200}</strong>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="text-align:center; font-size:14px; color:#8c2643; padding-top:20px;">
+                Reply to this email to contact the customer or reach them at <a href="mailto:${customerEmail}" style="color:#8c2643;">${customerEmail}</a>.
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+`;
 
     // Email options for the customer
     const mailOptions = {

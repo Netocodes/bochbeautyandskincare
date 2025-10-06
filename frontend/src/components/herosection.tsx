@@ -61,11 +61,13 @@ const HeroSection = () => {
               placeholder={"Schedule Call"}
               onPointerEnterCapture={""}
               onPointerLeaveCapture={""}
-              className="py-2 text-sm font-semibold text-gray-200 bg-green-700 capitalize"
+              className="py-4 px-6 text-sm font-semibold text-gray-200 bg-orange-700 capitalize"
               onResize={undefined}
               onResizeCapture={undefined}
             >
-              <a href="/shop-page">Schedule call 📞</a>
+              <a href="https://wa.me/+905384085304?text=Hello%2C%20I%27m%20interested%20in%20your%20services%21">
+                Schedule call 📞
+              </a>
             </Button>
             <Button
               placeholder={"Visit Shop"}

@@ -78,7 +78,7 @@ const Payment = () => {
   };
   return (
     <div>
-      <Card className="w-full  max-w-6xl mx-auto bg-white dark:bg-gray-800 shadow-md text-black">
+      <Card className="w-full max-w-6xl mx-auto bg-white dark:bg-gray-800 shadow-md text-black">
         <div className="mb-4 flex flex-col  items-center justify-between">
           <h5 className="text-2xl pb-3 font-bold leading-none text-gray-900 dark:text-white">
             Payment options: Bank Transfers
@@ -180,8 +180,8 @@ const Payment = () => {
           <div className="py-3 px-5 border shadow">
             {" "}
             <b className="text-red-500 px-2">
-              * Please ensure to get your OrderId from your mail and include in
-              the in the payment description.
+              * Please ensure to get your Order-Id from your mail and include in
+              the payment description.
             </b>{" "}
             <h3 className="my-3">How to make payments:</h3>
             <ol className="list-decimal  list-inside flex flex-col gap-y-3 text-left leading-relaxed tracking-wide">
@@ -195,8 +195,8 @@ const Payment = () => {
               </li>{" "}
               <li>
                 Before Making the payment, you will receive an email with your
-                order confirmation.Confirm your order and Copy your Order ID and
-                proceed to making payment payment.
+                order confirmation. Confirm your order and Copy your Order-Id
+                and proceed to making payment payment.
               </li>{" "}
             </ol>{" "}
             <div className="flex items-center justify-center py-4">

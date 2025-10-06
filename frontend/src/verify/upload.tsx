@@ -95,7 +95,7 @@ const Upload = () => {
   return (
     <div className="w-full  flex flex-col items-center ">
       <div
-        className="relative w-full min-h-screen flex items-center justify-center py-4 md:py-12 px-2 sm:px-6 lg:px-8 bg-gray-500 bg-no-repeat bg-cover "
+        className="relative w-full h-[max-content]  flex items-center justify-center py-4 md:py-12 px-2 sm:px-6 lg:px-8 bg-gray-500 bg-no-repeat bg-cover "
         style={{
           backgroundImage:
             'url("https://images.unsplash.com/photo-1621243804936-775306a8f2e3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80")',
@@ -110,7 +110,7 @@ const Upload = () => {
             <p className="mt-4 text-sm text-gray-700">
               Make sure to use the same{" "}
               <b className="underline italic tracking-wider underline-offset-4">
-                orderId
+                Order-Id
               </b>{" "}
               provided to you on your mail
             </p>
@@ -118,7 +118,7 @@ const Upload = () => {
           <form className="mt-8 space-y-3" onSubmit={handleUpload}>
             <div className="grid grid-cols-1 space-y-2">
               <label className="text-lg font-bold text-gray-600 tracking-wider">
-                * orderId:
+                * Order-Id
               </label>
               <input
                 className="text-base p-2 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500"
@@ -127,7 +127,7 @@ const Upload = () => {
                 onChange={handleOrderIdChange}
                 required
                 maxLength={5}
-                placeholder="Enter orderId here"
+                placeholder="Enter Order-Id here"
               />
             </div>
             <div className="grid grid-cols-1 space-y-2">

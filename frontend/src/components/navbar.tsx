@@ -22,7 +22,7 @@ export const Navbar: React.FC = () => {
     { id: 1, text: "Homepage", link: "/" },
     { id: 2, text: "Shop", link: "./productPage" },
     { id: 3, text: "Services", link: "/Services" },
-    { id: 4, text: "Shipping & Payment", link: "/shipping-page" },
+    { id: 4, text: "Verify Payment", link: "/verify-payment" },
     { id: 5, text: "Contact", link: "./Contact" },
   ];
 

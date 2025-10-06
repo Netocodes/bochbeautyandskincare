@@ -7,7 +7,7 @@ import Payment from "./payment";
 
 const StepperForm = () => {
   return (
-    <div className="w-full h-screen flex items-center justify-center">
+    <div className="w-full h-[max-content] py-12 flex items-center justify-center">
       <Wizard>
         <PersonalInfo />
         <Address />

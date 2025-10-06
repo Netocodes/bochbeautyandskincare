@@ -1,13 +1,13 @@
 import { Resend } from "resend";
 const resend = new Resend(process.env.RESEND_API_KEY);
-
+const email = process.env.email;
 // Endpoint to handle file and orderId upload for payment Verification
 export const Proof = (req, res) => {
   const file = req.file;
   const orderId = req.body.orderId;
 
   // validate input
-  if (!file || !orderId || orderId > 5) {
+  if (!file || !orderId || orderId.lenght > 5) {
     return res
       .status(400)
       .send(
@@ -24,7 +24,7 @@ export const Proof = (req, res) => {
     text: `A new payment proof has been uploaded for Order #${orderId}. Please find the attachment. and reply the costumer`,
     attachments: [
       {
-        filename: file.originalname, // Use the original file name
+        filename: "Payment Slip", // Use the original file name
         content: file.buffer, // Use the file buffer (in-memory)
       },
     ],

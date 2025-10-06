@@ -25,7 +25,7 @@ const Currency = () => {
   const [lastUpdated, setLastUpdated] = useState<string>("");
 
   // Fetch conversion rate and update converted amount
-  const convertCurrency = async () => {
+  const convertCurrency = React.useCallback(async () => {
     try {
       const response = await fetch(
         `https://api.exchangerate-api.com/v4/latest/${fromCurrency}`
@@ -41,14 +41,14 @@ const Currency = () => {
     } catch (error) {
       console.error("Error fetching conversion rate:", error);
     }
-  };
+  }, [amount, fromCurrency, toCurrency]);
 
   // Trigger conversion when amount or currencies change
   useEffect(() => {
     if (amount && fromCurrency && toCurrency) {
       convertCurrency();
     }
-  }, [amount, fromCurrency, toCurrency]);
+  }, [amount, fromCurrency, toCurrency, convertCurrency]);
 
   // Handle currency selection
   const handleCurrencyChange = (
@@ -60,10 +60,12 @@ const Currency = () => {
 
   return (
     <div>
-      <ImExit
+      <div
+        className="flex gap-2 items-center justify-start px-4 py-2 cursor-pointer"
         onClick={() => navigate(-1)}
-        className="my-2 size-12 text-[#8c2643] "
-      />
+      >
+        <ImExit className="my-2 size-12 text-[#8c2643] " /> Go back
+      </div>
       <div className="flex justify-center items-center min-h-screen">
         <div className="w-full max-w-[85rem] py-12 px-5 bg-[#f8f8f8] mx-auto">
           <div className="block mb-4 mx-auto border-b border-slate-300 pb-2">
